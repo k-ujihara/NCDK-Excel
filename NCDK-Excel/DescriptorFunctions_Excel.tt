@@ -1,0 +1,162 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+/*
+ * MIT License
+ * 
+ * Copyright (c) 2017 Kazuya Ujihara
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+using ExcelDna.Integration;
+using NCDK.Tools.Manipulator;
+using System.Runtime.Caching;
+
+namespace ExcelNCDK
+{
+    public static partial class DescriptorFunctions
+    {
+<#
+    var filename = Path.Combine(new FileInfo(this.Host.TemplateFile).Directory.FullName, "DescriptorInfo.txt");
+    MakeWrappers(filename);
+#>
+    }
+}
+
+<#+
+    public static IList<string> SplitLine(string line)
+    {
+        return line.Split('\t').Select(n => n.Trim()).ToList();
+    }
+
+    public static string GetValue(IList<string> values, int index)
+    {
+        if (values.Count > index)
+            return values[index];
+        return null;
+    }
+
+    public string Value(string value)
+    {
+        return value;
+    }
+
+    public void MakeWrappers(string filename)
+    {
+        IList<string> titleRow = null;
+        using (var reader = new StreamReader(filename))
+        {
+            int idx_function_name = -1;
+            int idx_class_name = -1;
+            int idx_return_type = -1;
+            int idx_preparation = -1;
+
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                if (titleRow == null)
+                {
+                    titleRow = SplitLine(line);
+                    idx_function_name = titleRow.IndexOf("function_name");
+                    idx_class_name = titleRow.IndexOf("class_name");
+                    idx_return_type = titleRow.IndexOf("return_type");
+                    idx_preparation = titleRow.IndexOf("preparation");
+                    continue;
+                }
+
+                IList<string> values = SplitLine(line);
+                string func_name = GetValue(values, idx_function_name);
+                string class_name = GetValue(values, idx_class_name);
+                string return_type = GetValue(values, idx_return_type);
+                string preparation = GetValue(values, idx_preparation);
+
+                string excelReturnType = null;
+                string extractValue = null;
+                string calcReturnType = null;
+
+                switch (return_type)
+                {
+                    case "int[]":
+                        calcReturnType = "DescriptorValue<ArrayResult<int>>";
+                        excelReturnType = "string";
+                        extractValue = "ToExcelString(result)";
+                        break;
+                    case "double[]":
+                        calcReturnType = "DescriptorValue<ArrayResult<double>>";
+                        excelReturnType = "string";
+                        extractValue = "ToExcelString(result)";
+                        break;
+                    case "int":
+                        calcReturnType = "DescriptorValue<Result<int>>";
+                        excelReturnType = "int";
+                        extractValue = "result.Value.Value";
+                        break;
+                    case "double":
+                        calcReturnType = "DescriptorValue<Result<double>>";
+                        excelReturnType = "double";
+                        extractValue = "result.Value.Value";
+                        break;
+                    default:
+                        if (return_type == null)
+                            return_type = "null";
+                        throw new Exception("Unexpected return type " + return_type.ToString() + ".");
+                }
+
+                string nullableExcelReturnType = excelReturnType;
+                if (nullableExcelReturnType != "string")
+                    nullableExcelReturnType = nullableExcelReturnType + "?";
+#>
+        [ExcelFunction()]
+        public static <#= excelReturnType #> NCDK_<#= func_name #>(string text)
+        {
+            var cache = MemoryCache.Default;
+            var key = "<#= func_name #>" + SeparatorofNameKind + text;
+            <#= nullableExcelReturnType #> nReturnValue = cache[key] as <#= nullableExcelReturnType #>;
+
+            if (nReturnValue == null)
+            {
+                var mol = Parse(text);
+                var descriptor = new <#= class_name #>();
+<#+
+                if (preparation != null)
+                {
+#>
+                <#= preparation #>
+<#+
+                }
+#>
+                var result = descriptor.Calculate(mol);
+                nReturnValue = <#= extractValue #>;
+                var policy = new CacheItemPolicy();
+                cache.Set(key, nReturnValue, policy);
+            }
+            return (<#= excelReturnType #>)nReturnValue;
+        }
+<#+
+            }
+        }
+    }
+#>
