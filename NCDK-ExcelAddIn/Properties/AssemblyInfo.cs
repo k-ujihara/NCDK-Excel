@@ -1,14 +1,16 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security;
 
 [assembly: AssemblyTitle("NCDK-Excel")]
-[assembly: AssemblyDescription("NCDK-Excel is Add-in for enabling cheminformatics functions in Excel worksheet.")]
+[assembly: AssemblyDescription("NCDK-Excel")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kazuya Ujihara")]
-[assembly: AssemblyProduct("ExcelNCDK")]
+[assembly: AssemblyProduct("NCDK-Excel")]
 [assembly: AssemblyCopyright("Copyright © 2018 Kazuya Ujihara")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-[assembly: Guid("ee857b06-2129-4bc6-b573-1d2f6d15e347")]
+[assembly: Guid("e9b0fd00-341a-4242-9ec3-ea26a28fec7c")]
+
