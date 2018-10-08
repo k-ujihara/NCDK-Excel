@@ -1,26 +1,24 @@
-﻿/*
- * MIT License
- * 
- * Copyright (c) 2017 Kazuya Ujihara
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+﻿// MIT License
+// 
+// Copyright (c) 2018 Kazuya Ujihara
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 
 using NCDK;
 using NCDK.Aromaticities;
@@ -40,11 +38,12 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Caching;
 
-namespace ExcelNCDK
+namespace NCDKExcel
 {
     public static partial class DescriptorFunctions
     {
         private const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
+        private static readonly object sync_lock_cache = new object();
 
         static string ToExcelString(double value)
         {
@@ -97,28 +96,6 @@ namespace ExcelNCDK
             return null;
         }
 
-        static void AddImplicitHydrogens(IAtomContainer container)
-        {
-            CDKAtomTypeMatcher matcher = CDKAtomTypeMatcher.GetInstance(container.Builder);
-            int atomCount = container.Atoms.Count;
-            string[] originalAtomTypeNames = new string[atomCount];
-            for (int i = 0; i < atomCount; i++)
-            {
-                IAtom atom = container.Atoms[i];
-                IAtomType type = matcher.FindMatchingAtomType(container, atom);
-                originalAtomTypeNames[i] = atom.AtomTypeName;
-                atom.AtomTypeName = type.AtomTypeName;
-            }
-            CDKHydrogenAdder hAdder = CDKHydrogenAdder.GetInstance(container.Builder);
-            hAdder.AddImplicitHydrogens(container);
-            // reset to the original atom types
-            for (int i = 0; i < atomCount; i++)
-            {
-                IAtom atom = container.Atoms[i];
-                atom.AtomTypeName = originalAtomTypeNames[i];
-            }
-        }
-
         static readonly IAtomContainer nullMol = ChemObjectBuilder.Instance.NewAtomContainer();
 
         static IAtomContainer Parse(string text)
@@ -126,24 +103,29 @@ namespace ExcelNCDK
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var cache = MemoryCache.Default;
-            var mol = cache[text] as IAtomContainer;
-            if (mol == null)
+            IAtomContainer mol;
+            lock (sync_lock_cache)
             {
-                mol = RawParse(text);
+                var cache = MemoryCache.Default;
+                mol = cache[text] as IAtomContainer;
                 if (mol == null)
-                    mol = nullMol;
+                {
+                    mol = RawParse(text);
+                    if (mol == null)
+                        mol = nullMol;
 
-                AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);
-                Aromaticity.CDKLegacy.Apply(mol);
-                CDKHydrogenAdder.GetInstance(ChemObjectBuilder.Instance).AddImplicitHydrogens(mol);
-                AtomContainerManipulator.ConvertImplicitToExplicitHydrogens(mol);
-                BODRIsotopeFactory.Instance.ConfigureAtoms(mol);
-                Cycles.MarkRingAtomsAndBonds(mol);
+                    AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);
+                    Aromaticity.CDKLegacy.Apply(mol);
+                    CDKHydrogenAdder.GetInstance(ChemObjectBuilder.Instance).AddImplicitHydrogens(mol);
+                    AtomContainerManipulator.ConvertImplicitToExplicitHydrogens(mol);
+                    BODRIsotopeFactory.Instance.ConfigureAtoms(mol);
+                    Cycles.MarkRingAtomsAndBonds(mol);
 
-                var policy = new CacheItemPolicy();
-                cache.Set(text, mol, policy);
+                    var policy = new CacheItemPolicy();
+                    cache.Set(text, mol, policy);
+                }
             }
+
             if (object.ReferenceEquals(mol, nullMol))
                 return null;
             return mol;

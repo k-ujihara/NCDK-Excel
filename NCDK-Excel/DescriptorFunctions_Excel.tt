@@ -7,35 +7,32 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 
-/*
- * MIT License
- * 
- * Copyright (c) 2017 Kazuya Ujihara
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+// MIT License
+// 
+// Copyright (c) 2018 Kazuya Ujihara
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 
 using ExcelDna.Integration;
-using NCDK.Tools.Manipulator;
 using System.Runtime.Caching;
 
-namespace ExcelNCDK
+namespace NCDKExcel
 {
     public static partial class DescriptorFunctions
     {
@@ -129,29 +126,35 @@ namespace ExcelNCDK
                 if (nullableExcelReturnType != "string")
                     nullableExcelReturnType = nullableExcelReturnType + "?";
 #>
-        [ExcelFunction()]
+        [ExcelFunction(IsThreadSafe = true)]
         public static <#= excelReturnType #> NCDK_<#= func_name #>(string text)
         {
             var cache = MemoryCache.Default;
             var key = "<#= func_name #>" + SeparatorofNameKind + text;
             <#= nullableExcelReturnType #> nReturnValue = cache[key] as <#= nullableExcelReturnType #>;
-
             if (nReturnValue == null)
             {
-                var mol = Parse(text);
-                var descriptor = new <#= class_name #>();
-<#+
-                if (preparation != null)
+                lock (sync_lock_cache)
                 {
-#>
-                <#= preparation #>
-<#+
+                    nReturnValue = cache[key] as <#= nullableExcelReturnType #>;
+                    if (nReturnValue == null)
+                    {
+                        var mol = Parse(text);
+                        var descriptor = new <#= class_name #>();
+    <#+
+                        if (preparation != null)
+                        {
+    #>
+                        <#= preparation #>
+    <#+
+                        }
+    #>
+                        var result = descriptor.Calculate(mol);
+                        nReturnValue = <#= extractValue #>;
+                        var policy = new CacheItemPolicy();
+                        cache.Set(key, nReturnValue, policy);
+                    }
                 }
-#>
-                var result = descriptor.Calculate(mol);
-                nReturnValue = <#= extractValue #>;
-                var policy = new CacheItemPolicy();
-                cache.Set(key, nReturnValue, policy);
             }
             return (<#= excelReturnType #>)nReturnValue;
         }
