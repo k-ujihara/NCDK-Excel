@@ -22,13 +22,11 @@
 
 using NCDK;
 using NCDK.Aromaticities;
-using NCDK.AtomTypes;
 using NCDK.Config;
 using NCDK.Graphs;
 using NCDK.Graphs.InChI;
 using NCDK.IO;
 using NCDK.QSAR;
-using NCDK.QSAR.Results;
 using NCDK.Silent;
 using NCDK.Smiles;
 using NCDK.Tools;
@@ -42,26 +40,27 @@ namespace NCDKExcel
 {
     public static partial class DescriptorFunctions
     {
-        private const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
-        private static readonly object sync_lock_cache = new object();
+        static readonly object sync_lock_propCache = new object();
+        static readonly MemoryCache propCache = new MemoryCache("9186893B3F504417AF7C8593C4786684");
+        private const string SeparatorOfNameKind = "(S-E-P-A-R-A-T-O-R)";
 
-        static string ToExcelString(double value)
+        static string ToExcelString(object value)
         {
-            if (double.IsNaN(value))
-                return "#N/A";
-            if (double.IsInfinity(value))
-                return "#NUM!";
+            switch (value)
+            {
+                case double v:
+                    if (double.IsNaN(v))
+                        return "#N/A";
+                    if (double.IsInfinity(v))
+                        return "#NUM!";
+                    break;
+            }
             return value.ToString();
         }
 
-        static string ToExcelString(DescriptorValue<ArrayResult<double>> result)
+        static string ToExcelString(AbstractDescriptorResult result)
         {
-            return string.Join(", ", result.Value.Select(n => ToExcelString(n)));
-        }
-
-        static string ToExcelString(DescriptorValue<ArrayResult<int>> result)
-        {
-            return string.Join(", ", result.Value.Select(n => n.ToString()));
+            return string.Join(", ", result.Values.Select(n => ToExcelString(n)));
         }
 
         static SmilesParser parser = new SmilesParser(ChemObjectBuilder.Instance);
@@ -97,6 +96,8 @@ namespace NCDKExcel
         }
 
         static readonly IAtomContainer nullMol = ChemObjectBuilder.Instance.NewAtomContainer();
+        static readonly object sync_lock_molCache = new object();
+        static readonly MemoryCache molCache = new MemoryCache("2A66E877A5334899993A694156D51BCC");
 
         static IAtomContainer Parse(string text)
         {
@@ -104,30 +105,33 @@ namespace NCDKExcel
                 throw new ArgumentNullException(nameof(text));
 
             IAtomContainer mol;
-            lock (sync_lock_cache)
+            mol = molCache[text] as IAtomContainer;
+            if (mol == null)
             {
-                var cache = MemoryCache.Default;
-                mol = cache[text] as IAtomContainer;
-                if (mol == null)
+                lock (sync_lock_molCache)
                 {
-                    mol = RawParse(text);
+                    mol = molCache[text] as IAtomContainer;
                     if (mol == null)
-                        mol = nullMol;
+                    {
+                        mol = RawParse(text);
+                        if (mol == null)
+                            mol = nullMol;
 
-                    AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);
-                    Aromaticity.CDKLegacy.Apply(mol);
-                    CDKHydrogenAdder.GetInstance(ChemObjectBuilder.Instance).AddImplicitHydrogens(mol);
-                    AtomContainerManipulator.ConvertImplicitToExplicitHydrogens(mol);
-                    BODRIsotopeFactory.Instance.ConfigureAtoms(mol);
-                    Cycles.MarkRingAtomsAndBonds(mol);
+                        AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);
+                        CDK.HydrogenAdder.AddImplicitHydrogens(mol);
+                        Aromaticity.CDKLegacy.Apply(mol);
+                        AtomContainerManipulator.ConvertImplicitToExplicitHydrogens(mol);
+                        CDK.IsotopeFactory.ConfigureAtoms(mol);
+                        Cycles.MarkRingAtomsAndBonds(mol);
 
-                    var policy = new CacheItemPolicy();
-                    cache.Set(text, mol, policy);
+                        var policy = new CacheItemPolicy();
+                        molCache.Set(text, mol, policy);
+                    }
                 }
-            }
 
-            if (object.ReferenceEquals(mol, nullMol))
-                return null;
+                if (object.ReferenceEquals(mol, nullMol))
+                    return null;
+            }
             return mol;
         }
 
