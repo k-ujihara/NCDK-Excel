@@ -45,18 +45,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0BE419BD6AF89CFE0A10CB9E4580C267"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_189C98635183ED6F312DCA675C1D28B1"
-        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2AC06E3D245540E58D1975E1702638A5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,12 +53,6 @@
         {
         "MsmKey" = "8:_3655AAFE938E97A654EA1322CD52F406"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_59E5CC10766B2356F089FF8A312719AF"
-        "OwnerKey" = "8:_0BE419BD6AF89CFE0A10CB9E4580C267"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,13 +94,13 @@
         "Entry"
         {
         "MsmKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
-        "OwnerKey" = "8:_189C98635183ED6F312DCA675C1D28B1"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
-        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "OwnerKey" = "8:_AF0AFD32C116B7E0DA55D7914E583F8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -143,6 +125,12 @@
         {
         "MsmKey" = "8:_AA60B84DE7816898C2A1DECA2BAF2A03"
         "OwnerKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AF0AFD32C116B7E0DA55D7914E583F8F"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -190,7 +178,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_189C98635183ED6F312DCA675C1D28B1"
+        "OwnerKey" = "8:_AF0AFD32C116B7E0DA55D7914E583F8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -215,24 +203,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A695C3B92D8FED134D87A77295B4BDBD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0BE419BD6AF89CFE0A10CB9E4580C267"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_59E5CC10766B2356F089FF8A312719AF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AA60B84DE7816898C2A1DECA2BAF2A03"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -454,68 +424,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0BE419BD6AF89CFE0A10CB9E4580C267"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:HtmlAgilityPack, Version=1.8.11.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_0BE419BD6AF89CFE0A10CB9E4580C267"
-                    {
-                    "Name" = "8:HtmlAgilityPack.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:HtmlAgilityPack.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_189C98635183ED6F312DCA675C1D28B1"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:NCDK-Excel, Version=0.0.2.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_189C98635183ED6F312DCA675C1D28B1"
-                    {
-                    "Name" = "8:NCDK-Excel.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:NCDK-Excel.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2AC06E3D245540E58D1975E1702638A5"
             {
             "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.vsto"
@@ -550,37 +458,6 @@
                     }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_59E5CC10766B2356F089FF8A312719AF"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_59E5CC10766B2356F089FF8A312719AF"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -695,7 +572,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:NCDK, Version=1.5.2.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:NCDK, Version=1.5.3.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_900CF9819E87CA1BB846844AF77D4998"
@@ -757,7 +634,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:dotNetRDF, Version=2.1.0.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:dotNetRDF, Version=2.2.0.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_AA60B84DE7816898C2A1DECA2BAF2A03"
@@ -767,6 +644,37 @@
                     }
                 }
             "SourcePath" = "8:dotNetRDF.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AF0AFD32C116B7E0DA55D7914E583F8F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:NCDKExcel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_AF0AFD32C116B7E0DA55D7914E583F8F"
+                    {
+                    "Name" = "8:NCDKExcel.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:NCDKExcel.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -962,15 +870,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCDK-Excel"
-        "ProductCode" = "8:{825D9FA7-9B86-4E08-B406-E3A53C9882C8}"
-        "PackageCode" = "8:{2F4835A0-542E-45E1-BE75-525659EE769E}"
+        "ProductCode" = "8:{C62395E0-A688-4B27-B5D3-7B0816BAE6FF}"
+        "PackageCode" = "8:{D50F00DF-563B-465C-9858-769BC4E593C1}"
         "UpgradeCode" = "8:{1CFDC548-A7DF-490C-A808-22A7567F9BD0}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.0.2"
+        "ProductVersion" = "8:0.0.3"
         "Manufacturer" = "8:Kazuya Ujihara"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/kazuyaujihara/NCDK-Excel"
@@ -1184,7 +1092,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_0A8563DC94464EC8A3A8E9928A6D4CE0"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Finished"
+                    "DisplayName" = "8:完了"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFinishedDlg.wid"
@@ -1215,7 +1123,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_4D39C6573C344C1C8C0C9E48A0C52B6E"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Finished"
+                    "DisplayName" = "8:完了"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFinishedDlg.wid"
@@ -1259,7 +1167,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_48BC7492D4E54CB7939025A743EB1DCC"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Progress"
+                    "DisplayName" = "8:進行状況"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminProgressDlg.wid"
@@ -1303,7 +1211,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_2709E0F56F33491B87C9528058DE4325"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Installation Folder"
+                    "DisplayName" = "8:インストール フォルダー"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"
@@ -1338,7 +1246,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_678CCF99D12340DBBC8F7943CB0F2515"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Confirm Installation"
+                    "DisplayName" = "8:インストールの確認"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdConfirmDlg.wid"
@@ -1360,7 +1268,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_975B65CFF60F4A2581526DD7CEDB020F"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Welcome"
+                    "DisplayName" = "8:ようこそ"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdWelcomeDlg.wid"
@@ -1423,7 +1331,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_F0131B1C88D1458B9F207001208E5CD2"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Progress"
+                    "DisplayName" = "8:進行状況"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdProgressDlg.wid"
@@ -1473,7 +1381,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_878A5C2212804C7086E3AC3BA1408111"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Confirm Installation"
+                    "DisplayName" = "8:インストールの確認"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminConfirmDlg.wid"
@@ -1495,7 +1403,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_9B5232CFED504DDBA1DE4F832061320F"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Installation Folder"
+                    "DisplayName" = "8:インストール フォルダー"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFolderDlg.wid"
@@ -1517,7 +1425,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_AA3A5859BA554ACBA58A2D946A62840E"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Welcome"
+                    "DisplayName" = "8:ようこそ"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminWelcomeDlg.wid"

@@ -5,34 +5,35 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ output extension=".tt.cs" #>
+<#@ output extension=".cs" #>
 
-// MIT License
-// 
-// Copyright (c) 2018 Kazuya Ujihara
-// 
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+/*
+ * MIT License
+ * 
+ * Copyright (c) 2018-2019 Kazuya Ujihara
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 
 using ExcelDna.Integration;
-using NCDK.QSAR;
-using System.Collections.Generic;
-using System.Linq;
+using NCDK.Geometries;
+using NCDK.Tools.Manipulator;
 using System.Runtime.Caching;
 
 namespace NCDKExcel
@@ -55,7 +56,7 @@ namespace NCDKExcel
     public static string GetValue(IList<string> values, int index)
     {
         if (values.Count > index)
-		{
+        {
 			var s = values[index];
 			if (s.StartsWith("\"") && s.EndsWith("\""))
 			{
@@ -78,185 +79,116 @@ namespace NCDKExcel
         using (var reader = new StreamReader(filename))
         {
             int idx_function_name = -1;
-            int idx_class_name = -1;
+            int idx_initializer = -1;
             int idx_return_type = -1;
+            int idx_calc_func = -1;
             int idx_preparation = -1;
-            int idx_index = -1;
-            int idx_hidden = -1;
-            int idx_excel_param = -1;
-            int idx_ncdk_param = -1;
-			int idx_pre_execute = -1;
+            int idx_geometry3D = -1;
 
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-                if (line.StartsWith("#"))
-                    continue;
                 if (titleRow == null)
                 {
                     titleRow = SplitLine(line);
-                    idx_hidden = titleRow.IndexOf("hidden");
                     idx_function_name = titleRow.IndexOf("function_name");
-                    idx_class_name = titleRow.IndexOf("class_name");
+                    idx_initializer = titleRow.IndexOf("initializer");
                     idx_return_type = titleRow.IndexOf("return_type");
-                    idx_index = titleRow.IndexOf("index");
-                    idx_excel_param = titleRow.IndexOf("excel_parameters");
-                    idx_ncdk_param = titleRow.IndexOf("ncdk_parameters");
-                    idx_pre_execute = titleRow.IndexOf("pre_execute");
+                    idx_calc_func = titleRow.IndexOf("calc_func");
+                    idx_preparation = titleRow.IndexOf("preparation");
+                    idx_geometry3D = titleRow.IndexOf("geometry3D");  
                     continue;
                 }
 
-                IList<string> values = SplitLine(line); 
-                string isHidden = string.Equals("true", GetValue(values, idx_hidden), StringComparison.OrdinalIgnoreCase) ? "true" : "false";
+                IList<string> values = SplitLine(line);
                 string func_name = GetValue(values, idx_function_name);
-                string class_name = GetValue(values, idx_class_name);
+                string initializer = GetValue(values, idx_initializer);
                 string return_type = GetValue(values, idx_return_type);
-                if (!int.TryParse(GetValue(values, idx_index), out int index))
-                    index = -1;
-                string excel_param = GetValue(values, idx_excel_param);
-				string[][] excel_params = Array.Empty<string[]>();;
-				if (!string.IsNullOrEmpty(excel_param))
-					excel_params = excel_param.Split(',').Select(n => n.Trim().Split(' ').Where(m => m != "").ToArray()).ToArray();
-                string ncdk_param = GetValue(values, idx_ncdk_param);
-				string pre_execute = GetValue(values, idx_pre_execute);
-				
-                if (return_type == null)
-                    return_type = "null";
+                string calc_func = GetValue(values, idx_calc_func);
+                string preparation = GetValue(values, idx_preparation);
+                string geometry3D = GetValue(values, idx_geometry3D);
 
-                bool isArray = false;
-                string elementType = return_type;
-                if (return_type.EndsWith("[]"))
+                string excelReturnType = null;
+                string extractValue = null;
+                string calcReturnType = null;
+
+                switch (return_type)
                 {
-                    isArray = true;
-                    elementType = return_type.Substring(0, return_type.Length - 2);
-                }
-
-                string calcReturnType = "DescriptorValue<"
-                  + (isArray ? "ArrayResult" : "Result")
-                  + "<"
-                  + elementType
-                  + ">>";
-
-                switch (elementType)
-                {
+                    case "int[]":
+                        calcReturnType = "DescriptorValue<ArrayResult<int>>";
+                        excelReturnType = "string";
+                        extractValue = "ToExcelString(result)";
+                        break;
+                    case "double[]":
+                        calcReturnType = "DescriptorValue<ArrayResult<double>>";
+                        excelReturnType = "string";
+                        extractValue = "ToExcelString(result)";
+                        break;
                     case "int":
+                        calcReturnType = "DescriptorValue<Result<int>>";
+                        excelReturnType = "double";
+                        extractValue = "result.Value";
+                        break;
                     case "double":
-                    case "null":
+                        calcReturnType = "DescriptorValue<Result<double>>";
+                        excelReturnType = "double";
+                        extractValue = "result.Value";
+                        break;
+                    case "IBitFingerprint":
+                        calcReturnType = "IBitFingerprint";
+                        excelReturnType = "string";
+                        extractValue = "ToExcelString(result)";
                         break;
                     default:
+                        if (return_type == null)
+                            return_type = "null";
                         throw new Exception("Unexpected return type " + return_type.ToString() + ".");
                 }
+
+                string nullableExcelReturnType = excelReturnType;
+                if (nullableExcelReturnType != "string")
+                    nullableExcelReturnType = nullableExcelReturnType + "?";
 #>
-<#+
-                if (index == -1)
-                {
-#>
-        static IReadOnlyDictionary<string, object> Calc_<#= func_name #>(string text
-			<#+ if (!string.IsNullOrEmpty(excel_param)) { #>, <#= excel_param #> <#+ } #>
-			)
+        [ExcelFunction()]
+        public static <#= excelReturnType #> NCDK_<#= func_name #>(string text)
         {
-            var key = "<#= func_name #>" + SeparatorOfNameKind + text
-				<#= string.Concat(excel_params.Select(n => "+ " + n[1] + ".ToString()"))  #>
-				;
-            IReadOnlyDictionary<string, object> result;
-            result = propCache[key] as IReadOnlyDictionary<string, object>;
-            if (result == null)
+            var cache = MemoryCache.Default;
+            var key = "<#= func_name #>" + SeparatorofNameKind + text;
+            <#= nullableExcelReturnType #> nReturnValue = cache[key] as <#= nullableExcelReturnType #>;
+
+            if (nReturnValue == null)
             {
-                lock (sync_lock_propCache)
+                var mol = Parse(text);
+                var descriptor = <#= initializer #>;
+<#+
+                if (preparation != null)
                 {
-                    result = propCache[key] as IReadOnlyDictionary<string, object>;
-                    if (result == null)
-                    {
-                        var mol = Parse(text);
-                        var descriptor = new <#= class_name #>();
-                        result = descriptor.Calculate(mol<#+ if (!string.IsNullOrEmpty(ncdk_param)) { #>, <#= ncdk_param #><#+ } #>);
-                        var policy = new CacheItemPolicy();
-                        propCache.Set(key, result, policy);
-                    }
+#>
+                <#= preparation #>
+<#+
                 }
+#>
+<#+
+                if (geometry3D == "TRUE")
+                {
+#>
+                if (!GeometryUtil.Has3DCoordinates(mol))
+                {
+                    nReturnValue = <#= excelReturnType == "double" ? "double.NaN" : "\"#N/A\"" #> ;
+                }
+<#+
+                }
+#>
+                if (nReturnValue == null)
+                {
+                    var result = descriptor.<#= calc_func #>(mol);
+                    nReturnValue = <#= extractValue #>;
+                }
+                var policy = new CacheItemPolicy();
+                cache.Set(key, nReturnValue, policy);
             }
-            return result;
+            return (<#= excelReturnType #>)nReturnValue;
         }
-<#+
-                }
-#>
-
-<#+
-                if (isArray)
-                {
-#>
-        [ExcelFunction(IsThreadSafe = true, Name = "NCDK_<#= func_name #>", IsHidden = <#= isHidden #>)]
-        public static string NCDK_<#= func_name #>_A(
-            [ExcelArgument("SMILES, InChI, or MOL")]
-            string text
-			<#+ if (!string.IsNullOrEmpty(excel_param)) { #>, <#= excel_param #> <#+ } #>
-			)
-        {
-            if (text == null)
-                throw new System.ArgumentNullException(nameof(text));
-
-			<#+ if (!string.IsNullOrEmpty(pre_execute)) { #> <#= pre_execute #> <#+ } #>
-
-            var result = Calc_<#= func_name #>(text<#= string.Concat(excel_params.Select(n => ", " + n[1])) #>);
-            return ToExcelString(result);
-        }
-
-        [ExcelFunction(IsThreadSafe = true, Name = "NCDK.<#= func_name #>", IsHidden = <#= isHidden #>)]
-        public static <#= elementType #> NCDK_<#= func_name #>(
-            [ExcelArgument("SMILES, InChI, or MOL")]
-            string text,
-            [ExcelArgument("Index of array")]
-            int index
-			<#+ if (!string.IsNullOrEmpty(excel_param)) { #>, <#= excel_param #> <#+ } #>
-			)
-        {
-            if (text == null)
-                throw new System.ArgumentNullException(nameof(text));
-
-			<#+ if (!string.IsNullOrEmpty(pre_execute)) { #> <#= pre_execute #> <#+ } #>
-
-            var result = Calc_<#= func_name #>(text<#= string.Concat(excel_params.Select(n => ", " + n[1])) #>);
-            return (<#= elementType #>)result.Values.ElementAt(index - 1);
-        }
-<#+
-                }
-                else
-                {
-#>
-        [ExcelFunction(IsThreadSafe = true, Name = "NCDK.<#= func_name #>", IsHidden = <#= isHidden #>)]
-        public static <#= elementType #> NCDK_<#= func_name #>(
-            [ExcelArgument("SMILES, InChI, or MOL")]
-            string text
-			<#+ if (!string.IsNullOrEmpty(excel_param)) { #>, <#= excel_param #> <#+ } #>
-			)
-        {
-            if (text == null)
-                throw new System.ArgumentNullException(nameof(text));
-
-			<#+ if (!string.IsNullOrEmpty(pre_execute)) { #> <#= pre_execute #> <#+ } #>
-<#+
-                    if (index != -1)
-                    {
-#>
-
-            var result = Calc_<#= class_name #>(text<#= string.Concat(excel_params.Select(n => ", " + n[1])) #>);
-            return (<#= elementType #>)result.Values.ElementAt(<#= index - 1 #>);
-<#+
-                    }
-                    else
-                    {
-#>
-
-            var result = Calc_<#= func_name #>(text<#= string.Concat(excel_params.Select(n => ", " + n[1])) #>);
-            return (<#= elementType #>)result.Values.First();
-<#+
-                    }
-#>
-        }
-
-<#+
-                }
-#>
 <#+
             }
         }

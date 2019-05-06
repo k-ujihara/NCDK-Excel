@@ -1,63 +1,68 @@
-function_name	class_name	return_type	index	hidden	excel_parameters	ncdk_parameters	pre_execute
-AcidicGroupCount	NCDK.QSAR.Descriptors.Moleculars.AcidicGroupCountDescriptor	int					
-ALogP_A	NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor	double[]		TRUE			
-APol	NCDK.QSAR.Descriptors.Moleculars.APolDescriptor	double					
-AromaticAtomsCount	NCDK.QSAR.Descriptors.Moleculars.AromaticAtomsCountDescriptor	int					
-AromaticBondsCount	NCDK.QSAR.Descriptors.Moleculars.AromaticBondsCountDescriptor	int					
-AtomCount	NCDK.QSAR.Descriptors.Moleculars.AtomCountDescriptor	int					
-AutocorrelationCharge	NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorCharge	double[]					
-AutocorrelationMass	NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorMass	double[]					
-AutocorrelationPolarizability	NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorPolarizability	double[]					
-BasicGroupCount	NCDK.QSAR.Descriptors.Moleculars.BasicGroupCountDescriptor	int					
-BCUT	NCDK.QSAR.Descriptors.Moleculars.BCUTDescriptor	double[]			"int nHigh, int nLow"	"nHigh, nLow"	if (nHigh <= 0) nHigh = 1; if (nLow <= 0) nLow = 1;
-BondCount	NCDK.QSAR.Descriptors.Moleculars.BondCountDescriptor	int					
-BPol	NCDK.QSAR.Descriptors.Moleculars.BPolDescriptor	double					
-CarbonTypes	NCDK.QSAR.Descriptors.Moleculars.CarbonTypesDescriptor	int[]					
-ChiChain	NCDK.QSAR.Descriptors.Moleculars.ChiChainDescriptor	double[]					
-ChiCluster	NCDK.QSAR.Descriptors.Moleculars.ChiClusterDescriptor	double[]					
-ChiPathCluster	NCDK.QSAR.Descriptors.Moleculars.ChiPathClusterDescriptor	double[]					
-ChiPath	NCDK.QSAR.Descriptors.Moleculars.ChiPathDescriptor	double[]					
-CPSA	NCDK.QSAR.Descriptors.Moleculars.CPSADescriptor	double[]					
-EccentricConnectivityIndex	NCDK.QSAR.Descriptors.Moleculars.EccentricConnectivityIndexDescriptor	int					
-FMF	NCDK.QSAR.Descriptors.Moleculars.FMFDescriptor	double					
-FractionalPSA	NCDK.QSAR.Descriptors.Moleculars.FractionalPSADescriptor	double					
-FragmentComplexity	NCDK.QSAR.Descriptors.Moleculars.FragmentComplexityDescriptor	double					
-GravitationalIndex	NCDK.QSAR.Descriptors.Moleculars.GravitationalIndexDescriptor	double[]					
-HBondAcceptorCount	NCDK.QSAR.Descriptors.Moleculars.HBondAcceptorCountDescriptor	int					
-HBondDonorCount	NCDK.QSAR.Descriptors.Moleculars.HBondDonorCountDescriptor	int					
-HybridizationRatio	NCDK.QSAR.Descriptors.Moleculars.HybridizationRatioDescriptor	double					
-KappaShapeIndices	NCDK.QSAR.Descriptors.Moleculars.KappaShapeIndicesDescriptor	double[]					
-KierHallSmarts	NCDK.QSAR.Descriptors.Moleculars.KierHallSmartsDescriptor	int[]					
-LargestChain	NCDK.QSAR.Descriptors.Moleculars.LargestChainDescriptor	int					
-LargestPiSystem	NCDK.QSAR.Descriptors.Moleculars.LargestPiSystemDescriptor	int					
-LengthOverBreadth	NCDK.QSAR.Descriptors.Moleculars.LengthOverBreadthDescriptor	double[]					
-LongestAliphaticChain	NCDK.QSAR.Descriptors.Moleculars.LongestAliphaticChainDescriptor	int					
-MannholdLogP	NCDK.QSAR.Descriptors.Moleculars.MannholdLogPDescriptor	double					
-MDE	NCDK.QSAR.Descriptors.Moleculars.MDEDescriptor	double[]					
-MomentOfInertia	NCDK.QSAR.Descriptors.Moleculars.MomentOfInertiaDescriptor	double[]					
-PetitjeanNumber	NCDK.QSAR.Descriptors.Moleculars.PetitjeanNumberDescriptor	double					
-PetitjeanShapeIndex	NCDK.QSAR.Descriptors.Moleculars.PetitjeanShapeIndexDescriptor	double[]					
-RotatableBondsCount	NCDK.QSAR.Descriptors.Moleculars.RotatableBondsCountDescriptor	int					
-RuleOfFive	NCDK.QSAR.Descriptors.Moleculars.RuleOfFiveDescriptor	int					
-SmallRing	NCDK.QSAR.Descriptors.Moleculars.SmallRingDescriptor	int[]					
-TPSA	NCDK.QSAR.Descriptors.Moleculars.TPSADescriptor	double					
-VABC	NCDK.QSAR.Descriptors.Moleculars.VABCDescriptor	double					
-VAdjMa	NCDK.QSAR.Descriptors.Moleculars.VAdjMaDescriptor	double					
-Weight	NCDK.QSAR.Descriptors.Moleculars.WeightDescriptor	double			string element	element	"if (element == """") element = ""*"";"
-WeightedPath	NCDK.QSAR.Descriptors.Moleculars.WeightedPathDescriptor	double[]					
-WHIM	NCDK.QSAR.Descriptors.Moleculars.WHIMDescriptor	double[]					
-WienerNumbers	NCDK.QSAR.Descriptors.Moleculars.WienerNumbersDescriptor	double[]					
-XLogP	NCDK.QSAR.Descriptors.Moleculars.XLogPDescriptor	double					
-ZagrebIndex	NCDK.QSAR.Descriptors.Moleculars.ZagrebIndexDescriptor	double					
-C1SP1	CarbonTypes	int	1				
-C2SP1	CarbonTypes	int	2				
-C1SP2	CarbonTypes	int	3				
-C2SP2	CarbonTypes	int	4				
-C3SP2	CarbonTypes	int	5				
-C1SP3	CarbonTypes	int	6				
-C2SP3	CarbonTypes	int	7				
-C3SP3	CarbonTypes	int	8				
-C4SP3	CarbonTypes	int	9				
-ALogP	ALogP_A	double	1				
-AMR	ALogP_A	double	3				
-MW	NCDK.QSAR.Descriptors.Moleculars.WeightDescriptor	double					
+function_name	initializer	return_type	calc_func	preparation	geometry3D
+AcidicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.AcidicGroupCountDescriptor()	int	Calculate		
+APol	new NCDK.QSAR.Descriptors.Moleculars.APolDescriptor()	double	Calculate		
+AromaticAtomsCount	new NCDK.QSAR.Descriptors.Moleculars.AromaticAtomsCountDescriptor()	int	Calculate		
+AromaticBondsCount	new NCDK.QSAR.Descriptors.Moleculars.AromaticBondsCountDescriptor()	int	Calculate		
+AtomCount	new NCDK.QSAR.Descriptors.Moleculars.AtomCountDescriptor()	int	Calculate		
+AutocorrelationCharge	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorCharge()	double[]	Calculate		
+AutocorrelationMass	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorMass()	double[]	Calculate		
+AutocorrelationPolarizability	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorPolarizability()	double[]	Calculate		
+BasicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.BasicGroupCountDescriptor()	int	Calculate		
+BCUT	new NCDK.QSAR.Descriptors.Moleculars.BCUTDescriptor()	double[]	Calculate		
+BondCount	new NCDK.QSAR.Descriptors.Moleculars.BondCountDescriptor()	int	Calculate		
+BPol	new NCDK.QSAR.Descriptors.Moleculars.BPolDescriptor()	double	Calculate		
+CarbonTypes	new NCDK.QSAR.Descriptors.Moleculars.CarbonTypesDescriptor()	int[]	Calculate		
+ChiChain	new NCDK.QSAR.Descriptors.Moleculars.ChiChainDescriptor()	double[]	Calculate		
+ChiCluster	new NCDK.QSAR.Descriptors.Moleculars.ChiClusterDescriptor()	double[]	Calculate		
+ChiPathCluster	new NCDK.QSAR.Descriptors.Moleculars.ChiPathClusterDescriptor()	double[]	Calculate		
+ChiPath	new NCDK.QSAR.Descriptors.Moleculars.ChiPathDescriptor()	double[]	Calculate		
+CPSA	new NCDK.QSAR.Descriptors.Moleculars.CPSADescriptor()	double[]	Calculate		TRUE
+EccentricConnectivityIndex	new NCDK.QSAR.Descriptors.Moleculars.EccentricConnectivityIndexDescriptor()	int	Calculate		
+FMF	new NCDK.QSAR.Descriptors.Moleculars.FMFDescriptor()	double	Calculate		
+FractionalPSA	new NCDK.QSAR.Descriptors.Moleculars.FractionalPSADescriptor()	double	Calculate		
+FragmentComplexity	new NCDK.QSAR.Descriptors.Moleculars.FragmentComplexityDescriptor()	double	Calculate		
+GravitationalIndex	new NCDK.QSAR.Descriptors.Moleculars.GravitationalIndexDescriptor()	double[]	Calculate		TRUE
+HBondAcceptorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondAcceptorCountDescriptor()	int	Calculate		
+HBondDonorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondDonorCountDescriptor()	int	Calculate		
+HybridizationRatio	new NCDK.QSAR.Descriptors.Moleculars.HybridizationRatioDescriptor()	double	Calculate		
+KappaShapeIndices	new NCDK.QSAR.Descriptors.Moleculars.KappaShapeIndicesDescriptor()	double[]	Calculate		
+KierHallSmarts	new NCDK.QSAR.Descriptors.Moleculars.KierHallSmartsDescriptor()	int[]	Calculate		
+LargestChain	new NCDK.QSAR.Descriptors.Moleculars.LargestChainDescriptor()	int	Calculate		
+LargestPiSystem	new NCDK.QSAR.Descriptors.Moleculars.LargestPiSystemDescriptor()	int	Calculate		
+LengthOverBreadth	new NCDK.QSAR.Descriptors.Moleculars.LengthOverBreadthDescriptor()	double[]	Calculate	NCDK.Config.BODRIsotopeFactory.Instance.ConfigureAtoms(mol);	TRUE
+LongestAliphaticChain	new NCDK.QSAR.Descriptors.Moleculars.LongestAliphaticChainDescriptor(checkRingSystem: true)	int	Calculate		
+MannholdLogP	new NCDK.QSAR.Descriptors.Moleculars.MannholdLogPDescriptor()	double	Calculate		
+MDE	new NCDK.QSAR.Descriptors.Moleculars.MDEDescriptor()	double[]	Calculate		
+MomentOfInertia	new NCDK.QSAR.Descriptors.Moleculars.MomentOfInertiaDescriptor()	double[]	Calculate		TRUE
+PetitjeanNumber	new NCDK.QSAR.Descriptors.Moleculars.PetitjeanNumberDescriptor()	double	Calculate		
+PetitjeanShapeIndex	new NCDK.QSAR.Descriptors.Moleculars.PetitjeanShapeIndexDescriptor()	double[]	Calculate		TRUE
+RotatableBondsCount	new NCDK.QSAR.Descriptors.Moleculars.RotatableBondsCountDescriptor()	int	Calculate		
+RuleOfFive	new NCDK.QSAR.Descriptors.Moleculars.RuleOfFiveDescriptor()	int	Calculate		
+SmallRing	new NCDK.QSAR.Descriptors.Moleculars.SmallRingDescriptor()	int[]	Calculate		
+TPSA	new NCDK.QSAR.Descriptors.Moleculars.TPSADescriptor()	double	Calculate		
+VABC	new NCDK.QSAR.Descriptors.Moleculars.VABCDescriptor()	double	Calculate	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol); AddImplicitHydrogens(mol);	
+VAdjMa	new NCDK.QSAR.Descriptors.Moleculars.VAdjMaDescriptor()	double	Calculate		
+Weight	new NCDK.QSAR.Descriptors.Moleculars.WeightDescriptor()	double	Calculate		
+WeightedPath	new NCDK.QSAR.Descriptors.Moleculars.WeightedPathDescriptor()	double[]	Calculate		
+WHIM	new NCDK.QSAR.Descriptors.Moleculars.WHIMDescriptor()	double[]	Calculate		TRUE
+WienerNumbers	new NCDK.QSAR.Descriptors.Moleculars.WienerNumbersDescriptor()	double[]	Calculate		
+XLogP	new NCDK.QSAR.Descriptors.Moleculars.XLogPDescriptor()	double	Calculate		
+ZagrebIndex	new NCDK.QSAR.Descriptors.Moleculars.ZagrebIndexDescriptor()	double	Calculate		
+ECFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP0)	IBitFingerprint	GetBitFingerprint		
+ECFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP2)	IBitFingerprint	GetBitFingerprint		
+ECFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP4)	IBitFingerprint	GetBitFingerprint		
+ECFP6	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP6)	IBitFingerprint	GetBitFingerprint		
+FCFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP0)	IBitFingerprint	GetBitFingerprint		
+FCFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP2)	IBitFingerprint	GetBitFingerprint		
+FCFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP4)	IBitFingerprint	GetBitFingerprint		
+FCFP6	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP6)	IBitFingerprint	GetBitFingerprint		
+AtomPairs2DFingerprinter	new NCDK.Fingerprints.AtomPairs2DFingerprinter()	IBitFingerprint	GetBitFingerprint		
+EStateFingerprinter	new NCDK.Fingerprints.EStateFingerprinter()	IBitFingerprint	GetBitFingerprint		
+ExtendedFingerprinter	new NCDK.Fingerprints.ExtendedFingerprinter()	IBitFingerprint	GetBitFingerprint		
+CDKFingerprinter	new NCDK.Fingerprints.Fingerprinter()	IBitFingerprint	GetBitFingerprint		
+KlekotaRothFingerprinter	new NCDK.Fingerprints.KlekotaRothFingerprinter()	IBitFingerprint	GetBitFingerprint		
+LingoFingerprinter	new NCDK.Fingerprints.LingoFingerprinter()	IBitFingerprint	GetBitFingerprint		
+MACCSFingerprinter	new NCDK.Fingerprints.MACCSFingerprinter()	IBitFingerprint	GetBitFingerprint		
+ShortestPathFingerprinter	new NCDK.Fingerprints.ShortestPathFingerprinter()	IBitFingerprint	GetBitFingerprint	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);	
+SubstructureFingerprinter	new NCDK.Fingerprints.SubstructureFingerprinter()	IBitFingerprint	GetBitFingerprint		
+PubchemFingerprinter   	new NCDK.Fingerprints.PubchemFingerprinter()	IBitFingerprint	GetBitFingerprint		

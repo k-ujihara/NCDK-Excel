@@ -1,6 +1,6 @@
 ﻿// MIT License
 // 
-// Copyright (c) 2018 Kazuya Ujihara
+// Copyright (c) 2018-2019 Kazuya Ujihara
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,6 @@
 
 using System;
 using System.IO;
-using System.Text.RegularExpressions;
 
 namespace NCDK_ExcelAddIn
 {
@@ -65,12 +64,13 @@ namespace NCDK_ExcelAddIn
             Application.RegisterXLL(addinPath);
         }
 
-        static readonly Regex reOpenDD = new Regex("^OPEN(\\d*)$", RegexOptions.Compiled);
-
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
-#if false // following code is not required if this xll is resisted by Application.RegisterXLL method.
-            var key = Registry.CurrentUser
+#if false
+            // following code is not required if this xll is resisted by Application.RegisterXLL method.
+            // but it can be effective when it shuted down abnormally on previous session.
+            var reOpenDD = new System.Text.RegularExpressions.Regex("^OPEN(\\d*)$", System.Text.RegularExpressions.RegexOptions.Compiled);
+            var key = Microsoft.Win32.Registry.CurrentUser
                 .OpenSubKey("Software")
                 .OpenSubKey("Microsoft")
                 .OpenSubKey("Office")
