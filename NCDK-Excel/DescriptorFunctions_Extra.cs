@@ -1,43 +1,41 @@
 ﻿using ExcelDna.Integration;
+using NCDK;
 using System;
 using System.Runtime.Caching;
+using static NCDKExcel.Utility;
 
 namespace NCDKExcel
 {
     public static partial class DescriptorFunctions
     {
-        [ExcelFunction()]
-        public static double NCDK_ALogP(string text)
+        static double NCDK_CalcDoubleDesc(string text, string name, Func<IAtomContainer, double?> calculator)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
             var cache = MemoryCache.Default;
-            var key = "AlogP" + SeparatorofNameKind + text;
-            double? result = cache[key] as double?;
-            if (result == null)
+            var key = name + SeparatorofNameKind + text;
+            double? nReturnValue = cache[key] as double?;
+            if (nReturnValue == null)
             {
                 var mol = Parse(text);
-                result = new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).Value;
+                nReturnValue = calculator(mol);
+                var policy = new CacheItemPolicy();
+                cache.Set(key, nReturnValue, policy);
             }
-            return result.Value;
+            return nReturnValue.Value;
+        }
+
+        [ExcelFunction()]
+        public static double NCDK_ALogP(string text)
+        {
+            return NCDK_CalcDoubleDesc(text, "AlogP", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).Value);
         }
 
         [ExcelFunction()]
         public static double NCDK_AMolarRefractivity(string text)
         {
-            if (text == null)
-                throw new ArgumentNullException(nameof(text));
-
-            var cache = MemoryCache.Default;
-            var key = "AMolarRefractivity" + SeparatorofNameKind + text;
-            double? result = cache[key] as double?;
-            if (result == null)
-            {
-                var mol = Parse(text);
-                result = new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).AMR;
-            }
-            return result.Value;
+            return NCDK_CalcDoubleDesc(text, "AMolarRefractivity", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).AMR);
         }
     }
 }

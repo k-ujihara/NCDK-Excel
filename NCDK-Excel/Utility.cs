@@ -1,32 +1,7 @@
-﻿// MIT License
-// 
-// Copyright (c) 2018-2019 Kazuya Ujihara
-// 
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
-
-
-using NCDK;
+﻿using NCDK;
 using NCDK.Fingerprints;
 using NCDK.IO;
 using NCDK.QSAR;
-using NCDK.Silent;
-using NCDK.Smiles;
 using System;
 using System.IO;
 using System.Linq;
@@ -35,11 +10,19 @@ using System.Text;
 
 namespace NCDKExcel
 {
-    public static partial class DescriptorFunctions
+    public enum LineNotationType
     {
-        private const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
+        Nil = 0,
+        Smiles = 1,
+        InChI = 2,
+        MolText = 3,
+    }
 
-        static string ToExcelString(object value)
+    public static class Utility
+    {
+        public const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
+
+        public static string ToExcelString(object value)
         {
             switch (value)
             {
@@ -54,12 +37,12 @@ namespace NCDKExcel
             }
         }
 
-        static string ToExcelString(IDescriptorResult result)
+        public static string ToExcelString(IDescriptorResult result)
         {
             return string.Join(", ", result.Values.Select(n => ToExcelString(n)));
         }
 
-        static string ToExcelString(IBitFingerprint fp)
+        public static string ToExcelString(IBitFingerprint fp)
         {
             var sb = new StringBuilder();
             for (int i = 0; i < fp.Length; i++)
@@ -69,13 +52,11 @@ namespace NCDKExcel
             return sb.ToString();
         }
 
-        static SmilesParser parser = new SmilesParser(ChemObjectBuilder.Instance);
-
         static IAtomContainer ParseSmiles(string smiles)
         {
             try
             {
-                var mol = parser.ParseSmiles(smiles);
+                var mol = CDK.SmilesParser.ParseSmiles(smiles);
                 if (mol.Atoms.Count == 0)
                     return null;
                 return mol;
@@ -92,7 +73,7 @@ namespace NCDKExcel
             {
                 using (var reader = new InChIPlainTextReader(new StringReader(inchi)))
                 {
-                    var chemFile = reader.Read(new ChemFile());
+                    var chemFile = reader.Read(CDK.Builder.NewChemFile());
                     if (chemFile.Count != 1)
                         throw new Exception();
                     var seq = chemFile[0];
@@ -111,15 +92,19 @@ namespace NCDKExcel
             return null;
         }
 
-        static void AddImplicitHydrogens(IAtomContainer container)
+        /// <summary>
+        /// Add implicit hydrogens.
+        /// </summary>
+        /// <param name="container">Molecular to add hydrogens</param>
+        public static void AddImplicitHydrogens(IAtomContainer container)
         {
             var matcher = CDK.AtomTypeMatcher;
             int atomCount = container.Atoms.Count;
             string[] originalAtomTypeNames = new string[atomCount];
             for (int i = 0; i < atomCount; i++)
             {
-                IAtom atom = container.Atoms[i];
-                IAtomType type = matcher.FindMatchingAtomType(container, atom);
+                var atom = container.Atoms[i];
+                var type = matcher.FindMatchingAtomType(container, atom);
                 originalAtomTypeNames[i] = atom.AtomTypeName;
                 atom.AtomTypeName = type.AtomTypeName;
             }
@@ -128,14 +113,22 @@ namespace NCDKExcel
             // reset to the original atom types
             for (int i = 0; i < atomCount; i++)
             {
-                IAtom atom = container.Atoms[i];
+                var atom = container.Atoms[i];
                 atom.AtomTypeName = originalAtomTypeNames[i];
             }
         }
 
-        static readonly IAtomContainer nullMol = ChemObjectBuilder.Instance.NewAtomContainer();
+        /// <summary>
+        /// Dummy molecule to indicate <see langword="null"/>.
+        /// </summary>
+        static readonly IAtomContainer nullMol = CDK.Builder.NewAtomContainer();
 
-        static IAtomContainer Parse(string text)
+        /// <summary>
+        /// Parse <paramref name="text"/> as SMILES, InChI or MOL text and cache it.
+        /// </summary>
+        /// <param name="text">Text to parse</param>
+        /// <returns>Molecular or <see langword="null"/> if it cannot be parsed.</returns>
+        public static IAtomContainer Parse(string text)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
@@ -143,7 +136,7 @@ namespace NCDKExcel
             var cache = MemoryCache.Default;
             if (!(cache[text] is IAtomContainer mol))
             {
-                mol = RawParse(text);
+                mol = RawParse(text, out LineNotationType notationType);
                 if (mol == null)
                     mol = nullMol;
 
@@ -155,12 +148,15 @@ namespace NCDKExcel
             return mol;
         }
 
-        static IAtomContainer RawParse(string text)
+        static IAtomContainer RawParse(string text, out LineNotationType notationType)
         {
             IAtomContainer mol = null;
 
             if (text == null)
+            {
+                notationType = LineNotationType.Nil;
                 return null;
+            }
             if (text.IndexOf('\r') >= 0)
                 goto Go_Mol;
             if (text.IndexOf('\n') >= 0)
@@ -168,16 +164,22 @@ namespace NCDKExcel
 
             mol = ParseSmiles(text);
             if (mol != null)
+            {
+                notationType = LineNotationType.Smiles;
                 return mol;
+            }
 
             mol = ParseInChI(text);
             if (mol != null)
+            {
+                notationType = LineNotationType.InChI;
                 return mol;
-           
+            }
+
             Go_Mol:
             using (var r = new MDLV2000Reader(new StringReader(text)))
             {
-                var m = ChemObjectBuilder.Instance.NewAtomContainer();
+                var m = CDK.Builder.NewAtomContainer();
                 try
                 {
                     r.Read(m);
@@ -187,11 +189,14 @@ namespace NCDKExcel
                 { }
             }
             if (mol != null)
+            {
+                notationType = LineNotationType.MolText;
                 return mol;
+            }
 
             using (var r = new MDLV3000Reader(new StringReader(text)))
             {
-                var m = ChemObjectBuilder.Instance.NewAtomContainer();
+                var m = CDK.Builder.NewAtomContainer();
                 try
                 {
                     r.Read(m);
@@ -201,8 +206,12 @@ namespace NCDKExcel
                 { }
             }
             if (mol != null)
+            {
+                notationType = LineNotationType.MolText;
                 return mol;
+            }
 
+            notationType = LineNotationType.Nil;
             return null;
         }
     }

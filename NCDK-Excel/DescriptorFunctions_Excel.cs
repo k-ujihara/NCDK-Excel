@@ -27,6 +27,7 @@ using ExcelDna.Integration;
 using NCDK.Geometries;
 using NCDK.Tools.Manipulator;
 using System.Runtime.Caching;
+using static NCDKExcel.Utility;
 
 namespace NCDKExcel
 {
