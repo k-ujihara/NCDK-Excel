@@ -176,7 +176,7 @@ namespace NCDKExcel
                 return mol;
             }
 
-            Go_Mol:
+        Go_Mol:
             using (var r = new MDLV2000Reader(new StringReader(text)))
             {
                 var m = CDK.Builder.NewAtomContainer();
@@ -213,6 +213,26 @@ namespace NCDKExcel
 
             notationType = LineNotationType.Nil;
             return null;
+        }
+
+        public static string ToMolText(IAtomContainer mol)
+        {
+            string ret = null;
+            using (var sr = new StringWriter())
+            {
+                try
+                {
+                    using (var w = new MDLV2000Writer(sr))
+                    {
+                        w.WriteMolecule(mol);
+                    }
+                    ret = sr.ToString();
+                }
+                catch (Exception)
+                {
+                }
+            }
+            return ret;
         }
     }
 }
