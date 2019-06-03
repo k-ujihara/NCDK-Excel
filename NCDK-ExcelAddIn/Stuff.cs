@@ -72,8 +72,16 @@ namespace NCDK_ExcelAddIn
                                 newSheet.Cells[row, ColumnMol] = exception.Message;
                             }
                         }
-                        newSheet.Rows[row].RowHeight = newSheet.Rows[1].RowHeight;
                         row++;
+                    }
+                }
+
+                {
+                    var height = newSheet.Rows[1].RowHeight;
+                    var rows = newSheet.Rows;
+                    for (int i = 2; i < row; i++)
+                    {
+                        rows[i].RowHeight = height;
                     }
                 }
             }
