@@ -45,6 +45,24 @@ namespace NCDKExcel
             return nReturnValue;
         }
 
+        /// <summary>
+        /// Call NCDK functions by name.
+        /// This calls <see cref="DescriptorFunctions"/>.NCDK_<paramref name="name"/>(<paramref name="text"/>) method using refrection.
+        /// </summary>
+        /// <param name="name">The name to specify the method.</param>
+        /// <param name="text">The text to specify the molecule.</param>
+        /// <returns>The calculated value expressed by string.</returns>
+        [ExcelFunction(Name = "NCDK")]
+        public static string NCDKByName(string name, string text)
+        {
+            var type = typeof(DescriptorFunctions);
+            var method = type.GetMethod("NCDK_" + name);
+            if (method == null)
+                return null;
+            var ret = method.Invoke(null, new object[] { text });
+            return ret?.ToString();
+        }
+
         [ExcelFunction()]
         public static double NCDK_ALogP(string text)
         {
