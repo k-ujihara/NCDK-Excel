@@ -37,6 +37,7 @@
             this.tabNCDK = this.Factory.CreateRibbonTab();
             this.groupGeneral = this.Factory.CreateRibbonGroup();
             this.buttonImportSDF = this.Factory.CreateRibbonButton();
+            this.buttonGeneratePicture = this.Factory.CreateRibbonButton();
             this.tabNCDK.SuspendLayout();
             this.groupGeneral.SuspendLayout();
             this.SuspendLayout();
@@ -45,11 +46,13 @@
             // 
             this.tabNCDK.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.tabNCDK.Groups.Add(this.groupGeneral);
+            this.tabNCDK.Label = "TabAddIns";
             this.tabNCDK.Name = "tabNCDK";
             // 
             // groupGeneral
             // 
             this.groupGeneral.Items.Add(this.buttonImportSDF);
+            this.groupGeneral.Items.Add(this.buttonGeneratePicture);
             this.groupGeneral.Label = "NCDK";
             this.groupGeneral.Name = "groupGeneral";
             // 
@@ -58,6 +61,12 @@
             this.buttonImportSDF.Label = "Import SDF";
             this.buttonImportSDF.Name = "buttonImportSDF";
             this.buttonImportSDF.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonImportSDF_Click);
+            // 
+            // buttonGeneratePicture
+            // 
+            this.buttonGeneratePicture.Label = "Generate Picture";
+            this.buttonGeneratePicture.Name = "buttonGeneratePicture";
+            this.buttonGeneratePicture.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonGeneratePicture_Click);
             // 
             // NCDKExcelRibbon
             // 
@@ -78,6 +87,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tabNCDK;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupGeneral;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonImportSDF;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonGeneratePicture;
     }
 
     partial class ThisRibbonCollection
