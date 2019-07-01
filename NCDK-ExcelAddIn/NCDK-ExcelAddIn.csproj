@@ -188,6 +188,7 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="ComUtility.cs" />
     <Compile Include="NCDKExcelRibbon.cs">
       <SubType>Component</SubType>
     </Compile>

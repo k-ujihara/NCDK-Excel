@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
+using static NCDKExcel.ComUtility;
 
 namespace NCDK_ExcelAddIn
 {
@@ -63,14 +64,15 @@ namespace NCDK_ExcelAddIn
                         }
                         using (var sr = new StringWriter())
                         {
+                            Excel.Range cells = newSheet.Cells;
                             try
                             {
                                 using (var w = new MDLV2000Writer(sr))
                                 {
                                     w.WriteMolecule(mol);
                                 }
-                                newSheet.Cells[row, ColumnMol] = sr.ToString();
-                                newSheet.Cells[row, ColumnTitle] = mol.Title;
+                                cells[row, ColumnMol] = sr.ToString();
+                                cells[row, ColumnTitle] = mol.Title;
                                 foreach (var prop in mol.GetProperties())
                                 {
                                     switch (prop.Key)
@@ -81,9 +83,9 @@ namespace NCDK_ExcelAddIn
                                             if (!keyIndex.TryGetValue(key, out int index))
                                             {
                                                 keyIndex[key] = (index = endIndex++);
-                                                newSheet.Cells[1, index] = key;
+                                                cells[1, index] = key;
                                             }
-                                            newSheet.Cells[row, index] = prop.Value.ToString();
+                                            cells[row, index] = prop.Value.ToString();
                                             break;
                                         default:
                                             break;
@@ -92,7 +94,11 @@ namespace NCDK_ExcelAddIn
                             }
                             catch (CDKException exception)
                             {
-                                newSheet.Cells[row, ColumnMol] = exception.Message;
+                                cells[row, ColumnMol] = exception.Message;
+                            }
+                            finally
+                            {
+                                ReleaseComObject(cells);
                             }
                         }
                         row++;

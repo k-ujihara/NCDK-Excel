@@ -38,6 +38,9 @@
             this.groupGeneral = this.Factory.CreateRibbonGroup();
             this.buttonImportSDF = this.Factory.CreateRibbonButton();
             this.buttonGeneratePicture = this.Factory.CreateRibbonButton();
+            this.buttonUpdatePictures = this.Factory.CreateRibbonButton();
+            this.buttonShowPictures = this.Factory.CreateRibbonButton();
+            this.buttonUnshowPicture = this.Factory.CreateRibbonButton();
             this.tabNCDK.SuspendLayout();
             this.groupGeneral.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +56,9 @@
             // 
             this.groupGeneral.Items.Add(this.buttonImportSDF);
             this.groupGeneral.Items.Add(this.buttonGeneratePicture);
+            this.groupGeneral.Items.Add(this.buttonUpdatePictures);
+            this.groupGeneral.Items.Add(this.buttonShowPictures);
+            this.groupGeneral.Items.Add(this.buttonUnshowPicture);
             this.groupGeneral.Label = "NCDK";
             this.groupGeneral.Name = "groupGeneral";
             // 
@@ -67,6 +73,24 @@
             this.buttonGeneratePicture.Label = "Generate Picture";
             this.buttonGeneratePicture.Name = "buttonGeneratePicture";
             this.buttonGeneratePicture.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonGeneratePicture_Click);
+            // 
+            // buttonUpdatePictures
+            // 
+            this.buttonUpdatePictures.Label = "Update Picture";
+            this.buttonUpdatePictures.Name = "buttonUpdatePictures";
+            this.buttonUpdatePictures.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonUpdatePictures_Click);
+            // 
+            // buttonShowPictures
+            // 
+            this.buttonShowPictures.Label = "Show Picture";
+            this.buttonShowPictures.Name = "buttonShowPictures";
+            this.buttonShowPictures.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonShowPictures_Click);
+            // 
+            // buttonUnshowPicture
+            // 
+            this.buttonUnshowPicture.Label = "Unshow Picture";
+            this.buttonUnshowPicture.Name = "buttonUnshowPicture";
+            this.buttonUnshowPicture.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonUnshowPicture_Click);
             // 
             // NCDKExcelRibbon
             // 
@@ -88,6 +112,9 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupGeneral;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonImportSDF;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonGeneratePicture;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonShowPictures;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonUnshowPicture;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonUpdatePictures;
     }
 
     partial class ThisRibbonCollection
