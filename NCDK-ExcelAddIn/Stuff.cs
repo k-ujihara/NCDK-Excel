@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
-using static NCDKExcel.ComUtility;
 
 namespace NCDK_ExcelAddIn
 {
@@ -95,10 +94,6 @@ namespace NCDK_ExcelAddIn
                             catch (CDKException exception)
                             {
                                 cells[row, ColumnMol] = exception.Message;
-                            }
-                            finally
-                            {
-                                ReleaseComObject(cells);
                             }
                         }
                         row++;

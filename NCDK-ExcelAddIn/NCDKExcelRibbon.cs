@@ -29,7 +29,6 @@ using System.Linq;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
-using static NCDKExcel.ComUtility;
 
 namespace NCDK_ExcelAddIn
 {
@@ -124,7 +123,6 @@ namespace NCDK_ExcelAddIn
                 firstCellInfo = new Tuple<int, int>(firstCell.Column, firstCell.Row);
                 if (!string.IsNullOrEmpty(firstCell.Text))
                     action(firstCell);
-                ReleaseComObject(firstCell);
             }
 
             Excel.Range foundCell = range.Find("*");
@@ -139,7 +137,6 @@ namespace NCDK_ExcelAddIn
             for (int i = 0; i < cellsCount; i++)
             {
                 newfoundCell = range.FindNext(foundCell);
-                ReleaseComObject(foundCell);
                 var cellInfo = new Tuple<int, int>(newfoundCell.Column, newfoundCell.Row);
                 if (firstCellInfo.Equals(cellInfo)
                  || firstFoundCellInfo.Equals(cellInfo))
@@ -148,7 +145,6 @@ namespace NCDK_ExcelAddIn
                 action(newfoundCell);
                 foundCell = newfoundCell;
             }
-            ReleaseComObject(newfoundCell);
         }
 
         class StructureGegerator : IDisposable      
@@ -213,12 +209,10 @@ namespace NCDK_ExcelAddIn
                         string pictureName = CreateUniqueString(
                              shapes.Cast<Excel.Shape>().
                              Select(n => n.Name), prefix: PicturePrefix);
-                        ReleaseComObject(shapes);
 
                         var shapeToDelete = FindShape(cell);
                         if (shapeToDelete != null)
                             shapeToDelete.Delete();
-                        ReleaseComObject(shapeToDelete);
                         AddPicture(cell, tempPng, pictureName);
                     }
                 }
@@ -245,7 +239,6 @@ namespace NCDK_ExcelAddIn
                         var shapeToDelete = FindShape(cell);
                         if (shapeToDelete != null)
                             shapeToDelete.Delete();
-                        ReleaseComObject(shapeToDelete);
                         AddPicture(cell, tempPng, pictureName);
                         shapeNames.Add(pictureName);
                     }
@@ -269,9 +262,6 @@ namespace NCDK_ExcelAddIn
             shape.ScaleHeight(1, Office.MsoTriState.msoTrue);
             shape.ScaleWidth(1, Office.MsoTriState.msoTrue);
             shape.Name = name;
-
-            ReleaseComObject(shape);
-            ReleaseComObject(shapes);
         }
 
         /// <summary>
@@ -315,9 +305,7 @@ namespace NCDK_ExcelAddIn
             foreach (var shape in shapes.Cast<Excel.Shape>().Where(n => IsChemicalStructure(n)))
             {
                 shape.Visible = flag;
-                ReleaseComObject(shape);
             }
-            ReleaseComObject(shapes);
         }
 
         private void ButtonUnshowPicture_Click(object sender, RibbonControlEventArgs e)
@@ -348,9 +336,7 @@ namespace NCDK_ExcelAddIn
                 {
                     return shape;
                 }
-                ReleaseComObject(shape);
             }
-            ReleaseComObject(shapes);
             return null;
         }
 
@@ -368,7 +354,6 @@ namespace NCDK_ExcelAddIn
                 {
                     var cell = shape.TopLeftCell;
                     shapeList.Add(new Tuple<Excel.Shape, int, int>(shape, cell.Row, cell.Column));
-                    ReleaseComObject(cell);
                 }
                 foreach (var shapeInfo in shapeList)
                 {
@@ -387,8 +372,6 @@ namespace NCDK_ExcelAddIn
                             Trace.TraceInformation(ex.Message);
                         }
                     }
-                    ReleaseComObject(cell);
-                    ReleaseComObject(shape);
                 }
             }
             catch (Exception)
