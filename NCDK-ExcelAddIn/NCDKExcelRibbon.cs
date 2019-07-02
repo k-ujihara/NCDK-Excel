@@ -258,10 +258,13 @@ namespace NCDK_ExcelAddIn
             Excel.Shape shape = shapes.AddPicture(
                 pictureFileName,
                 Office.MsoTriState.msoFalse, Office.MsoTriState.msoTrue,
-                cell.Left, cell.Top, 0, 0);
-            shape.ScaleHeight(1, Office.MsoTriState.msoTrue);
-            shape.ScaleWidth(1, Office.MsoTriState.msoTrue);
+                cell.Left, cell.Top, cell.Width, cell.Height);
+            shape.Placement = Excel.XlPlacement.xlMoveAndSize;
             shape.Name = name;
+
+            // if we want to add original size picture, add the following lines.
+            // shape.ScaleHeight(1, Office.MsoTriState.msoTrue);
+            // shape.ScaleWidth(1, Office.MsoTriState.msoTrue);
         }
 
         /// <summary>
