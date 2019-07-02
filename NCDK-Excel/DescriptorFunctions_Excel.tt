@@ -34,7 +34,6 @@
 using ExcelDna.Integration;
 using NCDK.Geometries;
 using NCDK.Tools.Manipulator;
-using System.Runtime.Caching;
 using static NCDKExcel.Utility;
 
 namespace NCDKExcel
@@ -153,13 +152,10 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static <#= excelReturnType #> NCDK_<#= func_name #>(string text)
         {
-            var cache = MemoryCache.Default;
-            var key = "<#= func_name #>" + SeparatorofNameKind + text;
-            <#= nullableExcelReturnType #> nReturnValue = cache[key] as <#= nullableExcelReturnType #>;
-
-            if (nReturnValue == null)
-            {
-                var mol = Parse(text);
+            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "<#= func_name #>",
+                mol =>
+                {
+                <#= nullableExcelReturnType #> nReturnValue = null;
                 var descriptor = <#= initializer #>;
 <#+
                 if (preparation != null)
@@ -185,10 +181,10 @@ namespace NCDKExcel
                     var result = descriptor.<#= calc_func #>(mol);
                     nReturnValue = <#= extractValue #>;
                 }
-                var policy = new CacheItemPolicy();
-                cache.Set(key, nReturnValue, policy);
-            }
-            return (<#= excelReturnType #>)nReturnValue;
+
+                return (<#= excelReturnType #>)nReturnValue;
+                });
+            return (<#= excelReturnType #>)ret;
         }
 <#+
             }

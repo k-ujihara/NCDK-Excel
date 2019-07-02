@@ -2,29 +2,43 @@
 using NCDK;
 using NCDK.Graphs.InChI;
 using System;
-using System.Runtime.Caching;
+using System.Collections.Generic;
 using static NCDKExcel.Utility;
 
 namespace NCDKExcel
 {
+    static class Caching<T>
+    {
+        static IDictionary<string, T> ValueCache = new Dictionary<string, T>();
+
+        public static T Calculate(string text, string name, Func<IAtomContainer, T> calculator)
+        {
+            if (text == null)
+                throw new ArgumentNullException(nameof(text));
+
+            var key = name + SeparatorofNameKind + text;
+            if (!ValueCache.TryGetValue(key, out T nReturnValue))
+            {
+                var mol = Parse(text);
+                nReturnValue = calculator(mol);
+                ValueCache[key] = nReturnValue;
+            }
+            return nReturnValue;
+        }
+    }
+
     public static partial class DescriptorFunctions
     {
+        static IDictionary<string, double?> ValueCacheDouble = new Dictionary<string, double?>();
+
         static double NCDK_CalcDoubleDesc(string text, string name, Func<IAtomContainer, double?> calculator)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var cache = MemoryCache.Default;
             var key = name + SeparatorofNameKind + text;
-            double? nReturnValue = cache[key] as double?;
-            if (nReturnValue == null)
-            {
-                var mol = Parse(text);
-                nReturnValue = calculator(mol);
-                var policy = new CacheItemPolicy();
-                cache.Set(key, nReturnValue, policy);
-            }
-            return nReturnValue.Value;
+            var ret = Caching<double?>.Calculate(text, name, calculator);
+            return ret.Value;
         }
 
         static string NCDK_CalcStringDesc(string text, string name, Func<IAtomContainer, string> calculator)
@@ -32,17 +46,9 @@ namespace NCDKExcel
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var cache = MemoryCache.Default;
             var key = name + SeparatorofNameKind + text;
-            string nReturnValue = cache[key] as string;
-            if (nReturnValue == null)
-            {
-                var mol = Parse(text);
-                nReturnValue = calculator(mol);
-                var policy = new CacheItemPolicy();
-                cache.Set(key, nReturnValue, policy);
-            }
-            return nReturnValue;
+            var ret = Caching<string>.Calculate(text, name, calculator);
+            return ret;
         }
 
         /// <summary>

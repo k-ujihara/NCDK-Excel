@@ -3,9 +3,9 @@ using NCDK.Fingerprints;
 using NCDK.IO;
 using NCDK.QSAR;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Caching;
 using System.Text;
 
 namespace NCDKExcel
@@ -123,25 +123,25 @@ namespace NCDKExcel
         /// </summary>
         static readonly IAtomContainer nullMol = CDK.Builder.NewAtomContainer();
 
+        static IDictionary<string, IAtomContainer> MolecularCache = new Dictionary<string, IAtomContainer>();
+
         /// <summary>
         /// Parse <paramref name="text"/> as SMILES, InChI or MOL text and cache it.
         /// </summary>
-        /// <param name="text">Text to parse</param>
+        /// <param name="ident">Text to parse</param>
         /// <returns>Molecular or <see langword="null"/> if it cannot be parsed.</returns>
-        public static IAtomContainer Parse(string text)
+        public static IAtomContainer Parse(string ident)
         {
-            if (text == null)
-                throw new ArgumentNullException(nameof(text));
+            if (ident == null)
+                throw new ArgumentNullException(nameof(ident));
 
-            var cache = MemoryCache.Default;
-            if (!(cache[text] is IAtomContainer mol))
+            if (!MolecularCache.TryGetValue(ident, out IAtomContainer mol))
             {
-                mol = RawParse(text, out LineNotationType notationType);
+                mol = RawParse(ident, out LineNotationType notationType);
                 if (mol == null)
                     mol = nullMol;
 
-                var policy = new CacheItemPolicy();
-                cache.Set(text, mol, policy);
+                MolecularCache[ident] = mol;
             }
             if (object.ReferenceEquals(mol, nullMol))
                 return null;
