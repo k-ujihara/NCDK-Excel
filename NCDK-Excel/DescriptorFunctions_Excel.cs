@@ -436,6 +436,44 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
+        public static double NCDK_FractionalCSP3(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "FractionalCSP3",
+                mol =>
+                {
+                double? nReturnValue = null;
+                var descriptor = new NCDK.QSAR.Descriptors.Moleculars.FractionalCSP3Descriptor();
+                
+                if (nReturnValue == null)
+                {
+                    var result = descriptor.Calculate(mol);
+                    nReturnValue = result.Value;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double NCDK_FSP3(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "FSP3",
+                mol =>
+                {
+                double? nReturnValue = null;
+                var descriptor = new NCDK.QSAR.Descriptors.Moleculars.FractionalCSP3Descriptor();
+                
+                if (nReturnValue == null)
+                {
+                    var result = descriptor.Calculate(mol);
+                    nReturnValue = result.Value;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
         public static double NCDK_FragmentComplexity(string text)
         {
             var ret = Caching<double?>.Calculate(text, "FragmentComplexity",
@@ -981,6 +1019,24 @@ namespace NCDKExcel
                 {
                     var result = descriptor.Calculate(mol);
                     nReturnValue = result.Value;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double NCDK_MolecularWeight(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "MolecularWeight",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = NCDK.Tools.Manipulator.AtomContainerManipulator.GetMolecularWeight(mol);
+                    nReturnValue = result;
                 }
 
                 return (double)nReturnValue;

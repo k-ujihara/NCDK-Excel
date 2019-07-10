@@ -84,6 +84,7 @@ namespace NCDKExcel
             int idx_calc_func = -1;
             int idx_preparation = -1;
             int idx_geometry3D = -1;
+            int idx_static = -1;
 
             string line;
             while ((line = reader.ReadLine()) != null)
@@ -96,7 +97,8 @@ namespace NCDKExcel
                     idx_return_type = titleRow.IndexOf("return_type");
                     idx_calc_func = titleRow.IndexOf("calc_func");
                     idx_preparation = titleRow.IndexOf("preparation");
-                    idx_geometry3D = titleRow.IndexOf("geometry3D");  
+                    idx_geometry3D = titleRow.IndexOf("geometry3D");
+                    idx_static = titleRow.IndexOf("static");
                     continue;
                 }
 
@@ -107,6 +109,7 @@ namespace NCDKExcel
                 string calc_func = GetValue(values, idx_calc_func);
                 string preparation = GetValue(values, idx_preparation);
                 string geometry3D = GetValue(values, idx_geometry3D);
+                string sstatic = GetValue(values, idx_static);
 
                 string excelReturnType = null;
                 string extractValue = null;
@@ -114,25 +117,30 @@ namespace NCDKExcel
 
                 switch (return_type)
                 {
-                    case "int[]":
+                    case "DescriptorValue_int[]":
                         calcReturnType = "DescriptorValue<ArrayResult<int>>";
                         excelReturnType = "string";
                         extractValue = "ToExcelString(result)";
                         break;
-                    case "double[]":
+                    case "DescriptorValue_double[]":
                         calcReturnType = "DescriptorValue<ArrayResult<double>>";
                         excelReturnType = "string";
                         extractValue = "ToExcelString(result)";
                         break;
-                    case "int":
+                    case "DescriptorValue_int":
                         calcReturnType = "DescriptorValue<Result<int>>";
                         excelReturnType = "double";
                         extractValue = "result.Value";
                         break;
-                    case "double":
+                    case "DescriptorValue_double":
                         calcReturnType = "DescriptorValue<Result<double>>";
                         excelReturnType = "double";
                         extractValue = "result.Value";
+                        break;
+                    case "double":
+                        calcReturnType = "double";
+                        excelReturnType = "double";
+                        extractValue = "result";
                         break;
                     case "IBitFingerprint":
                         calcReturnType = "IBitFingerprint";
@@ -156,7 +164,14 @@ namespace NCDKExcel
                 mol =>
                 {
                 <#= nullableExcelReturnType #> nReturnValue = null;
+<#+
+                if (sstatic != "TRUE")
+                {
+#>
                 var descriptor = <#= initializer #>;
+<#+
+                }
+#>
 <#+
                 if (preparation != null)
                 {
@@ -178,7 +193,7 @@ namespace NCDKExcel
 #>
                 if (nReturnValue == null)
                 {
-                    var result = descriptor.<#= calc_func #>(mol);
+                    var result = <#= sstatic == "TRUE" ? initializer : "descriptor" #>.<#= calc_func #>(mol);
                     nReturnValue = <#= extractValue #>;
                 }
 
