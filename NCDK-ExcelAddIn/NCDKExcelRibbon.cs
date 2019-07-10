@@ -96,8 +96,22 @@ namespace NCDK_ExcelAddIn
                 case Excel.Range cells:
                     dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
                     Excel.Shapes shapes = sheet.Shapes;
-                    var shapeNames = shapes.Cast<Excel.Shape>().Select(n => n.Name).ToList();
-                    EnumerateCells(cells, cell => GenerateChemicalStructurePictureOnCell(cell, shapeNames));
+
+                    var saveScreenUpdating = Globals.ThisAddIn.Application.ScreenUpdating;
+                    var saveCalculation = Globals.ThisAddIn.Application.Calculation;
+                    try
+                    {
+                        Globals.ThisAddIn.Application.ScreenUpdating = false;
+                        Globals.ThisAddIn.Application.Calculation = Excel.XlCalculation.xlCalculationManual;
+
+                        var shapeNames = shapes.Cast<Excel.Shape>().Select(n => n.Name).ToList();
+                        EnumerateCells(cells, cell => GenerateChemicalStructurePictureOnCell(cell, shapeNames));
+                    }
+                    finally
+                    {
+                        Globals.ThisAddIn.Application.Calculation = saveCalculation;
+                        Globals.ThisAddIn.Application.ScreenUpdating = saveScreenUpdating;
+                    }
                     break;
                 default:
                     break;
@@ -250,6 +264,12 @@ namespace NCDK_ExcelAddIn
             }
         }
 
+        /// <summary>
+        /// Add a picture file named <paramref name="pictureFileName"/> on <paramref name="cell"/> and name <paramref name="name"/>.
+        /// </summary>
+        /// <param name="cell">The cell to add a picture.</param>
+        /// <param name="pictureFileName">File name of the picture.</param>
+        /// <param name="name">Excel name of the picture.</param>
         private static void AddPicture(Excel.Range cell, string pictureFileName, string name)
         {
             cell.Activate();
@@ -259,12 +279,29 @@ namespace NCDK_ExcelAddIn
                 pictureFileName,
                 Office.MsoTriState.msoFalse, Office.MsoTriState.msoTrue,
                 cell.Left, cell.Top, cell.Width, cell.Height);
-            shape.Placement = Excel.XlPlacement.xlMoveAndSize;
+            shape.Placement = Excel.XlPlacement.xlMove;
             shape.Name = name;
 
-            // if we want to add original size picture, add the following lines.
-            // shape.ScaleHeight(1, Office.MsoTriState.msoTrue);
-            // shape.ScaleWidth(1, Office.MsoTriState.msoTrue);
+            // if you want to fit pictures with each cell, delte the following lines.
+            shape.ScaleHeight(1, Office.MsoTriState.msoTrue);
+            shape.ScaleWidth(1, Office.MsoTriState.msoTrue);
+
+            var xyRatioCell = cell.Width / cell.Height;
+            var xyRatioShape = shape.Width / shape.Height;
+            float scale = 1;
+            if (xyRatioCell > xyRatioShape)
+            {
+                // fit to cell.Height
+                scale = (float)cell.Height / shape.Height;
+            }
+            else
+            {
+                // fit to cell.Width;
+                scale = (float)cell.Width / shape.Width;
+            }
+
+            shape.ScaleHeight(scale, Office.MsoTriState.msoTrue);
+            shape.ScaleWidth(scale, Office.MsoTriState.msoTrue);
         }
 
         /// <summary>
