@@ -31,6 +31,13 @@ namespace NCDKExcel
     {
         static IDictionary<string, double?> ValueCacheDouble = new Dictionary<string, double?>();
 
+        /// <summary>
+        /// Calculate descriptor returns <see cref="System.Double"/> in Excel.
+        /// </summary>
+        /// <param name="text">Input text to caluculate, typically molecular identifier.</param>
+        /// <param name="name">The descriptor name.</param>
+        /// <param name="calculator">The caluculator.</param>
+        /// <returns>Calculated value as <see cref="System.Double"/>.</returns>
         static double NCDK_CalcDoubleDesc(string text, string name, Func<IAtomContainer, double?> calculator)
         {
             if (text == null)
@@ -41,6 +48,13 @@ namespace NCDKExcel
             return ret.Value;
         }
 
+        /// <summary>
+        /// Calculate descriptor returns <see cref="System.String"/> in Excel.
+        /// </summary>
+        /// <param name="text">Input text to caluculate, typically molecular identifier.</param>
+        /// <param name="name">The descriptor name.</param>
+        /// <param name="calculator">The caluculator.</param>
+        /// <returns>Calculated value as <see cref="System.String"/>.</returns>
         static string NCDK_CalcStringDesc(string text, string name, Func<IAtomContainer, string> calculator)
         {
             if (text == null)
@@ -79,6 +93,45 @@ namespace NCDKExcel
         public static double NCDK_AMolarRefractivity(string text)
         {
             return NCDK_CalcDoubleDesc(text, "AMolarRefractivity", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).AMR);
+        }
+
+
+        [ExcelFunction()]
+        public static double NCDK_MolecularWeight(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "MolecularWeight",
+                mol =>
+                {
+                    double? nReturnValue = null;
+
+                    if (nReturnValue == null)
+                    {
+                        var result = NCDK.Tools.Manipulator.AtomContainerManipulator.GetMass(mol, NCDK.Tools.Manipulator.MolecularWeightTypes.MolWeight);
+                        nReturnValue = result;
+                    }
+
+                    return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+
+        [ExcelFunction()]
+        public static double NCDK_ExactMass(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "ExactMass",
+                mol =>
+                {
+                    double? nReturnValue = null;
+
+                    if (nReturnValue == null)
+                    {
+                        var result = NCDK.Tools.Manipulator.AtomContainerManipulator.GetMass(mol, NCDK.Tools.Manipulator.MolecularWeightTypes.MostAbundant);
+                        nReturnValue = result;
+                    }
+
+                    return (double)nReturnValue;
+                });
+            return (double)ret;
         }
 
         private static NCDK.Smiles.SmilesGenerator localSmilesGenerator = null;

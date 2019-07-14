@@ -573,6 +573,25 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
+        public static double NCDK_JPlogP(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "JPlogP",
+                mol =>
+                {
+                double? nReturnValue = null;
+                var descriptor = new NCDK.QSAR.Descriptors.Moleculars.JPlogPDescriptor();
+                
+                if (nReturnValue == null)
+                {
+                    var result = descriptor.Calculate(mol);
+                    nReturnValue = result.Value;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
         public static string NCDK_KappaShapeIndices(string text)
         {
             var ret = Caching<string>.Calculate(text, "KappaShapeIndices",
@@ -908,25 +927,6 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
-        public static double NCDK_Weight(string text)
-        {
-            var ret = Caching<double?>.Calculate(text, "Weight",
-                mol =>
-                {
-                double? nReturnValue = null;
-                var descriptor = new NCDK.QSAR.Descriptors.Moleculars.WeightDescriptor();
-                
-                if (nReturnValue == null)
-                {
-                    var result = descriptor.Calculate(mol);
-                    nReturnValue = result.Value;
-                }
-
-                return (double)nReturnValue;
-                });
-            return (double)ret;
-        }
-        [ExcelFunction()]
         public static string NCDK_WeightedPath(string text)
         {
             var ret = Caching<string>.Calculate(text, "WeightedPath",
@@ -1019,24 +1019,6 @@ namespace NCDKExcel
                 {
                     var result = descriptor.Calculate(mol);
                     nReturnValue = result.Value;
-                }
-
-                return (double)nReturnValue;
-                });
-            return (double)ret;
-        }
-        [ExcelFunction()]
-        public static double NCDK_MolecularWeight(string text)
-        {
-            var ret = Caching<double?>.Calculate(text, "MolecularWeight",
-                mol =>
-                {
-                double? nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = NCDK.Tools.Manipulator.AtomContainerManipulator.GetMolecularWeight(mol);
-                    nReturnValue = result;
                 }
 
                 return (double)nReturnValue;

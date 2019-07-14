@@ -27,6 +27,7 @@ GravitationalIndex	new NCDK.QSAR.Descriptors.Moleculars.GravitationalIndexDescri
 HBondAcceptorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondAcceptorCountDescriptor()	DescriptorValue_int	Calculate			
 HBondDonorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondDonorCountDescriptor()	DescriptorValue_int	Calculate			
 HybridizationRatio	new NCDK.QSAR.Descriptors.Moleculars.HybridizationRatioDescriptor()	DescriptorValue_double	Calculate			
+JPlogP	new NCDK.QSAR.Descriptors.Moleculars.JPlogPDescriptor()	DescriptorValue_double	Calculate			
 KappaShapeIndices	new NCDK.QSAR.Descriptors.Moleculars.KappaShapeIndicesDescriptor()	DescriptorValue_double[]	Calculate			
 KierHallSmarts	new NCDK.QSAR.Descriptors.Moleculars.KierHallSmartsDescriptor()	DescriptorValue_int[]	Calculate			
 LargestChain	new NCDK.QSAR.Descriptors.Moleculars.LargestChainDescriptor()	DescriptorValue_int	Calculate			
@@ -44,13 +45,11 @@ SmallRing	new NCDK.QSAR.Descriptors.Moleculars.SmallRingDescriptor()	DescriptorV
 TPSA	new NCDK.QSAR.Descriptors.Moleculars.TPSADescriptor()	DescriptorValue_double	Calculate			
 VABC	new NCDK.QSAR.Descriptors.Moleculars.VABCDescriptor()	DescriptorValue_double	Calculate	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol); AddImplicitHydrogens(mol);		
 VAdjMa	new NCDK.QSAR.Descriptors.Moleculars.VAdjMaDescriptor()	DescriptorValue_double	Calculate			
-Weight	new NCDK.QSAR.Descriptors.Moleculars.WeightDescriptor()	DescriptorValue_double	Calculate			
 WeightedPath	new NCDK.QSAR.Descriptors.Moleculars.WeightedPathDescriptor()	DescriptorValue_double[]	Calculate			
 WHIM	new NCDK.QSAR.Descriptors.Moleculars.WHIMDescriptor()	DescriptorValue_double[]	Calculate		TRUE	
 WienerNumbers	new NCDK.QSAR.Descriptors.Moleculars.WienerNumbersDescriptor()	DescriptorValue_double[]	Calculate			
 XLogP	new NCDK.QSAR.Descriptors.Moleculars.XLogPDescriptor()	DescriptorValue_double	Calculate			
 ZagrebIndex	new NCDK.QSAR.Descriptors.Moleculars.ZagrebIndexDescriptor()	DescriptorValue_double	Calculate			
-MolecularWeight	NCDK.Tools.Manipulator.AtomContainerManipulator	double	GetMolecularWeight			TRUE
 ECFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP0)	IBitFingerprint	GetBitFingerprint			
 ECFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP2)	IBitFingerprint	GetBitFingerprint			
 ECFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP4)	IBitFingerprint	GetBitFingerprint			

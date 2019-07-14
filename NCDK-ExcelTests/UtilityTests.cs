@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NCDK.Fingerprints;
 using System.Collections;
+using NCDK;
 
 namespace NCDKExcel
 {
@@ -26,10 +27,25 @@ namespace NCDKExcel
         }
 
         [TestMethod()]
+        public void ToExcelStringDescriptorValueTest()
+        {
+            var result = new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor.Result(1, 2, 3);
+            Assert.AreEqual("1, 2, 3", Utility.ToExcelString(result));
+        }
+
+        [TestMethod()]
         public void ParseTest()
         {
             Assert.IsNotNull(Utility.Parse("C"));
             Assert.IsNull(Utility.Parse("qwertyuop"));
+        }
+
+        [TestMethod()]
+        public void ToMolTextTest()
+        {
+            var methane = CDK.SmilesParser.ParseSmiles("C");
+            var molText = Utility.ToMolText(methane);
+            Assert.IsTrue(molText.Contains("M  END"));
         }
     }
 }

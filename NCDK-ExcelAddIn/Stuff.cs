@@ -1,7 +1,5 @@
 ﻿using NCDK;
-using NCDK.Depict;
 using NCDK.IO;
-using NCDK.Renderers.Colors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,27 +9,10 @@ namespace NCDK_ExcelAddIn
 {
     public static class Stuff
     {
-        private readonly static object syncLock = new object();
-
-        private static DepictionGenerator pictureGenerator;
-        public static DepictionGenerator PictureGenerator
-        {
-            get
-            {
-                if (pictureGenerator == null)
-                    lock (syncLock)
-                    {
-                        if (pictureGenerator == null)
-                            pictureGenerator = new DepictionGenerator
-                            {
-                                AtomColorer = new CDK2DAtomColors(),
-                                BackgroundColor = System.Windows.Media.Colors.Transparent,
-                            };
-                    }
-                return pictureGenerator;
-            }
-        }
-
+        /// <summary>
+        /// Read molecules and their info from SD file. 
+        /// </summary>
+        /// <param name="sdfName">File name of the SD File.</param>
         public static void LoadSDFToNewSheet(string sdfName)
         {
             dynamic newSheet = null;

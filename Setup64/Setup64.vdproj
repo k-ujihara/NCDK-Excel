@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1767D48D279FFC8621060349AF9CE589"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2AC06E3D245540E58D1975E1702638A5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,6 +58,12 @@
         "Entry"
         {
         "MsmKey" = "8:_3655AAFE938E97A654EA1322CD52F406"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_596CEA4BC849FEC1B19FA8BAB8524D0E"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -81,32 +93,38 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7EC315152877612AB270719B2160D2B3"
-        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7EC315152877612AB270719B2160D2B3"
-        "OwnerKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_82159C0C7EC84934938C7F91601E4F00"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
+        "MsmKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
+        "OwnerKey" = "8:_1767D48D279FFC8621060349AF9CE589"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
+        "OwnerKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
-        "OwnerKey" = "8:_AF0AFD32C116B7E0DA55D7914E583F8F"
+        "MsmKey" = "8:_959164C531696ECD1DD00A3AC042E38A"
+        "OwnerKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_959164C531696ECD1DD00A3AC042E38A"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -117,31 +135,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A695C3B92D8FED134D87A77295B4BDBD"
-        "OwnerKey" = "8:_AA60B84DE7816898C2A1DECA2BAF2A03"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A695C3B92D8FED134D87A77295B4BDBD"
+        "MsmKey" = "8:_A249C9852192C39D38D3F60943B02617"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AA60B84DE7816898C2A1DECA2BAF2A03"
+        "MsmKey" = "8:_B8507DC0041F2AD6F2BBCCED4E212BDB"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AA60B84DE7816898C2A1DECA2BAF2A03"
-        "OwnerKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
+        "MsmKey" = "8:_B8507DC0041F2AD6F2BBCCED4E212BDB"
+        "OwnerKey" = "8:_596CEA4BC849FEC1B19FA8BAB8524D0E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AF0AFD32C116B7E0DA55D7914E583F8F"
+        "MsmKey" = "8:_BAFFEED5043E46EC73E40C2135C2E907"
+        "OwnerKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BAFFEED5043E46EC73E40C2135C2E907"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -171,6 +189,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F52F6BF5A33F2D9EB601DD5570CBEBFF"
+        "OwnerKey" = "8:_959164C531696ECD1DD00A3AC042E38A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F52F6BF5A33F2D9EB601DD5570CBEBFF"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
@@ -178,31 +214,55 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AF0AFD32C116B7E0DA55D7914E583F8F"
+        "OwnerKey" = "8:_A249C9852192C39D38D3F60943B02617"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_900CF9819E87CA1BB846844AF77D4998"
+        "OwnerKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7EC315152877612AB270719B2160D2B3"
+        "OwnerKey" = "8:_596CEA4BC849FEC1B19FA8BAB8524D0E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AA60B84DE7816898C2A1DECA2BAF2A03"
+        "OwnerKey" = "8:_1767D48D279FFC8621060349AF9CE589"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A695C3B92D8FED134D87A77295B4BDBD"
+        "OwnerKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BAFFEED5043E46EC73E40C2135C2E907"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_959164C531696ECD1DD00A3AC042E38A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F52F6BF5A33F2D9EB601DD5570CBEBFF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B8507DC0041F2AD6F2BBCCED4E212BDB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -424,6 +484,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1767D48D279FFC8621060349AF9CE589"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:NCDKExcel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_1767D48D279FFC8621060349AF9CE589"
+                    {
+                    "Name" = "8:NCDKExcel.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:NCDKExcel.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2AC06E3D245540E58D1975E1702638A5"
             {
             "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.vsto"
@@ -458,6 +549,37 @@
                     }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_596CEA4BC849FEC1B19FA8BAB8524D0E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:HtmlAgilityPack, Version=1.11.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_596CEA4BC849FEC1B19FA8BAB8524D0E"
+                    {
+                    "Name" = "8:HtmlAgilityPack.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:HtmlAgilityPack.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -537,37 +659,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7EC315152877612AB270719B2160D2B3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MathNet.Numerics, Version=4.7.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_7EC315152877612AB270719B2160D2B3"
-                    {
-                    "Name" = "8:MathNet.Numerics.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:MathNet.Numerics.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82159C0C7EC84934938C7F91601E4F00"
             {
             "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x64\\libinchi.dll"
@@ -588,20 +679,51 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_900CF9819E87CA1BB846844AF77D4998"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_927079B44C5669AB045B4A6ADC710BB1"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:NCDK, Version=1.5.3.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_900CF9819E87CA1BB846844AF77D4998"
+                    "_927079B44C5669AB045B4A6ADC710BB1"
                     {
                     "Name" = "8:NCDK.dll"
                     "Attributes" = "3:512"
                     }
                 }
             "SourcePath" = "8:NCDK.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_959164C531696ECD1DD00A3AC042E38A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:dotNetRDF, Version=2.2.0.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_959164C531696ECD1DD00A3AC042E38A"
+                    {
+                    "Name" = "8:dotNetRDF.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:dotNetRDF.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -639,20 +761,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A695C3B92D8FED134D87A77295B4BDBD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A249C9852192C39D38D3F60943B02617"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A695C3B92D8FED134D87A77295B4BDBD"
+                    "_A249C9852192C39D38D3F60943B02617"
                     {
-                    "Name" = "8:VDS.Common.dll"
+                    "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:VDS.Common.dll"
+            "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -670,20 +792,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AA60B84DE7816898C2A1DECA2BAF2A03"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B8507DC0041F2AD6F2BBCCED4E212BDB"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:dotNetRDF, Version=2.2.0.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_AA60B84DE7816898C2A1DECA2BAF2A03"
+                    "_B8507DC0041F2AD6F2BBCCED4E212BDB"
                     {
-                    "Name" = "8:dotNetRDF.dll"
+                    "Name" = "8:System.Net.Http.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:dotNetRDF.dll"
+            "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -701,20 +823,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AF0AFD32C116B7E0DA55D7914E583F8F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BAFFEED5043E46EC73E40C2135C2E907"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:NCDKExcel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:MathNet.Numerics, Version=4.7.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_AF0AFD32C116B7E0DA55D7914E583F8F"
+                    "_BAFFEED5043E46EC73E40C2135C2E907"
                     {
-                    "Name" = "8:NCDKExcel.dll"
+                    "Name" = "8:MathNet.Numerics.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:NCDKExcel.dll"
+            "SourcePath" = "8:MathNet.Numerics.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
@@ -814,6 +936,68 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F52F6BF5A33F2D9EB601DD5570CBEBFF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F52F6BF5A33F2D9EB601DD5570CBEBFF"
+                    {
+                    "Name" = "8:VDS.Common.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:VDS.Common.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F8C2E43C97E7C2C07B9947319F51415D"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:NCDK.Display, Version=1.5.3.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F8C2E43C97E7C2C07B9947319F51415D"
+                    {
+                    "Name" = "8:NCDK.Display.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:NCDK.Display.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -870,15 +1054,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCDK-Excel"
-        "ProductCode" = "8:{BC26B6CD-5C4C-45B8-A435-BE4A04D1BC1A}"
-        "PackageCode" = "8:{1BA02ACC-0018-4D12-833F-B10F9E95AA25}"
+        "ProductCode" = "8:{C78B6E0F-6B73-45FA-B654-4B0176310CE7}"
+        "PackageCode" = "8:{1CA2F6DE-38E8-42E3-9E38-567749CB7641}"
         "UpgradeCode" = "8:{1CFDC548-A7DF-490C-A808-22A7567F9BD0}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.0.3"
+        "ProductVersion" = "8:0.0.4"
         "Manufacturer" = "8:Kazuya Ujihara"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/kazuyaujihara/NCDK-Excel"
@@ -1480,7 +1664,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_067712FD363D461A9822E94352F6C24D"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\obj\\Release\\NCDK-ExcelAddIn.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\obj\\Debug\\NCDK-ExcelAddIn.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C52D037B08014D6C87B0C80F7E58DF8C"
