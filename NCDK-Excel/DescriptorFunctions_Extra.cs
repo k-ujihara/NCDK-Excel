@@ -7,7 +7,7 @@ using static NCDKExcel.Utility;
 
 namespace NCDKExcel
 {
-    static class Caching<T>
+    static partial class Caching<T>
     {
         static IDictionary<string, T> ValueCache = new Dictionary<string, T>();
 
@@ -84,7 +84,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_ALogP(string text)
         {
-            return NCDK_CalcDoubleDesc(text, "NCDK_AlogP", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).Value);
+            return NCDK_CalcDoubleDesc(text, "NCDK_ALogP", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).Value);
         }
 
         [ExcelFunction()]

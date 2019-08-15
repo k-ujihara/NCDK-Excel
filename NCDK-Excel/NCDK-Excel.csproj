@@ -43,6 +43,9 @@
     <Reference Include="NCDK, Version=1.5.5.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
       <HintPath>..\packages\NCDK.1.5.5\lib\net461\NCDK.dll</HintPath>
     </Reference>
+    <Reference Include="RDKit2DotNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2019033.1\lib\net40\RDKit2DotNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -68,6 +71,7 @@
       <DependentUpon>DescriptorFunctions_Excel.tt</DependentUpon>
     </Compile>
     <Compile Include="DescriptorFunctions_Extra.cs" />
+    <Compile Include="RDKit_DescriptorFunctions.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="DistanceFunctions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,7 +106,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\ExcelDna.AddIn.1.0.0\build\ExcelDna.AddIn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ExcelDna.AddIn.1.0.0\build\ExcelDna.AddIn.targets'))" />
     <Error Condition="!Exists('..\packages\NCDK.1.5.5\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.5\build\NCDK.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets'))" />
   </Target>
   <Import Project="..\packages\ExcelDna.AddIn.1.0.0\build\ExcelDna.AddIn.targets" Condition="Exists('..\packages\ExcelDna.AddIn.1.0.0\build\ExcelDna.AddIn.targets')" />
   <Import Project="..\packages\NCDK.1.5.5\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.5\build\NCDK.targets')" />
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets')" />
 </Project>
