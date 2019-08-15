@@ -58,9 +58,11 @@ namespace NCDKExcel
         if (values.Count > index)
         {
 			var s = values[index];
+			// unwrap double quotation
 			if (s.StartsWith("\"") && s.EndsWith("\""))
 			{
 				s = s.Substring(1, s.Length - 2);
+				// unescape double quotation
 				s = s.Replace("\"\"", "\"");
 			}
             return s;

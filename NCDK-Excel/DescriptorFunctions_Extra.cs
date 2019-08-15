@@ -29,8 +29,6 @@ namespace NCDKExcel
 
     public static partial class DescriptorFunctions
     {
-        static IDictionary<string, double?> ValueCacheDouble = new Dictionary<string, double?>();
-
         /// <summary>
         /// Calculate descriptor returns <see cref="System.Double"/> in Excel.
         /// </summary>

@@ -37,7 +37,8 @@ namespace NCDKExcel
         public void ParseTest()
         {
             Assert.IsNotNull(Utility.Parse("C"));
-            Assert.IsNull(Utility.Parse("qwertyuop"));
+            const string InvalidValue = "qwertyuop";
+            Assert.IsNull(Utility.Parse(InvalidValue));
         }
 
         [TestMethod()]
