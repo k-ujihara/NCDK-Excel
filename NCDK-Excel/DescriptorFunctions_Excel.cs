@@ -35,7 +35,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_AcidicGroupCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "AcidicGroupCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_AcidicGroupCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -54,7 +54,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_APol(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "APol",
+            var ret = Caching<double?>.Calculate(text, "NCDK_APol",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -73,7 +73,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_AromaticAtomsCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "AromaticAtomsCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_AromaticAtomsCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -92,7 +92,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_AromaticBondsCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "AromaticBondsCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_AromaticBondsCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -111,7 +111,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_AtomCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "AtomCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_AtomCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -130,7 +130,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_AutocorrelationCharge(string text)
         {
-            var ret = Caching<string>.Calculate(text, "AutocorrelationCharge",
+            var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationCharge",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -149,7 +149,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_AutocorrelationMass(string text)
         {
-            var ret = Caching<string>.Calculate(text, "AutocorrelationMass",
+            var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationMass",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -168,7 +168,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_AutocorrelationPolarizability(string text)
         {
-            var ret = Caching<string>.Calculate(text, "AutocorrelationPolarizability",
+            var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationPolarizability",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -187,7 +187,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_BasicGroupCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "BasicGroupCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_BasicGroupCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -206,7 +206,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_BCUT(string text)
         {
-            var ret = Caching<string>.Calculate(text, "BCUT",
+            var ret = Caching<string>.Calculate(text, "NCDK_BCUT",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -225,7 +225,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_BondCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "BondCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_BondCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -244,7 +244,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_BPol(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "BPol",
+            var ret = Caching<double?>.Calculate(text, "NCDK_BPol",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -263,7 +263,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_CarbonTypes(string text)
         {
-            var ret = Caching<string>.Calculate(text, "CarbonTypes",
+            var ret = Caching<string>.Calculate(text, "NCDK_CarbonTypes",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -282,7 +282,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ChiChain(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ChiChain",
+            var ret = Caching<string>.Calculate(text, "NCDK_ChiChain",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -301,7 +301,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ChiCluster(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ChiCluster",
+            var ret = Caching<string>.Calculate(text, "NCDK_ChiCluster",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -320,7 +320,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ChiPathCluster(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ChiPathCluster",
+            var ret = Caching<string>.Calculate(text, "NCDK_ChiPathCluster",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -339,7 +339,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ChiPath(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ChiPath",
+            var ret = Caching<string>.Calculate(text, "NCDK_ChiPath",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -358,7 +358,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_CPSA(string text)
         {
-            var ret = Caching<string>.Calculate(text, "CPSA",
+            var ret = Caching<string>.Calculate(text, "NCDK_CPSA",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -381,7 +381,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_EccentricConnectivityIndex(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "EccentricConnectivityIndex",
+            var ret = Caching<double?>.Calculate(text, "NCDK_EccentricConnectivityIndex",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -400,7 +400,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_FMF(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "FMF",
+            var ret = Caching<double?>.Calculate(text, "NCDK_FMF",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -419,7 +419,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_FractionalPSA(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "FractionalPSA",
+            var ret = Caching<double?>.Calculate(text, "NCDK_FractionalPSA",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -438,7 +438,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_FractionalCSP3(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "FractionalCSP3",
+            var ret = Caching<double?>.Calculate(text, "NCDK_FractionalCSP3",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -457,7 +457,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_FSP3(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "FSP3",
+            var ret = Caching<double?>.Calculate(text, "NCDK_FSP3",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -476,7 +476,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_FragmentComplexity(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "FragmentComplexity",
+            var ret = Caching<double?>.Calculate(text, "NCDK_FragmentComplexity",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -495,7 +495,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_GravitationalIndex(string text)
         {
-            var ret = Caching<string>.Calculate(text, "GravitationalIndex",
+            var ret = Caching<string>.Calculate(text, "NCDK_GravitationalIndex",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -518,7 +518,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_HBondAcceptorCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "HBondAcceptorCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_HBondAcceptorCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -537,7 +537,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_HBondDonorCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "HBondDonorCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_HBondDonorCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -556,7 +556,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_HybridizationRatio(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "HybridizationRatio",
+            var ret = Caching<double?>.Calculate(text, "NCDK_HybridizationRatio",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -575,7 +575,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_JPlogP(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "JPlogP",
+            var ret = Caching<double?>.Calculate(text, "NCDK_JPlogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -594,7 +594,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_KappaShapeIndices(string text)
         {
-            var ret = Caching<string>.Calculate(text, "KappaShapeIndices",
+            var ret = Caching<string>.Calculate(text, "NCDK_KappaShapeIndices",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -613,7 +613,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_KierHallSmarts(string text)
         {
-            var ret = Caching<string>.Calculate(text, "KierHallSmarts",
+            var ret = Caching<string>.Calculate(text, "NCDK_KierHallSmarts",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -632,7 +632,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_LargestChain(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "LargestChain",
+            var ret = Caching<double?>.Calculate(text, "NCDK_LargestChain",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -651,7 +651,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_LargestPiSystem(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "LargestPiSystem",
+            var ret = Caching<double?>.Calculate(text, "NCDK_LargestPiSystem",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -670,7 +670,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_LengthOverBreadth(string text)
         {
-            var ret = Caching<string>.Calculate(text, "LengthOverBreadth",
+            var ret = Caching<string>.Calculate(text, "NCDK_LengthOverBreadth",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -693,7 +693,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_LongestAliphaticChain(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "LongestAliphaticChain",
+            var ret = Caching<double?>.Calculate(text, "NCDK_LongestAliphaticChain",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -712,7 +712,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_MannholdLogP(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "MannholdLogP",
+            var ret = Caching<double?>.Calculate(text, "NCDK_MannholdLogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -731,7 +731,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_MDE(string text)
         {
-            var ret = Caching<string>.Calculate(text, "MDE",
+            var ret = Caching<string>.Calculate(text, "NCDK_MDE",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -750,7 +750,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_MomentOfInertia(string text)
         {
-            var ret = Caching<string>.Calculate(text, "MomentOfInertia",
+            var ret = Caching<string>.Calculate(text, "NCDK_MomentOfInertia",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -773,7 +773,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_PetitjeanNumber(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "PetitjeanNumber",
+            var ret = Caching<double?>.Calculate(text, "NCDK_PetitjeanNumber",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -792,7 +792,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_PetitjeanShapeIndex(string text)
         {
-            var ret = Caching<string>.Calculate(text, "PetitjeanShapeIndex",
+            var ret = Caching<string>.Calculate(text, "NCDK_PetitjeanShapeIndex",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -815,7 +815,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_RotatableBondsCount(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RotatableBondsCount",
+            var ret = Caching<double?>.Calculate(text, "NCDK_RotatableBondsCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -834,7 +834,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_RuleOfFive(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RuleOfFive",
+            var ret = Caching<double?>.Calculate(text, "NCDK_RuleOfFive",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -853,7 +853,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_SmallRing(string text)
         {
-            var ret = Caching<string>.Calculate(text, "SmallRing",
+            var ret = Caching<string>.Calculate(text, "NCDK_SmallRing",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -872,7 +872,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_TPSA(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "TPSA",
+            var ret = Caching<double?>.Calculate(text, "NCDK_TPSA",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -891,7 +891,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_VABC(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "VABC",
+            var ret = Caching<double?>.Calculate(text, "NCDK_VABC",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -910,7 +910,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_VAdjMa(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "VAdjMa",
+            var ret = Caching<double?>.Calculate(text, "NCDK_VAdjMa",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -929,7 +929,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_WeightedPath(string text)
         {
-            var ret = Caching<string>.Calculate(text, "WeightedPath",
+            var ret = Caching<string>.Calculate(text, "NCDK_WeightedPath",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -948,7 +948,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_WHIM(string text)
         {
-            var ret = Caching<string>.Calculate(text, "WHIM",
+            var ret = Caching<string>.Calculate(text, "NCDK_WHIM",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -971,7 +971,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_WienerNumbers(string text)
         {
-            var ret = Caching<string>.Calculate(text, "WienerNumbers",
+            var ret = Caching<string>.Calculate(text, "NCDK_WienerNumbers",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -990,7 +990,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_XLogP(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "XLogP",
+            var ret = Caching<double?>.Calculate(text, "NCDK_XLogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -1009,7 +1009,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_ZagrebIndex(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "ZagrebIndex",
+            var ret = Caching<double?>.Calculate(text, "NCDK_ZagrebIndex",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -1028,7 +1028,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ECFP0(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ECFP0",
+            var ret = Caching<string>.Calculate(text, "NCDK_ECFP0",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1047,7 +1047,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ECFP2(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ECFP2",
+            var ret = Caching<string>.Calculate(text, "NCDK_ECFP2",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1066,7 +1066,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ECFP4(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ECFP4",
+            var ret = Caching<string>.Calculate(text, "NCDK_ECFP4",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1085,7 +1085,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ECFP6(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ECFP6",
+            var ret = Caching<string>.Calculate(text, "NCDK_ECFP6",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1104,7 +1104,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_FCFP0(string text)
         {
-            var ret = Caching<string>.Calculate(text, "FCFP0",
+            var ret = Caching<string>.Calculate(text, "NCDK_FCFP0",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1123,7 +1123,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_FCFP2(string text)
         {
-            var ret = Caching<string>.Calculate(text, "FCFP2",
+            var ret = Caching<string>.Calculate(text, "NCDK_FCFP2",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1142,7 +1142,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_FCFP4(string text)
         {
-            var ret = Caching<string>.Calculate(text, "FCFP4",
+            var ret = Caching<string>.Calculate(text, "NCDK_FCFP4",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1161,7 +1161,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_FCFP6(string text)
         {
-            var ret = Caching<string>.Calculate(text, "FCFP6",
+            var ret = Caching<string>.Calculate(text, "NCDK_FCFP6",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1180,7 +1180,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_AtomPairs2DFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "AtomPairs2DFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_AtomPairs2DFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1199,7 +1199,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_EStateFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "EStateFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_EStateFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1218,7 +1218,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ExtendedFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ExtendedFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_ExtendedFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1237,7 +1237,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_CDKFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "CDKFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_CDKFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1256,7 +1256,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_KlekotaRothFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "KlekotaRothFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_KlekotaRothFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1275,7 +1275,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_LingoFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "LingoFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_LingoFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1294,7 +1294,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_MACCSFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "MACCSFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_MACCSFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1313,7 +1313,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_ShortestPathFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "ShortestPathFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_ShortestPathFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1332,7 +1332,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_SubstructureFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "SubstructureFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_SubstructureFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1351,7 +1351,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_PubchemFingerprinter(string text)
         {
-            var ret = Caching<string>.Calculate(text, "PubchemFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_PubchemFingerprinter",
                 mol =>
                 {
                 string nReturnValue = null;

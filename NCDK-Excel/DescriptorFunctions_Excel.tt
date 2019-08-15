@@ -162,7 +162,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static <#= excelReturnType #> NCDK_<#= func_name #>(string text)
         {
-            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "<#= func_name #>",
+            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "NCDK_<#= func_name #>",
                 mol =>
                 {
                 <#= nullableExcelReturnType #> nReturnValue = null;

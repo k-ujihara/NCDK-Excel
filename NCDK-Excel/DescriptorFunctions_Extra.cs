@@ -84,20 +84,20 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_ALogP(string text)
         {
-            return NCDK_CalcDoubleDesc(text, "AlogP", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).Value);
+            return NCDK_CalcDoubleDesc(text, "NCDK_AlogP", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).Value);
         }
 
         [ExcelFunction()]
         public static double NCDK_AMolarRefractivity(string text)
         {
-            return NCDK_CalcDoubleDesc(text, "AMolarRefractivity", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).AMR);
+            return NCDK_CalcDoubleDesc(text, "NCDK_AMolarRefractivity", mol => new NCDK.QSAR.Descriptors.Moleculars.ALogPDescriptor().Calculate(mol).AMR);
         }
 
 
         [ExcelFunction()]
         public static double NCDK_MolecularWeight(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "MolecularWeight",
+            var ret = Caching<double?>.Calculate(text, "NCDK_MolecularWeight",
                 mol =>
                 {
                     double? nReturnValue = null;
@@ -116,7 +116,7 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static double NCDK_ExactMass(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "ExactMass",
+            var ret = Caching<double?>.Calculate(text, "NCDK_ExactMass",
                 mol =>
                 {
                     double? nReturnValue = null;
@@ -152,25 +152,25 @@ namespace NCDKExcel
         [ExcelFunction()]
         public static string NCDK_SMILES(string text)
         {
-            return NCDK_CalcStringDesc(text, "SMILES", mol => SmilesGenerator.Create(mol));
+            return NCDK_CalcStringDesc(text, "NCDK_SMILES", mol => SmilesGenerator.Create(mol));
         }
 
         [ExcelFunction()]
         public static string NCDK_InChI(string text)
         {
-            return NCDK_CalcStringDesc(text, "InChI", mol => InChIGeneratorFactory.Instance.GetInChIGenerator(mol).InChI);
+            return NCDK_CalcStringDesc(text, "NCDK_InChI", mol => InChIGeneratorFactory.Instance.GetInChIGenerator(mol).InChI);
         }
 
         [ExcelFunction()]
         public static string NCDK_InChIKey(string text)
         {
-            return NCDK_CalcStringDesc(text, "InChIKey", mol => InChIGeneratorFactory.Instance.GetInChIGenerator(mol).GetInChIKey());
+            return NCDK_CalcStringDesc(text, "NCDK_InChIKey", mol => InChIGeneratorFactory.Instance.GetInChIGenerator(mol).GetInChIKey());
         }
 
         [ExcelFunction()]
         public static string NCDK_MolText(string text)
         {
-            return NCDK_CalcStringDesc(text, "MolText", mol => Utility.ToMolText(mol));
+            return NCDK_CalcStringDesc(text, "NCDK_MolText", mol => Utility.ToMolText(mol));
         }
     }
 }
