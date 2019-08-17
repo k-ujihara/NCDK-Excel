@@ -1,5 +1,6 @@
 ﻿using NCDK;
 using NCDK.Fingerprints;
+using NCDK.Graphs.InChI;
 using NCDK.IO;
 using NCDK.QSAR;
 using System;
@@ -71,19 +72,10 @@ namespace NCDKExcel
         {
             try
             {
-                using (var reader = new InChIPlainTextReader(new StringReader(inchi)))
-                {
-                    var chemFile = reader.Read(CDK.Builder.NewChemFile());
-                    if (chemFile.Count != 1)
-                        throw new Exception();
-                    var seq = chemFile[0];
-                    if (seq.Count != 1)
-                        throw new Exception();
-                    var model = seq[0];
-                    if (model.MoleculeSet.Count != 1)
-                        throw new Exception();
-                    var mol = model.MoleculeSet[0];
-                    return mol;
+                var structure = InChIToStructure.FromInChI(inchi);
+                if (structure.ReturnStatus == InChIReturnCode.Ok)
+                { 
+                    return structure.AtomContainer;
                 }
             }
             catch (Exception)
