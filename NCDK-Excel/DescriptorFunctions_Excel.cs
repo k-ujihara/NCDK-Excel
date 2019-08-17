@@ -1367,6 +1367,115 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
+        [ExcelFunction()]
+        public static string RDKit_MACCSFingerprint(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_MACCSFingerprint",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.MACCSFingerprintMol(mol);
+                    nReturnValue = ToExcelString(result);
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
+        public static string RDKit_LayeredFingerprint(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_LayeredFingerprint",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.LayeredFingerprintMol(mol);
+                    nReturnValue = ToExcelString(result);
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
+        public static string RDKit_HashedAtomPairFingerprint(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_HashedAtomPairFingerprint",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.getHashedAtomPairFingerprintAsBitVect(mol);
+                    nReturnValue = ToExcelString(result);
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
+        public static string RDKit_HashedTopologicalTorsionFingerprint(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_HashedTopologicalTorsionFingerprint",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.getHashedTopologicalTorsionFingerprintAsBitVect(mol);
+                    nReturnValue = ToExcelString(result);
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
+        public static string RDKit_PatternFingerprint(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_PatternFingerprint",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.PatternFingerprintMol(mol);
+                    nReturnValue = ToExcelString(result);
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
+        public static string RDKit_RDKFingerprint(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_RDKFingerprint",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.RDKFingerprintMol(mol);
+                    nReturnValue = ToExcelString(result);
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+
     }
 }
 

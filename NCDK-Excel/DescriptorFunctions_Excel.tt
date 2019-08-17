@@ -80,6 +80,7 @@ namespace NCDKExcel
         IList<string> titleRow = null;
         using (var reader = new StreamReader(filename))
         {
+			int idx_kit_name = -1;
             int idx_function_name = -1;
             int idx_initializer = -1;
             int idx_return_type = -1;
@@ -94,6 +95,7 @@ namespace NCDKExcel
                 if (titleRow == null)
                 {
                     titleRow = SplitLine(line);
+					idx_kit_name = titleRow.IndexOf("kit_name"); 
                     idx_function_name = titleRow.IndexOf("function_name");
                     idx_initializer = titleRow.IndexOf("initializer");
                     idx_return_type = titleRow.IndexOf("return_type");
@@ -105,6 +107,7 @@ namespace NCDKExcel
                 }
 
                 IList<string> values = SplitLine(line);
+				string kit_name = GetValue(values, idx_kit_name);
                 string func_name = GetValue(values, idx_function_name);
                 string initializer = GetValue(values, idx_initializer);
                 string return_type = GetValue(values, idx_return_type);
@@ -149,6 +152,12 @@ namespace NCDKExcel
                         excelReturnType = "string";
                         extractValue = "ToExcelString(result)";
                         break;
+					// RDKit
+					case "BitVect":
+						calcReturnType = "BitVect";
+                        excelReturnType = "string";
+                        extractValue = "ToExcelString(result)";
+                        break;
                     default:
                         if (return_type == null)
                             return_type = "null";
@@ -160,9 +169,9 @@ namespace NCDKExcel
                     nullableExcelReturnType = nullableExcelReturnType + "?";
 #>
         [ExcelFunction()]
-        public static <#= excelReturnType #> NCDK_<#= func_name #>(string text)
+        public static <#= excelReturnType #> <#= kit_name #>_<#= func_name #>(string text)
         {
-            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "NCDK_<#= func_name #>",
+            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "<#= kit_name #>_<#= func_name #>",
                 mol =>
                 {
                 <#= nullableExcelReturnType #> nReturnValue = null;

@@ -18,7 +18,7 @@ namespace NCDKExcel
         MolText = 3,
     }
 
-    public static class Utility
+    public static partial class Utility
     {
         public const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
 

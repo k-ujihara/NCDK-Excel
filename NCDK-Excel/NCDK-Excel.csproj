@@ -71,7 +71,7 @@
       <DependentUpon>DescriptorFunctions_Excel.tt</DependentUpon>
     </Compile>
     <Compile Include="DescriptorFunctions_Extra.cs" />
-    <Compile Include="RDKit_DescriptorFunctions.cs" />
+    <Compile Include="RDKit_DescriptorFunctions_Extra.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="DistanceFunctions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
