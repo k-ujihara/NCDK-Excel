@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NCDK;
 using NCDK.Fingerprints;
 using System.Collections;
-using NCDK;
 
 namespace NCDKExcel
 {

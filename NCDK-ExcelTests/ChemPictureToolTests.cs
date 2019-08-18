@@ -1,7 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NCDK.Fingerprints;
-using System.Collections;
-using NCDK;
 using NCDK_ExcelAddIn;
 using System.Linq;
 

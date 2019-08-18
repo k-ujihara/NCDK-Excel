@@ -9,51 +9,6 @@ namespace NCDKExcel
 {
     static partial class Caching<T>
     {
-        static readonly IDictionary<string, ROMol> RDKitMolecularCache = new Dictionary<string, ROMol>();
-        static readonly ROMol nullMolRDKit = new RWMol();
-
-        public static ROMol ParseToRDKitMol(string ident)
-        {
-            if (ident == null)
-                throw new ArgumentNullException(nameof(ident));
-
-            LineNotationType notationType = 0;
-            if (!RDKitMolecularCache.TryGetValue(ident, out ROMol mol))
-            {
-                mol = RWMol.MolFromSmiles(ident);
-                if (mol != null)
-                {
-                    notationType = LineNotationType.Smiles;
-                    goto L_MolFound;
-                }
-
-                using (var rv = new ExtraInchiReturnValues())
-                {
-                    mol = RDKFuncs.InchiToMol(ident, rv);
-                    if (mol != null)
-                    {
-                        notationType = LineNotationType.InChI;
-                        goto L_MolFound;
-                    }
-                }
-
-                mol = RWMol.MolFromMolBlock(ident);
-                if (mol != null)
-                {
-                    notationType = LineNotationType.MolText;
-                    goto L_MolFound;
-                }
-
-            L_MolFound:
-                if (mol == null)
-                    mol = nullMolRDKit;
-                RDKitMolecularCache[ident] = mol;
-            }
-            if (object.ReferenceEquals(mol, nullMolRDKit))
-                return null;
-            return mol;
-        }
-
         public static T Calculate(string text, string name, Func<ROMol, T> calculator)
         {
             if (text == null)
@@ -62,7 +17,7 @@ namespace NCDKExcel
             var key = name + SeparatorofNameKind + text;
             if (!ValueCache.TryGetValue(key, out T nReturnValue))
             {
-                var mol = ParseToRDKitMol(text);
+                var mol = RDKitUtility.Parse(text);
                 nReturnValue = calculator(mol);
                 ValueCache[key] = nReturnValue;
             }
@@ -145,8 +100,53 @@ namespace NCDKExcel
         }
     }
 
-    public static partial class Utility
+    public static partial class RDKitUtility
     {
+        static readonly IDictionary<string, ROMol> MolecularCache = new Dictionary<string, ROMol>();
+        static readonly ROMol nullMol = new RWMol();
+
+        public static ROMol Parse(string ident)
+        {
+            if (ident == null)
+                throw new ArgumentNullException(nameof(ident));
+
+            LineNotationType notationType = 0;
+            if (!MolecularCache.TryGetValue(ident, out ROMol mol))
+            {
+                mol = RWMol.MolFromSmiles(ident);
+                if (mol != null)
+                {
+                    notationType = LineNotationType.Smiles;
+                    goto L_MolFound;
+                }
+
+                using (var rv = new ExtraInchiReturnValues())
+                {
+                    mol = RDKFuncs.InchiToMol(ident, rv);
+                    if (mol != null)
+                    {
+                        notationType = LineNotationType.InChI;
+                        goto L_MolFound;
+                    }
+                }
+
+                mol = RWMol.MolFromMolBlock(ident);
+                if (mol != null)
+                {
+                    notationType = LineNotationType.MolText;
+                    goto L_MolFound;
+                }
+
+            L_MolFound:
+                if (mol == null)
+                    mol = nullMol;
+                MolecularCache[ident] = mol;
+            }
+            if (object.ReferenceEquals(mol, nullMol))
+                return null;
+            return mol;
+        }
+
         public static string ToExcelString(BitVect fp)
         {
             var sb = new StringBuilder();

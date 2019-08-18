@@ -74,7 +74,7 @@ namespace NCDKExcel
             {
                 var structure = InChIToStructure.FromInChI(inchi);
                 if (structure.ReturnStatus == InChIReturnCode.Ok)
-                { 
+                {
                     return structure.AtomContainer;
                 }
             }
@@ -127,7 +127,8 @@ namespace NCDKExcel
             if (ident == null)
                 throw new ArgumentNullException(nameof(ident));
 
-            if (!MolecularCache.TryGetValue(ident, out IAtomContainer mol))
+            IAtomContainer mol;
+            //if (!MolecularCache.TryGetValue(ident, out mol))
             {
                 mol = RawParse(ident, out LineNotationType notationType);
                 if (mol == null)
