@@ -35,13 +35,18 @@ namespace NCDK_ExcelAddIn
 
         private void ButtonImportSDF_Click(object sender, RibbonControlEventArgs e)
         {
+            ButtonImportSDF(filename => Stuff.LoadSDFToNewSheet(filename));
+        }
+
+        private void ButtonImportSDF(Action<string> loadSDFToNewSheet)
+        {
             var openFileDialog = new OpenFileDialog
             {
                 FilterIndex = 1,
                 Filter =
-                        "All supported files (*.sdf)|*.sdf|" +
-                        "SD file (*.sdf)|*.sdf|" +
-                        "All Files (*.*)|*.*"
+                       "All supported files (*.sdf)|*.sdf|" +
+                       "SD file (*.sdf)|*.sdf|" +
+                       "All Files (*.*)|*.*"
             };
 
             var result = openFileDialog.ShowDialog();
@@ -52,7 +57,7 @@ namespace NCDK_ExcelAddIn
                 switch (ex)
                 {
                     case ".sdf":
-                        Stuff.LoadSDFToNewSheet(fn);
+                        loadSDFToNewSheet(fn);
                         break;
                     default:
                         break;
@@ -102,6 +107,11 @@ namespace NCDK_ExcelAddIn
                 if (keep != null)
                     keep.Select();
             }
+        }
+
+        private void buttonImportSDFRDKit_Click(object sender, RibbonControlEventArgs e)
+        {
+            ButtonImportSDF(filename => RDKitStuff.LoadSDFToNewSheet(filename));
         }
     }
 }

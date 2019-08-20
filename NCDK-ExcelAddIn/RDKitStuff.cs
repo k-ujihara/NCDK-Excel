@@ -1,13 +1,11 @@
-﻿using NCDK;
-using NCDK.IO;
+﻿using GraphMolWrap;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace NCDK_ExcelAddIn
 {
-    public static class Stuff
+    public static class RDKitStuff
     {
         /// <summary>
         /// Read molecules and their info from SD file. 
@@ -28,53 +26,53 @@ namespace NCDK_ExcelAddIn
                 Globals.ThisAddIn.Application.ScreenUpdating = false;
                 Globals.ThisAddIn.Application.Calculation = Excel.XlCalculation.xlCalculationManual;
 
-                using (var suppl = Chem.ForwardSDMolSupplier(new FileStream(sdfName, FileMode.Open)))
+                using (var suppl = new SDMolSupplier(sdfName))
                 {
-                    foreach (var mol in suppl)
+                    while (!suppl.atEnd())
                     {
-                        if (mol == null)
-                            continue;
+                        using (var mol = suppl.next())
+                        {
+                            if (mol == null)
+                                continue;
 
-                        if (newSheet == null)
-                        {
-                            newSheet = Globals.ThisAddIn.Application.Sheets.Add();
-                            newSheet.Cells[1, ColumnTitle] = "Title";
-                        }
-                        using (var sr = new StringWriter())
-                        {
+                            if (newSheet == null)
+                            {
+                                newSheet = Globals.ThisAddIn.Application.Sheets.Add();
+                                newSheet.Cells[1, ColumnTitle] = "Title";
+                            }
                             Excel.Range cells = newSheet.Cells;
                             try
                             {
-                                using (var w = new MDLV2000Writer(sr))
+                                using (var keys = mol.getPropList())
                                 {
-                                    w.WriteMolecule(mol);
-                                }
-                                cells[row, ColumnTitle] = mol.Title;
-                                foreach (var prop in mol.GetProperties())
-                                {
-                                    switch (prop.Key)
+                                    foreach (var key in keys)
                                     {
-                                        case string key:
-                                            if (key.Equals(CDKPropertyName.Title, StringComparison.Ordinal))
+                                        switch (key)
+                                        {
+                                            case "_Name":
+                                                cells[row, ColumnTitle] = mol.getProp(key);
                                                 break;
-                                            if (!keyIndex.TryGetValue(key, out int index))
-                                            {
-                                                keyIndex[key] = (index = endIndex++);
-                                                cells[1, index] = key;
-                                            }
-                                            cells[row, index] = prop.Value.ToString();
-                                            break;
-                                        default:
-                                            break;
+                                            default:
+                                                if (key.StartsWith("_", StringComparison.Ordinal))
+                                                    break;
+                                                if (!keyIndex.TryGetValue(key, out int index))
+                                                {
+                                                    keyIndex[key] = (index = endIndex++);
+                                                    cells[1, index] = key;
+                                                }
+                                                var prop = mol.getProp(key);
+                                                cells[row, index] = prop;
+                                                break;
+                                        }
                                     }
                                 }
                             }
-                            catch (CDKException exception)
+                            catch (Exception exception)
                             {
                                 cells[row, ColumnTitle] = exception.Message;
                             }
+                            row++;
                         }
-                        row++;
                     }
                 }
 

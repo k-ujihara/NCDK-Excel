@@ -74,3 +74,8 @@ RDKit	HashedAtomPairFingerprint	GraphMolWrap.RDKFuncs	BitVect	getHashedAtomPairF
 RDKit	HashedTopologicalTorsionFingerprint	GraphMolWrap.RDKFuncs	BitVect	getHashedTopologicalTorsionFingerprintAsBitVect			TRUE
 RDKit	PatternFingerprint	GraphMolWrap.RDKFuncs	BitVect	PatternFingerprintMol			TRUE
 RDKit	RDKFingerprint	GraphMolWrap.RDKFuncs	BitVect	RDKFingerprintMol			TRUE
+RDKit	MolLogP	GraphMolWrap.RDKFuncs	double	calcMolLogP			TRUE
+RDKit	MolMR	GraphMolWrap.RDKFuncs	double	calcMolMR			TRUE
+RDKit	ExactMW	GraphMolWrap.RDKFuncs	double	calcExactMW			TRUE
+RDKit	FractionCSP3	GraphMolWrap.RDKFuncs	double	calcFractionCSP3			TRUE
+RDKit	HallKierAlpha	GraphMolWrap.RDKFuncs	double	calcHallKierAlpha			TRUE

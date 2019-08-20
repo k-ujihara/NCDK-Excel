@@ -1475,7 +1475,96 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
+        [ExcelFunction()]
+        public static double RDKit_MolLogP(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_MolLogP",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.calcMolLogP(mol);
+                    nReturnValue = result;
+                }
 
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double RDKit_MolMR(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_MolMR",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.calcMolMR(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double RDKit_ExactMW(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_ExactMW",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.calcExactMW(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double RDKit_FractionCSP3(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_FractionCSP3",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.calcFractionCSP3(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double RDKit_HallKierAlpha(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_HallKierAlpha",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = GraphMolWrap.RDKFuncs.calcHallKierAlpha(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
     }
 }
 

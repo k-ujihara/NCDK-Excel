@@ -3,21 +3,21 @@ using GraphMolWrap;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static NCDKExcel.Utility;
+using static NCDKExcel.RDKitUtility;
 
 namespace NCDKExcel
 {
-    static partial class Caching<T>
+    static partial class Caching<TRet>
     {
-        public static T Calculate(string text, string name, Func<ROMol, T> calculator)
+        public static TRet Calculate(string text, string name, Func<ROMol, TRet> calculator)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
             var key = name + SeparatorofNameKind + text;
-            if (!ValueCache.TryGetValue(key, out T nReturnValue))
+            if (!ValueCache.TryGetValue(key, out TRet nReturnValue))
             {
-                var mol = RDKitUtility.Parse(text);
+                var mol = Parse(text);
                 nReturnValue = calculator(mol);
                 ValueCache[key] = nReturnValue;
             }
@@ -56,26 +56,27 @@ namespace NCDKExcel
         /// <param name="name">The descriptor name.</param>
         /// <param name="calculator">The caluculator.</param>
         /// <returns>Calculated value as <see cref="System.String"/>.</returns>
-        static string RDKit_CalcStringDesc(string text, string name, Func<ROMol, string> calculator)
+        static T RDKit_CalcDesc<T>(string text, string name, Func<ROMol, T> calculator)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
             var key = name + SeparatorofNameKind + text;
-            var ret = Caching<string>.Calculate(text, name, calculator);
+            var ret = Caching<T>.Calculate(text, name, calculator);
             return ret;
         }
+
 
         [ExcelFunction()]
         public static string RDKit_SMILES(string text)
         {
-            return RDKit_CalcStringDesc(text, "RDKit_SMILES", mol => mol.MolToSmiles());
+            return RDKit_CalcDesc(text, "RDKit_SMILES", mol => mol.MolToSmiles());
         }
 
         [ExcelFunction()]
         public static string RDKit_InChI(string text)
         {
-            return RDKit_CalcStringDesc(text, "RDKit_InChI", mol => 
+            return RDKit_CalcDesc(text, "RDKit_InChI", mol => 
                 {
                     using (var rv = new ExtraInchiReturnValues())
                     {
@@ -89,19 +90,33 @@ namespace NCDKExcel
         {
             using (var rv = new ExtraInchiReturnValues())
             {
-                return RDKit_CalcStringDesc(text, "RDKit_InChIKey", mol => RDKFuncs.MolToInchiKey(mol));
+                return RDKit_CalcDesc(text, "RDKit_InChIKey", mol => RDKFuncs.MolToInchiKey(mol));
             }
         }
 
         [ExcelFunction()]
         public static string RDKit_MolBlock(string text)
         {
-            return RDKit_CalcStringDesc(text, "RDKit_MolText", mol => mol.MolToMolBlock());
+            return RDKit_CalcDesc(text, "RDKit_MolText", mol => mol.MolToMolBlock());
+        }
+
+        [ExcelFunction()]
+        public static double RDKit_ChiNn(string text, int n)
+        {
+            return RDKit_CalcDesc(text, "RDKit_ChiNn" + n.ToString(), mol => RDKFuncs.calcChiNn(mol, (uint)n));
+        }
+
+        [ExcelFunction()]
+        public static double RDKit_ChiNv(string text, int n)
+        {
+            return RDKit_CalcDesc(text, "RDKit_ChiNv" + n.ToString(), mol => RDKFuncs.calcChiNv(mol, (uint)n));
         }
     }
 
     public static partial class RDKitUtility
     {
+        public const string SeparatorofNameKind = NCDKExcel.Utility.SeparatorofNameKind;
+
         static readonly IDictionary<string, ROMol> MolecularCache = new Dictionary<string, ROMol>();
         static readonly ROMol nullMol = new RWMol();
 

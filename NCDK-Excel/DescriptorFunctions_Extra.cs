@@ -7,17 +7,17 @@ using static NCDKExcel.Utility;
 
 namespace NCDKExcel
 {
-    static partial class Caching<T>
+    static partial class Caching<TRet>
     {
-        static IDictionary<string, T> ValueCache = new Dictionary<string, T>();
+        static IDictionary<string, TRet> ValueCache = new Dictionary<string, TRet>();
 
-        public static T Calculate(string text, string name, Func<IAtomContainer, T> calculator)
+        public static TRet Calculate(string text, string name, Func<IAtomContainer, TRet> calculator)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
             var key = name + SeparatorofNameKind + text;
-            if (!ValueCache.TryGetValue(key, out T nReturnValue))
+            if (!ValueCache.TryGetValue(key, out TRet nReturnValue))
             {
                 var mol = Parse(text);
                 nReturnValue = calculator(mol);
