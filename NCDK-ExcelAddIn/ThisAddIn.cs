@@ -20,6 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+// To run on debugger,
+// set proper values to "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Excel\Addins\NCDK-ExcelAddIn"
+// or "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\Excel\Addins\NCDK-ExcelAddIn" entry.
+// See setup projects.
+
 using System;
 using System.IO;
 
@@ -106,7 +111,6 @@ namespace NCDK_ExcelAddIn
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
-#endregion
+        #endregion
     }
 }

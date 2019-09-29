@@ -5,7 +5,6 @@ namespace NCDK_ExcelAddIn
 {
     public static class ExcelTool
     {
-
         /// <summary>
         /// Do <paramref name="action"/> on each cell in <paramref name="range"/>.
         /// </summary>
