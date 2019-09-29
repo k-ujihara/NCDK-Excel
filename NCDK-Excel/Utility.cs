@@ -1,4 +1,5 @@
-﻿using NCDK;
+﻿using GraphMolWrap;
+using NCDK;
 using NCDK.Fingerprints;
 using NCDK.Graphs.InChI;
 using NCDK.IO;
@@ -36,6 +37,17 @@ namespace NCDKExcel
                 default:
                     return value.ToString();
             }
+        }
+
+        public static string ToExcelString(BitVect fp)
+        {
+            var sb = new StringBuilder();
+            var n = fp.getNumBits();
+            for (uint i = 0; i < n; i++)
+            {
+                sb.Append(fp.getBit(i) ? "1" : "0");
+            }
+            return sb.ToString();
         }
 
         public static string ToExcelString(IDescriptorResult result)
