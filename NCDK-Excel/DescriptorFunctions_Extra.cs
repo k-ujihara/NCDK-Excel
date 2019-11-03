@@ -168,9 +168,9 @@ namespace NCDKExcel
         }
 
         [ExcelFunction()]
-        public static string NCDK_MolText(string text)
+        public static string NCDK_MolBlock(string text)
         {
-            return NCDK_CalcStringDesc(text, "NCDK_MolText", mol => Utility.ToMolText(mol));
+            return NCDK_CalcStringDesc(text, "NCDK_MolBlock", mol => Utility.ToMolBlock(mol));
         }
     }
 }

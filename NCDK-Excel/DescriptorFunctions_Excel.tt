@@ -147,18 +147,25 @@ namespace NCDKExcel
                         excelReturnType = "double";
                         extractValue = "result";
                         break;
+					 case "string":
+                        calcReturnType = "string";
+                        excelReturnType = "string";
+                        extractValue = "result";
+                        break;
                     case "IBitFingerprint":
                         calcReturnType = "IBitFingerprint";
                         excelReturnType = "string";
                         extractValue = "ToExcelString(result)";
                         break;
 					// RDKit
-					case "BitVect":
-						calcReturnType = "BitVect";
+					case "ExplicitBitVect":
+					case "SparseIntVect32":
+					case "SparseIntVect64":
+						calcReturnType = return_type;
                         excelReturnType = "string";
                         extractValue = "ToExcelString(result)";
                         break;
-                    default:
+					default:
                         if (return_type == null)
                             return_type = "null";
                         throw new Exception("Unexpected return type " + return_type.ToString() + ".");

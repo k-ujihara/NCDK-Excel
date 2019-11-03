@@ -17,7 +17,8 @@ namespace NCDK_ExcelAddIn
             int row = 2;
             var keyIndex = new Dictionary<string, int>();
             const int ColumnTitle = 1;
-            int endIndex = ColumnTitle + 1; // for Title:1
+            const int ColumnMolBlock = 2;
+            int endIndex = ColumnMolBlock + 1; // for Title:1
 
             var saveScreenUpdating = Globals.ThisAddIn.Application.ScreenUpdating;
             var saveCalculation = Globals.ThisAddIn.Application.Calculation;
@@ -39,6 +40,7 @@ namespace NCDK_ExcelAddIn
                             {
                                 newSheet = Globals.ThisAddIn.Application.Sheets.Add();
                                 newSheet.Cells[1, ColumnTitle] = "Title";
+                                newSheet.Cells[1, ColumnMolBlock] = "MOL Text";
                             }
                             Excel.Range cells = newSheet.Cells;
                             try
@@ -71,6 +73,7 @@ namespace NCDK_ExcelAddIn
                             {
                                 cells[row, ColumnTitle] = exception.Message;
                             }
+                            cells[row, ColumnMolBlock] = mol.MolToMolBlock();
                             row++;
                         }
                     }

@@ -42,11 +42,11 @@ namespace NCDKExcel
         }
 
         [TestMethod()]
-        public void ToMolTextTest()
+        public void ToMolBlockTest()
         {
             var methane = CDK.SmilesParser.ParseSmiles("C");
-            var molText = Utility.ToMolText(methane);
-            Assert.IsTrue(molText.Contains("M  END"));
+            var molBlock = Utility.ToMolBlock(methane);
+            Assert.IsTrue(molBlock.Contains("M  END"));
         }
     }
 }

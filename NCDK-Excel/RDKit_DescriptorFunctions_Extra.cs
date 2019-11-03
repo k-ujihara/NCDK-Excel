@@ -66,38 +66,16 @@ namespace NCDKExcel
             return ret;
         }
 
-
-        [ExcelFunction()]
-        public static string RDKit_SMILES(string text)
-        {
-            return RDKit_CalcDesc(text, "RDKit_SMILES", mol => mol.MolToSmiles());
-        }
-
         [ExcelFunction()]
         public static string RDKit_InChI(string text)
         {
-            return RDKit_CalcDesc(text, "RDKit_InChI", mol => 
-                {
-                    using (var rv = new ExtraInchiReturnValues())
-                    {
-                        return RDKFuncs.MolToInchi(mol, rv);
-                    }
-                });
-        }
-
-        [ExcelFunction()]
-        public static string RDKit_InChIKey(string text)
-        {
-            using (var rv = new ExtraInchiReturnValues())
+            return RDKit_CalcDesc(text, "RDKit_InChI", mol =>
             {
-                return RDKit_CalcDesc(text, "RDKit_InChIKey", mol => RDKFuncs.MolToInchiKey(mol));
-            }
-        }
-
-        [ExcelFunction()]
-        public static string RDKit_MolBlock(string text)
-        {
-            return RDKit_CalcDesc(text, "RDKit_MolText", mol => mol.MolToMolBlock());
+                using (var rv = new ExtraInchiReturnValues())
+                {
+                    return RDKFuncs.MolToInchi(mol, rv);
+                }
+            });
         }
 
         [ExcelFunction()]
@@ -148,7 +126,7 @@ namespace NCDKExcel
                 mol = RWMol.MolFromMolBlock(ident);
                 if (mol != null)
                 {
-                    notationType = LineNotationType.MolText;
+                    notationType = LineNotationType.MolBlock;
                     goto L_MolFound;
                 }
 

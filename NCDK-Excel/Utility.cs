@@ -17,7 +17,7 @@ namespace NCDKExcel
         Nil = 0,
         Smiles = 1,
         InChI = 2,
-        MolText = 3,
+        MolBlock = 3,
     }
 
     public static partial class Utility
@@ -48,6 +48,16 @@ namespace NCDKExcel
                 sb.Append(fp.getBit(i) ? "1" : "0");
             }
             return sb.ToString();
+        }
+
+        public static string ToExcelString(SparseIntVect32 vector)
+        {
+            return RDKitSparseVector.ToJson(vector);
+        }
+
+        public static string ToExcelString(SparseIntVect64 vector)
+        {
+            return RDKitSparseVector.ToJson(vector);
         }
 
         public static string ToExcelString(IDescriptorResult result)
@@ -195,7 +205,7 @@ namespace NCDKExcel
             }
             if (mol != null)
             {
-                notationType = LineNotationType.MolText;
+                notationType = LineNotationType.MolBlock;
                 return mol;
             }
 
@@ -212,7 +222,7 @@ namespace NCDKExcel
             }
             if (mol != null)
             {
-                notationType = LineNotationType.MolText;
+                notationType = LineNotationType.MolBlock;
                 return mol;
             }
 
@@ -220,7 +230,7 @@ namespace NCDKExcel
             return null;
         }
 
-        public static string ToMolText(IAtomContainer mol)
+        public static string ToMolBlock(IAtomContainer mol)
         {
             string ret = null;
             using (var sr = new StringWriter())
