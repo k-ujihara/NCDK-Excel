@@ -33,9 +33,6 @@ Build
 Open the solution file by Visual Studio 2017 and build all.
 Installer will be generated.
 
-AAAAA
------
-
 ### NCDK functions
 
 AcidicGroupCount
@@ -104,7 +101,7 @@ ExactMas
 SMILES
 InChI
 InChIKey
-MolText
+MolBlock
 Tanimoto
 
 ### RDKit Functions
@@ -115,13 +112,74 @@ HashedAtomPairFingerprint
 HashedTopologicalTorsionFingerprint
 PatternFingerprint
 RDKFingerprint
+AtomPairFingerprint
+TopologicalTorsionFingerprint
+Chi0n
+Chi0v
+Chi1n
+Chi1v
+Chi2n
+Chi2v
+Chi3n
+Chi3v
+Chi4n
+Chi4v
+Kappa1
+Kappa2
+Kappa3
+LabuteASA
 MolLogP
 MolMR
 ExactMW
 FractionCSP3
 HallKierAlpha
-
-
-
+LipinskiHBA
+LipinskiHBD
+NumAliphaticCarbocycles
+NumAliphaticHeterocycles
+NumAliphaticRings
+NumAmideBonds
+NumAromaticCarbocycles
+NumAromaticHeterocycles
+NumAromaticRings
+NumBridgeheadAtoms
+NumHBA
+NumHBD
+TPSA
+NumRotatableBonds
+NumHeteroatoms
+NumHeterocycles
+NumRings
+NumSaturatedCarbocycles
+NumSaturatedHeterocycles
+NumSaturatedRings
+NumSpiroAtoms
+BalabanJ
+FormalCharge
+AtomStereoCenters
+UnspecifiedAtomStereoCenters
+MolFormula
+CanonicalSmiles
+CXExtensions
+CXSmiles
+InchiKey
+MolBlock
+PDBBlock
+Smarts
+Smiles
+TPLText
+XYZBlock
+TanimotoSimilarity
+AllBitSimilarity
+AsymmetricSimilarity
+BraunBlanquetSimilarity
+CosineSimilarity
+DiceSimilarity
+KulczynskiSimilarity
+McConnaugheySimilarity
+OnBitSimilarity
+RusselSimilarity
+SokalSimilarity
+TverskySimilarity
 
 Copyright (c) 2018-2019 Kazuya Ujihara
