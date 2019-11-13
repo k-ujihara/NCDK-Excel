@@ -68,6 +68,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="QEDTests.cs" />
     <Compile Include="RDKitDescriptorFunctionsTests.cs" />
     <Compile Include="DescriptorFunctionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

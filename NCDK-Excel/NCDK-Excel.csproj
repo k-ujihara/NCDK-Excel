@@ -72,12 +72,16 @@
     <Compile Include="..\NCDK-ExcelAddIn\Properties\Versions.cs">
       <Link>Properties\Versions.cs</Link>
     </Compile>
+    <Compile Include="Chem.cs" />
+    <Compile Include="Crippen.cs" />
     <Compile Include="DescriptorFunctions_Excel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DescriptorFunctions_Excel.tt</DependentUpon>
     </Compile>
     <Compile Include="DescriptorFunctions_Extra.cs" />
+    <Compile Include="Descriptors.cs" />
+    <Compile Include="QED.cs" />
     <Compile Include="RDKit_DescriptorFunctions_Extra.cs" />
     <Compile Include="RDKitSparseVector.cs" />
     <Compile Include="Utility.cs" />

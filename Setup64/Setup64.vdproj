@@ -82,13 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_7E33562CD5B2703FA6A33AE4DA412DB8"
-        "OwnerKey" = "8:_607036F4A88DD0523762A671CBAB9BEC"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7E33562CD5B2703FA6A33AE4DA412DB8"
-        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "OwnerKey" = "8:_607036F4A88DD0523762A671CBAB9BEC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,13 +106,13 @@
         "Entry"
         {
         "MsmKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
-        "OwnerKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
+        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
-        "OwnerKey" = "8:_067712FD363D461A9822E94352F6C24D"
+        "OwnerKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -214,85 +214,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A249C9852192C39D38D3F60943B02617"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_596CEA4BC849FEC1B19FA8BAB8524D0E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1767D48D279FFC8621060349AF9CE589"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BAFFEED5043E46EC73E40C2135C2E907"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_959164C531696ECD1DD00A3AC042E38A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F52F6BF5A33F2D9EB601DD5570CBEBFF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B8507DC0041F2AD6F2BBCCED4E212BDB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3655AAFE938E97A654EA1322CD52F406"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_026FFC9B4425A4200BC3D728FBC902B3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_607036F4A88DD0523762A671CBAB9BEC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E99019DBF2A2FA67BC3A850FF8CD18EE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E0013B9B75E8C1B9238194E0EE2218ED"
+        "OwnerKey" = "8:_01675D4C060782C8922B8094BA29726F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -304,7 +226,85 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_01675D4C060782C8922B8094BA29726F"
+        "OwnerKey" = "8:_E0013B9B75E8C1B9238194E0EE2218ED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E99019DBF2A2FA67BC3A850FF8CD18EE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_607036F4A88DD0523762A671CBAB9BEC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_026FFC9B4425A4200BC3D728FBC902B3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3655AAFE938E97A654EA1322CD52F406"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B8507DC0041F2AD6F2BBCCED4E212BDB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F52F6BF5A33F2D9EB601DD5570CBEBFF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_959164C531696ECD1DD00A3AC042E38A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BAFFEED5043E46EC73E40C2135C2E907"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_927079B44C5669AB045B4A6ADC710BB1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1767D48D279FFC8621060349AF9CE589"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_596CEA4BC849FEC1B19FA8BAB8524D0E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F8C2E43C97E7C2C07B9947319F51415D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A249C9852192C39D38D3F60943B02617"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -429,11 +429,6 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_01675D4C060782C8922B8094BA29726F"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
@@ -460,11 +455,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_026FFC9B4425A4200BC3D728FBC902B3"
-                    {
-                    "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
             "TargetName" = "8:"
@@ -491,11 +481,6 @@
             "AssemblyAsmDisplayName" = "8:NCDKExcel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1767D48D279FFC8621060349AF9CE589"
-                    {
-                    "Name" = "8:NCDKExcel.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:NCDKExcel.dll"
             "TargetName" = "8:"
@@ -542,11 +527,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3655AAFE938E97A654EA1322CD52F406"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
             "TargetName" = "8:"
@@ -573,11 +553,6 @@
             "AssemblyAsmDisplayName" = "8:HtmlAgilityPack, Version=1.11.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_596CEA4BC849FEC1B19FA8BAB8524D0E"
-                    {
-                    "Name" = "8:HtmlAgilityPack.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:HtmlAgilityPack.dll"
             "TargetName" = "8:"
@@ -604,11 +579,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_607036F4A88DD0523762A671CBAB9BEC"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Excel.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Excel.dll"
             "TargetName" = "8:"
@@ -635,11 +605,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7E33562CD5B2703FA6A33AE4DA412DB8"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.dll"
             "TargetName" = "8:"
@@ -686,11 +651,6 @@
             "AssemblyAsmDisplayName" = "8:NCDK, Version=1.5.3.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_927079B44C5669AB045B4A6ADC710BB1"
-                    {
-                    "Name" = "8:NCDK.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:NCDK.dll"
             "TargetName" = "8:"
@@ -717,11 +677,6 @@
             "AssemblyAsmDisplayName" = "8:dotNetRDF, Version=2.2.0.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_959164C531696ECD1DD00A3AC042E38A"
-                    {
-                    "Name" = "8:dotNetRDF.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:dotNetRDF.dll"
             "TargetName" = "8:"
@@ -768,11 +723,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A249C9852192C39D38D3F60943B02617"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -799,11 +749,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_B8507DC0041F2AD6F2BBCCED4E212BDB"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -830,11 +775,6 @@
             "AssemblyAsmDisplayName" = "8:MathNet.Numerics, Version=4.7.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BAFFEED5043E46EC73E40C2135C2E907"
-                    {
-                    "Name" = "8:MathNet.Numerics.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MathNet.Numerics.dll"
             "TargetName" = "8:"
@@ -881,11 +821,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E0013B9B75E8C1B9238194E0EE2218ED"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.dll"
             "TargetName" = "8:"
@@ -912,11 +847,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E99019DBF2A2FA67BC3A850FF8CD18EE"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
             "TargetName" = "8:"
@@ -943,11 +873,6 @@
             "AssemblyAsmDisplayName" = "8:VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F52F6BF5A33F2D9EB601DD5570CBEBFF"
-                    {
-                    "Name" = "8:VDS.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:VDS.Common.dll"
             "TargetName" = "8:"
@@ -974,11 +899,6 @@
             "AssemblyAsmDisplayName" = "8:NCDK.Display, Version=1.5.3.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F8C2E43C97E7C2C07B9947319F51415D"
-                    {
-                    "Name" = "8:NCDK.Display.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:NCDK.Display.dll"
             "TargetName" = "8:"
@@ -1054,15 +974,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCDK-Excel"
-        "ProductCode" = "8:{C78B6E0F-6B73-45FA-B654-4B0176310CE7}"
-        "PackageCode" = "8:{1CA2F6DE-38E8-42E3-9E38-567749CB7641}"
+        "ProductCode" = "8:{21285161-5C41-4D24-8FDC-BC93EC29AEDC}"
+        "PackageCode" = "8:{503017BE-70F5-4F01-9914-10EDE3279945}"
         "UpgradeCode" = "8:{1CFDC548-A7DF-490C-A808-22A7567F9BD0}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.0.4"
+        "ProductVersion" = "8:0.0.5"
         "Manufacturer" = "8:Kazuya Ujihara"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/kazuyaujihara/NCDK-Excel"
