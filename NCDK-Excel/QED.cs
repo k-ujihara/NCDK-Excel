@@ -387,7 +387,8 @@ namespace NCDKExcel
 
         public static double Calculate(QEDProperies<double> qedProperties, QEDProperies<double> weight = null)
         {
-            var t = qedParameterTypesArray.Sum(tt => weight[tt] * Math.Log(Ads(qedProperties[tt], adsParameters[tt])));
+            var d = qedParameterTypesArray.Select(tt => Ads(qedProperties[tt], adsParameters[tt])).ToList();
+            var t = qedParameterTypesArray.Sum(tt => weight[tt] * Math.Log(d[(int)tt]));
             return Math.Exp(t / weight.Values.Sum());
         }
 
@@ -395,7 +396,7 @@ namespace NCDKExcel
         {
             if (weight == null)
                 weight = WeightMean;
-            return Calculate(mol, weight);
+            return Calculate(CreateProperties(mol), weight);
         }
     }
 }

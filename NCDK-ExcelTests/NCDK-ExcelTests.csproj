@@ -7,7 +7,7 @@
     <ProjectGuid>{59AD77EB-2D98-4CCC-A551-EB27D25597C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NCDK_ExcelTests</RootNamespace>
+    <RootNamespace>NCDKExcel</RootNamespace>
     <AssemblyName>NCDK-ExcelTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -78,6 +78,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="test_data\QED\NCI_200_qed.csv" />
+    <EmbeddedResource Include="test_data\QED\NCI_5000_qed.csv" />
+    <EmbeddedResource Include="test_data\QED\Regression_qed.csv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NCDK-ExcelAddIn\NCDK-ExcelAddIn.csproj">

@@ -14,9 +14,19 @@ namespace NCDKExcel
             return mol.hasSubstructMatch(query);
         }
 
-        public static ROMol DeleteSubstructs(ROMol mol, ROMol query, bool replaceAll = true)
+        public static ROMol DeleteSubstructs(ROMol mol, ROMol query, bool replaceAll = false)
         {
             return mol.deleteSubstructs(query, replaceAll);
+        }
+
+        public static string MolToSmiles(ROMol mol)
+        {
+            return RDKFuncs.MolToSmiles(mol);
+        }
+
+        public static string MolToSmarts(ROMol mol)
+        {
+            return RDKFuncs.MolToSmarts(mol);
         }
 
         public static RWMol MolFromSmiles(string smiles, bool sanitize = true)
