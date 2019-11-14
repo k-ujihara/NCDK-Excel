@@ -131,3 +131,4 @@ RDKit	Smarts	GraphMolWrap.RDKFuncs	string	MolToSmarts			TRUE
 RDKit	Smiles	GraphMolWrap.RDKFuncs	string	MolToSmiles			TRUE
 RDKit	TPLText	GraphMolWrap.RDKFuncs	string	MolToTPLText			TRUE
 RDKit	XYZBlock	GraphMolWrap.RDKFuncs	string	MolToXYZBlock			TRUE
+RDKit	QED	NCDKExcel.QED	double	Calculate			TRUE

@@ -2501,6 +2501,24 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
+        [ExcelFunction()]
+        public static double RDKit_QED(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_QED",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = NCDKExcel.QED.Calculate(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
     }
 }
 
