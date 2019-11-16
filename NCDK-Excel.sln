@@ -13,6 +13,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup32", "Setup\Setup.vdpr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCDK-ExcelTests", "NCDK-ExcelTests\NCDK-ExcelTests.csproj", "{59AD77EB-2D98-4CCC-A551-EB27D25597C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDKit", "RDKit\RDKit.csproj", "{B2FE6A3A-4775-4B6A-8630-420ABBF22286}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{59AD77EB-2D98-4CCC-A551-EB27D25597C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59AD77EB-2D98-4CCC-A551-EB27D25597C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59AD77EB-2D98-4CCC-A551-EB27D25597C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

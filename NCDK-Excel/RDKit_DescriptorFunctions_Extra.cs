@@ -67,13 +67,13 @@ namespace NCDKExcel
         }
 
         [ExcelFunction()]
-        public static string RDKit_InChI(string text)
+        public static string RDKit_InChI(string text, string options)
         {
             return RDKit_CalcDesc(text, "RDKit_InChI", mol =>
             {
                 using (var rv = new ExtraInchiReturnValues())
                 {
-                    return RDKFuncs.MolToInchi(mol, rv);
+                    return RDKit.Chem.MolToInchi(mol, options, rv);
                 }
             });
         }

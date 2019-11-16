@@ -24,6 +24,7 @@
 
 using ExcelDna.Integration;
 using GraphMolWrap;
+using RDKit;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -76,82 +77,83 @@ namespace NCDKExcel
         }
 
         [ExcelFunction()]
-        public static double RDKit_TanimotoSimilarity(string fp1, string fp2)
+        public static double RDKit_TanimotoSimilarity(string fp1, string fp2, bool returnDistance, double bounds)
         {
-            var val = RDKit_Similarity(RDKFuncs.TanimotoSimilarity, fp1, fp2);
+            var val = RDKit_Similarity(DataStructs.TanimotoSimilarity, fp1, fp2);
             if (double.IsNaN(val))
-                val = RDKit_Similarity(RDKFuncs.TanimotoSimilaritySIVi64, fp1, fp2);
+                val = RDKit_SimilaritySIV64(DataStructs.TanimotoSimilarity, fp1, fp2, returnDistance, bounds);
             return val;
         }
 
         [ExcelFunction()]
-        public static double RDKit_AllBitSimilarity(string fp1, string fp2)
-        {            return RDKit_Similarity(RDKFuncs.AllBitSimilarity, fp1, fp2);
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_AsymmetricSimilarity(string fp1, string fp2)
+        public static double RDKit_DiceSimilarity(string fp1, string fp2, bool returnDistance, double bounds)
         {
-            return RDKit_Similarity(RDKFuncs.AsymmetricSimilarity, fp1, fp2);
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_BraunBlanquetSimilarity(string fp1, string fp2)
-        {
-            return RDKit_Similarity(RDKFuncs.BraunBlanquetSimilarity, fp1, fp2);
+            var val = RDKit_Similarity(DataStructs.DiceSimilarity, fp1, fp2);
+            if (double.IsNaN(val))
+                val = RDKit_SimilaritySIV64(DataStructs.DiceSimilarity, fp1, fp2, returnDistance, bounds);
+            return val;
         }
 
         [ExcelFunction()]
         public static double RDKit_CosineSimilarity(string fp1, string fp2)
         {
-             return RDKit_Similarity(RDKFuncs.CosineSimilarity, fp1, fp2);
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_DiceSimilarity(string fp1, string fp2)
-        {
-            var val = RDKit_Similarity((ExplicitBitVect v1, ExplicitBitVect v2) => RDKFuncs.DiceSimilarity(v1, v2), fp1, fp2);
-            if (double.IsNaN(val))
-                val = RDKit_Similarity((SparseIntVect64 v1, SparseIntVect64 v2) => RDKFuncs.DiceSimilarity(v1, v2), fp1, fp2);
-            return val;
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_KulczynskiSimilarity(string fp1, string fp2)
-        {
-            return RDKit_Similarity(RDKFuncs.KulczynskiSimilarity, fp1, fp2);
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_McConnaugheySimilarity(string fp1, string fp2)
-        {
-            return RDKit_Similarity(RDKFuncs.McConnaugheySimilarity, fp1, fp2);
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_OnBitSimilarity(string fp1, string fp2)
-        {
-            return RDKit_Similarity(RDKFuncs.OnBitSimilarity, fp1, fp2);
-        }
-
-        [ExcelFunction()]
-        public static double RDKit_RusselSimilarity(string fp1, string fp2)
-        {
-            return RDKit_Similarity(RDKFuncs.RusselSimilarity, fp1, fp2);
+            return RDKit_Similarity(DataStructs.CosineSimilarity, fp1, fp2);
         }
 
         [ExcelFunction()]
         public static double RDKit_SokalSimilarity(string fp1, string fp2)
         {
-            return RDKit_Similarity(RDKFuncs.SokalSimilarity, fp1, fp2);
+            return RDKit_Similarity(DataStructs.SokalSimilarity, fp1, fp2);
         }
 
         [ExcelFunction()]
-        public static double RDKit_TverskySimilarity(string fp1, string fp2, double a, double b)
+        public static double RDKit_RusselSimilarity(string fp1, string fp2)
         {
-            var val = RDKit_Similarity((ExplicitBitVect v1, ExplicitBitVect v2) => RDKFuncs.TverskySimilarity(v1, v2, a, b), fp1, fp2);
+            return RDKit_Similarity(DataStructs.RusselSimilarity, fp1, fp2);
+        }
+
+        //[ExcelFunction()]
+        //public static double RDKit_RogotGoldbergSimilarity(string fp1, string fp2)
+        //{
+        //    return RDKit_Similarity(DataStructs.RogotGoldbergSimilarity, fp1, fp2);
+        //}
+
+        [ExcelFunction()]
+        public static double RDKit_AllBitSimilarity(string fp1, string fp2)
+        {
+            return RDKit_Similarity(DataStructs.AllBitSimilarity, fp1, fp2);
+        }
+
+        [ExcelFunction()]
+        public static double RDKit_KulczynskiSimilarity(string fp1, string fp2)
+        {
+            return RDKit_Similarity(DataStructs.KulczynskiSimilarity, fp1, fp2);
+        }
+
+        [ExcelFunction()]
+        public static double RDKit_McConnaugheySimilarity(string fp1, string fp2)
+        {
+            return RDKit_Similarity(DataStructs.McConnaugheySimilarity, fp1, fp2);
+        }
+
+        [ExcelFunction()]
+        public static double RDKit_AsymmetricSimilarity(string fp1, string fp2)
+        {
+            return RDKit_Similarity(DataStructs.AsymmetricSimilarity, fp1, fp2);
+        }
+
+        [ExcelFunction()]
+        public static double RDKit_BraunBlanquetSimilarity(string fp1, string fp2)
+        {
+            return RDKit_Similarity(DataStructs.BraunBlanquetSimilarity, fp1, fp2);
+        }
+            
+        [ExcelFunction()]
+        public static double RDKit_TverskySimilarity(string fp1, string fp2, double a, double b, bool returnDistance, double bounds)
+        {
+            var val = RDKit_Similarity((ExplicitBitVect v1, ExplicitBitVect v2) => DataStructs.TverskySimilarity(v1, v2, a, b), fp1, fp2);
             if (double.IsNaN(val))
-                val = RDKit_Similarity((SparseIntVect64 v1, SparseIntVect64 v2) => RDKFuncs.TverskySimilarity(v1, v2, a, b), fp1, fp2);
+                val = RDKit_SimilaritySIV64((SparseIntVect64 v1, SparseIntVect64 v2, bool _returnDistance, double _bounds) => DataStructs.TverskySimilarity(v1, v2, a, b, _returnDistance, _bounds), fp1, fp2, returnDistance, bounds);
             return val;
         }
 
@@ -172,15 +174,15 @@ namespace NCDKExcel
             return val;
         }
 
-        static double RDKit_Similarity(Func<SparseIntVect64, SparseIntVect64, double> func, string fp1, string fp2)
+        static double RDKit_SimilaritySIV64(Func<SparseIntVect64, SparseIntVect64, bool, double, double> func, string fp1, string fp2, bool returnDistance, double bounds)
         {
             var val = double.NaN;
             try
             {
                 var sv1 = RDKitSparseVector.FromJsonToSIV(fp1);
                 var sv2 = RDKitSparseVector.FromJsonToSIV(fp2);
-
-                val = RDKFuncs.TanimotoSimilaritySIVi64(sv1, sv2);
+                
+                val = func(sv1, sv2, returnDistance, bounds);
             }
             catch (Exception)
             {

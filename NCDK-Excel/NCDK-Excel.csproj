@@ -72,16 +72,12 @@
     <Compile Include="..\NCDK-ExcelAddIn\Properties\Versions.cs">
       <Link>Properties\Versions.cs</Link>
     </Compile>
-    <Compile Include="Chem.cs" />
-    <Compile Include="Crippen.cs" />
     <Compile Include="DescriptorFunctions_Excel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DescriptorFunctions_Excel.tt</DependentUpon>
     </Compile>
     <Compile Include="DescriptorFunctions_Extra.cs" />
-    <Compile Include="Descriptors.cs" />
-    <Compile Include="QED.cs" />
     <Compile Include="RDKit_DescriptorFunctions_Extra.cs" />
     <Compile Include="RDKitSparseVector.cs" />
     <Compile Include="Utility.cs" />
@@ -112,6 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DescriptorInfo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RDKit\RDKit.csproj">
+      <Project>{b2fe6a3a-4775-4b6a-8630-420abbf22286}</Project>
+      <Name>RDKit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

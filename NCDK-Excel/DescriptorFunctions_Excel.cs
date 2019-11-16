@@ -2322,42 +2322,6 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string RDKit_CanonicalSmiles(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "RDKit_CanonicalSmiles",
-                mol =>
-                {
-                string nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = GraphMolWrap.RDKFuncs.getCanonSmiles(mol);
-                    nReturnValue = result;
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
-        [ExcelFunction()]
-        public static string RDKit_CXExtensions(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "RDKit_CXExtensions",
-                mol =>
-                {
-                string nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = GraphMolWrap.RDKFuncs.getCXExtensions(mol);
-                    nReturnValue = result;
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
-        [ExcelFunction()]
         public static string RDKit_CXSmiles(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_CXSmiles",
@@ -2367,7 +2331,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MolToCXSmiles(mol);
+                    var result = RDKit.Chem.MolToCXSmiles(mol);
                     nReturnValue = result;
                 }
 
@@ -2385,7 +2349,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MolToInchiKey(mol);
+                    var result = RDKit.Chem.MolToInchiKey(mol);
                     nReturnValue = result;
                 }
 
@@ -2403,7 +2367,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MolToMolBlock(mol);
+                    var result = RDKit.Chem.MolToMolBlock(mol);
                     nReturnValue = result;
                 }
 
@@ -2421,7 +2385,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MolToPDBBlock(mol);
+                    var result = RDKit.Chem.MolToPDBBlock(mol);
                     nReturnValue = result;
                 }
 
@@ -2439,7 +2403,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MolToSmarts(mol);
+                    var result = RDKit.Chem.MolToSmarts(mol);
                     nReturnValue = result;
                 }
 
@@ -2457,43 +2421,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MolToSmiles(mol);
-                    nReturnValue = result;
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
-        [ExcelFunction()]
-        public static string RDKit_TPLText(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "RDKit_TPLText",
-                mol =>
-                {
-                string nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = GraphMolWrap.RDKFuncs.MolToTPLText(mol);
-                    nReturnValue = result;
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
-        [ExcelFunction()]
-        public static string RDKit_XYZBlock(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "RDKit_XYZBlock",
-                mol =>
-                {
-                string nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = GraphMolWrap.RDKFuncs.MolToXYZBlock(mol);
+                    var result = RDKit.Chem.MolToSmiles(mol);
                     nReturnValue = result;
                 }
 
@@ -2511,7 +2439,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = NCDKExcel.QED.Calculate(mol);
+                    var result = RDKit.Chem.QED.Calculate(mol);
                     nReturnValue = result;
                 }
 

@@ -159,16 +159,12 @@ FormalCharge
 AtomStereoCenters
 UnspecifiedAtomStereoCenters
 MolFormula
-CanonicalSmiles
-CXExtensions
 CXSmiles
 InchiKey
 MolBlock
 PDBBlock
 Smarts
 Smiles
-TPLText
-XYZBlock
 TanimotoSimilarity
 AllBitSimilarity
 AsymmetricSimilarity

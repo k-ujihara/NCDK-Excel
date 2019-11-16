@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using static NCDKExcel.QED.QEDParameterTypes;
+using RDKit;
+using static RDKit.Chem;
+using static RDKit.Chem.QED.QEDParameterTypes;
 
 namespace NCDKExcel
 {

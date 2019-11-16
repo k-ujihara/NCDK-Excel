@@ -69,6 +69,17 @@ namespace NCDKExcel
             return sb.ToString();
         }
 
+        public static string ToJson(SparseIntVectu32 vector)
+        {
+            var sb = new StringBuilder();
+            sb.Append("{");
+            sb.Append($"\"size\":{vector.size()},");
+            sb.Append("\"nonzero\":{");
+            sb.Append(string.Join(",", vector.getNonzero().Select(n => $"{n.first}:{n.second}")));
+            sb.Append("}}");
+            return sb.ToString();
+        }
+
         public static string ToJson(SparseIntVect64 vector)
         {
             var sb = new StringBuilder();

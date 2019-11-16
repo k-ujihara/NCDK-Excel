@@ -1,6 +1,6 @@
 ﻿using GraphMolWrap;
 
-namespace NCDKExcel
+namespace RDKit
 {
     public static partial class Descriptors
     {

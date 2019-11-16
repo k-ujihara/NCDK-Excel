@@ -91,6 +91,10 @@
       <Project>{2864227B-91F7-42F0-B532-3307F6C74566}</Project>
       <Name>NCDK-Excel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RDKit\RDKit.csproj">
+      <Project>{b2fe6a3a-4775-4b6a-8630-420abbf22286}</Project>
+      <Name>RDKit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
