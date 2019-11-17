@@ -163,6 +163,8 @@ CXSmiles
 InchiKey
 MolBlock
 PDBBlock
+TPLBlock
+XYZBlock
 Smarts
 Smiles
 TanimotoSimilarity

@@ -125,6 +125,8 @@ RDKit	CXSmiles	RDKit.Chem	string	MolToCXSmiles			TRUE
 RDKit	InchiKey	RDKit.Chem	string	MolToInchiKey			TRUE
 RDKit	MolBlock	RDKit.Chem	string	MolToMolBlock			TRUE
 RDKit	PDBBlock	RDKit.Chem	string	MolToPDBBlock			TRUE
+RDKit	TPLBlock	RDKit.Chem	string	MolToTPLBlock			TRUE
+RDKit	XYZBlock	RDKit.Chem	string	MolToXYZBlock			TRUE
 RDKit	Smarts	RDKit.Chem	string	MolToSmarts			TRUE
 RDKit	Smiles	RDKit.Chem	string	MolToSmiles			TRUE
 RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE

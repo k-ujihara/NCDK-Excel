@@ -2394,6 +2394,42 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
+        public static string RDKit_TPLBlock(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_TPLBlock",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = RDKit.Chem.MolToTPLBlock(mol);
+                    nReturnValue = result;
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
+        public static string RDKit_XYZBlock(string text)
+        {
+            var ret = Caching<string>.Calculate(text, "RDKit_XYZBlock",
+                mol =>
+                {
+                string nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = RDKit.Chem.MolToXYZBlock(mol);
+                    nReturnValue = result;
+                }
+
+                return (string)nReturnValue;
+                });
+            return (string)ret;
+        }
+        [ExcelFunction()]
         public static string RDKit_Smarts(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_Smarts",

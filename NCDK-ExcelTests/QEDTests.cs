@@ -22,7 +22,7 @@ namespace NCDKExcel
                 // Check that adding hydrogens will not change the result
                 // This is currently not the case. Hydrogens change the number of rotatable bonds and the
                 // number of alerts.
-                var mol = Chem.AddHs(d.Mol);
+                var mol = d.Mol.AddHs();
                 Assert.AreEqual(d.Expected, QED.Calculate(mol), 0.01, $"QED not equal to expected in line {d.LineNo}");
             }
         }
@@ -58,7 +58,7 @@ namespace NCDKExcel
             Assert.AreEqual(1, p[AROM]);
             Assert.AreEqual(3, p[ALERTS]);
 
-            p = QED.CreateProperties(Chem.AddHs(m));
+            p = QED.CreateProperties(m.AddHs());
             Assert.AreEqual(337.456, p[MW], 0.01);
             Assert.AreEqual(-0.55833, p[ALOGP], 0.01);
             Assert.AreEqual(6, p[HBA]);
