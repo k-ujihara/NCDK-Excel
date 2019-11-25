@@ -1467,7 +1467,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.RDKFingerprintMol(mol);
+                    var result = RDKit.Chem.RDKFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 

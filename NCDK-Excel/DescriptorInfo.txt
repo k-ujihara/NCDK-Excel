@@ -73,7 +73,7 @@ RDKit	LayeredFingerprint	GraphMolWrap.RDKFuncs	ExplicitBitVect	LayeredFingerprin
 RDKit	HashedAtomPairFingerprint	GraphMolWrap.RDKFuncs	ExplicitBitVect	getHashedAtomPairFingerprintAsBitVect			TRUE
 RDKit	HashedTopologicalTorsionFingerprint	GraphMolWrap.RDKFuncs	ExplicitBitVect	getHashedTopologicalTorsionFingerprintAsBitVect			TRUE
 RDKit	PatternFingerprint	GraphMolWrap.RDKFuncs	ExplicitBitVect	PatternFingerprintMol			TRUE
-RDKit	RDKFingerprint	GraphMolWrap.RDKFuncs	ExplicitBitVect	RDKFingerprintMol			TRUE
+RDKit	RDKFingerprint	RDKit.Chem	ExplicitBitVect	RDKFingerprint			TRUE
 RDKit	AtomPairFingerprint	GraphMolWrap.RDKFuncs	SparseIntVect32	getAtomPairFingerprint			TRUE
 RDKit	TopologicalTorsionFingerprint	GraphMolWrap.RDKFuncs	SparseIntVect64	getTopologicalTorsionFingerprint			TRUE
 RDKit	Chi0n	GraphMolWrap.RDKFuncs	double	calcChi0n			TRUE
