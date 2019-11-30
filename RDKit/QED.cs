@@ -375,7 +375,7 @@ namespace RDKit
                 mol = mol.RemoveHs(false);
                 var QEDProperties = new QEDProperies<double>()
                 {
-                    [QEDParameterTypes.MW] = Descriptors.MolWt(mol),
+                    [QEDParameterTypes.MW] = Descriptors.CalcExactMolWt(mol),
                     [QEDParameterTypes.ALOGP] = Crippen.MolLogP(mol),
                     [QEDParameterTypes.HBA] = Acceptors.Sum(pattern => mol.GetSubstructMatches(pattern).Count),
                     [QEDParameterTypes.HBD] = Descriptors.CalcNumHBD(mol),

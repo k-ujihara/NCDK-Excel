@@ -1,6 +1,5 @@
 ﻿using GraphMolWrap;
 using System;
-using System.Linq;
 
 namespace RDKit
 {
