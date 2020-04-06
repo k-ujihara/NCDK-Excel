@@ -2465,6 +2465,24 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
+        [ExcelFunction()]
+        public static double RDKit_NumHeavyAtoms(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumHeavyAtoms",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = RDKit.Chem.GetNumHeavyAtoms(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
     }
 }
 

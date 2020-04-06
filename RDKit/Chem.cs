@@ -529,5 +529,14 @@ namespace RDKit
         {
             return RDKFuncs.MolToInchiKey(mol, options);
         }
+
+        //
+        // rdChem
+        //
+
+        public static int GetNumHeavyAtoms(ROMol mol)
+        {
+            return (int)mol.getNumHeavyAtoms();
+        }
     }
 }

@@ -129,3 +129,4 @@ RDKit	XYZBlock	RDKit.Chem	string	MolToXYZBlock			TRUE
 RDKit	Smarts	RDKit.Chem	string	MolToSmarts			TRUE
 RDKit	Smiles	RDKit.Chem	string	MolToSmiles			TRUE
 RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE
+RDKit	NumHeavyAtoms	RDKit.Chem	double	GetNumHeavyAtoms			TRUE
