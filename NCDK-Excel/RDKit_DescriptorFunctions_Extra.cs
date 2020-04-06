@@ -126,6 +126,7 @@ namespace NCDKExcel
                 mol = RWMol.MolFromMolBlock(ident);
                 if (mol != null)
                 {
+                    RDKFuncs.assignStereochemistryFrom3D(mol);
                     notationType = LineNotationType.MolBlock;
                     goto L_MolFound;
                 }
