@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chem.cs" />
+    <Compile Include="GraphMolWrapTools.cs" />
     <Compile Include="Crippen.cs" />
+    <Compile Include="DataStructs.cs" />
     <Compile Include="Descriptors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QED.cs" />

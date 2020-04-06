@@ -4,6 +4,7 @@ using NCDK.Fingerprints;
 using NCDK.Graphs.InChI;
 using NCDK.IO;
 using NCDK.QSAR;
+using RDKit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,9 +44,9 @@ namespace NCDKExcel
         {
             var sb = new StringBuilder();
             var n = fp.getNumBits();
-            for (uint i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
-                sb.Append(fp.getBit(i) ? "1" : "0");
+                sb.Append(fp.GetBit(i) ? "1" : "0");
             }
             return sb.ToString();
         }

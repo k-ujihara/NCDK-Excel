@@ -26,6 +26,10 @@ namespace NCDK_ExcelAddIn
                     action(firstCell);
             }
 
+            // The Following is to avoid Excel's bug,
+            // ie, range.Find("*") returns cell outside range when range.Count == 1.
+            if (range.Count == 1)
+                return;
             Excel.Range foundCell = range.Find("*");
             firstFoundCellInfo = new Tuple<int, int>(foundCell.Column, foundCell.Row);
             if (foundCell == null)

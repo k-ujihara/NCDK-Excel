@@ -3,35 +3,6 @@ using System;
 
 namespace RDKit
 {
-    public static partial class ChemTools
-    {
-        public static Match_Vect_Vect GetSubstructMatches(this ROMol mol, ROMol pattern)
-        {
-            return mol.getSubstructMatches(pattern);
-        }
-
-        public static bool HasSubstructMatch(this ROMol mol, ROMol query)
-        {
-            return mol.hasSubstructMatch(query);
-        }
-
-        public static ROMol DeleteSubstructs(this ROMol mol, ROMol query, bool replaceAll = false)
-        {
-            return mol.deleteSubstructs(query, replaceAll);
-        }
-
-        public static ROMol AddHs(this ROMol mol, bool explicitOnly = false, bool addCoords = false)
-        {
-            return mol.addHs(explicitOnly, addCoords);
-        }
-
-        public static ROMol RemoveHs(this ROMol mol, bool implicitOnly = false,
-            bool updateExplicitCount = false, bool sanitize = true)
-        {
-            return mol.removeHs(implicitOnly, updateExplicitCount, sanitize);
-        }
-    }
-
     public static partial class Chem
     {
         public enum SequenceFlavor
@@ -127,27 +98,27 @@ namespace RDKit
             return RDKFuncs.detectChemistryProblems(mol, (int)sanitizeOps);
         }
 
-        public static Int_Vect_List FindAllPathsOfLengthN(ROMol mol, uint targetLen,
+        public static Int_Vect_List FindAllPathsOfLengthN(ROMol mol, int targetLen,
             bool useBonds = true, bool useHs = false, int rootedAtAtom = -1)
         {
-            return RDKFuncs.findAllPathsOfLengthN(mol, targetLen, useBonds, useHs, rootedAtAtom);
+            return RDKFuncs.findAllPathsOfLengthN(mol, (uint)targetLen, useBonds, useHs, rootedAtAtom);
         }
 
-        public static Int_Int_Vect_List_Map FindAllSubgraphsOfLengthMToN(ROMol mol, uint lowerLen, uint upperLen,
+        public static Int_Int_Vect_List_Map FindAllSubgraphsOfLengthMToN(ROMol mol, int lowerLen, int upperLen,
             bool useHs = false, int rootedAtAtom = -1)
         {
-            return RDKFuncs.findAllSubgraphsOfLengthsMtoN(mol, lowerLen, upperLen, useHs, rootedAtAtom);
+            return RDKFuncs.findAllSubgraphsOfLengthsMtoN(mol, (uint)lowerLen, (uint)upperLen, useHs, rootedAtAtom);
         }
 
-        public static Int_Vect_List FindAllSubgraphsOfLengthN(ROMol mol, uint targetLen,
+        public static Int_Vect_List FindAllSubgraphsOfLengthN(ROMol mol, int targetLen,
             bool useHs = false, int rootedAtAtom = -1)
         {
-            return RDKFuncs.findAllSubgraphsOfLengthN(mol, targetLen, useHs, rootedAtAtom);
+            return RDKFuncs.findAllSubgraphsOfLengthN(mol, (uint)targetLen, useHs, rootedAtAtom);
         }
 
-        public static Int_Vect FindAtomEnvironmentOfRadiusN(ROMol mol, uint radius, uint rootedAtAtom, bool useHs = false)
+        public static Int_Vect FindAtomEnvironmentOfRadiusN(ROMol mol, int radius, int rootedAtAtom, bool useHs = false)
         {
-            return RDKFuncs.findAtomEnvironmentOfRadiusN(mol, radius, rootedAtAtom, useHs);
+            return RDKFuncs.findAtomEnvironmentOfRadiusN(mol, (uint)radius, (uint)rootedAtAtom, useHs);
         }
 
         public static void FindPotentialStereoBonds(ROMol mol, bool cleanIt = false)
@@ -155,10 +126,10 @@ namespace RDKit
             RDKFuncs.findPotentialStereoBonds(mol, cleanIt);
         }
 
-        public static Int_Vect_List FindUniqueSubgraphsOfLengthNfindUniqueSubgraphsOfLengthN(ROMol mol, uint targetLen,
+        public static Int_Vect_List FindUniqueSubgraphsOfLengthNfindUniqueSubgraphsOfLengthN(ROMol mol, int targetLen,
             bool useHs = false, bool useBO = true, int rootedAtAtom = -1)
         {
-            return RDKFuncs.findUniqueSubgraphsOfLengthN(mol, targetLen, useHs, useBO, rootedAtAtom);
+            return RDKFuncs.findUniqueSubgraphsOfLengthN(mol, (uint)targetLen, useHs, useBO, rootedAtAtom);
         }
 
         public static ROMol FragmentOnBRICSBonds(ROMol mol)
@@ -178,7 +149,7 @@ namespace RDKit
             return RDKFuncs.getAdjacencyMatrix(mol, useBO, emptyVal, force, propNamePrefix);
         }
 
-        public static SWIGTYPE_p_double GetDistanceMat(ROMol mol,
+        public static SWIGTYPE_p_double GetDistanceMatrix(ROMol mol,
             bool useBO = false, bool useAtomWts = false, bool force = false, string propNamePrefix = "")
         {
             return RDKFuncs.getDistanceMat(mol, useBO, useAtomWts, force, propNamePrefix);
@@ -226,12 +197,11 @@ namespace RDKit
             RDKFuncs.Kekulize(mol, clearAromaticFlags);
         }
 
-        public static ExplicitBitVect LayeredFingerprintMol(ROMol mol,
-            LayerFlags layerFlags = (LayerFlags)(-1), uint minPath = 1, uint maxPath = 7, uint fpSize = 2048,
+        public static ExplicitBitVect LayeredFingerprint(ROMol mol,
+            LayerFlags layerFlags = (LayerFlags)(-1), int minPath = 1, int maxPath = 7, int fpSize = 2048,
             UInt_Vect atomCounts = null, ExplicitBitVect setOnlyBits = null, bool branchedPaths = true, UInt_Vect fromAtoms = null)
         {
-            atomCounts = atomCounts ?? new UInt_Vect(0);
-            return RDKFuncs.LayeredFingerprintMol(mol, (uint)layerFlags, minPath, maxPath, fpSize, atomCounts, setOnlyBits, branchedPaths, fromAtoms);
+            return RDKFuncs.LayeredFingerprintMol(mol, (uint)layerFlags, (uint)minPath, (uint)maxPath, (uint)fpSize, atomCounts, setOnlyBits, branchedPaths, fromAtoms);
         }
 
         public static ROMol MergeQueryHs(ROMol mol, bool mergeUnmappedOnly = false)
@@ -265,10 +235,10 @@ namespace RDKit
 
         public static StringMolMap ParseMolQueryDefFile(string filename,
             bool standardize = true, string delimiter = "\t", string comment = "//",
-            uint nameColumn = 0, uint smartsColumn = 1)
+            int nameColumn = 0, int smartsColumn = 1)
         {
             var queryDefs = new StringMolMap();
-            RDKFuncs.parseQueryDefFile(filename, queryDefs, standardize, delimiter, comment, nameColumn, smartsColumn);
+            RDKFuncs.parseQueryDefFile(filename, queryDefs, standardize, delimiter, comment, (uint)nameColumn, (uint)smartsColumn);
             return queryDefs;
         }
 
@@ -278,19 +248,19 @@ namespace RDKit
         }
 
         public static ExplicitBitVect PatternFingerprint(ROMol mol,
-            uint fpSize = 2048, UInt_Vect atomCounts = null, ExplicitBitVect setOnlyBits = null)
+            int fpSize = 2048, UInt_Vect atomCounts = null, ExplicitBitVect setOnlyBits = null)
         {
-            return RDKFuncs.PatternFingerprintMol(mol, fpSize, atomCounts ?? new UInt_Vect(), setOnlyBits);
+            return RDKFuncs.PatternFingerprintMol(mol, (uint)fpSize, atomCounts, setOnlyBits);
         }
 
         public static ExplicitBitVect RDKFingerprint(ROMol mol,
-            uint minPath = 1, uint maxPath = 7, uint fpSize = 2048, uint nBitsPerHash = 2,
-            bool useHs = true, double tgtDensity = 0, uint minSize = 128, bool branchedPaths = true,
+            int minPath = 1, int maxPath = 7, int fpSize = 2048, int nBitsPerHash = 2,
+            bool useHs = true, double tgtDensity = 0, int minSize = 128, bool branchedPaths = true,
             bool useBondOrder = true, UInt_Vect atomInvariants = null, UInt_Vect fromAtoms = null,
             SWIGTYPE_p_std__vectorT_std__vectorT_uint32_t_t_t atomBits = null,
             SWIGTYPE_p_std__mapT_unsigned_int_std__vectorT_std__vectorT_int_t_t_std__lessT_unsigned_int_t_t bitInfo = null)
         {
-            return RDKFuncs.RDKFingerprintMol(mol, minPath, maxPath, fpSize, nBitsPerHash, useHs, tgtDensity, minSize, branchedPaths, useBondOrder, atomInvariants, fromAtoms, atomBits, bitInfo);
+            return RDKFuncs.RDKFingerprintMol(mol, (uint)minPath, (uint)maxPath, (uint)fpSize, (uint)nBitsPerHash, useHs, tgtDensity, (uint)minSize, branchedPaths, useBondOrder, atomInvariants, fromAtoms, atomBits, bitInfo);
         }
 
         public static ROMol RemoveHs(ROMol mol,
@@ -320,9 +290,9 @@ namespace RDKit
             return RDKFuncs.replaceSidechains(mol, coreQuery, useChirality);
         }
 
-        public static ROMol_Vect ReplaceSubstructs(ROMol mol, ROMol query, ROMol replacement, bool replaceAll = false, uint replacementConnectionPoint = 0, bool useChirality = false)
+        public static ROMol_Vect ReplaceSubstructs(ROMol mol, ROMol query, ROMol replacement, bool replaceAll = false, int replacementConnectionPoint = 0, bool useChirality = false)
         {
-            return RDKFuncs.replaceSubstructs(mol, query, replacement, replaceAll, replacementConnectionPoint, useChirality);
+            return RDKFuncs.replaceSubstructs(mol, query, replacement, replaceAll, (uint)replacementConnectionPoint, useChirality);
         }
 
         public static SanitizeFlags SanitizeMol(RWMol mol, SanitizeFlags sanitizeOps = SanitizeFlags.SANITIZE_ALL)

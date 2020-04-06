@@ -1178,9 +1178,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_AtomPairs2DFingerprinter(string text)
+        public static string NCDK_AtomPairs2DFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_AtomPairs2DFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_AtomPairs2DFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1197,9 +1197,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_EStateFingerprinter(string text)
+        public static string NCDK_EStateFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_EStateFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_EStateFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1216,9 +1216,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_ExtendedFingerprinter(string text)
+        public static string NCDK_ExtendedFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ExtendedFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_ExtendedFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1235,9 +1235,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_CDKFingerprinter(string text)
+        public static string NCDK_CDKFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_CDKFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_CDKFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1254,9 +1254,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_KlekotaRothFingerprinter(string text)
+        public static string NCDK_KlekotaRothFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_KlekotaRothFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_KlekotaRothFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1273,9 +1273,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_LingoFingerprinter(string text)
+        public static string NCDK_LingoFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_LingoFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_LingoFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1292,9 +1292,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_MACCSFingerprinter(string text)
+        public static string NCDK_MACCSFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_MACCSFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_MACCSFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1311,9 +1311,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_ShortestPathFingerprinter(string text)
+        public static string NCDK_ShortestPathFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ShortestPathFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_ShortestPathFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1330,9 +1330,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_SubstructureFingerprinter(string text)
+        public static string NCDK_SubstructureFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_SubstructureFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_SubstructureFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1349,9 +1349,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string NCDK_PubchemFingerprinter(string text)
+        public static string NCDK_PubchemFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_PubchemFingerprinter",
+            var ret = Caching<string>.Calculate(text, "NCDK_PubchemFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1368,16 +1368,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction()]
-        public static string RDKit_MACCSFingerprint(string text)
+        public static string RDKit_MACCSKeysFingerprint(string text)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_MACCSFingerprint",
+            var ret = Caching<string>.Calculate(text, "RDKit_MACCSKeysFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.MACCSFingerprintMol(mol);
+                    var result = RDKit.Descriptors.GetMACCSKeysFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1395,7 +1395,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.LayeredFingerprintMol(mol);
+                    var result = RDKit.Chem.LayeredFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1413,7 +1413,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.getHashedAtomPairFingerprintAsBitVect(mol);
+                    var result = RDKit.Descriptors.GetHashedAtomPairFingerprintAsBitVect(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1431,7 +1431,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.getHashedTopologicalTorsionFingerprintAsBitVect(mol);
+                    var result = RDKit.Descriptors.GetHashedTopologicalTorsionFingerprintAsBitVect(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1449,7 +1449,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.PatternFingerprintMol(mol);
+                    var result = RDKit.Chem.PatternFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1485,7 +1485,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.getAtomPairFingerprint(mol);
+                    var result = RDKit.Descriptors.GetAtomPairFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1503,7 +1503,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.getTopologicalTorsionFingerprint(mol);
+                    var result = RDKit.Descriptors.GetTopologicalTorsionFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1521,7 +1521,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi0n(mol);
+                    var result = RDKit.Descriptors.CalcChi0n(mol);
                     nReturnValue = result;
                 }
 
@@ -1539,7 +1539,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi0v(mol);
+                    var result = RDKit.Descriptors.CalcChi0v(mol);
                     nReturnValue = result;
                 }
 
@@ -1557,7 +1557,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi1n(mol);
+                    var result = RDKit.Descriptors.CalcChi1n(mol);
                     nReturnValue = result;
                 }
 
@@ -1575,7 +1575,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi1v(mol);
+                    var result = RDKit.Descriptors.CalcChi1v(mol);
                     nReturnValue = result;
                 }
 
@@ -1593,7 +1593,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi2n(mol);
+                    var result = RDKit.Descriptors.CalcChi2n(mol);
                     nReturnValue = result;
                 }
 
@@ -1611,7 +1611,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi2v(mol);
+                    var result = RDKit.Descriptors.CalcChi2v(mol);
                     nReturnValue = result;
                 }
 
@@ -1629,7 +1629,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi3n(mol);
+                    var result = RDKit.Descriptors.CalcChi3n(mol);
                     nReturnValue = result;
                 }
 
@@ -1647,7 +1647,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi3v(mol);
+                    var result = RDKit.Descriptors.CalcChi3v(mol);
                     nReturnValue = result;
                 }
 
@@ -1665,7 +1665,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi4n(mol);
+                    var result = RDKit.Descriptors.CalcChi4n(mol);
                     nReturnValue = result;
                 }
 
@@ -1683,7 +1683,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcChi4v(mol);
+                    var result = RDKit.Descriptors.CalcChi4v(mol);
                     nReturnValue = result;
                 }
 
@@ -1701,7 +1701,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcKappa1(mol);
+                    var result = RDKit.Descriptors.CalcKappa1(mol);
                     nReturnValue = result;
                 }
 
@@ -1719,7 +1719,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcKappa2(mol);
+                    var result = RDKit.Descriptors.CalcKappa2(mol);
                     nReturnValue = result;
                 }
 
@@ -1737,7 +1737,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcKappa3(mol);
+                    var result = RDKit.Descriptors.CalcKappa3(mol);
                     nReturnValue = result;
                 }
 
@@ -1755,7 +1755,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcLabuteASA(mol);
+                    var result = RDKit.Descriptors.CalcLabuteASA(mol);
                     nReturnValue = result;
                 }
 
@@ -1773,7 +1773,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcMolLogP(mol);
+                    var result = RDKit.Chem.Crippen.MolLogP(mol);
                     nReturnValue = result;
                 }
 
@@ -1791,7 +1791,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcMolMR(mol);
+                    var result = RDKit.Chem.Crippen.MolMR(mol);
                     nReturnValue = result;
                 }
 
@@ -1800,16 +1800,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
-        public static double RDKit_ExactMW(string text)
+        public static double RDKit_ExactMolWt(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_ExactMW",
+            var ret = Caching<double?>.Calculate(text, "RDKit_ExactMolWt",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcExactMW(mol);
+                    var result = RDKit.Descriptors.CalcExactMolWt(mol);
                     nReturnValue = result;
                 }
 
@@ -1827,7 +1827,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcFractionCSP3(mol);
+                    var result = RDKit.Descriptors.CalcFractionCSP3(mol);
                     nReturnValue = result;
                 }
 
@@ -1845,7 +1845,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcHallKierAlpha(mol);
+                    var result = RDKit.Descriptors.CalcHallKierAlpha(mol);
                     nReturnValue = result;
                 }
 
@@ -1854,16 +1854,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
-        public static double RDKit_LipinskiHBA(string text)
+        public static double RDKit_NumLipinskiHBA(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_LipinskiHBA",
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumLipinskiHBA",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcLipinskiHBA(mol);
+                    var result = RDKit.Descriptors.CalcNumLipinskiHBA(mol);
                     nReturnValue = result;
                 }
 
@@ -1872,16 +1872,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
-        public static double RDKit_LipinskiHBD(string text)
+        public static double RDKit_NumLipinskiHBD(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_LipinskiHBD",
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumLipinskiHBD",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcLipinskiHBD(mol);
+                    var result = RDKit.Descriptors.CalcNumLipinskiHBD(mol);
                     nReturnValue = result;
                 }
 
@@ -1899,7 +1899,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAliphaticCarbocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumAliphaticCarbocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -1917,7 +1917,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAliphaticHeterocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumAliphaticHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -1935,7 +1935,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAliphaticRings(mol);
+                    var result = RDKit.Descriptors.CalcNumAliphaticRings(mol);
                     nReturnValue = result;
                 }
 
@@ -1953,7 +1953,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAmideBonds(mol);
+                    var result = RDKit.Descriptors.CalcNumAmideBonds(mol);
                     nReturnValue = result;
                 }
 
@@ -1971,7 +1971,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAromaticCarbocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumAromaticCarbocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -1989,7 +1989,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAromaticHeterocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumAromaticHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2007,7 +2007,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumAromaticRings(mol);
+                    var result = RDKit.Descriptors.CalcNumAromaticRings(mol);
                     nReturnValue = result;
                 }
 
@@ -2025,7 +2025,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumBridgeheadAtoms(mol);
+                    var result = RDKit.Descriptors.CalcNumBridgeheadAtoms(mol);
                     nReturnValue = result;
                 }
 
@@ -2043,7 +2043,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumHBA(mol);
+                    var result = RDKit.Descriptors.CalcNumHBA(mol);
                     nReturnValue = result;
                 }
 
@@ -2061,7 +2061,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumHBD(mol);
+                    var result = RDKit.Descriptors.CalcNumHBD(mol);
                     nReturnValue = result;
                 }
 
@@ -2079,7 +2079,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcTPSA(mol);
+                    var result = RDKit.Descriptors.CalcTPSA(mol);
                     nReturnValue = result;
                 }
 
@@ -2097,7 +2097,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumRotatableBonds(mol);
+                    var result = RDKit.Descriptors.CalcNumRotatableBonds(mol);
                     nReturnValue = result;
                 }
 
@@ -2115,7 +2115,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumHeteroatoms(mol);
+                    var result = RDKit.Descriptors.CalcNumHeteroatoms(mol);
                     nReturnValue = result;
                 }
 
@@ -2133,7 +2133,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumHeterocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2151,7 +2151,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumRings(mol);
+                    var result = RDKit.Descriptors.CalcNumRings(mol);
                     nReturnValue = result;
                 }
 
@@ -2169,7 +2169,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumSaturatedCarbocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumSaturatedCarbocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2187,7 +2187,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumSaturatedHeterocycles(mol);
+                    var result = RDKit.Descriptors.CalcNumSaturatedHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2205,7 +2205,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumSaturatedRings(mol);
+                    var result = RDKit.Descriptors.CalcNumSaturatedRings(mol);
                     nReturnValue = result;
                 }
 
@@ -2223,25 +2223,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcNumSpiroAtoms(mol);
-                    nReturnValue = result;
-                }
-
-                return (double)nReturnValue;
-                });
-            return (double)ret;
-        }
-        [ExcelFunction()]
-        public static double RDKit_BalabanJ(string text)
-        {
-            var ret = Caching<double?>.Calculate(text, "RDKit_BalabanJ",
-                mol =>
-                {
-                double? nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = GraphMolWrap.RDKFuncs.computeBalabanJ(mol);
+                    var result = RDKit.Descriptors.CalcNumSpiroAtoms(mol);
                     nReturnValue = result;
                 }
 
@@ -2259,7 +2241,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.getFormalCharge(mol);
+                    var result = RDKit.Chem.GetFormalCharge(mol);
                     nReturnValue = result;
                 }
 
@@ -2268,16 +2250,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
-        public static double RDKit_AtomStereoCenters(string text)
+        public static double RDKit_NumAtomStereoCenters(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_AtomStereoCenters",
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumAtomStereoCenters",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.numAtomStereoCenters(mol);
+                    var result = RDKit.Descriptors.CalcNumAtomStereoCenters(mol);
                     nReturnValue = result;
                 }
 
@@ -2286,16 +2268,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction()]
-        public static double RDKit_UnspecifiedAtomStereoCenters(string text)
+        public static double RDKit_NumUnspecifiedAtomStereoCenters(string text)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_UnspecifiedAtomStereoCenters",
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumUnspecifiedAtomStereoCenters",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.numUnspecifiedAtomStereoCenters(mol);
+                    var result = RDKit.Descriptors.CalcNumUnspecifiedAtomStereoCenters(mol);
                     nReturnValue = result;
                 }
 
@@ -2313,7 +2295,7 @@ namespace NCDKExcel
                 
                 if (nReturnValue == null)
                 {
-                    var result = GraphMolWrap.RDKFuncs.calcMolFormula(mol);
+                    var result = RDKit.Descriptors.CalcMolFormula(mol);
                     nReturnValue = result;
                 }
 

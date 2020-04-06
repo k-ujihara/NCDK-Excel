@@ -1,5 +1,6 @@
 ﻿using GraphMolWrap;
 using Newtonsoft.Json;
+using RDKit;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace NCDKExcel
     public class RDKitSparseVector
     {
         [JsonProperty("size")]
-        public uint Size { get; set; }
+        public int Size { get; set; }
 
         [JsonProperty("nonzero")]
         public IDictionary<long, int> Nonzero { get; set; }
@@ -19,10 +20,10 @@ namespace NCDKExcel
         {
             var o = new RDKitSparseVector()
             {
-                Size = vector.size(),
+                Size = vector.Count(),
             };
             o.Nonzero = new Dictionary<long, int>();
-            foreach (var e in vector.getNonzero())
+            foreach (var e in vector.GetNonzero())
             {
                 o.Nonzero.Add(e.first, e.second);
             }
@@ -33,7 +34,7 @@ namespace NCDKExcel
         {
             var o = new RDKitSparseVector()
             {
-                Size = vector.size(),
+                Size = vector.Count(),
             };
             o.Nonzero = new Dictionary<long, int>();
             foreach (var e in vector.getNonzero())
@@ -75,7 +76,7 @@ namespace NCDKExcel
             sb.Append("{");
             sb.Append($"\"size\":{vector.size()},");
             sb.Append("\"nonzero\":{");
-            sb.Append(string.Join(",", vector.getNonzero().Select(n => $"{n.first}:{n.second}")));
+            sb.Append(string.Join(",", vector.GetNonzero().Select(n => $"{n.first}:{n.second}")));
             sb.Append("}}");
             return sb.ToString();
         }
@@ -84,9 +85,9 @@ namespace NCDKExcel
         {
             var sb = new StringBuilder();
             sb.Append("{");
-            sb.Append($"\"size\":{vector.size()},");
+            sb.Append($"\"size\":{vector.Count()},");
             sb.Append("\"nonzero\":{");
-            sb.Append(string.Join(",", vector.getNonzero().Select(n => $"{n.first}:{n.second}")));
+            sb.Append(string.Join(",", vector.GetNonzero().Select(n => $"{n.first}:{n.second}")));
             sb.Append("}}");
             return sb.ToString();
         }

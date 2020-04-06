@@ -1,7 +1,5 @@
 ﻿
 using GraphMolWrap;
-using System;
-
 
 namespace RDKit
 {

@@ -106,10 +106,10 @@
       <HintPath>..\packages\MathNet.Numerics.Signed.4.9.0\lib\net461\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="NCDK, Version=1.5.6.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
-      <HintPath>..\packages\NCDK.1.5.6-alpha\lib\net461\NCDK.dll</HintPath>
+      <HintPath>..\packages\NCDK.1.5.6\lib\net461\NCDK.dll</HintPath>
     </Reference>
-    <Reference Include="NCDK.Display, Version=1.5.5.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
-      <HintPath>..\packages\NCDK.Display.1.5.6-alpha\lib\net461\NCDK.Display.dll</HintPath>
+    <Reference Include="NCDK.Display, Version=1.5.6.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
+      <HintPath>..\packages\NCDK.Display.1.5.6\lib\net461\NCDK.Display.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -265,13 +265,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\NCDK.1.5.6-alpha\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6-alpha\build\NCDK.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NCDK.1.5.6-alpha\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6-alpha\build\NCDK.targets'))" />
     <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
   </Target>
   <Import Project="..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
 </Project>

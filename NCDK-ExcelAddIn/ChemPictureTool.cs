@@ -23,11 +23,16 @@ namespace NCDK_ExcelAddIn
                     lock (syncLock)
                     {
                         if (pictureGenerator == null)
+                        {
                             pictureGenerator = new DepictionGenerator
                             {
                                 AtomColorer = new CDK2DAtomColors(),
                                 BackgroundColor = System.Windows.Media.Colors.Transparent,
                             };
+                            //var smiles = @"O=C1NC(=O)NC(=O)C1(/C2=C/CCCCC2)CC";
+                            //var mol = NCDK.CDK.SmilesParser.ParseSmiles(smiles);
+                            //pictureGenerator.Depict(mol).WriteTo(@"C:\Users\Public\Documents\a.png");
+                        }
                     }
                 return pictureGenerator;
             }
