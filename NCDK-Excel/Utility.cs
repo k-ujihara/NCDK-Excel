@@ -151,7 +151,7 @@ namespace NCDKExcel
                 throw new ArgumentNullException(nameof(ident));
 
             IAtomContainer mol;
-            //if (!MolecularCache.TryGetValue(ident, out mol))
+            if (!MolecularCache.TryGetValue(ident, out mol))
             {
                 mol = RawParse(ident, out LineNotationType notationType);
                 if (mol == null)
