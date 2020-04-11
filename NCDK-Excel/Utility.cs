@@ -13,14 +13,6 @@ using System.Text;
 
 namespace NCDKExcel
 {
-    public enum LineNotationType
-    {
-        Nil = 0,
-        Smiles = 1,
-        InChI = 2,
-        MolBlock = 3,
-    }
-
     public static partial class Utility
     {
         public const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
@@ -153,24 +145,30 @@ namespace NCDKExcel
             IAtomContainer mol;
             if (!MolecularCache.TryGetValue(ident, out mol))
             {
-                mol = RawParse(ident, out LineNotationType notationType);
+                mol = RawParse(ident, out string notationType);
                 if (mol == null)
                     mol = nullMol;
+                else
+                {
+                    if (notationType != null)
+                        mol.SetProperty("source", notationType);
+                }
 
                 MolecularCache[ident] = mol;
             }
             if (object.ReferenceEquals(mol, nullMol))
                 return null;
+
             return mol;
         }
 
-        static IAtomContainer RawParse(string text, out LineNotationType notationType)
+        static IAtomContainer RawParse(string text, out string notationType)
         {
             IAtomContainer mol = null;
 
             if (text == null)
             {
-                notationType = LineNotationType.Nil;
+                notationType = "None";
                 return null;
             }
             if (text.IndexOf('\r') >= 0)
@@ -181,14 +179,14 @@ namespace NCDKExcel
             mol = ParseSmiles(text);
             if (mol != null)
             {
-                notationType = LineNotationType.Smiles;
+                notationType = "SMILES";
                 return mol;
             }
 
             mol = ParseInChI(text);
             if (mol != null)
             {
-                notationType = LineNotationType.InChI;
+                notationType = "InChI";
                 return mol;
             }
 
@@ -206,7 +204,7 @@ namespace NCDKExcel
             }
             if (mol != null)
             {
-                notationType = LineNotationType.MolBlock;
+                notationType = "MolBlock";
                 return mol;
             }
 
@@ -223,11 +221,11 @@ namespace NCDKExcel
             }
             if (mol != null)
             {
-                notationType = LineNotationType.MolBlock;
+                notationType = "MolBlock";
                 return mol;
             }
 
-            notationType = LineNotationType.Nil;
+            notationType = "None";
             return null;
         }
 

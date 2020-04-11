@@ -2,6 +2,7 @@
 using NCDK;
 using NCDK.Graphs.InChI;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using static NCDKExcel.Utility;
 
@@ -9,7 +10,7 @@ namespace NCDKExcel
 {
     static partial class Caching<TRet>
     {
-        static IDictionary<string, TRet> ValueCache = new Dictionary<string, TRet>();
+        static IDictionary<string, TRet> ValueCache = new ConcurrentDictionary<string, TRet>();
 
         public static TRet Calculate(string text, string name, Func<IAtomContainer, TRet> calculator)
         {

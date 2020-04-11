@@ -103,13 +103,13 @@ namespace NCDKExcel
             if (ident == null)
                 throw new ArgumentNullException(nameof(ident));
 
-            LineNotationType notationType = 0;
+            string notationType = null;
             if (!MolecularCache.TryGetValue(ident, out ROMol mol))
             {
                 mol = RWMol.MolFromSmiles(ident);
                 if (mol != null)
                 {
-                    notationType = LineNotationType.Smiles;
+                    notationType = "SMILES";
                     goto L_MolFound;
                 }
 
@@ -118,7 +118,7 @@ namespace NCDKExcel
                     mol = RDKFuncs.InchiToMol(ident, rv);
                     if (mol != null)
                     {
-                        notationType = LineNotationType.InChI;
+                        notationType = "InChI";
                         goto L_MolFound;
                     }
                 }
@@ -127,17 +127,24 @@ namespace NCDKExcel
                 if (mol != null)
                 {
                     RDKFuncs.assignStereochemistryFrom3D(mol);
-                    notationType = LineNotationType.MolBlock;
+                    notationType = "MolBlock";
                     goto L_MolFound;
                 }
 
             L_MolFound:
                 if (mol == null)
                     mol = nullMol;
+                else
+                {
+                    if (notationType != null)
+                        mol.setProp("source", notationType);
+                }
+
                 MolecularCache[ident] = mol;
             }
             if (object.ReferenceEquals(mol, nullMol))
                 return null;
+
             return mol;
         }
 

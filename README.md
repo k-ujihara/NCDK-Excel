@@ -7,14 +7,27 @@ Getting Started
 ---------------
 
 Input a formula beginning with "NCDK_" or "RDKit_" in the Excel cell like the followings.
-- =NCDK_ECFP4("c1ccccc1C")
-- =NCDK_XLogP("c1ccccc1C")
-- =RDKit_MACCSFingerprint("c1ccccc1C")
+
+- =NCDK_ECFP4("c1ccccc1C")  ==> ECFP4 of toluene created by NCDK
+- =NCDK_XLogP("c1ccccc1C")  ==> 2.459, which is calculated by NCDK
+- =RDKit_MACCSFingerprint("c1ccccc1C")   ==> MACCS fingerprint created by RDKit
+- =RDKit_MolBlock("c1ccccc1C")  ==> MolBlock of toluene created by RDKit
+- =NCDK_SMILES("c1ccccc1C")  ==> MolBlock of toluene crated by NCDK
+- =NCDK_InChI("c1ccccc1C")  ==> "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3", which is created by NCDK
+- =NCDK_Tanimoto(NCDK_ECFP4("c1ccccc1"), NCDK_ECFP4("c1(Cl)ccc(C)cc1"))  ==> 0.07, Tanimoto smilarity between benzene and 4-chlorotoluene based on ECFP4
+
+Run Reaction SMILES
+
+- =RDKit_RunReactionSmiles("[C:1]>>[C:1]C", "Cc1ccccc1")  ==>  CCc1ccccc1
+- =RDKit_RunReactionSmiles("[c:1]>>[c:1]C", "Cc1ccccc1")  ==>  Cc1(Cl)ccccc1
+- =RDKit_RunReactionSmiles("[c:1][Cl:2].[C:3]B>>[c:1][C:3]", "c1ccccc1Cl.BCCCC")  ==> CCCCc1ccccc1
 
 Impoting SDF
+
 - Click "Import SDF" button in Add-ins tab in ribbon and select SD file. It gives a new worksheet imported the SDF.
 
 Generate picture from SMILES/InChI/MOL block
+
 - Select cells and click "Generate Picture".
 
 Screenshot
@@ -180,4 +193,4 @@ RusselSimilarity
 SokalSimilarity
 TverskySimilarity
 
-Copyright (c) 2018-2019 Kazuya Ujihara
+Copyright (c) 2018-2020 Kazuya Ujihara
