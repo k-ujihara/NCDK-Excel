@@ -366,8 +366,9 @@ namespace NCDKExcel
                 
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = "#N/A" ;
+                    nReturnValue = null ;
                 }
+                else
                 if (nReturnValue == null)
                 {
                     var result = descriptor.Calculate(mol);
@@ -503,8 +504,9 @@ namespace NCDKExcel
                 
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = "#N/A" ;
+                    nReturnValue = null ;
                 }
+                else
                 if (nReturnValue == null)
                 {
                     var result = descriptor.Calculate(mol);
@@ -678,8 +680,9 @@ namespace NCDKExcel
                 NCDK.Config.BODRIsotopeFactory.Instance.ConfigureAtoms(mol);
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = "#N/A" ;
+                    nReturnValue = null ;
                 }
+                else
                 if (nReturnValue == null)
                 {
                     var result = descriptor.Calculate(mol);
@@ -758,8 +761,9 @@ namespace NCDKExcel
                 
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = "#N/A" ;
+                    nReturnValue = null ;
                 }
+                else
                 if (nReturnValue == null)
                 {
                     var result = descriptor.Calculate(mol);
@@ -800,8 +804,9 @@ namespace NCDKExcel
                 
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = "#N/A" ;
+                    nReturnValue = null ;
                 }
+                else
                 if (nReturnValue == null)
                 {
                     var result = descriptor.Calculate(mol);
@@ -956,8 +961,9 @@ namespace NCDKExcel
                 
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = "#N/A" ;
+                    nReturnValue = null ;
                 }
+                else
                 if (nReturnValue == null)
                 {
                     var result = descriptor.Calculate(mol);

@@ -10,20 +10,20 @@ namespace NCDKExcel
 {
     static partial class Caching<TRet>
     {
-        static IDictionary<string, TRet> ValueCache = new ConcurrentDictionary<string, TRet>();
+        static ConcurrentDictionary<Tuple<string, string>, TRet> ValueCache = new ConcurrentDictionary<Tuple<string, string>, TRet>();
 
         public static TRet Calculate(string text, string name, Func<IAtomContainer, TRet> calculator)
         {
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var key = name + SeparatorofNameKind + text;
-            if (!ValueCache.TryGetValue(key, out TRet nReturnValue))
+            var key = new Tuple<string, string>(name, text);
+            TRet nReturnValue = ValueCache.GetOrAdd(key, tuple =>
             {
                 var mol = Parse(text);
-                nReturnValue = calculator(mol);
-                ValueCache[key] = nReturnValue;
-            }
+                return calculator(mol);
+            });
+
             return nReturnValue;
         }
     }
@@ -42,7 +42,6 @@ namespace NCDKExcel
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var key = name + SeparatorofNameKind + text;
             var ret = Caching<double?>.Calculate(text, name, calculator);
             return ret.Value;
         }
@@ -59,7 +58,6 @@ namespace NCDKExcel
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var key = name + SeparatorofNameKind + text;
             var ret = Caching<string>.Calculate(text, name, calculator);
             return ret;
         }

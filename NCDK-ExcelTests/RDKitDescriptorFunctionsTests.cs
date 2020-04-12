@@ -8,9 +8,9 @@ namespace NCDKExcel
         [TestMethod()]
         public void ParseTest()
         {
-            Assert.IsNotNull(RDKitUtility.Parse("C"));
+            Assert.IsNotNull(RDKitMol.Parse("C"));
             const string InvalidValue = "qwertyuop";
-            Assert.IsNull(RDKitUtility.Parse(InvalidValue));
+            Assert.IsNull(RDKitMol.Parse(InvalidValue));
         }
     }
 }

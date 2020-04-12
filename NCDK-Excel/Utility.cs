@@ -15,8 +15,6 @@ namespace NCDKExcel
 {
     public static partial class Utility
     {
-        public const string SeparatorofNameKind = "(S-E-P-A-R-A-T-O-R)";
-
         public static string ToExcelString(object value)
         {
             switch (value)

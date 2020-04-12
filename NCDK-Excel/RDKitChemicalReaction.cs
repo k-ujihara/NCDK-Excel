@@ -17,34 +17,32 @@ namespace NCDKExcel
         public static string RDKit_RunReactionSmiles(string rxnIdent, string reactantsIdent)
         {
             var key = new Tuple<string, string>(rxnIdent, reactantsIdent);
-            if (!RunReactionCache.TryGetValue(key, out string result))
+            var result = RunReactionCache.GetOrAdd(key, tuple =>
             {
-                try
+                var a_rxnIdent = tuple.Item1;
+                var a_reactantsIdent = tuple.Item2;
+
+                var rxn = RDKitChemicalReaction.Parse(a_rxnIdent);
+                var mols = new List<ROMol>();
+                foreach (var reactant_smiles in a_reactantsIdent.Split('.'))
                 {
-                    var rxn = RDKitChemicalReaction.Parse(rxnIdent);
-                    var mols = new List<ROMol>();
-                    foreach (var reactant_smiles in reactantsIdent.Split('.'))
-                    {
-                        var mol = RDKitUtility.Parse(reactant_smiles);
-                        if (mol == null)
-                        {
-                            goto L_Found;
-                        }
-                        mols.Add(mol);
-                    }
-                    var reactants = new ROMol_Vect(mols);
-                    var products_candidate_list = rxn.runReactants(reactants);
-                    if (products_candidate_list.Count > 0)
-                        result = string.Join(".", products_candidate_list.First().Select(mol => Chem.MolToSmiles(mol)));
+                    var mol = RDKitMol.Parse(reactant_smiles);
+                    if (mol == null)
+                        return null;
+                    mols.Add(mol);
                 }
-                catch (Exception)
-                {
-                }
-            L_Found:
-                if (result == null)
-                    result = "#VALUE!";
-                RunReactionCache[key] = result;
-            }
+
+                if (rxn.getNumReactantTemplates() != mols.Count)
+                    return null;
+
+                var reactants = new ROMol_Vect(mols);
+                var products_candidate_list = rxn.runReactants(reactants);
+                if (products_candidate_list.Count == 0)
+                    return null;
+
+                return string.Join(".", products_candidate_list.First().Select(mol => Chem.MolToSmiles(mol)));
+            });
+
             return result;
         }
     }
@@ -59,27 +57,15 @@ namespace NCDKExcel
             if (rxnSmarts == null)
                 throw new ArgumentNullException(nameof(rxnSmarts));
 
-            string notationType = null;
-            if (!ReactionCache.TryGetValue(rxnSmarts, out ChemicalReaction rxn))
+            var rxn = ReactionCache.GetOrAdd(rxnSmarts, a_rxnSmarts =>
             {
-                rxn = ChemicalReaction.ReactionFromSmarts(rxnSmarts);
-                if (rxn != null)
-                {
-                    notationType = "Reaction SMILES";
-                    goto L_Found;
-                }
+                var a_rxn = ChemicalReaction.ReactionFromSmarts(a_rxnSmarts);
+                if (a_rxn == null)
+                    return nullRxn;
 
-            L_Found:
-                if (rxn == null)
-                    rxn = nullRxn;
-                else
-                {
-                    if (notationType != null)
-                        rxn.setProp("source", notationType);
-                }
-
-                ReactionCache[rxnSmarts] = rxn;
-            }
+                a_rxn.setProp("source", "Reaction SMILES");
+                return a_rxn;
+            });
             if (object.ReferenceEquals(rxn, nullRxn))
                 return null;
 

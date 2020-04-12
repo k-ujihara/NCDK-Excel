@@ -3,7 +3,7 @@ using GraphMolWrap;
 using System;
 using System.Collections.Concurrent;
 using System.Text;
-using static NCDKExcel.RDKitUtility;
+using static NCDKExcel.RDKitMol;
 
 namespace NCDKExcel
 {
@@ -14,13 +14,13 @@ namespace NCDKExcel
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var key = name + SeparatorofNameKind + text;
-            if (!ValueCache.TryGetValue(key, out TRet nReturnValue))
+            var key = new Tuple<string, string>(name, text);
+            var nReturnValue = ValueCache.GetOrAdd(key, tuple =>
             {
                 var mol = Parse(text);
-                nReturnValue = calculator(mol);
-                ValueCache[key] = nReturnValue;
-            }
+                return calculator(mol);
+            });
+
             return nReturnValue;
         }
     }
@@ -33,7 +33,7 @@ namespace NCDKExcel
             if (nBits == 0)
                 nBits = 2048;
 
-            var ret = Caching<string>.Calculate(text, $"RDKit_MorganFingerprint{SeparatorofNameKind}{radius}{SeparatorofNameKind}{nBits}",
+            var ret = Caching<string>.Calculate(text, $"RDKit_MorganFingerprint:{radius}:{nBits}",
                 mol =>
                 {
                     string nReturnValue = null;
@@ -61,7 +61,6 @@ namespace NCDKExcel
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
-            var key = name + SeparatorofNameKind + text;
             var ret = Caching<T>.Calculate(text, name, calculator);
             return ret;
         }
@@ -91,10 +90,8 @@ namespace NCDKExcel
         }
     }
 
-    public static partial class RDKitUtility
+    public static class RDKitMol
     {
-        public const string SeparatorofNameKind = NCDKExcel.Utility.SeparatorofNameKind;
-
         static readonly ConcurrentDictionary<string, ROMol> MolecularCache = new ConcurrentDictionary<string, ROMol>();
         static readonly ROMol nullMol = new RWMol();
 
@@ -103,45 +100,48 @@ namespace NCDKExcel
             if (ident == null)
                 throw new ArgumentNullException(nameof(ident));
 
-            string notationType = null;
-            if (!MolecularCache.TryGetValue(ident, out ROMol mol))
+            var mol = MolecularCache.GetOrAdd(ident, a_ident =>
             {
-                mol = RWMol.MolFromSmiles(ident);
-                if (mol != null)
+                string notationType = null;
+                ROMol a_mol;
+
+                a_mol = RWMol.MolFromSmiles(ident);
+                if (a_mol != null)
                 {
                     notationType = "SMILES";
-                    goto L_MolFound;
+                    goto L_Found;
                 }
 
                 using (var rv = new ExtraInchiReturnValues())
                 {
-                    mol = RDKFuncs.InchiToMol(ident, rv);
-                    if (mol != null)
+                    a_mol = RDKFuncs.InchiToMol(ident, rv);
+                    if (a_mol != null)
                     {
                         notationType = "InChI";
-                        goto L_MolFound;
+                        goto L_Found;
                     }
                 }
 
-                mol = RWMol.MolFromMolBlock(ident);
-                if (mol != null)
+                a_mol = RWMol.MolFromMolBlock(ident);
+                if (a_mol != null)
                 {
-                    RDKFuncs.assignStereochemistryFrom3D(mol);
+                    RDKFuncs.assignStereochemistryFrom3D(a_mol);
                     notationType = "MolBlock";
-                    goto L_MolFound;
+                    goto L_Found;
                 }
 
-            L_MolFound:
-                if (mol == null)
-                    mol = nullMol;
+            L_Found:
+                if (a_mol == null)
+                    a_mol = nullMol;
                 else
                 {
                     if (notationType != null)
-                        mol.setProp("source", notationType);
+                        a_mol.setProp("source", notationType);
                 }
 
-                MolecularCache[ident] = mol;
-            }
+                return a_mol;
+            });
+
             if (object.ReferenceEquals(mol, nullMol))
                 return null;
 

@@ -204,8 +204,9 @@ namespace NCDKExcel
 #>
                 if (!GeometryUtil.Has3DCoordinates(mol))
                 {
-                    nReturnValue = <#= excelReturnType == "double" ? "double.NaN" : "\"#N/A\"" #> ;
+                    nReturnValue = <#= excelReturnType == "double" ? "double.NaN" : "null" #> ;
                 }
+                else
 <#+
                 }
 #>

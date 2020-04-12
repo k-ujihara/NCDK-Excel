@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="DescriptorFunctions_Extra.cs" />
     <Compile Include="RDKitChemicalReaction.cs" />
+    <Compile Include="RDKitSmarts.cs" />
     <Compile Include="RDKit_DescriptorFunctions_Extra.cs" />
     <Compile Include="RDKitSparseVector.cs" />
     <Compile Include="Utility.cs" />
