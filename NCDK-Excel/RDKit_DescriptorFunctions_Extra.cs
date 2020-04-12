@@ -1,7 +1,7 @@
 ﻿using ExcelDna.Integration;
 using GraphMolWrap;
 using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Text;
 using static NCDKExcel.RDKitUtility;
 
@@ -95,7 +95,7 @@ namespace NCDKExcel
     {
         public const string SeparatorofNameKind = NCDKExcel.Utility.SeparatorofNameKind;
 
-        static readonly IDictionary<string, ROMol> MolecularCache = new Dictionary<string, ROMol>();
+        static readonly ConcurrentDictionary<string, ROMol> MolecularCache = new ConcurrentDictionary<string, ROMol>();
         static readonly ROMol nullMol = new RWMol();
 
         public static ROMol Parse(string ident)

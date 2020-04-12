@@ -6,7 +6,7 @@ using NCDK.IO;
 using NCDK.QSAR;
 using RDKit;
 using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -130,7 +130,7 @@ namespace NCDKExcel
         /// </summary>
         static readonly IAtomContainer nullMol = CDK.Builder.NewAtomContainer();
 
-        static IDictionary<string, IAtomContainer> MolecularCache = new Dictionary<string, IAtomContainer>();
+        static ConcurrentDictionary<string, IAtomContainer> MolecularCache = new ConcurrentDictionary<string, IAtomContainer>();
 
         /// <summary>
         /// Parse <paramref name="text"/> as SMILES, InChI or MOL text and cache it.
