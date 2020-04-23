@@ -29,6 +29,7 @@ namespace NCDKExcel
                     var mol = RDKitMol.Parse(reactant_smiles);
                     if (mol == null)
                         return null;
+                    mol = mol.AddHs();
                     mols.Add(mol);
                 }
 
@@ -40,7 +41,7 @@ namespace NCDKExcel
                 if (products_candidate_list.Count == 0)
                     return null;
 
-                return string.Join(".", products_candidate_list.First().Select(mol => Chem.MolToSmiles(mol)));
+                return string.Join(".", products_candidate_list.First().Select(mol => Chem.MolToSmiles(Chem.RemoveHs(mol))));
             });
 
             return result;
