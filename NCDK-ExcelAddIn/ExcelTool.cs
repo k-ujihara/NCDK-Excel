@@ -20,9 +20,9 @@ namespace NCDK_ExcelAddIn
 
             Tuple<int, int> firstCellInfo, firstFoundCellInfo;
             {
-                Excel.Range firstCell = range.Cells[1];
+                var firstCell = (Excel.Range)range.Cells[1];
                 firstCellInfo = new Tuple<int, int>(firstCell.Column, firstCell.Row);
-                if (!string.IsNullOrEmpty(firstCell.Text))
+                if (!string.IsNullOrEmpty((string)firstCell.Text))
                     action(firstCell);
             }
 

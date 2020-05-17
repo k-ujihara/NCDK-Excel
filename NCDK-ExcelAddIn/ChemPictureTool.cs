@@ -121,7 +121,7 @@ namespace NCDK_ExcelAddIn
         {
             try
             {
-                string text = cell.Text;
+                var text = (string)cell.Text;
                 if (!string.IsNullOrEmpty(text))
                 {
                     using (var structGen = new StructureGegerator(text))
@@ -150,7 +150,7 @@ namespace NCDK_ExcelAddIn
         {
             try
             {
-                string text = cell.Text;
+                var text = (string)cell.Text;
                 if (!string.IsNullOrEmpty(text))
                 {
                     using (var structGen = new StructureGegerator(text))
@@ -187,7 +187,7 @@ namespace NCDK_ExcelAddIn
             Excel.Shape shape = shapes.AddPicture(
                 pictureFileName,
                 Office.MsoTriState.msoFalse, Office.MsoTriState.msoTrue,
-                cell.Left, cell.Top, cell.Width, cell.Height);
+                (float)cell.Left, (float)cell.Top, (float)cell.Width, (float)cell.Height);
             shape.Placement = Excel.XlPlacement.xlMove;
             shape.Name = name;
 
@@ -195,7 +195,7 @@ namespace NCDK_ExcelAddIn
             shape.ScaleHeight(1, Office.MsoTriState.msoTrue);
             shape.ScaleWidth(1, Office.MsoTriState.msoTrue);
 
-            var xyRatioCell = cell.Width / cell.Height;
+            var xyRatioCell = (float)cell.Width / (float)cell.Height;
             var xyRatioShape = shape.Width / shape.Height;
             float scale = 1;
             if (xyRatioCell > xyRatioShape)
@@ -238,7 +238,7 @@ namespace NCDK_ExcelAddIn
                     Excel.Range cell = sheet.Cells[shapeInfo.Item2, shapeInfo.Item3];
                     var pictureName = shape.Name;
                     shape.Delete();
-                    using (var sg = new StructureGegerator(cell.Text))
+                    using (var sg = new StructureGegerator((string)cell.Text))
                     {
                         try
                         {

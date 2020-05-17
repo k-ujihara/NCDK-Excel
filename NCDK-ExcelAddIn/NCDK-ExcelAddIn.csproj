@@ -119,13 +119,12 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -187,10 +186,18 @@
     <Compile Include="NCDKExcelRibbon.Designer.cs">
       <DependentUpon>NCDKExcelRibbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parago\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Parago\ProgressDialogCancellationExcpetion.cs" />
+    <Compile Include="Parago\ProgressDialogContext.cs" />
+    <Compile Include="Parago\ProgressDialogResult.cs" />
+    <Compile Include="Parago\ProgressDialogSettings.cs" />
     <Compile Include="Properties\Versions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Parago\WindowSettings.cs" />
     <EmbeddedResource Include="NCDKExcelRibbon.resx">
       <DependentUpon>NCDKExcelRibbon.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +243,12 @@
       <Project>{ee857b06-2129-4bc6-b573-1d2f6d15e347}</Project>
       <Name>NCDK-Excel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Parago\ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
