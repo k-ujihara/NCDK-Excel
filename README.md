@@ -172,6 +172,9 @@ NumSaturatedCarbocycles
 NumSaturatedHeterocycles
 NumSaturatedRings
 NumSpiroAtoms
+NumAtoms
+NumBonds
+NumHeavyAtoms
 BalabanJ
 FormalCharge
 AtomStereoCenters

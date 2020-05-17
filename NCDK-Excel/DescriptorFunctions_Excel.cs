@@ -2489,6 +2489,42 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
+        [ExcelFunction()]
+        public static double RDKit_NumAtoms(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumAtoms",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = RDKit.Chem.GetNumAtoms(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
+        [ExcelFunction()]
+        public static double RDKit_NumBonds(string text)
+        {
+            var ret = Caching<double?>.Calculate(text, "RDKit_NumBonds",
+                mol =>
+                {
+                double? nReturnValue = null;
+                
+                if (nReturnValue == null)
+                {
+                    var result = RDKit.Chem.GetNumBonds(mol);
+                    nReturnValue = result;
+                }
+
+                return (double)nReturnValue;
+                });
+            return (double)ret;
+        }
     }
 }
 

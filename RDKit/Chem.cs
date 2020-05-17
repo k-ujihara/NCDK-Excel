@@ -537,6 +537,17 @@ namespace RDKit
         public static int GetNumHeavyAtoms(ROMol mol)
         {
             return (int)mol.getNumHeavyAtoms();
+            
+        }
+
+        public static int GetNumAtoms(ROMol mol, bool onlyExplicit = true)
+        {
+            return (int)mol.getNumAtoms(onlyExplicit);
+        }
+
+        public static int GetNumBonds(ROMol mol, bool onlyHeavy = true)
+        {
+            return (int)mol.getNumBonds(onlyHeavy);
         }
     }
 }

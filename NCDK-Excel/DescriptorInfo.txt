@@ -130,3 +130,5 @@ RDKit	Smarts	RDKit.Chem	string	MolToSmarts			TRUE
 RDKit	Smiles	RDKit.Chem	string	MolToSmiles			TRUE
 RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE
 RDKit	NumHeavyAtoms	RDKit.Chem	double	GetNumHeavyAtoms			TRUE
+RDKit	NumAtoms	RDKit.Chem	double	GetNumAtoms			TRUE
+RDKit	NumBonds	RDKit.Chem	double	GetNumBonds			TRUE
