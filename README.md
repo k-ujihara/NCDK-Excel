@@ -19,7 +19,7 @@ Input a formula beginning with "NCDK_" or "RDKit_" in the Excel cell like the fo
 Has Substructure
 
 - =RDKit_HasSubstructMatch("CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C", "C1CCCCC1")  ==> TRUE
-- =RDKit_HasSubstructMatch("CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C", "c1ccccc1")  ==> FA+SE
+- =RDKit_HasSubstructMatch("CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C", "c1ccccc1")  ==> FALSE
 
 Run Reaction SMILES
 
