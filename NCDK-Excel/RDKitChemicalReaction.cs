@@ -22,26 +22,33 @@ namespace NCDKExcel
                 var a_rxnIdent = tuple.Item1;
                 var a_reactantsIdent = tuple.Item2;
 
-                var rxn = RDKitChemicalReaction.Parse(a_rxnIdent);
-                var mols = new List<ROMol>();
-                foreach (var reactant_smiles in a_reactantsIdent.Split('.'))
+                try
                 {
-                    var mol = RDKitMol.Parse(reactant_smiles);
-                    if (mol == null)
+                    var rxn = RDKitChemicalReaction.Parse(a_rxnIdent);
+                    var mols = new List<ROMol>();
+                    foreach (var reactant_smiles in a_reactantsIdent.Split('.'))
+                    {
+                        var mol = RDKitMol.Parse(reactant_smiles);
+                        if (mol == null)
+                            return null;
+                        mol = mol.AddHs();
+                        mols.Add(mol);
+                    }
+
+                    if (rxn.getNumReactantTemplates() != mols.Count)
                         return null;
-                    mol = mol.AddHs();
-                    mols.Add(mol);
+
+                    var reactants = new ROMol_Vect(mols);
+                    var products_candidate_list = rxn.runReactants(reactants);
+                    if (products_candidate_list.Count == 0)
+                        return null;
+
+                    return string.Join(".", products_candidate_list.First().Select(mol => Chem.MolToSmiles(Chem.RemoveHs(mol))));
                 }
-
-                if (rxn.getNumReactantTemplates() != mols.Count)
-                    return null;
-
-                var reactants = new ROMol_Vect(mols);
-                var products_candidate_list = rxn.runReactants(reactants);
-                if (products_candidate_list.Count == 0)
-                    return null;
-
-                return string.Join(".", products_candidate_list.First().Select(mol => Chem.MolToSmiles(Chem.RemoveHs(mol))));
+                catch (Exception ex)
+                {
+                    return ex.Message;
+                }
             });
 
             return result;
