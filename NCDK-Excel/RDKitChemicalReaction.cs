@@ -10,7 +10,7 @@ namespace NCDKExcel
 {
     public static partial class RDKit_ReactionFunctions
     {
-        static readonly ConcurrentDictionary<Tuple<string, string>, string> RunReactionCache = 
+        static readonly ConcurrentDictionary<Tuple<string, string>, string> RunReactionCache =
             new ConcurrentDictionary<Tuple<string, string>, string>();
 
         [ExcelFunction()]
@@ -52,6 +52,13 @@ namespace NCDKExcel
             });
 
             return result;
+        }
+
+        [ExcelFunction()]
+        public static string RDKit_StripMol(string smiles)
+        {
+            var stripped = Chem.StaticSaltRemover.StripMol(RDKitMol.Parse(smiles));
+            return Chem.MolToSmiles(stripped);
         }
     }
 

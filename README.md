@@ -200,5 +200,6 @@ OnBitSimilarity
 RusselSimilarity
 SokalSimilarity
 TverskySimilarity
+StripMol
 
 Copyright (c) 2018-2020 Kazuya Ujihara

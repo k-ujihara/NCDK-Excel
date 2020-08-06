@@ -23,7 +23,6 @@
 using Microsoft.Office.Tools.Ribbon;
 using System;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace NCDK_ExcelAddIn
