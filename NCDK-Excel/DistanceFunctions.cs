@@ -1,7 +1,7 @@
 ﻿/*
  * MIT License
  * 
- * Copyright (c) 2019 Kazuya Ujihara
+ * Copyright (c) 2019-2020 Kazuya Ujihara
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ namespace NCDKExcel
 {
     public static class DistanceFunctions
     {
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Tanimoto similariry.")]
         public static double NCDK_Tanimoto(string fp1, string fp2)
         {
             var val = double.NaN;
@@ -76,7 +76,7 @@ namespace NCDKExcel
             return new BitArray(array);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Tanimoto similariry.")]
         public static double RDKit_TanimotoSimilarity(string fp1, string fp2, bool returnDistance, double bounds)
         {
             var val = RDKit_Similarity(DataStructs.TanimotoSimilarity, fp1, fp2);
@@ -85,7 +85,7 @@ namespace NCDKExcel
             return val;
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the dice similariry.")]
         public static double RDKit_DiceSimilarity(string fp1, string fp2, bool returnDistance, double bounds)
         {
             var val = RDKit_Similarity(DataStructs.DiceSimilarity, fp1, fp2);
@@ -94,19 +94,19 @@ namespace NCDKExcel
             return val;
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the cosine similariry.")]
         public static double RDKit_CosineSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.CosineSimilarity, fp1, fp2);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Sokal similariry.")]
         public static double RDKit_SokalSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.SokalSimilarity, fp1, fp2);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Russel similariry.")]
         public static double RDKit_RusselSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.RusselSimilarity, fp1, fp2);
@@ -118,37 +118,37 @@ namespace NCDKExcel
         //    return RDKit_Similarity(DataStructs.RogotGoldbergSimilarity, fp1, fp2);
         //}
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the all bit similariry.")]
         public static double RDKit_AllBitSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.AllBitSimilarity, fp1, fp2);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Kulczynski similariry.")]
         public static double RDKit_KulczynskiSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.KulczynskiSimilarity, fp1, fp2);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the McConnaughey similariry.")]
         public static double RDKit_McConnaugheySimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.McConnaugheySimilarity, fp1, fp2);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the asymmetric similariry.")]
         public static double RDKit_AsymmetricSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.AsymmetricSimilarity, fp1, fp2);
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Braun Blanquet similariry.")]
         public static double RDKit_BraunBlanquetSimilarity(string fp1, string fp2)
         {
             return RDKit_Similarity(DataStructs.BraunBlanquetSimilarity, fp1, fp2);
         }
-            
-        [ExcelFunction()]
+
+        [ExcelFunction(Description = "Returns the Tversky similariry.")]
         public static double RDKit_TverskySimilarity(string fp1, string fp2, double a, double b, bool returnDistance, double bounds)
         {
             var val = RDKit_Similarity((ExplicitBitVect v1, ExplicitBitVect v2) => DataStructs.TverskySimilarity(v1, v2, a, b), fp1, fp2);

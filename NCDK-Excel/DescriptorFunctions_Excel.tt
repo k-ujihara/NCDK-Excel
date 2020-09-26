@@ -10,7 +10,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2018-2019 Kazuya Ujihara
+ * Copyright (c) 2018-2020 Kazuya Ujihara
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -88,6 +88,7 @@ namespace NCDKExcel
             int idx_preparation = -1;
             int idx_geometry3D = -1;
             int idx_static = -1;
+            int idx_description = -1;
 
             string line;
             while ((line = reader.ReadLine()) != null)
@@ -103,6 +104,7 @@ namespace NCDKExcel
                     idx_preparation = titleRow.IndexOf("preparation");
                     idx_geometry3D = titleRow.IndexOf("geometry3D");
                     idx_static = titleRow.IndexOf("static");
+                    idx_description = titleRow.IndexOf("description");
                     continue;
                 }
 
@@ -115,6 +117,7 @@ namespace NCDKExcel
                 string preparation = GetValue(values, idx_preparation);
                 string geometry3D = GetValue(values, idx_geometry3D);
                 string sstatic = GetValue(values, idx_static);
+                string description = GetValue(values, idx_description);
 
                 string excelReturnType = null;
                 string extractValue = null;
@@ -175,7 +178,7 @@ namespace NCDKExcel
                 if (nullableExcelReturnType != "string")
                     nullableExcelReturnType = nullableExcelReturnType + "?";
 #>
-        [ExcelFunction()]
+        [ExcelFunction(<#= string.IsNullOrEmpty(description) ? "": "Description = \"" + description +"\"" #>)]
         public static <#= excelReturnType #> <#= kit_name #>_<#= func_name #>(string text)
         {
             var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "<#= kit_name #>_<#= func_name #>",

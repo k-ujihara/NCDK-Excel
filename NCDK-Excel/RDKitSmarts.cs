@@ -11,8 +11,12 @@ namespace NCDKExcel
         static readonly ConcurrentDictionary<Tuple<string, string>, bool?> HasSubstructMatchCache =
             new ConcurrentDictionary<Tuple<string, string>, bool?>();
 
-        [ExcelFunction()]
-        public static object RDKit_HasSubstructMatch(string smiles, string smarts)
+        [ExcelFunction(Description = "Queries whether or not the molecule contains a particular substructure.")]
+        public static object RDKit_HasSubstructMatch(
+            [ExcelArgument(Description = "SMILES to match.")]
+            string smiles,
+            [ExcelArgument(Description = "SMARTS of substructure.")]
+            string smarts)
         {
             var key = new Tuple<string, string>(smiles, smarts);
             var result = HasSubstructMatchCache.GetOrAdd(key, tuple =>

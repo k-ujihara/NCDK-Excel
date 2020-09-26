@@ -13,7 +13,7 @@ namespace NCDKExcel
         static readonly ConcurrentDictionary<Tuple<string, string>, string> RunReactionCache =
             new ConcurrentDictionary<Tuple<string, string>, string>();
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Apply reaction SMILES to the reactant(s).")]
         public static string RDKit_RunReactionSmiles(string rxnIdent, string reactantsIdent)
         {
             var key = new Tuple<string, string>(rxnIdent, reactantsIdent);
@@ -54,7 +54,7 @@ namespace NCDKExcel
             return result;
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Remove salt.")]
         public static string RDKit_StripMol(string smiles)
         {
             var stripped = Chem.StaticSaltRemover.StripMol(RDKitMol.Parse(smiles));

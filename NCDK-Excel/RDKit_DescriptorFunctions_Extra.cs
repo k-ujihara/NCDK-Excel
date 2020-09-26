@@ -27,7 +27,7 @@ namespace NCDKExcel
 
     public static partial class DescriptorFunctions
     {
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Morgan fingerprint.")]
         public static string RDKit_MorganFingerprint(string text, int radius, int nBits)
         {
             if (nBits == 0)
@@ -65,7 +65,7 @@ namespace NCDKExcel
             return ret;
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the InChI.")]
         public static string RDKit_InChI(string text, string options)
         {
             return RDKit_CalcDesc(text, "RDKit_InChI", mol =>
@@ -77,13 +77,13 @@ namespace NCDKExcel
             });
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the chi Nn.")]
         public static double RDKit_ChiNn(string text, int n)
         {
             return RDKit_CalcDesc(text, "RDKit_ChiNn" + n.ToString(), mol => RDKFuncs.calcChiNn(mol, (uint)n));
         }
 
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the chi Nv.")]
         public static double RDKit_ChiNv(string text, int n)
         {
             return RDKit_CalcDesc(text, "RDKit_ChiNv" + n.ToString(), mol => RDKFuncs.calcChiNv(mol, (uint)n));

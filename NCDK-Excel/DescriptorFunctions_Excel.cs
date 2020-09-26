@@ -2,7 +2,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2018-2019 Kazuya Ujihara
+ * Copyright (c) 2018-2020 Kazuya Ujihara
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ namespace NCDKExcel
 {
     public static partial class DescriptorFunctions
     {
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of acidic groups.")]
         public static double NCDK_AcidicGroupCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_AcidicGroupCount",
@@ -51,7 +51,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Sum of the atomic polarizabilities.")]
         public static double NCDK_APol(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_APol",
@@ -70,7 +70,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of aromatic atoms.")]
         public static double NCDK_AromaticAtomsCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_AromaticAtomsCount",
@@ -89,7 +89,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of aromatic bonds.")]
         public static double NCDK_AromaticBondsCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_AromaticBondsCount",
@@ -108,7 +108,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of atoms.")]
         public static double NCDK_AtomCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_AtomCount",
@@ -127,7 +127,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the autocorrelation charge.")]
         public static string NCDK_AutocorrelationCharge(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationCharge",
@@ -146,7 +146,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the autocorrelation mass.")]
         public static string NCDK_AutocorrelationMass(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationMass",
@@ -165,7 +165,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the autocorrelation polarizability.")]
         public static string NCDK_AutocorrelationPolarizability(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationPolarizability",
@@ -184,7 +184,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of basic groups.")]
         public static double NCDK_BasicGroupCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_BasicGroupCount",
@@ -203,7 +203,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the BCUT.")]
         public static string NCDK_BCUT(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_BCUT",
@@ -222,7 +222,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of bonds.")]
         public static double NCDK_BondCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_BondCount",
@@ -241,7 +241,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule.")]
         public static double NCDK_BPol(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_BPol",
@@ -260,7 +260,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the topological descriptor characterizing the carbon connectivity.")]
         public static string NCDK_CarbonTypes(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_CarbonTypes",
@@ -279,7 +279,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Evaluates chi chain descriptors.")]
         public static string NCDK_ChiChain(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ChiChain",
@@ -298,7 +298,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Evaluates chi cluster descriptors.")]
         public static string NCDK_ChiCluster(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ChiCluster",
@@ -317,7 +317,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Evaluates chi path cluster descriptors.")]
         public static string NCDK_ChiPathCluster(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ChiPathCluster",
@@ -336,7 +336,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Evaluates chi path descriptors.")]
         public static string NCDK_ChiPath(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ChiPath",
@@ -355,7 +355,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the CPSA.")]
         public static string NCDK_CPSA(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_CPSA",
@@ -379,7 +379,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the eccentric connectivity index.")]
         public static double NCDK_EccentricConnectivityIndex(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_EccentricConnectivityIndex",
@@ -398,7 +398,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the FMF.")]
         public static double NCDK_FMF(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_FMF",
@@ -417,7 +417,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the fractional PSA.")]
         public static double NCDK_FractionalPSA(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_FractionalPSA",
@@ -436,7 +436,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the fractional CSP.")]
         public static double NCDK_FractionalCSP3(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_FractionalCSP3",
@@ -455,7 +455,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the fractional CSP3.")]
         public static double NCDK_FSP3(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_FSP3",
@@ -474,7 +474,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the fragment complexity.")]
         public static double NCDK_FragmentComplexity(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_FragmentComplexity",
@@ -493,7 +493,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the gravitational index.")]
         public static string NCDK_GravitationalIndex(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_GravitationalIndex",
@@ -517,7 +517,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the hbond acceptor count.")]
         public static double NCDK_HBondAcceptorCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_HBondAcceptorCount",
@@ -536,7 +536,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the hbond donor count.")]
         public static double NCDK_HBondDonorCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_HBondDonorCount",
@@ -555,7 +555,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the hybridization ratio.")]
         public static double NCDK_HybridizationRatio(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_HybridizationRatio",
@@ -574,7 +574,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the JPLogP.")]
         public static double NCDK_JPlogP(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_JPlogP",
@@ -593,7 +593,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the kappa shape indices.")]
         public static string NCDK_KappaShapeIndices(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_KappaShapeIndices",
@@ -612,7 +612,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the kier hall SMARTS.")]
         public static string NCDK_KierHallSmarts(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_KierHallSmarts",
@@ -631,7 +631,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the largest chain.")]
         public static double NCDK_LargestChain(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_LargestChain",
@@ -650,7 +650,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the largest pi system.")]
         public static double NCDK_LargestPiSystem(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_LargestPiSystem",
@@ -669,7 +669,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the length over breadth.")]
         public static string NCDK_LengthOverBreadth(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_LengthOverBreadth",
@@ -693,7 +693,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the longest aliphatic chain.")]
         public static double NCDK_LongestAliphaticChain(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_LongestAliphaticChain",
@@ -712,7 +712,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the mannhold log.")]
         public static double NCDK_MannholdLogP(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_MannholdLogP",
@@ -731,7 +731,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the MDE.")]
         public static string NCDK_MDE(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_MDE",
@@ -750,7 +750,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the moment of inertia.")]
         public static string NCDK_MomentOfInertia(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_MomentOfInertia",
@@ -774,7 +774,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the petitjean number.")]
         public static double NCDK_PetitjeanNumber(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_PetitjeanNumber",
@@ -793,7 +793,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the petitjean shape index.")]
         public static string NCDK_PetitjeanShapeIndex(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_PetitjeanShapeIndex",
@@ -817,7 +817,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the rotatable bonds count.")]
         public static double NCDK_RotatableBondsCount(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_RotatableBondsCount",
@@ -836,7 +836,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Rule of Five.")]
         public static double NCDK_RuleOfFive(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_RuleOfFive",
@@ -855,7 +855,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the small ring.")]
         public static string NCDK_SmallRing(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_SmallRing",
@@ -874,7 +874,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the TPSA.")]
         public static double NCDK_TPSA(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_TPSA",
@@ -893,7 +893,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the VABC.")]
         public static double NCDK_VABC(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_VABC",
@@ -912,7 +912,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the vadj ma.")]
         public static double NCDK_VAdjMa(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_VAdjMa",
@@ -931,7 +931,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the weighted path.")]
         public static string NCDK_WeightedPath(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_WeightedPath",
@@ -950,7 +950,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the WHIM.")]
         public static string NCDK_WHIM(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_WHIM",
@@ -974,7 +974,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the wiener numbers.")]
         public static string NCDK_WienerNumbers(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_WienerNumbers",
@@ -993,7 +993,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the xlog PDe.")]
         public static double NCDK_XLogP(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_XLogP",
@@ -1012,7 +1012,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the zagreb index.")]
         public static double NCDK_ZagrebIndex(string text)
         {
             var ret = Caching<double?>.Calculate(text, "NCDK_ZagrebIndex",
@@ -1031,7 +1031,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns ECFP0.")]
         public static string NCDK_ECFP0(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ECFP0",
@@ -1050,7 +1050,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns ECFP2.")]
         public static string NCDK_ECFP2(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ECFP2",
@@ -1069,7 +1069,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns ECFP4.")]
         public static string NCDK_ECFP4(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ECFP4",
@@ -1088,7 +1088,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns ECFP6.")]
         public static string NCDK_ECFP6(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ECFP6",
@@ -1107,7 +1107,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns FCFP0.")]
         public static string NCDK_FCFP0(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_FCFP0",
@@ -1126,7 +1126,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns FCFP2.")]
         public static string NCDK_FCFP2(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_FCFP2",
@@ -1145,7 +1145,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns FCFP4.")]
         public static string NCDK_FCFP4(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_FCFP4",
@@ -1164,7 +1164,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns FCFP6.")]
         public static string NCDK_FCFP6(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_FCFP6",
@@ -1183,7 +1183,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the AtomPairs2D fingerprint.")]
         public static string NCDK_AtomPairs2DFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_AtomPairs2DFingerprint",
@@ -1202,7 +1202,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the EState fingerprint.")]
         public static string NCDK_EStateFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_EStateFingerprint",
@@ -1221,7 +1221,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Extended fingerprint.")]
         public static string NCDK_ExtendedFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ExtendedFingerprint",
@@ -1240,7 +1240,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the CDK fingerprint.")]
         public static string NCDK_CDKFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_CDKFingerprint",
@@ -1259,7 +1259,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the KlekotaRoth fingerprint.")]
         public static string NCDK_KlekotaRothFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_KlekotaRothFingerprint",
@@ -1278,7 +1278,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Lingo fingerprint.")]
         public static string NCDK_LingoFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_LingoFingerprint",
@@ -1297,7 +1297,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the MACCS fingerprint.")]
         public static string NCDK_MACCSFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_MACCSFingerprint",
@@ -1316,7 +1316,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the ShortestPath.")]
         public static string NCDK_ShortestPathFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_ShortestPathFingerprint",
@@ -1335,7 +1335,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Substructure.")]
         public static string NCDK_SubstructureFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_SubstructureFingerprint",
@@ -1354,7 +1354,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Pubchem fingerprint.")]
         public static string NCDK_PubchemFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "NCDK_PubchemFingerprint",
@@ -1373,7 +1373,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the MACCSKeys fingerprint.")]
         public static string RDKit_MACCSKeysFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_MACCSKeysFingerprint",
@@ -1391,7 +1391,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Layered fingerprint.")]
         public static string RDKit_LayeredFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_LayeredFingerprint",
@@ -1409,7 +1409,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the HashedAtomPair fingerprint.")]
         public static string RDKit_HashedAtomPairFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_HashedAtomPairFingerprint",
@@ -1427,7 +1427,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the HashedTopologicalTorsion fingerprint.")]
         public static string RDKit_HashedTopologicalTorsionFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_HashedTopologicalTorsionFingerprint",
@@ -1445,7 +1445,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the Pattern fingerprint.")]
         public static string RDKit_PatternFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_PatternFingerprint",
@@ -1463,7 +1463,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the RDK fingerprint.")]
         public static string RDKit_RDKFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_RDKFingerprint",
@@ -1481,7 +1481,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the AtomPair fingerprint.")]
         public static string RDKit_AtomPairFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_AtomPairFingerprint",
@@ -1499,7 +1499,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the TopologicalTorsion fingerprint.")]
         public static string RDKit_TopologicalTorsionFingerprint(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_TopologicalTorsionFingerprint",
@@ -1517,7 +1517,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi0n.")]
         public static double RDKit_Chi0n(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi0n",
@@ -1535,7 +1535,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi0v.")]
         public static double RDKit_Chi0v(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi0v",
@@ -1553,7 +1553,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi1n.")]
         public static double RDKit_Chi1n(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi1n",
@@ -1571,7 +1571,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi1v.")]
         public static double RDKit_Chi1v(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi1v",
@@ -1589,7 +1589,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi2n.")]
         public static double RDKit_Chi2n(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi2n",
@@ -1607,7 +1607,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi2v.")]
         public static double RDKit_Chi2v(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi2v",
@@ -1625,7 +1625,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi3n.")]
         public static double RDKit_Chi3n(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi3n",
@@ -1643,7 +1643,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi3v.")]
         public static double RDKit_Chi3v(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi3v",
@@ -1661,7 +1661,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi4n.")]
         public static double RDKit_Chi4n(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi4n",
@@ -1679,7 +1679,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Chi4v.")]
         public static double RDKit_Chi4v(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Chi4v",
@@ -1697,7 +1697,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Kappa1.")]
         public static double RDKit_Kappa1(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Kappa1",
@@ -1715,7 +1715,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Kappa2.")]
         public static double RDKit_Kappa2(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Kappa2",
@@ -1733,7 +1733,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Kappa3.")]
         public static double RDKit_Kappa3(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_Kappa3",
@@ -1751,7 +1751,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns LabuteASA.")]
         public static double RDKit_LabuteASA(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_LabuteASA",
@@ -1769,7 +1769,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns MolLogP.")]
         public static double RDKit_MolLogP(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_MolLogP",
@@ -1787,7 +1787,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns MolMR.")]
         public static double RDKit_MolMR(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_MolMR",
@@ -1805,7 +1805,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns ExactMolWt.")]
         public static double RDKit_ExactMolWt(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_ExactMolWt",
@@ -1823,7 +1823,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns FractionCSP3.")]
         public static double RDKit_FractionCSP3(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_FractionCSP3",
@@ -1841,7 +1841,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns HallKierAlpha.")]
         public static double RDKit_HallKierAlpha(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_HallKierAlpha",
@@ -1859,7 +1859,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of LipinskiHBA.")]
         public static double RDKit_NumLipinskiHBA(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumLipinskiHBA",
@@ -1877,7 +1877,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of LipinskiHBD.")]
         public static double RDKit_NumLipinskiHBD(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumLipinskiHBD",
@@ -1895,7 +1895,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AliphaticCarbocycles.")]
         public static double RDKit_NumAliphaticCarbocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAliphaticCarbocycles",
@@ -1913,7 +1913,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AliphaticHeterocycles.")]
         public static double RDKit_NumAliphaticHeterocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAliphaticHeterocycles",
@@ -1931,7 +1931,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AliphaticRings.")]
         public static double RDKit_NumAliphaticRings(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAliphaticRings",
@@ -1949,7 +1949,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AmideBonds.")]
         public static double RDKit_NumAmideBonds(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAmideBonds",
@@ -1967,7 +1967,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AromaticCarbocycles.")]
         public static double RDKit_NumAromaticCarbocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAromaticCarbocycles",
@@ -1985,7 +1985,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AromaticHeterocycles.")]
         public static double RDKit_NumAromaticHeterocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAromaticHeterocycles",
@@ -2003,7 +2003,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AromaticRings.")]
         public static double RDKit_NumAromaticRings(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAromaticRings",
@@ -2021,7 +2021,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of BridgeheadAtoms.")]
         public static double RDKit_NumBridgeheadAtoms(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumBridgeheadAtoms",
@@ -2039,7 +2039,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of HBA.")]
         public static double RDKit_NumHBA(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumHBA",
@@ -2057,7 +2057,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of HBD.")]
         public static double RDKit_NumHBD(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumHBD",
@@ -2075,7 +2075,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns TPSA.")]
         public static double RDKit_TPSA(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_TPSA",
@@ -2093,7 +2093,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of RotatableBonds.")]
         public static double RDKit_NumRotatableBonds(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumRotatableBonds",
@@ -2111,7 +2111,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of Heteroatoms.")]
         public static double RDKit_NumHeteroatoms(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumHeteroatoms",
@@ -2129,7 +2129,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of Heterocycles.")]
         public static double RDKit_NumHeterocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumHeterocycles",
@@ -2147,7 +2147,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of Rings.")]
         public static double RDKit_NumRings(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumRings",
@@ -2165,7 +2165,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of SaturatedCarbocycles.")]
         public static double RDKit_NumSaturatedCarbocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumSaturatedCarbocycles",
@@ -2183,7 +2183,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of SaturatedHeterocycles.")]
         public static double RDKit_NumSaturatedHeterocycles(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumSaturatedHeterocycles",
@@ -2201,7 +2201,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of SaturatedRings.")]
         public static double RDKit_NumSaturatedRings(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumSaturatedRings",
@@ -2219,7 +2219,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of SpiroAtoms.")]
         public static double RDKit_NumSpiroAtoms(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumSpiroAtoms",
@@ -2237,7 +2237,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of malCharge.")]
         public static double RDKit_FormalCharge(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_FormalCharge",
@@ -2255,7 +2255,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of AtomStereoCenters.")]
         public static double RDKit_NumAtomStereoCenters(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAtomStereoCenters",
@@ -2273,7 +2273,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of UnspecifiedAtomStereoCenters.")]
         public static double RDKit_NumUnspecifiedAtomStereoCenters(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumUnspecifiedAtomStereoCenters",
@@ -2291,7 +2291,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns MolFormula.")]
         public static string RDKit_MolFormula(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_MolFormula",
@@ -2309,7 +2309,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns CXSmiles.")]
         public static string RDKit_CXSmiles(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_CXSmiles",
@@ -2327,7 +2327,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns InchiKey.")]
         public static string RDKit_InchiKey(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_InchiKey",
@@ -2345,7 +2345,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns MolBlock.")]
         public static string RDKit_MolBlock(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_MolBlock",
@@ -2363,7 +2363,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns PDBBlock.")]
         public static string RDKit_PDBBlock(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_PDBBlock",
@@ -2381,7 +2381,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns TPLBlock.")]
         public static string RDKit_TPLBlock(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_TPLBlock",
@@ -2399,7 +2399,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns XYZBlock.")]
         public static string RDKit_XYZBlock(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_XYZBlock",
@@ -2417,7 +2417,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Smarts.")]
         public static string RDKit_Smarts(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_Smarts",
@@ -2435,7 +2435,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns Smiles.")]
         public static string RDKit_Smiles(string text)
         {
             var ret = Caching<string>.Calculate(text, "RDKit_Smiles",
@@ -2453,7 +2453,7 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns QED.")]
         public static double RDKit_QED(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_QED",
@@ -2471,7 +2471,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of HeavyAtoms.")]
         public static double RDKit_NumHeavyAtoms(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumHeavyAtoms",
@@ -2489,7 +2489,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of Atoms.")]
         public static double RDKit_NumAtoms(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumAtoms",
@@ -2507,7 +2507,7 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction()]
+        [ExcelFunction(Description = "Returns the number of Bonds.")]
         public static double RDKit_NumBonds(string text)
         {
             var ret = Caching<double?>.Calculate(text, "RDKit_NumBonds",

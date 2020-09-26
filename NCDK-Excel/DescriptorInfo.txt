@@ -1,134 +1,134 @@
-kit_name	function_name	initializer	return_type	calc_func	preparation	geometry3D	static
-NCDK	AcidicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.AcidicGroupCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	APol	new NCDK.QSAR.Descriptors.Moleculars.APolDescriptor()	DescriptorValue_double	Calculate			
-NCDK	AromaticAtomsCount	new NCDK.QSAR.Descriptors.Moleculars.AromaticAtomsCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	AromaticBondsCount	new NCDK.QSAR.Descriptors.Moleculars.AromaticBondsCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	AtomCount	new NCDK.QSAR.Descriptors.Moleculars.AtomCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	AutocorrelationCharge	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorCharge()	DescriptorValue_double[]	Calculate			
-NCDK	AutocorrelationMass	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorMass()	DescriptorValue_double[]	Calculate			
-NCDK	AutocorrelationPolarizability	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorPolarizability()	DescriptorValue_double[]	Calculate			
-NCDK	BasicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.BasicGroupCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	BCUT	new NCDK.QSAR.Descriptors.Moleculars.BCUTDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	BondCount	new NCDK.QSAR.Descriptors.Moleculars.BondCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	BPol	new NCDK.QSAR.Descriptors.Moleculars.BPolDescriptor()	DescriptorValue_double	Calculate			
-NCDK	CarbonTypes	new NCDK.QSAR.Descriptors.Moleculars.CarbonTypesDescriptor()	DescriptorValue_int[]	Calculate			
-NCDK	ChiChain	new NCDK.QSAR.Descriptors.Moleculars.ChiChainDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	ChiCluster	new NCDK.QSAR.Descriptors.Moleculars.ChiClusterDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	ChiPathCluster	new NCDK.QSAR.Descriptors.Moleculars.ChiPathClusterDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	ChiPath	new NCDK.QSAR.Descriptors.Moleculars.ChiPathDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	CPSA	new NCDK.QSAR.Descriptors.Moleculars.CPSADescriptor()	DescriptorValue_double[]	Calculate		TRUE	
-NCDK	EccentricConnectivityIndex	new NCDK.QSAR.Descriptors.Moleculars.EccentricConnectivityIndexDescriptor()	DescriptorValue_int	Calculate			
-NCDK	FMF	new NCDK.QSAR.Descriptors.Moleculars.FMFDescriptor()	DescriptorValue_double	Calculate			
-NCDK	FractionalPSA	new NCDK.QSAR.Descriptors.Moleculars.FractionalPSADescriptor()	DescriptorValue_double	Calculate			
-NCDK	FractionalCSP3	new NCDK.QSAR.Descriptors.Moleculars.FractionalCSP3Descriptor()	DescriptorValue_double	Calculate			
-NCDK	FSP3	new NCDK.QSAR.Descriptors.Moleculars.FractionalCSP3Descriptor()	DescriptorValue_double	Calculate			
-NCDK	FragmentComplexity	new NCDK.QSAR.Descriptors.Moleculars.FragmentComplexityDescriptor()	DescriptorValue_double	Calculate			
-NCDK	GravitationalIndex	new NCDK.QSAR.Descriptors.Moleculars.GravitationalIndexDescriptor()	DescriptorValue_double[]	Calculate		TRUE	
-NCDK	HBondAcceptorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondAcceptorCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	HBondDonorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondDonorCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	HybridizationRatio	new NCDK.QSAR.Descriptors.Moleculars.HybridizationRatioDescriptor()	DescriptorValue_double	Calculate			
-NCDK	JPlogP	new NCDK.QSAR.Descriptors.Moleculars.JPlogPDescriptor()	DescriptorValue_double	Calculate			
-NCDK	KappaShapeIndices	new NCDK.QSAR.Descriptors.Moleculars.KappaShapeIndicesDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	KierHallSmarts	new NCDK.QSAR.Descriptors.Moleculars.KierHallSmartsDescriptor()	DescriptorValue_int[]	Calculate			
-NCDK	LargestChain	new NCDK.QSAR.Descriptors.Moleculars.LargestChainDescriptor()	DescriptorValue_int	Calculate			
-NCDK	LargestPiSystem	new NCDK.QSAR.Descriptors.Moleculars.LargestPiSystemDescriptor()	DescriptorValue_int	Calculate			
-NCDK	LengthOverBreadth	new NCDK.QSAR.Descriptors.Moleculars.LengthOverBreadthDescriptor()	DescriptorValue_double[]	Calculate	NCDK.Config.BODRIsotopeFactory.Instance.ConfigureAtoms(mol);	TRUE	
-NCDK	LongestAliphaticChain	new NCDK.QSAR.Descriptors.Moleculars.LongestAliphaticChainDescriptor(checkRingSystem: true)	DescriptorValue_int	Calculate			
-NCDK	MannholdLogP	new NCDK.QSAR.Descriptors.Moleculars.MannholdLogPDescriptor()	DescriptorValue_double	Calculate			
-NCDK	MDE	new NCDK.QSAR.Descriptors.Moleculars.MDEDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	MomentOfInertia	new NCDK.QSAR.Descriptors.Moleculars.MomentOfInertiaDescriptor()	DescriptorValue_double[]	Calculate		TRUE	
-NCDK	PetitjeanNumber	new NCDK.QSAR.Descriptors.Moleculars.PetitjeanNumberDescriptor()	DescriptorValue_double	Calculate			
-NCDK	PetitjeanShapeIndex	new NCDK.QSAR.Descriptors.Moleculars.PetitjeanShapeIndexDescriptor()	DescriptorValue_double[]	Calculate		TRUE	
-NCDK	RotatableBondsCount	new NCDK.QSAR.Descriptors.Moleculars.RotatableBondsCountDescriptor()	DescriptorValue_int	Calculate			
-NCDK	RuleOfFive	new NCDK.QSAR.Descriptors.Moleculars.RuleOfFiveDescriptor()	DescriptorValue_int	Calculate			
-NCDK	SmallRing	new NCDK.QSAR.Descriptors.Moleculars.SmallRingDescriptor()	DescriptorValue_int[]	Calculate			
-NCDK	TPSA	new NCDK.QSAR.Descriptors.Moleculars.TPSADescriptor()	DescriptorValue_double	Calculate			
-NCDK	VABC	new NCDK.QSAR.Descriptors.Moleculars.VABCDescriptor()	DescriptorValue_double	Calculate	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol); AddImplicitHydrogens(mol);		
-NCDK	VAdjMa	new NCDK.QSAR.Descriptors.Moleculars.VAdjMaDescriptor()	DescriptorValue_double	Calculate			
-NCDK	WeightedPath	new NCDK.QSAR.Descriptors.Moleculars.WeightedPathDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	WHIM	new NCDK.QSAR.Descriptors.Moleculars.WHIMDescriptor()	DescriptorValue_double[]	Calculate		TRUE	
-NCDK	WienerNumbers	new NCDK.QSAR.Descriptors.Moleculars.WienerNumbersDescriptor()	DescriptorValue_double[]	Calculate			
-NCDK	XLogP	new NCDK.QSAR.Descriptors.Moleculars.XLogPDescriptor()	DescriptorValue_double	Calculate			
-NCDK	ZagrebIndex	new NCDK.QSAR.Descriptors.Moleculars.ZagrebIndexDescriptor()	DescriptorValue_double	Calculate			
-NCDK	ECFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP0)	IBitFingerprint	GetBitFingerprint			
-NCDK	ECFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP2)	IBitFingerprint	GetBitFingerprint			
-NCDK	ECFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP4)	IBitFingerprint	GetBitFingerprint			
-NCDK	ECFP6	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP6)	IBitFingerprint	GetBitFingerprint			
-NCDK	FCFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP0)	IBitFingerprint	GetBitFingerprint			
-NCDK	FCFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP2)	IBitFingerprint	GetBitFingerprint			
-NCDK	FCFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP4)	IBitFingerprint	GetBitFingerprint			
-NCDK	FCFP6	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP6)	IBitFingerprint	GetBitFingerprint			
-NCDK	AtomPairs2DFingerprint	new NCDK.Fingerprints.AtomPairs2DFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	EStateFingerprint	new NCDK.Fingerprints.EStateFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	ExtendedFingerprint	new NCDK.Fingerprints.ExtendedFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	CDKFingerprint	new NCDK.Fingerprints.Fingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	KlekotaRothFingerprint	new NCDK.Fingerprints.KlekotaRothFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	LingoFingerprint	new NCDK.Fingerprints.LingoFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	MACCSFingerprint	new NCDK.Fingerprints.MACCSFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	ShortestPathFingerprint	new NCDK.Fingerprints.ShortestPathFingerprinter()	IBitFingerprint	GetBitFingerprint	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);		
-NCDK	SubstructureFingerprint	new NCDK.Fingerprints.SubstructureFingerprinter()	IBitFingerprint	GetBitFingerprint			
-NCDK	PubchemFingerprint	new NCDK.Fingerprints.PubchemFingerprinter()	IBitFingerprint	GetBitFingerprint			
-RDKit	MACCSKeysFingerprint	RDKit.Descriptors	ExplicitBitVect	GetMACCSKeysFingerprint			TRUE
-RDKit	LayeredFingerprint	RDKit.Chem	ExplicitBitVect	LayeredFingerprint			TRUE
-RDKit	HashedAtomPairFingerprint	RDKit.Descriptors	ExplicitBitVect	GetHashedAtomPairFingerprintAsBitVect			TRUE
-RDKit	HashedTopologicalTorsionFingerprint	RDKit.Descriptors	ExplicitBitVect	GetHashedTopologicalTorsionFingerprintAsBitVect			TRUE
-RDKit	PatternFingerprint	RDKit.Chem	ExplicitBitVect	PatternFingerprint			TRUE
-RDKit	RDKFingerprint	RDKit.Chem	ExplicitBitVect	RDKFingerprint			TRUE
-RDKit	AtomPairFingerprint	RDKit.Descriptors	SparseIntVect32	GetAtomPairFingerprint			TRUE
-RDKit	TopologicalTorsionFingerprint	RDKit.Descriptors	SparseIntVect64	GetTopologicalTorsionFingerprint			TRUE
-RDKit	Chi0n	RDKit.Descriptors	double	CalcChi0n			TRUE
-RDKit	Chi0v	RDKit.Descriptors	double	CalcChi0v			TRUE
-RDKit	Chi1n	RDKit.Descriptors	double	CalcChi1n			TRUE
-RDKit	Chi1v	RDKit.Descriptors	double	CalcChi1v			TRUE
-RDKit	Chi2n	RDKit.Descriptors	double	CalcChi2n			TRUE
-RDKit	Chi2v	RDKit.Descriptors	double	CalcChi2v			TRUE
-RDKit	Chi3n	RDKit.Descriptors	double	CalcChi3n			TRUE
-RDKit	Chi3v	RDKit.Descriptors	double	CalcChi3v			TRUE
-RDKit	Chi4n	RDKit.Descriptors	double	CalcChi4n			TRUE
-RDKit	Chi4v	RDKit.Descriptors	double	CalcChi4v			TRUE
-RDKit	Kappa1	RDKit.Descriptors	double	CalcKappa1			TRUE
-RDKit	Kappa2	RDKit.Descriptors	double	CalcKappa2			TRUE
-RDKit	Kappa3	RDKit.Descriptors	double	CalcKappa3			TRUE
-RDKit	LabuteASA	RDKit.Descriptors	double	CalcLabuteASA			TRUE
-RDKit	MolLogP	RDKit.Chem.Crippen	double	MolLogP			TRUE
-RDKit	MolMR	RDKit.Chem.Crippen	double	MolMR			TRUE
-RDKit	ExactMolWt	RDKit.Descriptors	double	CalcExactMolWt			TRUE
-RDKit	FractionCSP3	RDKit.Descriptors	double	CalcFractionCSP3			TRUE
-RDKit	HallKierAlpha	RDKit.Descriptors	double	CalcHallKierAlpha			TRUE
-RDKit	NumLipinskiHBA	RDKit.Descriptors	double	CalcNumLipinskiHBA			TRUE
-RDKit	NumLipinskiHBD	RDKit.Descriptors	double	CalcNumLipinskiHBD			TRUE
-RDKit	NumAliphaticCarbocycles	RDKit.Descriptors	double	CalcNumAliphaticCarbocycles			TRUE
-RDKit	NumAliphaticHeterocycles	RDKit.Descriptors	double	CalcNumAliphaticHeterocycles			TRUE
-RDKit	NumAliphaticRings	RDKit.Descriptors	double	CalcNumAliphaticRings			TRUE
-RDKit	NumAmideBonds	RDKit.Descriptors	double	CalcNumAmideBonds			TRUE
-RDKit	NumAromaticCarbocycles	RDKit.Descriptors	double	CalcNumAromaticCarbocycles			TRUE
-RDKit	NumAromaticHeterocycles	RDKit.Descriptors	double	CalcNumAromaticHeterocycles			TRUE
-RDKit	NumAromaticRings	RDKit.Descriptors	double	CalcNumAromaticRings			TRUE
-RDKit	NumBridgeheadAtoms	RDKit.Descriptors	double	CalcNumBridgeheadAtoms			TRUE
-RDKit	NumHBA	RDKit.Descriptors	double	CalcNumHBA			TRUE
-RDKit	NumHBD	RDKit.Descriptors	double	CalcNumHBD			TRUE
-RDKit	TPSA	RDKit.Descriptors	double	CalcTPSA			TRUE
-RDKit	NumRotatableBonds	RDKit.Descriptors	double	CalcNumRotatableBonds			TRUE
-RDKit	NumHeteroatoms	RDKit.Descriptors	double	CalcNumHeteroatoms			TRUE
-RDKit	NumHeterocycles	RDKit.Descriptors	double	CalcNumHeterocycles			TRUE
-RDKit	NumRings	RDKit.Descriptors	double	CalcNumRings			TRUE
-RDKit	NumSaturatedCarbocycles	RDKit.Descriptors	double	CalcNumSaturatedCarbocycles			TRUE
-RDKit	NumSaturatedHeterocycles	RDKit.Descriptors	double	CalcNumSaturatedHeterocycles			TRUE
-RDKit	NumSaturatedRings	RDKit.Descriptors	double	CalcNumSaturatedRings			TRUE
-RDKit	NumSpiroAtoms	RDKit.Descriptors	double	CalcNumSpiroAtoms			TRUE
-RDKit	FormalCharge	RDKit.Chem	double	GetFormalCharge			TRUE
-RDKit	NumAtomStereoCenters	RDKit.Descriptors	double	CalcNumAtomStereoCenters			TRUE
-RDKit	NumUnspecifiedAtomStereoCenters	RDKit.Descriptors	double	CalcNumUnspecifiedAtomStereoCenters			TRUE
-RDKit	MolFormula	RDKit.Descriptors	string	CalcMolFormula			TRUE
-RDKit	CXSmiles	RDKit.Chem	string	MolToCXSmiles			TRUE
-RDKit	InchiKey	RDKit.Chem	string	MolToInchiKey			TRUE
-RDKit	MolBlock	RDKit.Chem	string	MolToMolBlock			TRUE
-RDKit	PDBBlock	RDKit.Chem	string	MolToPDBBlock			TRUE
-RDKit	TPLBlock	RDKit.Chem	string	MolToTPLBlock			TRUE
-RDKit	XYZBlock	RDKit.Chem	string	MolToXYZBlock			TRUE
-RDKit	Smarts	RDKit.Chem	string	MolToSmarts			TRUE
-RDKit	Smiles	RDKit.Chem	string	MolToSmiles			TRUE
-RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE
-RDKit	NumHeavyAtoms	RDKit.Chem	double	GetNumHeavyAtoms			TRUE
-RDKit	NumAtoms	RDKit.Chem	double	GetNumAtoms			TRUE
-RDKit	NumBonds	RDKit.Chem	double	GetNumBonds			TRUE
+kit_name	function_name	initializer	return_type	calc_func	preparation	geometry3D	static	description
+NCDK	AcidicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.AcidicGroupCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of acidic groups.
+NCDK	APol	new NCDK.QSAR.Descriptors.Moleculars.APolDescriptor()	DescriptorValue_double	Calculate				Sum of the atomic polarizabilities.
+NCDK	AromaticAtomsCount	new NCDK.QSAR.Descriptors.Moleculars.AromaticAtomsCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of aromatic atoms.
+NCDK	AromaticBondsCount	new NCDK.QSAR.Descriptors.Moleculars.AromaticBondsCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of aromatic bonds.
+NCDK	AtomCount	new NCDK.QSAR.Descriptors.Moleculars.AtomCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of atoms.
+NCDK	AutocorrelationCharge	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorCharge()	DescriptorValue_double[]	Calculate				Returns the autocorrelation charge.
+NCDK	AutocorrelationMass	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorMass()	DescriptorValue_double[]	Calculate				Returns the autocorrelation mass.
+NCDK	AutocorrelationPolarizability	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorPolarizability()	DescriptorValue_double[]	Calculate				Returns the autocorrelation polarizability.
+NCDK	BasicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.BasicGroupCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of basic groups.
+NCDK	BCUT	new NCDK.QSAR.Descriptors.Moleculars.BCUTDescriptor()	DescriptorValue_double[]	Calculate				Returns the BCUT.
+NCDK	BondCount	new NCDK.QSAR.Descriptors.Moleculars.BondCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of bonds.
+NCDK	BPol	new NCDK.QSAR.Descriptors.Moleculars.BPolDescriptor()	DescriptorValue_double	Calculate				Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule.
+NCDK	CarbonTypes	new NCDK.QSAR.Descriptors.Moleculars.CarbonTypesDescriptor()	DescriptorValue_int[]	Calculate				Returns the topological descriptor characterizing the carbon connectivity. 
+NCDK	ChiChain	new NCDK.QSAR.Descriptors.Moleculars.ChiChainDescriptor()	DescriptorValue_double[]	Calculate				Evaluates chi chain descriptors.
+NCDK	ChiCluster	new NCDK.QSAR.Descriptors.Moleculars.ChiClusterDescriptor()	DescriptorValue_double[]	Calculate				Evaluates chi cluster descriptors.
+NCDK	ChiPathCluster	new NCDK.QSAR.Descriptors.Moleculars.ChiPathClusterDescriptor()	DescriptorValue_double[]	Calculate				Evaluates chi path cluster descriptors.
+NCDK	ChiPath	new NCDK.QSAR.Descriptors.Moleculars.ChiPathDescriptor()	DescriptorValue_double[]	Calculate				Evaluates chi path descriptors.
+NCDK	CPSA	new NCDK.QSAR.Descriptors.Moleculars.CPSADescriptor()	DescriptorValue_double[]	Calculate		TRUE		Returns the CPSA.
+NCDK	EccentricConnectivityIndex	new NCDK.QSAR.Descriptors.Moleculars.EccentricConnectivityIndexDescriptor()	DescriptorValue_int	Calculate				Returns the eccentric connectivity index.
+NCDK	FMF	new NCDK.QSAR.Descriptors.Moleculars.FMFDescriptor()	DescriptorValue_double	Calculate				Returns the FMF.
+NCDK	FractionalPSA	new NCDK.QSAR.Descriptors.Moleculars.FractionalPSADescriptor()	DescriptorValue_double	Calculate				Returns the fractional PSA.
+NCDK	FractionalCSP3	new NCDK.QSAR.Descriptors.Moleculars.FractionalCSP3Descriptor()	DescriptorValue_double	Calculate				Returns the fractional CSP.
+NCDK	FSP3	new NCDK.QSAR.Descriptors.Moleculars.FractionalCSP3Descriptor()	DescriptorValue_double	Calculate				Returns the fractional CSP3.
+NCDK	FragmentComplexity	new NCDK.QSAR.Descriptors.Moleculars.FragmentComplexityDescriptor()	DescriptorValue_double	Calculate				Returns the fragment complexity.
+NCDK	GravitationalIndex	new NCDK.QSAR.Descriptors.Moleculars.GravitationalIndexDescriptor()	DescriptorValue_double[]	Calculate		TRUE		Returns the gravitational index.
+NCDK	HBondAcceptorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondAcceptorCountDescriptor()	DescriptorValue_int	Calculate				Returns the hbond acceptor count.
+NCDK	HBondDonorCount	new NCDK.QSAR.Descriptors.Moleculars.HBondDonorCountDescriptor()	DescriptorValue_int	Calculate				Returns the hbond donor count.
+NCDK	HybridizationRatio	new NCDK.QSAR.Descriptors.Moleculars.HybridizationRatioDescriptor()	DescriptorValue_double	Calculate				Returns the hybridization ratio.
+NCDK	JPlogP	new NCDK.QSAR.Descriptors.Moleculars.JPlogPDescriptor()	DescriptorValue_double	Calculate				Returns the JPLogP.
+NCDK	KappaShapeIndices	new NCDK.QSAR.Descriptors.Moleculars.KappaShapeIndicesDescriptor()	DescriptorValue_double[]	Calculate				Returns the kappa shape indices.
+NCDK	KierHallSmarts	new NCDK.QSAR.Descriptors.Moleculars.KierHallSmartsDescriptor()	DescriptorValue_int[]	Calculate				Returns the kier hall SMARTS.
+NCDK	LargestChain	new NCDK.QSAR.Descriptors.Moleculars.LargestChainDescriptor()	DescriptorValue_int	Calculate				Returns the largest chain.
+NCDK	LargestPiSystem	new NCDK.QSAR.Descriptors.Moleculars.LargestPiSystemDescriptor()	DescriptorValue_int	Calculate				Returns the largest pi system.
+NCDK	LengthOverBreadth	new NCDK.QSAR.Descriptors.Moleculars.LengthOverBreadthDescriptor()	DescriptorValue_double[]	Calculate	NCDK.Config.BODRIsotopeFactory.Instance.ConfigureAtoms(mol);	TRUE		Returns the length over breadth.
+NCDK	LongestAliphaticChain	new NCDK.QSAR.Descriptors.Moleculars.LongestAliphaticChainDescriptor(checkRingSystem: true)	DescriptorValue_int	Calculate				Returns the longest aliphatic chain.
+NCDK	MannholdLogP	new NCDK.QSAR.Descriptors.Moleculars.MannholdLogPDescriptor()	DescriptorValue_double	Calculate				Returns the mannhold log.
+NCDK	MDE	new NCDK.QSAR.Descriptors.Moleculars.MDEDescriptor()	DescriptorValue_double[]	Calculate				Returns the MDE.
+NCDK	MomentOfInertia	new NCDK.QSAR.Descriptors.Moleculars.MomentOfInertiaDescriptor()	DescriptorValue_double[]	Calculate		TRUE		Returns the moment of inertia.
+NCDK	PetitjeanNumber	new NCDK.QSAR.Descriptors.Moleculars.PetitjeanNumberDescriptor()	DescriptorValue_double	Calculate				Returns the petitjean number.
+NCDK	PetitjeanShapeIndex	new NCDK.QSAR.Descriptors.Moleculars.PetitjeanShapeIndexDescriptor()	DescriptorValue_double[]	Calculate		TRUE		Returns the petitjean shape index.
+NCDK	RotatableBondsCount	new NCDK.QSAR.Descriptors.Moleculars.RotatableBondsCountDescriptor()	DescriptorValue_int	Calculate				Returns the rotatable bonds count.
+NCDK	RuleOfFive	new NCDK.QSAR.Descriptors.Moleculars.RuleOfFiveDescriptor()	DescriptorValue_int	Calculate				Returns the Rule of Five.
+NCDK	SmallRing	new NCDK.QSAR.Descriptors.Moleculars.SmallRingDescriptor()	DescriptorValue_int[]	Calculate				Returns the small ring.
+NCDK	TPSA	new NCDK.QSAR.Descriptors.Moleculars.TPSADescriptor()	DescriptorValue_double	Calculate				Returns the TPSA.
+NCDK	VABC	new NCDK.QSAR.Descriptors.Moleculars.VABCDescriptor()	DescriptorValue_double	Calculate	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol); AddImplicitHydrogens(mol);			Returns the VABC.
+NCDK	VAdjMa	new NCDK.QSAR.Descriptors.Moleculars.VAdjMaDescriptor()	DescriptorValue_double	Calculate				Returns the vadj ma.
+NCDK	WeightedPath	new NCDK.QSAR.Descriptors.Moleculars.WeightedPathDescriptor()	DescriptorValue_double[]	Calculate				Returns the weighted path.
+NCDK	WHIM	new NCDK.QSAR.Descriptors.Moleculars.WHIMDescriptor()	DescriptorValue_double[]	Calculate		TRUE		Returns the WHIM.
+NCDK	WienerNumbers	new NCDK.QSAR.Descriptors.Moleculars.WienerNumbersDescriptor()	DescriptorValue_double[]	Calculate				Returns the wiener numbers.
+NCDK	XLogP	new NCDK.QSAR.Descriptors.Moleculars.XLogPDescriptor()	DescriptorValue_double	Calculate				Returns the xlog PDe.
+NCDK	ZagrebIndex	new NCDK.QSAR.Descriptors.Moleculars.ZagrebIndexDescriptor()	DescriptorValue_double	Calculate				Returns the zagreb index.
+NCDK	ECFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP0)	IBitFingerprint	GetBitFingerprint				Returns ECFP0.
+NCDK	ECFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP2)	IBitFingerprint	GetBitFingerprint				Returns ECFP2.
+NCDK	ECFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP4)	IBitFingerprint	GetBitFingerprint				Returns ECFP4.
+NCDK	ECFP6	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.ECFP6)	IBitFingerprint	GetBitFingerprint				Returns ECFP6.
+NCDK	FCFP0	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP0)	IBitFingerprint	GetBitFingerprint				Returns FCFP0.
+NCDK	FCFP2	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP2)	IBitFingerprint	GetBitFingerprint				Returns FCFP2.
+NCDK	FCFP4	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP4)	IBitFingerprint	GetBitFingerprint				Returns FCFP4.
+NCDK	FCFP6	new NCDK.Fingerprints.CircularFingerprinter(NCDK.Fingerprints.CircularFingerprinterClass.FCFP6)	IBitFingerprint	GetBitFingerprint				Returns FCFP6.
+NCDK	AtomPairs2DFingerprint	new NCDK.Fingerprints.AtomPairs2DFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the AtomPairs2D fingerprint.
+NCDK	EStateFingerprint	new NCDK.Fingerprints.EStateFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the EState fingerprint.
+NCDK	ExtendedFingerprint	new NCDK.Fingerprints.ExtendedFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the Extended fingerprint.
+NCDK	CDKFingerprint	new NCDK.Fingerprints.Fingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the CDK fingerprint.
+NCDK	KlekotaRothFingerprint	new NCDK.Fingerprints.KlekotaRothFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the KlekotaRoth fingerprint.
+NCDK	LingoFingerprint	new NCDK.Fingerprints.LingoFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the Lingo fingerprint.
+NCDK	MACCSFingerprint	new NCDK.Fingerprints.MACCSFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the MACCS fingerprint.
+NCDK	ShortestPathFingerprint	new NCDK.Fingerprints.ShortestPathFingerprinter()	IBitFingerprint	GetBitFingerprint	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);			Returns the ShortestPath.
+NCDK	SubstructureFingerprint	new NCDK.Fingerprints.SubstructureFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the Substructure.
+NCDK	PubchemFingerprint	new NCDK.Fingerprints.PubchemFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the Pubchem fingerprint.
+RDKit	MACCSKeysFingerprint	RDKit.Descriptors	ExplicitBitVect	GetMACCSKeysFingerprint			TRUE	Returns the MACCSKeys fingerprint.
+RDKit	LayeredFingerprint	RDKit.Chem	ExplicitBitVect	LayeredFingerprint			TRUE	Returns the Layered fingerprint.
+RDKit	HashedAtomPairFingerprint	RDKit.Descriptors	ExplicitBitVect	GetHashedAtomPairFingerprintAsBitVect			TRUE	Returns the HashedAtomPair fingerprint.
+RDKit	HashedTopologicalTorsionFingerprint	RDKit.Descriptors	ExplicitBitVect	GetHashedTopologicalTorsionFingerprintAsBitVect			TRUE	Returns the HashedTopologicalTorsion fingerprint.
+RDKit	PatternFingerprint	RDKit.Chem	ExplicitBitVect	PatternFingerprint			TRUE	Returns the Pattern fingerprint.
+RDKit	RDKFingerprint	RDKit.Chem	ExplicitBitVect	RDKFingerprint			TRUE	Returns the RDK fingerprint.
+RDKit	AtomPairFingerprint	RDKit.Descriptors	SparseIntVect32	GetAtomPairFingerprint			TRUE	Returns the AtomPair fingerprint.
+RDKit	TopologicalTorsionFingerprint	RDKit.Descriptors	SparseIntVect64	GetTopologicalTorsionFingerprint			TRUE	Returns the TopologicalTorsion fingerprint.
+RDKit	Chi0n	RDKit.Descriptors	double	CalcChi0n			TRUE	Returns Chi0n.
+RDKit	Chi0v	RDKit.Descriptors	double	CalcChi0v			TRUE	Returns Chi0v.
+RDKit	Chi1n	RDKit.Descriptors	double	CalcChi1n			TRUE	Returns Chi1n.
+RDKit	Chi1v	RDKit.Descriptors	double	CalcChi1v			TRUE	Returns Chi1v.
+RDKit	Chi2n	RDKit.Descriptors	double	CalcChi2n			TRUE	Returns Chi2n.
+RDKit	Chi2v	RDKit.Descriptors	double	CalcChi2v			TRUE	Returns Chi2v.
+RDKit	Chi3n	RDKit.Descriptors	double	CalcChi3n			TRUE	Returns Chi3n.
+RDKit	Chi3v	RDKit.Descriptors	double	CalcChi3v			TRUE	Returns Chi3v.
+RDKit	Chi4n	RDKit.Descriptors	double	CalcChi4n			TRUE	Returns Chi4n.
+RDKit	Chi4v	RDKit.Descriptors	double	CalcChi4v			TRUE	Returns Chi4v.
+RDKit	Kappa1	RDKit.Descriptors	double	CalcKappa1			TRUE	Returns Kappa1.
+RDKit	Kappa2	RDKit.Descriptors	double	CalcKappa2			TRUE	Returns Kappa2.
+RDKit	Kappa3	RDKit.Descriptors	double	CalcKappa3			TRUE	Returns Kappa3.
+RDKit	LabuteASA	RDKit.Descriptors	double	CalcLabuteASA			TRUE	Returns LabuteASA.
+RDKit	MolLogP	RDKit.Chem.Crippen	double	MolLogP			TRUE	Returns MolLogP.
+RDKit	MolMR	RDKit.Chem.Crippen	double	MolMR			TRUE	Returns MolMR.
+RDKit	ExactMolWt	RDKit.Descriptors	double	CalcExactMolWt			TRUE	Returns ExactMolWt.
+RDKit	FractionCSP3	RDKit.Descriptors	double	CalcFractionCSP3			TRUE	Returns FractionCSP3.
+RDKit	HallKierAlpha	RDKit.Descriptors	double	CalcHallKierAlpha			TRUE	Returns HallKierAlpha.
+RDKit	NumLipinskiHBA	RDKit.Descriptors	double	CalcNumLipinskiHBA			TRUE	Returns the number of LipinskiHBA.
+RDKit	NumLipinskiHBD	RDKit.Descriptors	double	CalcNumLipinskiHBD			TRUE	Returns the number of LipinskiHBD.
+RDKit	NumAliphaticCarbocycles	RDKit.Descriptors	double	CalcNumAliphaticCarbocycles			TRUE	Returns the number of AliphaticCarbocycles.
+RDKit	NumAliphaticHeterocycles	RDKit.Descriptors	double	CalcNumAliphaticHeterocycles			TRUE	Returns the number of AliphaticHeterocycles.
+RDKit	NumAliphaticRings	RDKit.Descriptors	double	CalcNumAliphaticRings			TRUE	Returns the number of AliphaticRings.
+RDKit	NumAmideBonds	RDKit.Descriptors	double	CalcNumAmideBonds			TRUE	Returns the number of AmideBonds.
+RDKit	NumAromaticCarbocycles	RDKit.Descriptors	double	CalcNumAromaticCarbocycles			TRUE	Returns the number of AromaticCarbocycles.
+RDKit	NumAromaticHeterocycles	RDKit.Descriptors	double	CalcNumAromaticHeterocycles			TRUE	Returns the number of AromaticHeterocycles.
+RDKit	NumAromaticRings	RDKit.Descriptors	double	CalcNumAromaticRings			TRUE	Returns the number of AromaticRings.
+RDKit	NumBridgeheadAtoms	RDKit.Descriptors	double	CalcNumBridgeheadAtoms			TRUE	Returns the number of BridgeheadAtoms.
+RDKit	NumHBA	RDKit.Descriptors	double	CalcNumHBA			TRUE	Returns the number of HBA.
+RDKit	NumHBD	RDKit.Descriptors	double	CalcNumHBD			TRUE	Returns the number of HBD.
+RDKit	TPSA	RDKit.Descriptors	double	CalcTPSA			TRUE	Returns TPSA.
+RDKit	NumRotatableBonds	RDKit.Descriptors	double	CalcNumRotatableBonds			TRUE	Returns the number of RotatableBonds.
+RDKit	NumHeteroatoms	RDKit.Descriptors	double	CalcNumHeteroatoms			TRUE	Returns the number of Heteroatoms.
+RDKit	NumHeterocycles	RDKit.Descriptors	double	CalcNumHeterocycles			TRUE	Returns the number of Heterocycles.
+RDKit	NumRings	RDKit.Descriptors	double	CalcNumRings			TRUE	Returns the number of Rings.
+RDKit	NumSaturatedCarbocycles	RDKit.Descriptors	double	CalcNumSaturatedCarbocycles			TRUE	Returns the number of SaturatedCarbocycles.
+RDKit	NumSaturatedHeterocycles	RDKit.Descriptors	double	CalcNumSaturatedHeterocycles			TRUE	Returns the number of SaturatedHeterocycles.
+RDKit	NumSaturatedRings	RDKit.Descriptors	double	CalcNumSaturatedRings			TRUE	Returns the number of SaturatedRings.
+RDKit	NumSpiroAtoms	RDKit.Descriptors	double	CalcNumSpiroAtoms			TRUE	Returns the number of SpiroAtoms.
+RDKit	FormalCharge	RDKit.Chem	double	GetFormalCharge			TRUE	Returns the number of malCharge.
+RDKit	NumAtomStereoCenters	RDKit.Descriptors	double	CalcNumAtomStereoCenters			TRUE	Returns the number of AtomStereoCenters.
+RDKit	NumUnspecifiedAtomStereoCenters	RDKit.Descriptors	double	CalcNumUnspecifiedAtomStereoCenters			TRUE	Returns the number of UnspecifiedAtomStereoCenters.
+RDKit	MolFormula	RDKit.Descriptors	string	CalcMolFormula			TRUE	Returns MolFormula.
+RDKit	CXSmiles	RDKit.Chem	string	MolToCXSmiles			TRUE	Returns CXSmiles.
+RDKit	InchiKey	RDKit.Chem	string	MolToInchiKey			TRUE	Returns InchiKey.
+RDKit	MolBlock	RDKit.Chem	string	MolToMolBlock			TRUE	Returns MolBlock.
+RDKit	PDBBlock	RDKit.Chem	string	MolToPDBBlock			TRUE	Returns PDBBlock.
+RDKit	TPLBlock	RDKit.Chem	string	MolToTPLBlock			TRUE	Returns TPLBlock.
+RDKit	XYZBlock	RDKit.Chem	string	MolToXYZBlock			TRUE	Returns XYZBlock.
+RDKit	Smarts	RDKit.Chem	string	MolToSmarts			TRUE	Returns Smarts.
+RDKit	Smiles	RDKit.Chem	string	MolToSmiles			TRUE	Returns Smiles.
+RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE	Returns QED.
+RDKit	NumHeavyAtoms	RDKit.Chem	double	GetNumHeavyAtoms			TRUE	Returns the number of HeavyAtoms.
+RDKit	NumAtoms	RDKit.Chem	double	GetNumAtoms			TRUE	Returns the number of Atoms.
+RDKit	NumBonds	RDKit.Chem	double	GetNumBonds			TRUE	Returns the number of Bonds.

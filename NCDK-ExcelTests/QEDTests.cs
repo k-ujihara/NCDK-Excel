@@ -49,7 +49,7 @@ namespace NCDKExcel
         {
             var m = Chem.MolFromSmiles("N=C(CCSCc1csc(N=C(N)N)n1)NS(N)(=O)=O");
             var p = QED.CreateProperties(m);
-            Assert.AreEqual(337.456, p[MW], 0.01);
+            Assert.AreEqual(337.045, p[MW], 0.01);
             Assert.AreEqual(-0.55833, p[ALOGP], 0.01);
             Assert.AreEqual(6, p[HBA]);
             Assert.AreEqual(5, p[HBD]);
@@ -59,7 +59,7 @@ namespace NCDKExcel
             Assert.AreEqual(3, p[ALERTS]);
 
             p = QED.CreateProperties(m.AddHs());
-            Assert.AreEqual(337.456, p[MW], 0.01);
+            Assert.AreEqual(337.045, p[MW], 0.01);
             Assert.AreEqual(-0.55833, p[ALOGP], 0.01);
             Assert.AreEqual(6, p[HBA]);
             Assert.AreEqual(5, p[HBD]);
