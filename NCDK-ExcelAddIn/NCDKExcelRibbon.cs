@@ -1,6 +1,6 @@
 ﻿// MIT License
 // 
-// Copyright (c) 2019 Kazuya Ujihara
+// Copyright (c) 2019-2020 Kazuya Ujihara
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,7 @@ namespace NCDK_ExcelAddIn
             dynamic keep = Globals.ThisAddIn.Application.Selection;
             try
             {
-                ChemPictureTool.AddChemicalStructures(keep);
+                Stuff.AddChemicalStructures(keep);
             }
             catch (Exception)
             {
