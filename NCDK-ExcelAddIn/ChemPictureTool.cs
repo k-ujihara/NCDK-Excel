@@ -1,5 +1,8 @@
-﻿using NCDK.Depict;
+﻿using NCDK;
+using NCDK.Depict;
 using NCDK.Renderers.Colors;
+using NCDK.Smiles;
+using NCDK.Tools.Manipulator;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -75,14 +78,34 @@ namespace NCDK_ExcelAddIn
 
         class StructureGegerator : IDisposable
         {
+            private static SmilesParser parser = new SmilesParser(CDK.Builder);
+
             public string FileName { get; private set; }
 
             public StructureGegerator(string ident)
             {
-                var mol = NCDKExcel.Utility.Parse(ident);
-                var depict = PictureGenerator.Depict(mol);
+                Depiction depict = null;
+                if (IsReactionSmilees(ident))
+                {
+                    var rxn = parser.ParseReactionSmiles(ident);
+                    ReactionManipulator.PerceiveDativeBonds(rxn);
+                    ReactionManipulator.PerceiveRadicals(rxn);
+                    depict = PictureGenerator.Depict(rxn);
+                }
+                else
+                {
+                    var mol = NCDKExcel.Utility.Parse(ident);
+                    AtomContainerManipulator.PerceiveDativeBonds(mol);
+                    AtomContainerManipulator.PerceiveRadicals(mol);
+                    depict = PictureGenerator.Depict(mol);
+                }
                 FileName = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".png");
                 depict.WriteTo(FileName);
+            }
+
+            private static bool IsReactionSmilees(string smiles)
+            {
+                return smiles.Split(' ')[0].Contains(">");
             }
 
             private bool disposedValue = false;

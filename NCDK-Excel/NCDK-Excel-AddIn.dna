@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DnaLibrary Name="NCDK-Excel Add-In" RuntimeVersion="v4.0" xmlns="http://schemas.excel-dna.net/addin/2018/05/dnalibrary">
   <ExternalLibrary Path="NCDKExcel.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" IncludePdb="false" />
-
+  <Reference Path="ExcelDna.IntelliSense.dll" Pack="true" />
   <!--
        The RuntimeVersion attribute above allows two settings:
        * RuntimeVersion="v4.0" - for .NET 4 and 4.5
