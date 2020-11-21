@@ -53,6 +53,7 @@
     <Compile Include="Descriptors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QED.cs" />
+    <Compile Include="RdMolDraw2D.cs" />
     <Compile Include="SaltRemover.cs" />
     <Compile Include="SimilarityFunctions.cs">
       <DependentUpon>SimilarityFunctions.tt</DependentUpon>

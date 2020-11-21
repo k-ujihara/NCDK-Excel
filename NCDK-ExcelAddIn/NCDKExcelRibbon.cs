@@ -33,6 +33,23 @@ namespace NCDK_ExcelAddIn
         {
         }
 
+        private void AddChemicalStructures(IPictureGegerator pictureGenerator)
+        {
+            dynamic keep = Globals.ThisAddIn.Application.Selection;
+            try
+            {
+                Stuff.AddChemicalStructures(keep, pictureGenerator);
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                if (keep != null)
+                    keep.Select();
+            }
+        }
+
         private void ButtonImportSDF_Click(object sender, RibbonControlEventArgs e)
         {
             ButtonImportSDF(filename => NCDKStuff.LoadSDFToNewSheet(filename));
@@ -65,21 +82,20 @@ namespace NCDK_ExcelAddIn
             }
         }
 
+        private static NCDKPictureGenerator _NCDKPictureGenerator = null;
+        private static NCDKPictureGenerator NCDKPictureGenerator
+        {
+            get
+            {
+                if (_NCDKPictureGenerator == null)
+                    _NCDKPictureGenerator = new NCDKPictureGenerator();
+                return _NCDKPictureGenerator;
+            }
+        }
+
         private void ButtonGeneratePicture_Click(object sender, RibbonControlEventArgs e)
         {
-            dynamic keep = Globals.ThisAddIn.Application.Selection;
-            try
-            {
-                NCDKStuff.AddChemicalStructures(keep);
-            }
-            catch (Exception)
-            {
-            }
-            finally
-            {
-                if (keep != null)
-                    keep.Select();
-            }
+            AddChemicalStructures(NCDKPictureGenerator);
         }
 
         private void ButtonUnshowPicture_Click(object sender, RibbonControlEventArgs e)
@@ -97,7 +113,7 @@ namespace NCDK_ExcelAddIn
             dynamic keep = Globals.ThisAddIn.Application.Selection;
             try
             {
-                ChemPictureTool.UpdatePictures();
+                ChemPictureTool.UpdatePictures(NCDKPictureGenerator);
             }
             catch (Exception)
             {
@@ -109,9 +125,25 @@ namespace NCDK_ExcelAddIn
             }
         }
 
-        private void buttonImportSDFRDKit_Click(object sender, RibbonControlEventArgs e)
+        private void ButtonImportSDFRDKit_Click(object sender, RibbonControlEventArgs e)
         {
             ButtonImportSDF(filename => RDKitStuff.LoadSDFToNewSheet(filename));
+        }
+
+        private static RDKitPictureGenerator _RDKitPictureGenerator = null;
+        private static RDKitPictureGenerator RDKitPictureGenerator
+        {
+            get
+            {
+                if (_RDKitPictureGenerator == null)
+                    _RDKitPictureGenerator = new RDKitPictureGenerator();
+                return _RDKitPictureGenerator;
+            }
+        }
+
+        private void ButtonGeneratePictureRDKit_Click(object sender, RibbonControlEventArgs e)
+        {
+            AddChemicalStructures(RDKitPictureGenerator);
         }
     }
 }

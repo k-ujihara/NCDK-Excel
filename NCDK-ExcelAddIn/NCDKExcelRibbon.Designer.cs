@@ -43,6 +43,7 @@
             this.buttonUnshowPicture = this.Factory.CreateRibbonButton();
             this.groupRDKit = this.Factory.CreateRibbonGroup();
             this.buttonImportSDFRDKit = this.Factory.CreateRibbonButton();
+            this.buttonGeneratePictureRDKit = this.Factory.CreateRibbonButton();
             this.tabNCDK.SuspendLayout();
             this.groupGeneral.SuspendLayout();
             this.groupRDKit.SuspendLayout();
@@ -99,6 +100,7 @@
             // groupRDKit
             // 
             this.groupRDKit.Items.Add(this.buttonImportSDFRDKit);
+            this.groupRDKit.Items.Add(this.buttonGeneratePictureRDKit);
             this.groupRDKit.Label = "RDKit";
             this.groupRDKit.Name = "groupRDKit";
             // 
@@ -106,7 +108,13 @@
             // 
             this.buttonImportSDFRDKit.Label = "Import SDF";
             this.buttonImportSDFRDKit.Name = "buttonImportSDFRDKit";
-            this.buttonImportSDFRDKit.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonImportSDFRDKit_Click);
+            this.buttonImportSDFRDKit.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonImportSDFRDKit_Click);
+            // 
+            // buttonGeneratePictureRDKit
+            // 
+            this.buttonGeneratePictureRDKit.Label = "Generate Picture";
+            this.buttonGeneratePictureRDKit.Name = "buttonGeneratePictureRDKit";
+            this.buttonGeneratePictureRDKit.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonGeneratePictureRDKit_Click);
             // 
             // NCDKExcelRibbon
             // 
@@ -135,6 +143,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonUpdatePictures;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupRDKit;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonImportSDFRDKit;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonGeneratePictureRDKit;
     }
 
     partial class ThisRibbonCollection

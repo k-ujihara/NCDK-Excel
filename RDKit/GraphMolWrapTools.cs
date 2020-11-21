@@ -75,5 +75,71 @@ namespace RDKit
 
         public static Long_Pair_Vect GetNonzero(this SparseIntVect64 v)
             => v.getNonzero();
+
+        //
+        // MolDraw2D
+        // 
+
+        public static void ClearDrawing(this MolDraw2D view)
+            => view.clearDrawing();
+
+        public static MolDrawOptions DrawOptions(this MolDraw2D view)
+            => view.drawOptions();
+
+        public static DrawColour GetColor(this MolDraw2D view)
+            => view.colour();
+
+        public static void SetColor(this MolDraw2D view, DrawColour color)
+            => view.setColour(color);
+
+        public static UInt_Vect GetDash(this MolDraw2D view)
+            => view.dash();
+
+        public static void SetDash(this MolDraw2D view, UInt_Vect dash)
+            => view.setDash(dash);
+
+        public static double GetFontSize(this MolDraw2D view)
+            => view.fontSize();
+
+        public static void SetFontSize(this MolDraw2D view, double size)
+            => view.setFontSize(size);
+
+        public static double Scale(this MolDraw2D view)
+            => view.scale();
+
+        public static void SetScale(this MolDraw2D view, int width, int height, Point2D minv, Point2D maxv)
+            => view.setScale(width, height, minv, maxv);
+
+        public static double GetHeight(this MolDraw2D view)
+            => view.height();
+
+        public static double GetWidth(this MolDraw2D view)
+            => view.width();
+
+        public static int GetLineWidth(this MolDraw2D view)
+            => view.lineWidth();
+
+        public static void SetLineWidth(this MolDraw2D view, int size)
+            => view.setLineWidth(size);
+
+        public static double GetPanelHeight(this MolDraw2D view)
+            => view.panelHeight();
+
+        public static double GetPanelWidth(this MolDraw2D view)
+            => view.panelWidth();
+
+        public static void DrawMolecule(this MolDraw2D view, ROMol mol, string legend = "", Int_Vect highlight_atoms = null, Int_Vect highlight_bonds = null)
+            => view.drawMolecule(mol, legend, highlight_atoms, highlight_bonds);
+
+        //
+        // MolDraw2DSVG
+        //
+
+        public static void FinishDrawing(this MolDraw2DSVG view)
+            => view.finishDrawing();
+
+
+        public static string GetDrawingText(this MolDraw2DSVG view)
+            => view.getDrawingText();
     }
 }

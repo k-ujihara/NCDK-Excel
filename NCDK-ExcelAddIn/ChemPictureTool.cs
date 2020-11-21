@@ -87,8 +87,10 @@ namespace NCDK_ExcelAddIn
         /// Generate picture of molecule specified as text format.
         /// </summary>
         /// <param name="text">Identifier to convert, typically SMILES, MOLBlock etc.</param>
+        /// <param name="width">Width of generate picture. Can be ignored.</param>
+        /// <param name="height">Height of generate picture. Can be ignored.</param>
         /// <returns><see cref="TempFile"/> object of the genrated picture.</returns>
-        TempFile GenerateTemporary(string text);
+        TempFile GenerateTemporary(string text, double width, double height);
     }
 
     public static class ChemPictureTool
@@ -98,7 +100,7 @@ namespace NCDK_ExcelAddIn
         /// </summary>
         /// <param name="range">The range to sweep.</param>
         /// <param name="callback">Callback function before visiting cell.</param>
-        public static void AddChemicalStructures(dynamic range, Action callback = null)
+        public static void AddChemicalStructures(dynamic range, IPictureGegerator pictureGenerator, Action callback = null)
         {
             switch (range)
             {
@@ -114,7 +116,7 @@ namespace NCDK_ExcelAddIn
                         Globals.ThisAddIn.Application.Calculation = Excel.XlCalculation.xlCalculationManual;
 
                         var shapeNames = shapes.Cast<Excel.Shape>().Select(n => n.Name).ToList();
-                        ExcelTool.EnumerateCells(cells, cell => GenerateChemicalStructurePictureOnCell(cell, shapeNames), callback);
+                        ExcelTool.EnumerateCells(cells, cell => GenerateChemicalStructurePictureOnCell(cell, pictureGenerator, shapeNames), callback);
                     }
                     finally
                     {
@@ -128,16 +130,15 @@ namespace NCDK_ExcelAddIn
         }
 
         const string PicturePrefix = "NCDK-Picture ";
-        private static NCDKPictureGegerator pictureGenerator = new NCDKPictureGegerator();
 
-        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell, ICollection<string> shapeNames)
+        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell, IPictureGegerator pictureGenerator, ICollection<string> shapeNames)
         {
             try
             {
                 var text = (string)cell.Text;
                 if (!string.IsNullOrEmpty(text))
                 {
-                    using (var structGen = pictureGenerator.GenerateTemporary(text))
+                    using (var structGen = pictureGenerator.GenerateTemporary(text, (double)cell.Width, (double)cell.Height))
                     {
                         var tempPng = structGen.FileName;
                         dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
@@ -197,7 +198,7 @@ namespace NCDK_ExcelAddIn
             shape.LockAspectRatio = Office.MsoTriState.msoTrue;
         }
 
-        public static void UpdatePictures()
+        public static void UpdatePictures(IPictureGegerator pictureGenerator)
         {
             dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
             Excel.Shapes shapes = sheet.Shapes;
@@ -221,7 +222,7 @@ namespace NCDK_ExcelAddIn
                     Excel.Range cell = sheet.Cells[shapeInfo.Item2, shapeInfo.Item3];
                     var pictureName = shape.Name;
                     shape.Delete();
-                    using (var sg = pictureGenerator.GenerateTemporary((string)cell.Text))
+                    using (var sg = pictureGenerator.GenerateTemporary((string)cell.Text, (double)cell.Width, (double)cell.Height))
                     {
                         try
                         {

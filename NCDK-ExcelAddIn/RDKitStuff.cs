@@ -3,13 +3,12 @@ using Parago.Windows;
 using System;
 using System.Collections.Generic;
 using Excel = Microsoft.Office.Interop.Excel;
+using static NCDK_ExcelAddIn.Stuff;
 
 namespace NCDK_ExcelAddIn
 {
     public static class RDKitStuff
     {
-        private static bool EnableProgressBar { get; } = true;
-
         private static void _LoadSDFToNewSheet(string sdfName, ref object newSheet, ref int row)
         {
             var keyIndex = new Dictionary<string, int>();
@@ -111,21 +110,6 @@ namespace NCDK_ExcelAddIn
                 try { Globals.ThisAddIn.Application.Calculation = saveCalculation; } catch (Exception) { }
                 try { Globals.ThisAddIn.Application.ScreenUpdating = saveScreenUpdating; } catch (Exception) { }
             }
-        }
-
-        private static void AddChemicalStructuresCheckCancel()
-        {
-            if (EnableProgressBar)
-                ProgressDialog.Current.ReportWithCancellationCheck("");
-        }
-
-        public static void AddChemicalStructures(dynamic range)
-        {
-            var result = ProgressDialog.Execute(
-                null,
-                "Converting to image",
-                (Action)(() => ChemPictureTool.AddChemicalStructures(range, (Action)AddChemicalStructuresCheckCancel)),
-                ProgressDialogSettings.WithSubLabelAndCancel);
         }
     }
 }

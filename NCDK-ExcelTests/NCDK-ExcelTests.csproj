@@ -39,8 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MathNet.Numerics, Version=4.8.1.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
-      <HintPath>..\packages\MathNet.Numerics.Signed.4.8.1\lib\net461\MathNet.Numerics.dll</HintPath>
+    <Reference Include="MathNet.Numerics, Version=4.9.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.4.9.0\lib\net461\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -50,10 +50,10 @@
       <HintPath>..\packages\MSTest.TestFramework.1.4.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="NCDK, Version=1.5.6.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
-      <HintPath>..\packages\NCDK.1.5.6-alpha\lib\net461\NCDK.dll</HintPath>
+      <HintPath>..\packages\NCDK.1.5.6\lib\net461\NCDK.dll</HintPath>
     </Reference>
     <Reference Include="RDKit2DotNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RDKit.DotNetWrap.0.2019033.1\lib\net40\RDKit2DotNet.dll</HintPath>
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2019091.1\lib\net40\RDKit2DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Numerics" />
@@ -123,12 +123,12 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets'))" />
-    <Error Condition="!Exists('..\packages\NCDK.1.5.6-alpha\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6-alpha\build\NCDK.targets'))" />
-    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
   </Target>
   <Import Project="..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets')" />
-  <Import Project="..\packages\NCDK.1.5.6-alpha\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6-alpha\build\NCDK.targets')" />
-  <Import Project="..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2019033.1\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

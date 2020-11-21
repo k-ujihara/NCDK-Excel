@@ -27,13 +27,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
+using static NCDK_ExcelAddIn.Stuff;
 
 namespace NCDK_ExcelAddIn
 {
     public static class NCDKStuff
     {
-        private static bool EnableProgressBar { get; } = true;
-
         /// <summary>
         /// Read molecules and their info from SD file. 
         /// </summary>
@@ -141,19 +140,5 @@ namespace NCDK_ExcelAddIn
             }
         }
 
-        private static void AddChemicalStructuresCheckCancel()
-        {
-            if (EnableProgressBar)
-                ProgressDialog.Current.ReportWithCancellationCheck("");
-        }
-
-        public static void AddChemicalStructures(dynamic range)
-        {
-            var result = ProgressDialog.Execute(
-                null,
-                "Converting to image",
-                (Action)(() => ChemPictureTool.AddChemicalStructures(range, (Action)AddChemicalStructuresCheckCancel)),
-                ProgressDialogSettings.WithSubLabelAndCancel);
-        }
     }
 }

@@ -7,7 +7,7 @@ using static NCDK_ExcelAddIn.ChemStuff;
 
 namespace NCDK_ExcelAddIn
 {
-    public class NCDKPictureGegerator : IPictureGegerator
+    public class NCDKPictureGenerator : IPictureGegerator
     {
         private readonly static object syncLock = new object();
 
@@ -34,7 +34,7 @@ namespace NCDK_ExcelAddIn
 
         private static SmilesParser parser = new SmilesParser(CDK.Builder);
 
-        public NCDKPictureGegerator()
+        public NCDKPictureGenerator()
         {
         }
 
@@ -64,6 +64,12 @@ namespace NCDK_ExcelAddIn
             Generate(text, tempFile.FileName);
 
             return tempFile;
+        }
+
+        public TempFile GenerateTemporary(string text, double width, double height)
+        {
+            // ignore width and height
+            return GenerateTemporary(text);
         }
     }
 }
