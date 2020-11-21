@@ -33,6 +33,7 @@ namespace NCDK_ExcelAddIn
         /// </summary>
         /// <param name="range">The range contains cells to action.</param>
         /// <param name="action">The action to do on each cell.</param>
+        /// <param name="callback">Callback function before visiting each cell.</param>
         public static void EnumerateCells(Excel.Range range, Action<Excel.Range> action, Action callback = null)
         {
             // Enumerate non-empty cells by Excel.Range.Find function.

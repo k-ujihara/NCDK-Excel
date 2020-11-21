@@ -179,6 +179,7 @@
   -->
   <ItemGroup>
     <Compile Include="ChemPictureTool.cs" />
+    <Compile Include="ChemStuff.cs" />
     <Compile Include="ExcelTool.cs" />
     <Compile Include="NCDKExcelRibbon.cs">
       <SubType>Component</SubType>
@@ -186,6 +187,7 @@
     <Compile Include="NCDKExcelRibbon.Designer.cs">
       <DependentUpon>NCDKExcelRibbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="NCDKPictureTool.cs" />
     <Compile Include="Parago\ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
     </Compile>
@@ -226,7 +228,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="RDKitStuff.cs" />
-    <Compile Include="Stuff.cs" />
+    <Compile Include="NCDKStuff.cs" />
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>

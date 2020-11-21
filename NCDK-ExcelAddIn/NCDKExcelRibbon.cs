@@ -35,7 +35,7 @@ namespace NCDK_ExcelAddIn
 
         private void ButtonImportSDF_Click(object sender, RibbonControlEventArgs e)
         {
-            ButtonImportSDF(filename => Stuff.LoadSDFToNewSheet(filename));
+            ButtonImportSDF(filename => NCDKStuff.LoadSDFToNewSheet(filename));
         }
 
         private void ButtonImportSDF(Action<string> loadSDFToNewSheet)
@@ -70,7 +70,7 @@ namespace NCDK_ExcelAddIn
             dynamic keep = Globals.ThisAddIn.Application.Selection;
             try
             {
-                Stuff.AddChemicalStructures(keep);
+                NCDKStuff.AddChemicalStructures(keep);
             }
             catch (Exception)
             {

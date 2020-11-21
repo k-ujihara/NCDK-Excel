@@ -30,7 +30,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace NCDK_ExcelAddIn
 {
-    public static class Stuff
+    public static class NCDKStuff
     {
         private static bool EnableProgressBar { get; } = true;
 

@@ -20,11 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using NCDK;
-using NCDK.Depict;
-using NCDK.Renderers.Colors;
-using NCDK.Smiles;
-using NCDK.Tools.Manipulator;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,38 +30,74 @@ using Office = Microsoft.Office.Core;
 
 namespace NCDK_ExcelAddIn
 {
-    public static class ChemPictureTool
+    public class TempFile : IDisposable
     {
-        private readonly static object syncLock = new object();
-
-        private static DepictionGenerator pictureGenerator;
-        public static DepictionGenerator PictureGenerator
+        public TempFile()
+            : this(null) 
         {
-            get
+        }
+
+        public TempFile(string extension)
+        {
+            FileName = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + extension??"");
+        }
+
+        public string FileName { get; private set; } = null;
+
+        #region IDisposable Support
+        private bool disposedValue = false; // To detect redundant calls
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
             {
-                if (pictureGenerator == null)
-                    lock (syncLock)
+                if (disposing)
+                {
+                    if (FileName != null && File.Exists(FileName))
                     {
-                        if (pictureGenerator == null)
+                        try
                         {
-                            pictureGenerator = new DepictionGenerator
-                            {
-                                AtomColorer = new CDK2DAtomColors(),
-                                BackgroundColor = System.Windows.Media.Colors.Transparent,
-                            };
-                            //var smiles = @"O=C1NC(=O)NC(=O)C1(/C2=C/CCCCC2)CC";
-                            //var mol = NCDK.CDK.SmilesParser.ParseSmiles(smiles);
-                            //pictureGenerator.Depict(mol).WriteTo(@"C:\Users\Public\Documents\a.png");
+                            File.Delete(FileName);
                         }
+                        catch (Exception)
+                        {
+                            // ignore
+                        }                        
                     }
-                return pictureGenerator;
+                }
+                FileName = null;
+
+                disposedValue = true;
             }
         }
 
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion
+    }
+
+    /// <summary>
+    /// Picture generator from text express of molecule.
+    /// </summary>
+    public interface IPictureGegerator
+    {
+        /// <summary>
+        /// Generate picture of molecule specified as text format.
+        /// </summary>
+        /// <param name="text">Identifier to convert, typically SMILES, MOLBlock etc.</param>
+        /// <returns><see cref="TempFile"/> object of the genrated picture.</returns>
+        TempFile GenerateTemporary(string text);
+    }
+
+    public static class ChemPictureTool
+    {
         /// <summary>
         /// Add pictures of chemical strucure indicatied by text in each cell in range.
         /// </summary>
         /// <param name="range">The range to sweep.</param>
+        /// <param name="callback">Callback function before visiting cell.</param>
         public static void AddChemicalStructures(dynamic range, Action callback = null)
         {
             switch (range)
@@ -97,108 +128,16 @@ namespace NCDK_ExcelAddIn
         }
 
         const string PicturePrefix = "NCDK-Picture ";
+        private static NCDKPictureGegerator pictureGenerator = new NCDKPictureGegerator();
 
-        class StructureGegerator : IDisposable
-        {
-            private static SmilesParser parser = new SmilesParser(CDK.Builder);
-
-            public string FileName { get; private set; }
-
-            public StructureGegerator(string ident)
-            {
-                Depiction depict = null;
-                if (IsReactionSmilees(ident))
-                {
-                    var rxn = parser.ParseReactionSmiles(ident);
-                    ReactionManipulator.PerceiveDativeBonds(rxn);
-                    ReactionManipulator.PerceiveRadicals(rxn);
-                    depict = PictureGenerator.Depict(rxn);
-                }
-                else
-                {
-                    var mol = NCDKExcel.Utility.Parse(ident);
-                    AtomContainerManipulator.PerceiveDativeBonds(mol);
-                    AtomContainerManipulator.PerceiveRadicals(mol);
-                    depict = PictureGenerator.Depict(mol);
-                }
-                FileName = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".png");
-                depict.WriteTo(FileName);
-            }
-
-            private static bool IsReactionSmilees(string smiles)
-            {
-                return smiles.Split(' ')[0].Contains(">");
-            }
-
-            private bool disposedValue = false;
-
-            protected virtual void Dispose(bool disposing)
-            {
-                if (!disposedValue)
-                {
-                    try
-                    {
-                        if (FileName != null)
-                            File.Delete(FileName);
-                    }
-                    catch (Exception e)
-                    {
-                        Trace.TraceWarning(e.Message);
-                    }
-
-                    disposedValue = true;
-                }
-            }
-
-            public void Dispose()
-            {
-                Dispose(true);
-            }
-        }
-
-
-        /// <summary>
-        /// Insert picture of molecule indicated by <paramref name="cell"/>.Text on <paramref name="cell"/>.
-        /// Do nothing when it cause exception.
-        /// </summary>
-        /// <param name="cell">The cell to add picture.</param>
-        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell)
+        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell, ICollection<string> shapeNames)
         {
             try
             {
                 var text = (string)cell.Text;
                 if (!string.IsNullOrEmpty(text))
                 {
-                    using (var structGen = new StructureGegerator(text))
-                    {
-                        var tempPng = structGen.FileName;
-                        dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
-                        Excel.Shapes shapes = sheet.Shapes;
-                        string pictureName = CreateUniqueString(
-                             shapes.Cast<Excel.Shape>().
-                             Select(n => n.Name), prefix: PicturePrefix);
-
-                        var shapeToDelete = FindChemShape(cell);
-                        if (shapeToDelete != null)
-                            shapeToDelete.Delete();
-                        AddPicture(cell, tempPng, pictureName);
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Trace.TraceWarning(e.Message);
-            }
-        }
-
-        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell, IList<string> shapeNames)
-        {
-            try
-            {
-                var text = (string)cell.Text;
-                if (!string.IsNullOrEmpty(text))
-                {
-                    using (var structGen = new StructureGegerator(text))
+                    using (var structGen = pictureGenerator.GenerateTemporary(text))
                     {
                         var tempPng = structGen.FileName;
                         dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
@@ -208,7 +147,6 @@ namespace NCDK_ExcelAddIn
                         if (shapeToDelete != null)
                             shapeToDelete.Delete();
                         AddPicture(cell, tempPng, pictureName);
-                        shapeNames.Add(pictureName);
                     }
                 }
             }
@@ -283,11 +221,12 @@ namespace NCDK_ExcelAddIn
                     Excel.Range cell = sheet.Cells[shapeInfo.Item2, shapeInfo.Item3];
                     var pictureName = shape.Name;
                     shape.Delete();
-                    using (var sg = new StructureGegerator((string)cell.Text))
+                    using (var sg = pictureGenerator.GenerateTemporary((string)cell.Text))
                     {
                         try
                         {
-                            AddPicture(cell, sg.FileName, pictureName);
+                            var filename = sg.FileName;
+                            AddPicture(cell, filename, pictureName);
                         }
                         catch (Exception ex)
                         {

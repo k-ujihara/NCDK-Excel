@@ -112,5 +112,20 @@ namespace NCDK_ExcelAddIn
                 try { Globals.ThisAddIn.Application.ScreenUpdating = saveScreenUpdating; } catch (Exception) { }
             }
         }
+
+        private static void AddChemicalStructuresCheckCancel()
+        {
+            if (EnableProgressBar)
+                ProgressDialog.Current.ReportWithCancellationCheck("");
+        }
+
+        public static void AddChemicalStructures(dynamic range)
+        {
+            var result = ProgressDialog.Execute(
+                null,
+                "Converting to image",
+                (Action)(() => ChemPictureTool.AddChemicalStructures(range, (Action)AddChemicalStructuresCheckCancel)),
+                ProgressDialogSettings.WithSubLabelAndCancel);
+        }
     }
 }
