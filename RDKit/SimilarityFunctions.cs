@@ -41,12 +41,12 @@ namespace RDKit
             => RDKFuncs.TanimotoSimilaritySIVu32(v1, v2, returnDistance, bounds);
         public static double TverskySimilarity(ExplicitBitVect bv1, ExplicitBitVect bv2, double a, double b)
             => RDKFuncs.TverskySimilarity(bv1, bv2, a, b);
-        public static double TverskySimilarity(SparseIntVect32 v1, SparseIntVect32 v2, double a, double b, bool returnDistance = false, double bounds = 0)
-            => RDKFuncs.TverskySimilarity(v1, v2, a, b, returnDistance, bounds);
-        public static double TverskySimilarity(SparseIntVectu32 v1, SparseIntVectu32 v2, double a, double b, bool returnDistance = false, double bounds = 0)
-            => RDKFuncs.TverskySimilarity(v1, v2, a, b, returnDistance, bounds);
-        public static double TverskySimilarity(SparseIntVect64 v1, SparseIntVect64 v2, double a, double b, bool returnDistance = false, double bounds = 0)
-            => RDKFuncs.TverskySimilarity(v1, v2, a, b, returnDistance, bounds);
+        //public static double TverskySimilarity(SparseIntVect32 v1, SparseIntVect32 v2, double a, double b, bool returnDistance = false, double bounds = 0)
+        //    => RDKFuncs.TverskySimilarity(v1, v2, a, b, returnDistance, bounds);
+        //public static double TverskySimilarity(SparseIntVectu32 v1, SparseIntVectu32 v2, double a, double b, bool returnDistance = false, double bounds = 0)
+        //    => RDKFuncs.TverskySimilarity(v1, v2, a, b, returnDistance, bounds);
+        //public static double TverskySimilarity(SparseIntVect64 v1, SparseIntVect64 v2, double a, double b, bool returnDistance = false, double bounds = 0)
+        //    => RDKFuncs.TverskySimilarity(v1, v2, a, b, returnDistance, bounds);
     }
 }
 

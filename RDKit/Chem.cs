@@ -93,10 +93,10 @@ namespace RDKit
             RDKFuncs.detectBondStereochemistry(mol, confId);
         }
 
-        public static MolSanitizeException_Vect DetectChemistryProblems(ROMol mol, SanitizeFlags sanitizeOps = SanitizeFlags.SANITIZE_ALL)
-        {
-            return RDKFuncs.detectChemistryProblems(mol, (int)sanitizeOps);
-        }
+        //public static MolSanitizeException_Vect DetectChemistryProblems(ROMol mol, SanitizeFlags sanitizeOps = SanitizeFlags.SANITIZE_ALL)
+        //{
+        //    return RDKFuncs.detectChemistryProblems(mol, (int)sanitizeOps);
+        //}
 
         public static Int_Vect_List FindAllPathsOfLengthN(ROMol mol, int targetLen,
             bool useBonds = true, bool useHs = false, int rootedAtAtom = -1)
@@ -305,10 +305,10 @@ namespace RDKit
              RDKFuncs.setAromaticity(mol, model);
         }
 
-        public static void SetBondStereoFromDirections(ROMol mol)
-        {
-            RDKFuncs.setBondStereoFromDirections(mol);
-        }
+        //public static void SetBondStereoFromDirections(ROMol mol)
+        //{
+        //    RDKFuncs.setBondStereoFromDirections(mol);
+        //}
 
         public static void SetConjugation(ROMol mol)
         {
@@ -374,10 +374,10 @@ namespace RDKit
             return RDKFuncs.MolFragmentToCXSmiles(mol, atomsToUse, bondsToUse, atomSymbols, bondSymbols, isomericSmiles, kekuleSmiles, rootedAtAtom, canonical);
         }
 
-        public static string MolFragmentToSmarts(ROMol mol, Int_Vect atomsToUse, Int_Vect bondsToUse = null, bool isomericSmiles = true)
-        {
-            return RDKFuncs.MolFragmentToSmarts(mol, atomsToUse, bondsToUse, isomericSmiles);
-        }
+        //public static string MolFragmentToSmarts(ROMol mol, Int_Vect atomsToUse, Int_Vect bondsToUse = null, bool isomericSmiles = true)
+        //{
+        //    return RDKFuncs.MolFragmentToSmarts(mol, atomsToUse, bondsToUse, isomericSmiles);
+        //}
 
         public static string MolFragmentToSmiles(ROMol mol, Int_Vect atomsToUse, Int_Vect bondsToUse = null,
             Str_Vect atomSymbols = null, Str_Vect bondSymbols = null,
@@ -484,15 +484,15 @@ namespace RDKit
             RDKFuncs.MolToPDBFile(mol, filename, confId, (uint)flavor);
         }
 
-        public static string MolToXYZBlock(ROMol mol, int confId = -1)
-        {
-            return RDKFuncs.MolToXYZBlock(mol, confId);
-        }
+        //public static string MolToXYZBlock(ROMol mol, int confId = -1)
+        //{
+        //    return RDKFuncs.MolToXYZBlock(mol, confId);
+        //}
 
-        public static void MolToXYZFile(ROMol mol, string filename, int confId = -1)
-        {
-            RDKFuncs.MolToXYZFile(mol, filename, confId);
-        }
+        //public static void MolToXYZFile(ROMol mol, string filename, int confId = -1)
+        //{
+        //    RDKFuncs.MolToXYZFile(mol, filename, confId);
+        //}
 
         public static string MolToCXSmiles(ROMol mol, bool isomericSmiles = true,
             bool kekuleSmiles = false, int rootedAtAtom = -1, bool canonical = true,
