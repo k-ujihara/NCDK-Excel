@@ -148,14 +148,14 @@ namespace NCDKExcel
             return RDKit_Similarity(DataStructs.BraunBlanquetSimilarity, fp1, fp2);
         }
 
-        //[ExcelFunction(Description = "Returns the Tversky similariry.")]
-        //public static double RDKit_TverskySimilarity(string fp1, string fp2, double a, double b, bool returnDistance, double bounds)
-        //{
-        //    var val = RDKit_Similarity((ExplicitBitVect v1, ExplicitBitVect v2) => DataStructs.TverskySimilarity(v1, v2, a, b), fp1, fp2);
-        //    if (double.IsNaN(val))
-        //        val = RDKit_SimilaritySIV64((SparseIntVect64 v1, SparseIntVect64 v2, bool _returnDistance, double _bounds) => DataStructs.TverskySimilarity(v1, v2, a, b, _returnDistance, _bounds), fp1, fp2, returnDistance, bounds);
-        //    return val;
-        //}
+        [ExcelFunction(Description = "Returns the Tversky similariry.")]
+        public static double RDKit_TverskySimilarity(string fp1, string fp2, double a, double b, bool returnDistance, double bounds)
+        {
+            var val = RDKit_Similarity((ExplicitBitVect v1, ExplicitBitVect v2) => DataStructs.TverskySimilarity(v1, v2, a, b), fp1, fp2);
+            if (double.IsNaN(val))
+                val = RDKit_SimilaritySIV64((SparseIntVect64 v1, SparseIntVect64 v2, bool _returnDistance, double _bounds) => DataStructs.TverskySimilarity(v1, v2, a, b, _returnDistance, _bounds), fp1, fp2, returnDistance, bounds);
+            return val;
+        }
 
         static double RDKit_Similarity(Func<ExplicitBitVect, ExplicitBitVect, double> func, string fp1, string fp2)
         {
