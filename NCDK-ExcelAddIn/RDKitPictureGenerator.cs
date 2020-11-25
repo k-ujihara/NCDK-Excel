@@ -25,7 +25,13 @@ namespace NCDK_ExcelAddIn
                 height *= scale;
             }
 
-            var mol = Chem.MolFromSmiles(text);
+            RWMol mol = null;
+            mol = Chem.MolFromSmiles(text);
+            if (mol == null)
+                mol = Chem.MolFromSmarts(text);
+            if (mol == null)
+                return null;
+
             var view = new MolDraw2DSVG((int)width, (int)height);
             RdMolDraw2D.PrepareMolForDrawing(mol);
             view.DrawMolecule(mol);

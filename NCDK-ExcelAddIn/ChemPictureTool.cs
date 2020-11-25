@@ -33,7 +33,7 @@ namespace NCDK_ExcelAddIn
     public class TempFile : IDisposable
     {
         public TempFile()
-            : this(null) 
+            : this("") 
         {
         }
 
@@ -138,16 +138,24 @@ namespace NCDK_ExcelAddIn
                 var text = (string)cell.Text;
                 if (!string.IsNullOrEmpty(text))
                 {
-                    using (var structGen = pictureGenerator.GenerateTemporary(text, (double)cell.Width, (double)cell.Height))
+                    var structGen = pictureGenerator.GenerateTemporary(text, (double)cell.Width, (double)cell.Height);
+                    if (structGen != null)
                     {
-                        var tempPng = structGen.FileName;
-                        dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
-                        string pictureName = CreateUniqueString(shapeNames, prefix: PicturePrefix);
+                        try
+                        {
+                            var tempPng = structGen.FileName;
+                            dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
+                            string pictureName = CreateUniqueString(shapeNames, prefix: PicturePrefix);
 
-                        var shapeToDelete = FindChemShape(cell);
-                        if (shapeToDelete != null)
-                            shapeToDelete.Delete();
-                        AddPicture(cell, tempPng, pictureName);
+                            var shapeToDelete = FindChemShape(cell);
+                            if (shapeToDelete != null)
+                                shapeToDelete.Delete();
+                            AddPicture(cell, tempPng, pictureName);
+                        }
+                        finally
+                        {
+                            structGen.Dispose();
+                        }
                     }
                 }
             }
@@ -222,16 +230,24 @@ namespace NCDK_ExcelAddIn
                     Excel.Range cell = sheet.Cells[shapeInfo.Item2, shapeInfo.Item3];
                     var pictureName = shape.Name;
                     shape.Delete();
-                    using (var sg = pictureGenerator.GenerateTemporary((string)cell.Text, (double)cell.Width, (double)cell.Height))
+                    var sg = pictureGenerator.GenerateTemporary((string)cell.Text, (double)cell.Width, (double)cell.Height);
+                    if (sg != null)
                     {
                         try
                         {
-                            var filename = sg.FileName;
-                            AddPicture(cell, filename, pictureName);
+                            try
+                            {
+                                var filename = sg.FileName;
+                                AddPicture(cell, filename, pictureName);
+                            }
+                            catch (Exception ex)
+                            {
+                                Trace.TraceInformation(ex.Message);
+                            }
                         }
-                        catch (Exception ex)
+                        finally
                         {
-                            Trace.TraceInformation(ex.Message);
+                            sg.Dispose();
                         }
                     }
                 }
