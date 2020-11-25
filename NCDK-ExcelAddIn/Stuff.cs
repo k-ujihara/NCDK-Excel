@@ -1,9 +1,5 @@
 ﻿using Parago.Windows;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NCDK_ExcelAddIn
 {
@@ -17,13 +13,39 @@ namespace NCDK_ExcelAddIn
                 ProgressDialog.Current.ReportWithCancellationCheck("");
         }
 
+        private class AddChemicalStructuresExecuter
+        {
+            readonly dynamic range;
+            readonly IPictureGegerator pictureGenerator;
+
+            public AddChemicalStructuresExecuter(dynamic range, IPictureGegerator pictureGenerator)
+            {
+                this.range = range;
+                this.pictureGenerator = pictureGenerator;
+            }
+
+            public void Run()
+            {
+                ChemPictureTool.AddChemicalStructures(range, pictureGenerator, (Action)AddChemicalStructuresCheckCancel);
+            }
+        }
+
         public static void AddChemicalStructures(dynamic range, IPictureGegerator pictureGenerator)
         {
-            var result = ProgressDialog.Execute(
+            var executer = new AddChemicalStructuresExecuter(range, pictureGenerator);
+
+            if (EnableProgressBar)
+            {
+                var result = ProgressDialog.Execute(
                 null,
                 "Converting to image",
-                (Action)(() => ChemPictureTool.AddChemicalStructures(range, pictureGenerator, (Action)AddChemicalStructuresCheckCancel)),
+                (Action)executer.Run,
                 ProgressDialogSettings.WithSubLabelAndCancel);
+            }
+            else
+            {
+                executer.Run();
+            }
         }
     }
 }
