@@ -9,7 +9,7 @@ namespace NCDK_ExcelAddIn
 {
     public static class Stuff
     {
-        public static bool EnableProgressBar { get; } = false;
+        public static bool EnableProgressBar { get; } = true;
 
         private static void AddChemicalStructuresCheckCancel()
         {

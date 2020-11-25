@@ -139,6 +139,5 @@ namespace NCDK_ExcelAddIn
                 try { Globals.ThisAddIn.Application.ScreenUpdating = saveScreenUpdating; } catch (Exception) { }
             }
         }
-
     }
 }
