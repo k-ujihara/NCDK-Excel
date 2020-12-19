@@ -53,7 +53,7 @@
       <HintPath>..\packages\NCDK.1.5.6\lib\net461\NCDK.dll</HintPath>
     </Reference>
     <Reference Include="RDKit2DotNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RDKit.DotNetWrap.0.2019091.1\lib\net40\RDKit2DotNet.dll</HintPath>
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2020091.1\lib\net40\RDKit2DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Numerics" />
@@ -124,11 +124,11 @@
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets'))" />
     <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
-    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets'))" />
   </Target>
   <Import Project="..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.4.0\build\net45\MSTest.TestAdapter.targets')" />
   <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
-  <Import Project="..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2019091.1\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
