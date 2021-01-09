@@ -36,42 +36,53 @@
         {
             this.tabNCDK = this.Factory.CreateRibbonTab();
             this.groupGeneral = this.Factory.CreateRibbonGroup();
-            this.buttonImportSDF = this.Factory.CreateRibbonButton();
+            this.buttonPreferenceDialog = this.Factory.CreateRibbonButton();
+            this.buttonImportSDFRDKit = this.Factory.CreateRibbonButton();
+            this.groupImage = this.Factory.CreateRibbonGroup();
             this.buttonGeneratePicture = this.Factory.CreateRibbonButton();
             this.buttonUpdatePictures = this.Factory.CreateRibbonButton();
             this.buttonShowPictures = this.Factory.CreateRibbonButton();
             this.buttonUnshowPicture = this.Factory.CreateRibbonButton();
-            this.groupRDKit = this.Factory.CreateRibbonGroup();
-            this.buttonImportSDFRDKit = this.Factory.CreateRibbonButton();
-            this.buttonGeneratePictureRDKit = this.Factory.CreateRibbonButton();
             this.tabNCDK.SuspendLayout();
             this.groupGeneral.SuspendLayout();
-            this.groupRDKit.SuspendLayout();
+            this.groupImage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNCDK
             // 
             this.tabNCDK.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.tabNCDK.Groups.Add(this.groupGeneral);
-            this.tabNCDK.Groups.Add(this.groupRDKit);
+            this.tabNCDK.Groups.Add(this.groupImage);
             this.tabNCDK.Label = "TabAddIns";
             this.tabNCDK.Name = "tabNCDK";
             // 
             // groupGeneral
             // 
-            this.groupGeneral.Items.Add(this.buttonImportSDF);
-            this.groupGeneral.Items.Add(this.buttonGeneratePicture);
-            this.groupGeneral.Items.Add(this.buttonUpdatePictures);
-            this.groupGeneral.Items.Add(this.buttonShowPictures);
-            this.groupGeneral.Items.Add(this.buttonUnshowPicture);
-            this.groupGeneral.Label = "NCDK";
+            this.groupGeneral.Items.Add(this.buttonPreferenceDialog);
+            this.groupGeneral.Items.Add(this.buttonImportSDFRDKit);
+            this.groupGeneral.Label = "General";
             this.groupGeneral.Name = "groupGeneral";
             // 
-            // buttonImportSDF
+            // buttonPreferenceDialog
             // 
-            this.buttonImportSDF.Label = "Import SDF";
-            this.buttonImportSDF.Name = "buttonImportSDF";
-            this.buttonImportSDF.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonImportSDF_Click);
+            this.buttonPreferenceDialog.Label = "Preference";
+            this.buttonPreferenceDialog.Name = "buttonPreferenceDialog";
+            this.buttonPreferenceDialog.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonPreferenceDialog_Click);
+            // 
+            // buttonImportSDFRDKit
+            // 
+            this.buttonImportSDFRDKit.Label = "Import SDF";
+            this.buttonImportSDFRDKit.Name = "buttonImportSDFRDKit";
+            this.buttonImportSDFRDKit.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonImportSDFRDKit_Click);
+            // 
+            // groupImage
+            // 
+            this.groupImage.Items.Add(this.buttonGeneratePicture);
+            this.groupImage.Items.Add(this.buttonUpdatePictures);
+            this.groupImage.Items.Add(this.buttonShowPictures);
+            this.groupImage.Items.Add(this.buttonUnshowPicture);
+            this.groupImage.Label = "Image";
+            this.groupImage.Name = "groupImage";
             // 
             // buttonGeneratePicture
             // 
@@ -97,25 +108,6 @@
             this.buttonUnshowPicture.Name = "buttonUnshowPicture";
             this.buttonUnshowPicture.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonUnshowPicture_Click);
             // 
-            // groupRDKit
-            // 
-            this.groupRDKit.Items.Add(this.buttonImportSDFRDKit);
-            this.groupRDKit.Items.Add(this.buttonGeneratePictureRDKit);
-            this.groupRDKit.Label = "RDKit";
-            this.groupRDKit.Name = "groupRDKit";
-            // 
-            // buttonImportSDFRDKit
-            // 
-            this.buttonImportSDFRDKit.Label = "Import SDF";
-            this.buttonImportSDFRDKit.Name = "buttonImportSDFRDKit";
-            this.buttonImportSDFRDKit.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonImportSDFRDKit_Click);
-            // 
-            // buttonGeneratePictureRDKit
-            // 
-            this.buttonGeneratePictureRDKit.Label = "Generate Picture";
-            this.buttonGeneratePictureRDKit.Name = "buttonGeneratePictureRDKit";
-            this.buttonGeneratePictureRDKit.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ButtonGeneratePictureRDKit_Click);
-            // 
             // NCDKExcelRibbon
             // 
             this.Name = "NCDKExcelRibbon";
@@ -126,8 +118,8 @@
             this.tabNCDK.PerformLayout();
             this.groupGeneral.ResumeLayout(false);
             this.groupGeneral.PerformLayout();
-            this.groupRDKit.ResumeLayout(false);
-            this.groupRDKit.PerformLayout();
+            this.groupImage.ResumeLayout(false);
+            this.groupImage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -135,15 +127,14 @@
         #endregion
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tabNCDK;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupGeneral;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonImportSDF;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupImage;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonGeneratePicture;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonShowPictures;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonUnshowPicture;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonUpdatePictures;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupRDKit;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonImportSDFRDKit;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonGeneratePictureRDKit;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonPreferenceDialog;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupGeneral;
     }
 
     partial class ThisRibbonCollection

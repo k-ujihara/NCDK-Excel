@@ -1,6 +1,6 @@
 ﻿// MIT License
 // 
-// Copyright (c) 2020-2021 Kazuya Ujihara
+// Copyright (c) 2021 Kazuya Ujihara
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,26 +20,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using GraphMolWrap;
+using System;
+using System.Globalization;
+using System.Windows.Forms;
 
-namespace RDKit
+namespace NCDK_ExcelAddIn
 {
-    public static partial class Chem
+    public partial class PrefDialog : Form
     {
-        public static partial class Draw
+        public PrefDialog()
         {
-            public static class RdMolDraw2D
-            {
-                public static void PrepareAndDrawMolecule(MolDraw2D drawer, ROMol mol, string legend = "", Int_Vect highlight_atoms = null, Int_Vect highlight_bonds = null)
-                {
-                    RDKFuncs.prepareAndDrawMolecule(drawer, mol, legend, highlight_atoms, highlight_bonds);
-                }
+            InitializeComponent();
+        }
 
-                public static void PrepareMolForDrawing(RWMol mol, bool kekulize = true, bool addChiralHs = true, bool wedgeBonds = true, bool forceCoords = false)
-                {
-                    RDKFuncs.prepareMolForDrawing(mol, kekulize, addChiralHs, wedgeBonds, forceCoords);
-                }
-            }
+        private void PrefDialog_Load(object sender, EventArgs e)
+        {
+            foreach (var v in Toolkits.Enumerate())
+                this.comboToolkit.Items.Add(v);
+            foreach (var v in ColoringStyles.Enumerate())
+                this.comboColoring.Items.Add(v);
+            foreach (var v in ImageTypes.Enumerate())
+                this.comboImageType.Items.Add(v);
+        }
+
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            this.comboColoring.Text = Config.Default.Toolkit;
+            this.comboColoring.Text = Config.Default.ColoringStyle;
+            this.comboImageType.Text = Config.Default.ImageType.ToUpperInvariant();
+            this.textMinimumPixels.Text = Config.Default.MinimumEdgePixels.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

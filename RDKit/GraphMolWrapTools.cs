@@ -1,4 +1,27 @@
-﻿using GraphMolWrap;
+﻿// MIT License
+// 
+// Copyright (c) 2020-2021 Kazuya Ujihara
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
+using GraphMolWrap;
+using System;
 
 namespace RDKit
 {
@@ -131,15 +154,37 @@ namespace RDKit
         public static void DrawMolecule(this MolDraw2D view, ROMol mol, string legend = "", Int_Vect highlight_atoms = null, Int_Vect highlight_bonds = null)
             => view.drawMolecule(mol, legend, highlight_atoms, highlight_bonds);
 
+        public static void FinishDrawing(this MolDraw2D view)
+        {
+            switch (view)
+            {
+                case MolDraw2DSVG d2d:
+                    d2d.finishDrawing();
+                    break;
+                case MolDraw2DCairo d2d:
+                    d2d.finishDrawing();
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        //
+        // MolDraw2DCairo
+        //
+
+        public static void WriteDrawingText(this MolDraw2DCairo view, string fName)
+        {
+            view.writeDrawingText(fName);
+        }
+
         //
         // MolDraw2DSVG
         //
 
-        public static void FinishDrawing(this MolDraw2DSVG view)
-            => view.finishDrawing();
-
-
         public static string GetDrawingText(this MolDraw2DSVG view)
-            => view.getDrawingText();
+        {
+            return view.getDrawingText();
+        }
     }
 }

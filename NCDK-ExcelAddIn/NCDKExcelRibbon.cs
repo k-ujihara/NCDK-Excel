@@ -1,6 +1,6 @@
 ﻿// MIT License
 // 
-// Copyright (c) 2019-2020 Kazuya Ujihara
+// Copyright (c) 2019-2021 Kazuya Ujihara
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +22,7 @@
 
 using Microsoft.Office.Tools.Ribbon;
 using System;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -48,11 +49,6 @@ namespace NCDK_ExcelAddIn
                 if (keep != null)
                     keep.Select();
             }
-        }
-
-        private void ButtonImportSDF_Click(object sender, RibbonControlEventArgs e)
-        {
-            ButtonImportSDF(filename => NCDKStuff.LoadSDFToNewSheet(filename));
         }
 
         private void ButtonImportSDF(Action<string> loadSDFToNewSheet)
@@ -93,9 +89,22 @@ namespace NCDK_ExcelAddIn
             }
         }
 
+        private IPictureGegerator GetPictureGegerator()
+        {
+            switch (Config.Toolkit)
+            {
+                case Toolkits.RDKit:
+                    return RDKitPictureGenerator;
+                case Toolkits.NCDK:
+                    return NCDKPictureGenerator;
+                default:
+                    return RDKitPictureGenerator;
+            }
+        }
+
         private void ButtonGeneratePicture_Click(object sender, RibbonControlEventArgs e)
         {
-            AddChemicalStructures(NCDKPictureGenerator);
+            AddChemicalStructures(GetPictureGegerator());
         }
 
         private void ButtonUnshowPicture_Click(object sender, RibbonControlEventArgs e)
@@ -113,7 +122,7 @@ namespace NCDK_ExcelAddIn
             dynamic keep = Globals.ThisAddIn.Application.Selection;
             try
             {
-                ChemPictureTool.UpdatePictures(NCDKPictureGenerator);
+                ChemPictureTool.UpdatePictures(GetPictureGegerator());
             }
             catch (Exception)
             {
@@ -121,13 +130,27 @@ namespace NCDK_ExcelAddIn
             finally
             {
                 if (keep != null)
-                    keep.Select();
+                    try
+                    {
+                        keep.Select();
+                    }
+                    catch (Exception)
+                    {
+                    }
             }
         }
 
         private void ButtonImportSDFRDKit_Click(object sender, RibbonControlEventArgs e)
         {
-            ButtonImportSDF(filename => RDKitStuff.LoadSDFToNewSheet(filename));
+            switch (Config.Toolkit)
+            {
+                case Toolkits.NCDK:
+                    ButtonImportSDF(filename => NCDKStuff.LoadSDFToNewSheet(filename));
+                    break;
+                case Toolkits.RDKit:
+                    ButtonImportSDF(filename => RDKitStuff.LoadSDFToNewSheet(filename));
+                    break;
+            }
         }
 
         private static RDKitPictureGenerator _RDKitPictureGenerator = null;
@@ -141,9 +164,25 @@ namespace NCDK_ExcelAddIn
             }
         }
 
-        private void ButtonGeneratePictureRDKit_Click(object sender, RibbonControlEventArgs e)
+        private void ButtonPreferenceDialog_Click(object sender, RibbonControlEventArgs e)
         {
-            AddChemicalStructures(RDKitPictureGenerator);
+            var dlg = new PrefDialog();
+            dlg.comboToolkit.Text = Config.Toolkit;
+            dlg.comboColoring.Text = Config.ColoringStyle;
+            dlg.comboImageType.Text = Config.ImageType.ToUpperInvariant();
+            dlg.textMinimumPixels.Text = Config.MinimumEdgePixels.ToString(CultureInfo.InvariantCulture);
+
+            var result = dlg.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Config.Toolkit = dlg.comboToolkit.Text;
+                Config.ColoringStyle = dlg.comboColoring.Text;
+                Config.ImageType = dlg.comboImageType.Text;
+                if (int.TryParse(dlg.textMinimumPixels.Text, out int value))
+                {
+                    Config.MinimumEdgePixels = value;
+                }
+            }
         }
     }
 }

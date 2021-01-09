@@ -36,11 +36,11 @@
     <Reference Include="ExcelDna.Integration, Version=1.1.0.0, Culture=neutral, PublicKeyToken=f225e9659857edbe, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDna.Integration.1.1.0\lib\ExcelDna.Integration.dll</HintPath>
     </Reference>
-    <Reference Include="ExcelDna.IntelliSense, Version=1.4.1.0, Culture=neutral, PublicKeyToken=f225e9659857edbe, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExcelDna.IntelliSense.1.4.1\lib\net40\ExcelDna.IntelliSense.dll</HintPath>
+    <Reference Include="ExcelDna.IntelliSense, Version=1.4.2.0, Culture=neutral, PublicKeyToken=f225e9659857edbe, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDna.IntelliSense.1.4.2\lib\net40\ExcelDna.IntelliSense.dll</HintPath>
     </Reference>
-    <Reference Include="MathNet.Numerics, Version=4.12.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
-      <HintPath>..\packages\MathNet.Numerics.Signed.4.12.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    <Reference Include="MathNet.Numerics, Version=4.14.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.4.14.0\lib\net461\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="NCDK, Version=1.5.6.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
       <HintPath>..\packages\NCDK.1.5.6\lib\net461\NCDK.dll</HintPath>
@@ -50,8 +50,8 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RDKit2DotNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RDKit.DotNetWrap.0.2020091.1\lib\net40\RDKit2DotNet.dll</HintPath>
+    <Reference Include="RDKit2DotNet, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2020093.2\lib\net40\RDKit2DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -127,11 +127,11 @@
     <PropertyGroup>
       <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
     <Error Condition="!Exists('..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets'))" />
-    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020093.2\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020093.2\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
   </Target>
-  <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
   <Import Project="..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets" Condition="Exists('..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets')" />
-  <Import Project="..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020091.1\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2020093.2\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020093.2\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
 </Project>

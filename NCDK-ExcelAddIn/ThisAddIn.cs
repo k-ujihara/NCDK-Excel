@@ -1,6 +1,6 @@
 ﻿// MIT License
 // 
-// Copyright (c) 2018-2019 Kazuya Ujihara
+// Copyright (c) 2018-2021 Kazuya Ujihara
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,7 @@ namespace NCDK_ExcelAddIn
     {
         private string addinPath;
 
-        private void ThisAddIn_Startup(object sender, System.EventArgs e)
+        private void RegisterXLL()
         {
             const string xllName32 = "NCDK-Excel-AddIn.xll";
             const string xllName64 = "NCDK-Excel-AddIn64.xll";
@@ -69,7 +69,7 @@ namespace NCDK_ExcelAddIn
             Application.RegisterXLL(addinPath);
         }
 
-        private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
+        private void UnregisterXLL()
         {
 #if false
             // following code is not required if this xll is resisted by Application.RegisterXLL method.
@@ -98,6 +98,16 @@ namespace NCDK_ExcelAddIn
                 }
             }
 #endif
+        }
+
+        private void ThisAddIn_Startup(object sender, System.EventArgs e)
+        {
+            RegisterXLL();
+        }
+
+        private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
+        {
+            UnregisterXLL();
         }
 
         #region VSTO generated code
