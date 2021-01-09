@@ -78,33 +78,22 @@ namespace NCDK_ExcelAddIn
             }
         }
 
-        private static NCDKPictureGenerator _NCDKPictureGenerator = null;
-        private static NCDKPictureGenerator NCDKPictureGenerator
-        {
-            get
-            {
-                if (_NCDKPictureGenerator == null)
-                    _NCDKPictureGenerator = new NCDKPictureGenerator();
-                return _NCDKPictureGenerator;
-            }
-        }
-
-        private IPictureGegerator GetPictureGegerator()
+        private IPictureGegerator CreatePictureGegerator()
         {
             switch (Config.Toolkit)
             {
                 case Toolkits.RDKit:
-                    return RDKitPictureGenerator;
+                    return new RDKitPictureGenerator();
                 case Toolkits.NCDK:
-                    return NCDKPictureGenerator;
+                    return new NCDKPictureGenerator();
                 default:
-                    return RDKitPictureGenerator;
+                    return new RDKitPictureGenerator();
             }
         }
 
         private void ButtonGeneratePicture_Click(object sender, RibbonControlEventArgs e)
         {
-            AddChemicalStructures(GetPictureGegerator());
+            AddChemicalStructures(CreatePictureGegerator());
         }
 
         private void ButtonUnshowPicture_Click(object sender, RibbonControlEventArgs e)
@@ -122,7 +111,7 @@ namespace NCDK_ExcelAddIn
             dynamic keep = Globals.ThisAddIn.Application.Selection;
             try
             {
-                ChemPictureTool.UpdatePictures(GetPictureGegerator());
+                ChemPictureTool.UpdatePictures(CreatePictureGegerator());
             }
             catch (Exception)
             {
@@ -150,17 +139,6 @@ namespace NCDK_ExcelAddIn
                 case Toolkits.RDKit:
                     ButtonImportSDF(filename => RDKitStuff.LoadSDFToNewSheet(filename));
                     break;
-            }
-        }
-
-        private static RDKitPictureGenerator _RDKitPictureGenerator = null;
-        private static RDKitPictureGenerator RDKitPictureGenerator
-        {
-            get
-            {
-                if (_RDKitPictureGenerator == null)
-                    _RDKitPictureGenerator = new RDKitPictureGenerator();
-                return _RDKitPictureGenerator;
             }
         }
 

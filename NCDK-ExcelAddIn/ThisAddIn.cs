@@ -100,13 +100,24 @@ namespace NCDK_ExcelAddIn
 #endif
         }
 
+        private void LoadSettings()
+        {
+        }
+
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Save();
+        }
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             RegisterXLL();
+            LoadSettings();
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
+            SaveSettings();
             UnregisterXLL();
         }
 

@@ -77,11 +77,11 @@ namespace NCDK_ExcelAddIn
         public static IEnumerable<string> Enumerate() => _all;
         public static string Canonicalize(string value) => Utils.Canonicalize(value, _all, Default);
 
-        public static string ForegroundColor(string value)
+        public static string ForegroundColorer(string value)
         {
             var i = value.IndexOf(_on_);
             if (i < 0)
-                return ForegroundColor(Default);
+                return ForegroundColorer(Default);
             return value.Substring(0, i);
         }
 

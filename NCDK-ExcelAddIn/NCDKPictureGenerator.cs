@@ -68,24 +68,19 @@ namespace NCDK_ExcelAddIn
 
         private readonly static object syncLock = new object();
 
-        private static DepictionGenerator pictureGenerator;
-        public static DepictionGenerator PictureGenerator
+        private DepictionGenerator pictureGenerator = null;
+        public DepictionGenerator PictureGenerator
         {
             get
             {
                 if (pictureGenerator == null)
-                    lock (syncLock)
+                {
+                    pictureGenerator = new DepictionGenerator
                     {
-                        if (pictureGenerator == null)
-                        {
-                            var g = new DepictionGenerator
-                            {
-                                AtomColorer = ToAtomColorer(ColoringStyles.ForegroundColor(Config.ColoringStyle)),
-                                BackgroundColor = WPF::Media.Colors.White,
-                            };
-                            pictureGenerator = g;
-                        }
-                    }
+                        AtomColorer = ToAtomColorer(ColoringStyles.ForegroundColorer(Config.ColoringStyle)),
+                        BackgroundColor = ToWPFColor(ColoringStyles.BackgroundColor(Config.ColoringStyle)),
+                    };
+                }
                 return pictureGenerator;
             }
         }

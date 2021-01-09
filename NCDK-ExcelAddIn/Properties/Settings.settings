@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ColoringStyle" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">Color on White</Value>
     </Setting>
     <Setting Name="ImageType" Type="System.String" Scope="User">
       <Value Profile="(Default)">svg</Value>
