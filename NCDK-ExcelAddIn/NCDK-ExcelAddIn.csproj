@@ -182,7 +182,6 @@
   <ItemGroup>
     <Compile Include="ChemPictureTool.cs" />
     <Compile Include="ChemStuff.cs" />
-    <Compile Include="ColoringStyleToStringConverter.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="ExcelTool.cs" />
     <Compile Include="NCDKExcelRibbon.cs">
