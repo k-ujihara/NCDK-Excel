@@ -2417,42 +2417,6 @@ namespace NCDKExcel
                 });
             return (string)ret;
         }
-        [ExcelFunction(Description = "Returns Smarts.")]
-        public static string RDKit_Smarts(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "RDKit_Smarts",
-                mol =>
-                {
-                string nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = RDKit.Chem.MolToSmarts(mol);
-                    nReturnValue = result;
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
-        [ExcelFunction(Description = "Returns Smiles.")]
-        public static string RDKit_Smiles(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "RDKit_Smiles",
-                mol =>
-                {
-                string nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = RDKit.Chem.MolToSmiles(mol);
-                    nReturnValue = result;
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
         [ExcelFunction(Description = "Returns QED.")]
         public static double RDKit_QED(string text)
         {

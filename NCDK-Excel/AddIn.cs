@@ -8,8 +8,8 @@ public class AddIn : IExcelAddIn
         // The name was changed (and made obsolete) to highlight the pair of function calls now required.
         IntelliSenseServer.Install();
 
-        // FIXME: This hack to load RDKit2DotNet before used in NCDK-AddIn 
-        NCDKExcel.DescriptorFunctions.RDKit_Smiles("C");
+        // HACK: Next line only to load RDKit2DotNet before using in NCDK-AddIn.
+        new GraphMolWrap.ROMol();
     }
 
     public void AutoClose()

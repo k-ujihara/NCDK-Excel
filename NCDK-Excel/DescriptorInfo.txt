@@ -126,8 +126,6 @@ RDKit	MolBlock	RDKit.Chem	string	MolToMolBlock			TRUE	Returns MolBlock.
 RDKit	PDBBlock	RDKit.Chem	string	MolToPDBBlock			TRUE	Returns PDBBlock.
 RDKit	TPLBlock	RDKit.Chem	string	MolToTPLBlock			TRUE	Returns TPLBlock.
 RDKit	XYZBlock	RDKit.Chem	string	MolToXYZBlock			TRUE	Returns XYZBlock.
-RDKit	Smarts	RDKit.Chem	string	MolToSmarts			TRUE	Returns Smarts.
-RDKit	Smiles	RDKit.Chem	string	MolToSmiles			TRUE	Returns Smiles.
 RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE	Returns QED.
 RDKit	NumHeavyAtoms	RDKit.Chem	double	GetNumHeavyAtoms			TRUE	Returns the number of HeavyAtoms.
 RDKit	NumAtoms	RDKit.Chem	double	GetNumAtoms			TRUE	Returns the number of Atoms.

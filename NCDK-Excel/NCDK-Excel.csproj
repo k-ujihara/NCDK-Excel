@@ -168,6 +168,7 @@
       <DependentUpon>DescriptorFunctions_Excel.tt</DependentUpon>
     </Compile>
     <Compile Include="DescriptorFunctions_Extra.cs" />
+    <Compile Include="ExcelDnaUtility.cs" />
     <Compile Include="OpsinFunctions.cs" />
     <Compile Include="RDKitChemicalReaction.cs" />
     <Compile Include="RDKitSmarts.cs" />

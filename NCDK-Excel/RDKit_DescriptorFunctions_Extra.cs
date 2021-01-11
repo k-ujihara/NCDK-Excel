@@ -65,6 +65,55 @@ namespace NCDKExcel
             return ret;
         }
 
+        [ExcelFunction(Description = "Returns Smarts.")]
+        public static string RDKit_Smarts(string text, object isomericSmiles = null)
+        {
+            var _isomericSmiles = ExcelDnaUtility.ToBoolean(isomericSmiles, true);
+
+            if (_isomericSmiles)
+            {
+                return RDKit_CalcDesc(text, "RDKit_Smarts", mol => RDKit.Chem.MolToSmarts(mol));
+            }
+            return RDKit.Chem.MolToSmarts(Parse(text), _isomericSmiles);
+        }
+
+        [ExcelFunction(Description = "Returns Smiles.")]
+        public static string RDKit_Smiles(string text,
+            object isomericSmiles = null, bool kekuleSmiles = false,
+            object rootedAtAtom = null, object canonical = null,
+            bool allBondsExplicit = false, bool allHsExplicit = false,
+            bool doRandom = false)
+        {
+            var _isomericSmiles = ExcelDnaUtility.ToBoolean(isomericSmiles, true);
+            var _rootedAtAtom = ExcelDnaUtility.ToInt32(rootedAtAtom, -1);
+            var _canonical = ExcelDnaUtility.ToBoolean(canonical, true);
+
+            if (_isomericSmiles
+             && !kekuleSmiles
+             && _rootedAtAtom == -1
+             && _canonical
+             && !allBondsExplicit
+             && !allHsExplicit
+             && !doRandom)
+            {
+                return RDKit_CalcDesc(text, "RDKit_Smiles", mol => RDKit.Chem.MolToSmiles(mol));
+            }
+            {
+                ROMol mol;
+                if (kekuleSmiles)
+                {
+                    var _mol = RWMol.MolFromSmiles(text);
+                    RDKFuncs.Kekulize(_mol);
+                    mol = _mol;
+                }
+                else
+                {
+                    mol = Parse(text);
+                }
+                return RDKit.Chem.MolToSmiles(mol, _isomericSmiles, kekuleSmiles, _rootedAtAtom, _canonical, allBondsExplicit, allHsExplicit, doRandom);
+            }
+        }
+
         [ExcelFunction(Description = "Returns the InChI.")]
         public static string RDKit_InChI(string text, string options)
         {
@@ -95,17 +144,22 @@ namespace NCDKExcel
         static readonly ConcurrentDictionary<string, ROMol> MolecularCache = new ConcurrentDictionary<string, ROMol>();
         static readonly ROMol nullMol = new RWMol();
 
-        public static ROMol Parse(string ident)
+        /// <summary>
+        /// Tries to parses text as SMILES, InChI, or MolBlock and returns RDKit ROMol.
+        /// </summary>
+        /// <param name="molIdent">Text expression of molecule like SMILES, InChI, or MolBlock.</param>
+        /// <returns>RDKit ROMol.</returns>
+        public static ROMol Parse(string molIdent)
         {
-            if (ident == null)
-                throw new ArgumentNullException(nameof(ident));
+            if (molIdent == null)
+                throw new ArgumentNullException(nameof(molIdent));
 
-            var mol = MolecularCache.GetOrAdd(ident, a_ident =>
+            var mol = MolecularCache.GetOrAdd(molIdent, a_ident =>
             {
                 string notationType = null;
                 ROMol a_mol;
 
-                a_mol = RWMol.MolFromSmiles(ident);
+                a_mol = RWMol.MolFromSmiles(molIdent);
                 if (a_mol != null)
                 {
                     notationType = "SMILES";
@@ -114,7 +168,7 @@ namespace NCDKExcel
 
                 using (var rv = new ExtraInchiReturnValues())
                 {
-                    a_mol = RDKFuncs.InchiToMol(ident, rv);
+                    a_mol = RDKFuncs.InchiToMol(molIdent, rv);
                     if (a_mol != null)
                     {
                         notationType = "InChI";
@@ -122,7 +176,7 @@ namespace NCDKExcel
                     }
                 }
 
-                a_mol = RWMol.MolFromMolBlock(ident);
+                a_mol = RWMol.MolFromMolBlock(molIdent);
                 if (a_mol != null)
                 {
                     RDKFuncs.assignStereochemistryFrom3D(a_mol);
