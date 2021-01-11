@@ -48,8 +48,9 @@ From installer: Execute NCDK-Excel.msi to install NCDK-Excel and then enable add
 Build
 -----
 
-Open the solution file by Visual Studio 2017 and build all.
-Installer will be generated.
+Build `opsin-2.5.0-jar-with-dependencies.dll` according to `build-opsin.bat` in `OPSIN` folder.
+Open the solution file, `NCDK-Excel.sln`, by Visual Studio 2017 and `Build Solution` to build it.
+Installers are generated in `Setup\Release` and `Setup64\Release` folder on `Release` configuration.
 
 ### NCDK functions
 
@@ -202,4 +203,8 @@ SokalSimilarity
 TverskySimilarity
 StripMol
 
-Copyright (c) 2018-2020 Kazuya Ujihara
+# OPSIN functions
+
+ParseToSmiles
+
+Copyright (c) 2018-2021 Kazuya Ujihara
