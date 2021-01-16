@@ -15,11 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCDK-ExcelTests", "NCDK-Exc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDKit", "RDKit\RDKit.csproj", "{B2FE6A3A-4775-4B6A-8630-420ABBF22286}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Opsin", "Opsin", "{065E86C3-74A3-41BB-8F59-573BE1C93419}"
-	ProjectSection(SolutionItems) = preProject
-		OPSIN\build-opsin.bat = OPSIN\build-opsin.bat
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{93F0AB8F-899B-4037-B57A-E9385C9DA702}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
