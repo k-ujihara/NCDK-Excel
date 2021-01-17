@@ -15,9 +15,12 @@ Input a formula beginning with "NCDK_", "RDKit_", or "OPSIN_" in the Excel cell 
 | `=RDKit_MACCSFingerprint("c1ccccc1C")` | 0000...1010 | MACCS fingerprint created by RDKit |
 | `=RDKit_MolBlock("c1ccccc1C")` | "RDKit ... M  END" | MolBlock of toluene created by RDKit |
 | `=NCDK_SMILES("RDKit ... M  END")` | C1=CC=CC=C1C | SMILES of MolBlock expression of toluene crated by NCDK |
-| `=NCDK_InChI("c1ccccc1C")` | "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3" | InChi created by NCDK |
+| `=RDKit_Smiles("c1c(C)cccc1")` | Cc1ccccc1 | SMILES of toluene |
+| `=RDKit_Smiles("c1ccccc1", , TRUE)`| C1=CC=CC=C1 | Kekulize SMILES of benzene |
+| `=NCDK_InChI("c1ccccc1C")` | "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3" | InChI created by NCDK |
 | `=NCDK_Tanimoto(NCDK_ECFP4("c1ccccc1"), NCDK_ECFP4("c1(Cl)ccc(C)cc1"))` | 0.07 | Tanimoto smilarity between benzene and 4-chlorotoluene based on ECFP4 |
 | `=OPSIN_ParseToSmiles("toluene")` | "CC1=CC=CC=C1" | SMILES of toluene |
+| `=OPSIN_ParseToStdInChIKey("benzene")` | UHOVQNZJYSORNB-UHFFFAOYSA-N | InChIKey of benzene |
 
 Has Substructure
 
@@ -37,6 +40,7 @@ Impoting SDF
 Generate picture from SMILES/InChI/MOL block
 
 - Select cells and click "Generate Picture".
+- Picture format, color, and toolkit can be selected in `Preference`.
 
 Screenshot
 ----------
@@ -46,13 +50,13 @@ Screenshot
 How to Install
 --------------
 
-From installer: Execute NCDK-Excel.msi to install NCDK-Excel and then enable add-in by File > Options > Add-ins > Manage: COM-Add-ins > GO... > check 'NCDK for Excel' if required.
+Execute `NCDK-Excel-x86.msi` or `NCDK-Excel-x64.msi` and launch Excel.
+If you want to enable or disable it, go "File" > "Options" > "Add-ins" > "Manage: COM-Add-ins" > "GO..." and check/uncheck 'NCDK for Excel'.
 
 Build
 -----
 
-Build `opsin-2.5.0-jar-with-dependencies.dll` according to `build-opsin.bat` in `OPSIN` folder.
-Open the solution file, `NCDK-Excel.sln`, by Visual Studio 2017 and `Build Solution` to build it.
+Open the solution file, `NCDK-Excel.sln`, by Visual Studio 2019 and `Build Solution` to build it.
 Installers are generated in `Setup\Release` and `Setup64\Release` folder on `Release` configuration.
 
 NCDK functions
@@ -212,5 +216,9 @@ OPSIN functions
 ---------------
 
 ParseToSmiles
+ParseToCML
+ParseToInChI
+ParseToStdInChI
+ParseToStdInChIKey
 
 Copyright (c) 2018-2021 Kazuya Ujihara

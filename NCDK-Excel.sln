@@ -1,15 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCDK-Excel", "NCDK-Excel\NCDK-Excel.csproj", "{2864227B-91F7-42F0-B532-3307F6C74566}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCDK-ExcelAddIn", "NCDK-ExcelAddIn\NCDK-ExcelAddIn.csproj", "{59D3D9BA-D194-4CFF-93C6-FC18E0D795E9}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup64", "Setup64\Setup64.vdproj", "{CD97C1D8-E575-4A96-9F51-51FEAB8EFC9B}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup32", "Setup\Setup.vdproj", "{5F4BC01B-64D1-431C-B1BC-701DD9ED74F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCDK-ExcelTests", "NCDK-ExcelTests\NCDK-ExcelTests.csproj", "{59AD77EB-2D98-4CCC-A551-EB27D25597C6}"
 EndProject
@@ -22,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{93F0AB8F-8
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup32", "Setup\Setup.vdproj", "{DFC24D84-4374-4BF4-BC2C-D127EA37011F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup64", "Setup64\Setup64.vdproj", "{00A9D9BB-B182-48A0-B3BB-BB3CCCAF970A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,12 +37,6 @@ Global
 		{59D3D9BA-D194-4CFF-93C6-FC18E0D795E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59D3D9BA-D194-4CFF-93C6-FC18E0D795E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59D3D9BA-D194-4CFF-93C6-FC18E0D795E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD97C1D8-E575-4A96-9F51-51FEAB8EFC9B}.Debug|Any CPU.ActiveCfg = Debug
-		{CD97C1D8-E575-4A96-9F51-51FEAB8EFC9B}.Release|Any CPU.ActiveCfg = Release
-		{CD97C1D8-E575-4A96-9F51-51FEAB8EFC9B}.Release|Any CPU.Build.0 = Release
-		{5F4BC01B-64D1-431C-B1BC-701DD9ED74F4}.Debug|Any CPU.ActiveCfg = Debug
-		{5F4BC01B-64D1-431C-B1BC-701DD9ED74F4}.Release|Any CPU.ActiveCfg = Release
-		{5F4BC01B-64D1-431C-B1BC-701DD9ED74F4}.Release|Any CPU.Build.0 = Release
 		{59AD77EB-2D98-4CCC-A551-EB27D25597C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59AD77EB-2D98-4CCC-A551-EB27D25597C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59AD77EB-2D98-4CCC-A551-EB27D25597C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +45,12 @@ Global
 		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2FE6A3A-4775-4B6A-8630-420ABBF22286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC24D84-4374-4BF4-BC2C-D127EA37011F}.Debug|Any CPU.ActiveCfg = Debug
+		{DFC24D84-4374-4BF4-BC2C-D127EA37011F}.Release|Any CPU.ActiveCfg = Release
+		{DFC24D84-4374-4BF4-BC2C-D127EA37011F}.Release|Any CPU.Build.0 = Release
+		{00A9D9BB-B182-48A0-B3BB-BB3CCCAF970A}.Debug|Any CPU.ActiveCfg = Debug
+		{00A9D9BB-B182-48A0-B3BB-BB3CCCAF970A}.Release|Any CPU.ActiveCfg = Release
+		{00A9D9BB-B182-48A0-B3BB-BB3CCCAF970A}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
