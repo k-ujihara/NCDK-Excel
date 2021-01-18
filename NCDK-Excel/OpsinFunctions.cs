@@ -6,7 +6,7 @@ namespace NCDKExcel
     public static class OpsinFunctions
     {
         internal static NameToStructure NameToStructureConverter { get; } = NameToStructure.Instance;
-        internal static NameToInchi nts = new NameToInchi();
+        //internal static NameToInchi nts = new NameToInchi();
 
         [ExcelFunction(Description = "Accepts IUPAC name and returns the SMILES.")]
         public static string OPSIN_ParseToSmiles(string name)
