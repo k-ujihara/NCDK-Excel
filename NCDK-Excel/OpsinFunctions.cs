@@ -22,22 +22,22 @@ namespace NCDKExcel
             return smiles;
         }
 
-        [ExcelFunction(Description = "Accepts IUPAC name and returns the CML.")]
-        public static string OPSIN_ParseToInChI(string name)
-        {
-            return nts.ParseToInchi(name);
-        }
+        //[ExcelFunction(Description = "Accepts IUPAC name and returns the CML.")]
+        //public static string OPSIN_ParseToInChI(string name)
+        //{
+        //    return nts.ParseToInchi(name);
+        //}
 
-        [ExcelFunction(Description = "Accepts IUPAC name and returns the StdInChI.")]
-        public static string OPSIN_ParseToStdInChI(string name)
-        {
-            return nts.ParseToStdInchi(name);
-        }
+        //[ExcelFunction(Description = "Accepts IUPAC name and returns the StdInChI.")]
+        //public static string OPSIN_ParseToStdInChI(string name)
+        //{
+        //    return nts.ParseToStdInchi(name);
+        //}
 
-        [ExcelFunction(Description = "Accepts IUPAC name and returns the StdInChIKey.")]
-        public static string OPSIN_ParseToStdInChIKey(string name)
-        {
-            return nts.ParseToStdInchiKey(name);
-        }
+        //[ExcelFunction(Description = "Accepts IUPAC name and returns the StdInChIKey.")]
+        //public static string OPSIN_ParseToStdInChIKey(string name)
+        //{
+        //    return nts.ParseToStdInchiKey(name);
+        //}
     }
 }

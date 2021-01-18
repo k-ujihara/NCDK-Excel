@@ -217,8 +217,5 @@ OPSIN functions
 
 ParseToSmiles
 ParseToCML
-ParseToInChI
-ParseToStdInChI
-ParseToStdInChIKey
 
 Copyright (c) 2018-2021 Kazuya Ujihara
