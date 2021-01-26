@@ -15,13 +15,31 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_08804172D72147ADA010B7BF189DF2E5"
+        "MsmKey" = "8:_00AC3B93478C45ABBB979D0F3BCC09D3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_08EB38F05A094353BBC6A0A8498D717D"
+        "MsmKey" = "8:_014414ACBEB44BF7BF7BC5D60711C393"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_01EA8910F66E47DAB2C147D1DEDC1C09"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_03DC960A7E8940C69DFFA19743EACB2B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_04A26A63FCCD46D1A008CA156AA8841B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,7 +57,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0CEB4D21A9EF46D897A340446194D9A6"
+        "MsmKey" = "8:_0C944DA48317472D962BFDA01E3FBC8C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -111,55 +129,73 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0E645C76D1CF49059CBB999685C24DAB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0FDEA2C9212A6B9B6356295D96D349A9"
         "OwnerKey" = "8:_86ED011B261B476D88B7866D571BAE5A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_12D12EE2142B4A35BBD46AB86FC6FFE3"
+        "MsmKey" = "8:_1054136A46FB4E148CA8D586AFB564F2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_13B1ACB6EBF848C3B57812E2F11BDC2D"
+        "MsmKey" = "8:_10B8ED08327547EE924C9E576DFECCE5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_14892534727745B2A4E2A21906AE0868"
+        "MsmKey" = "8:_122A24E342AF4191A36BFBA936692135"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_181206EE9C6B4341953293FFB339DE1D"
+        "MsmKey" = "8:_130A9D723E134D4992BAB9FEC1D70810"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_19E9C5E0A9A84495965B3C555407C675"
+        "MsmKey" = "8:_14C67778FB1744F8A5EA019D01C2C9F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1A4863A3D8BF4DDA9171BBE231FA1B6E"
+        "MsmKey" = "8:_163666D4EAEB4C5AB2D019246E76F4BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1BA8F25A9857417B9412881B55C75D32"
+        "MsmKey" = "8:_16E599DC58914A428358152789929AF5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1DC49C386C4A4E319AF6DEE3CB579B15"
+        "MsmKey" = "8:_175F29CF7BDC4351A705782A8C75668B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_17C81DE658E14B0D8E25733FE36A2970"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1CE8B5968A0C41AE86BA060D2B94B197"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -171,37 +207,73 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_234986A139D04F5A94E37A607BFC0C71"
+        "MsmKey" = "8:_22C247FAB3C3483085145BE0589EB7B7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_24ACBB3CE8954561A869B127F3E225E4"
+        "MsmKey" = "8:_29458D3E56AE4311A52D8863F8DF022D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_293FBF54AE454753B72B0B3B03A38A9D"
+        "MsmKey" = "8:_29AD47425DD540F0A358B70FA01B5F39"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_294CB6B482114FB98F351DA271D6B8BC"
+        "MsmKey" = "8:_2A91B04C40BC440EBD928C8A9CCDB834"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2E3BA9DA0FB740138B6C4EB969215687"
+        "MsmKey" = "8:_2AD901F613594D6B937C051A4EF95C0F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_30C4031332A244C8A175504A833A43F5"
+        "MsmKey" = "8:_2BCFA22F17BE4357A7FB3B3FC0F0B505"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2C63818CD4D94E269C2C9B7AEF22E291"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2E3DE8F98E2B4DFB845396F3B52C3446"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_327FDB8D54AC4FB282CCF4DBABBAA01E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_32ACFEC292C3478D8DEFC2325C7049AA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_33055F1543E349F39A89AABCB06EF0CE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_35B0F6FC2F5E40BF8046D2A0C7A6518F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -221,24 +293,6 @@
         {
         "MsmKey" = "8:_3732317986C6CF56DB7A7EAC9C8D0952"
         "OwnerKey" = "8:_86ED011B261B476D88B7866D571BAE5A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3798C586304B48A2BEFAC7F207AAE56D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3818DAB404B7446E82B3245021381BCE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_397EE8B4481E4F2680186B5FE86DC9A7"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -273,19 +327,37 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3F5D068825CB40F4AB6B11A11376D4B2"
+        "MsmKey" = "8:_3BAF227655C1411BA8E25470221784ED"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_41BF4831E308479583A318CE07764F6B"
+        "MsmKey" = "8:_3D05CA90BDE44C6AA5C25D1FD6EE8BC0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_41EDF0AC75D442319A8C145ADC0EB04B"
+        "MsmKey" = "8:_3E872FF9620A49E7B13F7D0B9BC06D04"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3F2339A94F814D1E86A09E1C50F0E5E6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3F315B99F7394959B91BE449653BC0A9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_433CB295BF2A4A35AC9B99064E44FCD6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -299,12 +371,6 @@
         {
         "MsmKey" = "8:_43B5BFCB454838084EAF100921BEE708"
         "OwnerKey" = "8:_555A23D3FCCBE5E2F802AB802FC706E6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_463F541E6BBE40299D9131BCF702A1B1"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -333,25 +399,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_470C00BA545942448E3D89DA842F5FB0"
+        "MsmKey" = "8:_4888511A89904BA7B584FBE4C3E63CC7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4AB4DAA8CD4A44D5919DAF0B804513AE"
+        "MsmKey" = "8:_48C651CEE872461594181D15EB741FFA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4C2B7BAC4200444D999900F7879318BF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4D056A58ADFC4AC7AD9069C247C9490D"
+        "MsmKey" = "8:_4BF36B06A7CE43538EFDCA0B81FE8BEF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -435,7 +495,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4EE22FD34EB04FFAACF96C3199E6D09F"
+        "MsmKey" = "8:_4E648BA2C3B049B09A5A54E74C5DFA15"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4E982AA22BA54B71BC428F2855020157"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -465,7 +531,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5152ACC2C345447D94ABD7D532BC7CF1"
+        "MsmKey" = "8:_51396CF447664DDEB58A77F778CBC384"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_518ABF0C0F7346A782DE91895A2F4313"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -507,12 +579,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_54B44C08B09E4AE6AF453889D3DA0D75"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_555A23D3FCCBE5E2F802AB802FC706E6"
         "OwnerKey" = "8:_B382CE30D338898A71B03C83F0D177E3"
         "MsmSig" = "8:_UNDEFINED"
@@ -525,25 +591,43 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5A8E3B4417304DE5954C9B5C73B5E1BF"
+        "MsmKey" = "8:_5707DD95B03249A599F4FA054CDB5F6F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5AB4A02E002A415B86443C07BF13D5FA"
+        "MsmKey" = "8:_581E89F8CD2D4B219556323DA1BD80D4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5BE2B59DF3714711903CB854EADF223A"
+        "MsmKey" = "8:_58CD4379C2EB4B2CA3541F7B1F830BE8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5C690EDA00F24B82893C83681FE96609"
+        "MsmKey" = "8:_59821E55089B497A8E8C4213556179C5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B75027492624092AD05C74F3DD919D5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B949748A7DD4F1E9F1B631466FC4A8A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5E7B0B4CEA0B44CC9834237EFDF4DA64"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -567,25 +651,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_609CF1C5907D44F392BDBAD203586FD0"
+        "MsmKey" = "8:_5FB3C904DD544F1BBF38EC25B3C7A4E4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_60C488A222CE4A64A74E3AA44C6B8FE3"
+        "MsmKey" = "8:_660F531536B040158A49335913492DB2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_678B1769CE9F4F67A06008035E620DD5"
+        "MsmKey" = "8:_691C071491C74770A0CCE791708DECC8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6892A25E2A054C02B2A7667B5E676D34"
+        "MsmKey" = "8:_6966B82EE157480EBF9027526B030AD7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_69672C8785A3454293B91D40B8EC4E46"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -609,25 +699,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_69A62111E09242AEB82E8D43080BF3C1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6A4365B36CCC449D906A3392A2D89DCE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6AF584BED601477C880D89936845EEE7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6C4B1434EEB04935BE6CD8362066758D"
+        "MsmKey" = "8:_6B777437BFFA40C1878F467C28723A79"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -645,25 +717,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7046116A45D94828916785DA84F7A35C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_72A2AD83240252628ECFD222E3707710"
         "OwnerKey" = "8:_86ED011B261B476D88B7866D571BAE5A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7496794E2F014999A0A1778EFE5B12BA"
+        "MsmKey" = "8:_749435D2DFCC450BB82154E6AEB25E6D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_759B0FB3F21340E4AC53BF1C0A331204"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_75F01625916E4F53916AB7B6BB21D968"
+        "MsmKey" = "8:_76B02B5BBE3942EC86D2A1A5AC78006B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -687,49 +759,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_79759071A37B4BDDB3B3EF84C58B83D6"
+        "MsmKey" = "8:_79B43EED1542431BA65D7F53F45EB33D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7C09F812394B4C69BEA8FFE4D961B30F"
+        "MsmKey" = "8:_7A93DDCB3E734BBA836A681D53FC798F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7C5919B8591D422880ECF2322A750ACD"
+        "MsmKey" = "8:_7D76895327B647BEAC8E8572F5E10F85"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D1AAE81A219489E89526A17BA135E11"
+        "MsmKey" = "8:_7E5C60075829414DA4CADDA5F8DA5D94"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7E194B48691F4D05BCC197F441A3F7F7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_829B17BB9B374E5DA824E00A4EEC41CA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_83B1A74AB5DB47AA86510D7526B707C2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_859757A20C7C4D23BAFD96BA4C48CDEB"
+        "MsmKey" = "8:_86C1CC270A5D4D0793A05AA19585B348"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -741,25 +795,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_89314BE750EC4028A5832F8717811595"
+        "MsmKey" = "8:_8C71EA234AA64B1FB54499F93FA0AF90"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8CBC36166FC6452BA03234CD08BB1EBE"
+        "MsmKey" = "8:_94EB514DF6AF4AE591853AE7375320F1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8F7B5786651A4F1F8D08288EA2F22602"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_931D729098C34FA9B3442396BE643D92"
+        "MsmKey" = "8:_957ACADE86A24C4D8B38FCF3A1FDD09F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -777,6 +825,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_999133DD358040C19D1074BFF238BC2B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9D4A7D0B64C74155B8CA58B885B89BDD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A19E9BB58A390D645C36329628B950D8"
         "OwnerKey" = "8:_BB9CA6116E27A8C2728BD27F17494964"
         "MsmSig" = "8:_UNDEFINED"
@@ -789,31 +849,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A3B35CE684EC43D09256D7203C56AA48"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A48EBC02DF114E549F031080100C4F2B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A4EBED1641464A9690A3D3841403E295"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A5E497A0F1CE42CBA06F7933717B1C6B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A6405586CA184A369566EF2301729D58"
+        "MsmKey" = "8:_A4252D545AC14F8CA4CD174B9BC36344"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -825,13 +861,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A71BAF599D334824A7ED5B30D5A475B4"
+        "MsmKey" = "8:_A75D6D0857694C739A45AAF14D437429"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A7FA35FD74FE4A6997023045F947AAA3"
+        "MsmKey" = "8:_A80187A81864492EABAA7D5C4A32562C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -855,19 +891,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AAD7FFF1D42C480E950E5CDC4CDBBCFF"
+        "MsmKey" = "8:_AA6EE8C70F2647B0AF1DFFFE915A38C6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AC2B4FEE6DB642B4B8BA2A5C055095BD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AC7E4530F2914F1DA520B7EFDAB58E23"
+        "MsmKey" = "8:_AB37E05DD5E7447098B53FB8EC6D4072"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -879,31 +909,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B0B5FFDC99B24862A7CB4FB0822B78D9"
+        "MsmKey" = "8:_ACA571AA8BE64F9095DC22C0102A2BB6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B112F4FDD54440DD8063DE329169E61F"
+        "MsmKey" = "8:_ACE7EFC5E45F42B48B5084D82AD6B59A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B1636CA098AE4B0B80F095C398A8436C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B1DABD2753C44612B81ED7E6B0C2E5D8"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B1F9B85AC2AF4ECF9FBB29ABCE95F859"
+        "MsmKey" = "8:_AEE3FA75C31141CA928678DDCA5504D7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -921,7 +939,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B33B61AD279B400488C7B3A0E3A492C1"
+        "MsmKey" = "8:_B25D225C332F40478103FF1F33DD1047"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -939,19 +957,43 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B57FCF2B81C84E3090F6A3C46A7232C7"
+        "MsmKey" = "8:_B457D9EF4ADD4378B9EC85729F8A3554"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B6A1E6E3BE474A9CAA4387DD25496428"
+        "MsmKey" = "8:_B57F34BBA2414A8A9D87F6C28699A6A3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B9F746510AA24A5492B64900295516DC"
+        "MsmKey" = "8:_B59BCAE1FCF2459CB4C0BA7EE9A10D8F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B6163D2871444C059DD3289AFF0A5917"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B640DA39BDAB47119DE9EE977BBDEE1D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B75F81A275654197B6D27EC3126B4454"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B7997F893A444FD1A0096A844A299358"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -959,12 +1001,6 @@
         {
         "MsmKey" = "8:_BB9CA6116E27A8C2728BD27F17494964"
         "OwnerKey" = "8:_86ED011B261B476D88B7866D571BAE5A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BC573B4DB8B5411696F8EEDB39DD3055"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -981,43 +1017,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BDFAC8FE71B745179AA4E8CEBED5ED07"
+        "MsmKey" = "8:_C0730BB3790A4118B95462DA7555EDEF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C08F2F44BCBB49A58C8652DC94FE4738"
+        "MsmKey" = "8:_C0AC0D6313224D37A135ACAA8174D128"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C18BE1EF88134D20AD3D8B0E763B01B6"
+        "MsmKey" = "8:_C0CB4A0BF3274CF78369B000E4E7C0FF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C1DE7B4D73F84DA594A0A10E6F0095AB"
+        "MsmKey" = "8:_C3A0FC7761C442B58E5A3CD4E703672E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C2F4871E815C479386652D7394F39B14"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C3850A8B22A34245BBD0FA2EFBBC7E7C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C47D7FD8054D480597E39C4A13682A72"
+        "MsmKey" = "8:_C461F4AAFAF941FB99B8793338B59BB0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1035,61 +1059,61 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C7EBEA55D35A4C5389493029121B9BE1"
+        "MsmKey" = "8:_C7FD27D475AC41DAA3F3284D1DAB3397"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C8CFB4CA16E8490D94BD29894C23FA08"
+        "MsmKey" = "8:_CCC366835AF44A2BB6D61F554C8E106F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CC2E83CE7E1E43039283CD95EBC06D5C"
+        "MsmKey" = "8:_D1B8AC6B8E8C40A894324A969761ABA9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CEF0188979DE4B2BAFE2A9CA40085489"
+        "MsmKey" = "8:_D1CECB4DB6644A3E8F929A79A6230F03"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D0560A7D108D4120BE3A73C39F1F07A3"
+        "MsmKey" = "8:_D32A3859109C4052A1A08E6599E3A78E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D374964526BC4945B095F7B37B3CE732"
+        "MsmKey" = "8:_D4203EACBAE5499BA29673391C571240"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D5E98B32FAAA46F7989A9514B17317DD"
+        "MsmKey" = "8:_D67774209B194A7B9A6C15E8DA312371"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D8FB813703AE407DA8CBC4E9B4CC2007"
+        "MsmKey" = "8:_D733F5C0BC044CAD9CA4BBD2084D165C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D9267507C9FD47F5B2C3CD25705F63B4"
+        "MsmKey" = "8:_D7ABAA856D8E4E4A9559A9E1B59CF5F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D95AF20F3E2E409F8DE87331A97B1C7F"
+        "MsmKey" = "8:_D96814BA29FD4971B8F4B490FA4A1036"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1113,25 +1137,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DC03383C59334FD3AB26C2BD9CAC57DA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DC16ED3345E149F087721E4D9361C2FE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DEA4DD37BE9242EAA445476185F0EA13"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DF56DE37227340D799839EB47364CE07"
+        "MsmKey" = "8:_DDF1A6EC308F48B589117D1F1BB31083"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1179,13 +1185,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E00A5F35C56F46168744177077EAF35F"
+        "MsmKey" = "8:_E2AD83013CF7479FB6070C03CA30819B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E2283BE8D9894919BD82F0795AF785EF"
+        "MsmKey" = "8:_E2DF891732224DD1A3FB03ED028830D0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1209,37 +1215,55 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E6973CAFBE13406B8CD7EFEA5786BA0A"
+        "MsmKey" = "8:_E6B5FA0F8CF64B269A1CCCD50369B346"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EB123CFB7FE146088510B38A5C468965"
+        "MsmKey" = "8:_EC4191A56E944F269E5710A4F56D8FE1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ED1A675D48A74FF7A162D39BC1FAEB05"
+        "MsmKey" = "8:_EE24E61C785C451D81627DB8B5EE5FC8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F18F7D5072CB4B66A2F5EA46F24F8A48"
+        "MsmKey" = "8:_EE66EE0A20F6423693B7FA659064C986"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F2BC393A07AC42D2BFAC8DF5B84F68A7"
+        "MsmKey" = "8:_EF11C0F8C4D34CA8BD178F1056604467"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F5E71A306C93456F97E58EB9581B0284"
+        "MsmKey" = "8:_F003D27302B14456A3A215AC33A6A9B2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F008EDA9DCEC47F886874E015CF3F990"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F01737EF0FE04F7294E9D7F347E9869C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F1288460135B4B2E8A31506E22F1313F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1277,30 +1301,6 @@
         {
         "MsmKey" = "8:_F83071808A46AD4D20567EC609A287B7"
         "OwnerKey" = "8:_86ED011B261B476D88B7866D571BAE5A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F9E0DDF0595041E68673623966FFCF21"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FA327C9B99B94EBDBAB697F9777B4472"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FC6CE64B0B364FE88F9DCECF1FD7AD4B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FDBCD7BBD63B48728CC76AD9D50E0D8A"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1626,10 +1626,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_08804172D72147ADA010B7BF189DF2E5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_00AC3B93478C45ABBB979D0F3BCC09D3"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_wserialization-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_wserialization-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitSmilesParse.dll"
+            "TargetName" = "8:RDKitSmilesParse.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1646,10 +1646,70 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_08EB38F05A094353BBC6A0A8498D717D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_014414ACBEB44BF7BF7BC5D60711C393"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\freetype.dll"
-            "TargetName" = "8:freetype.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\cairo.dll"
+            "TargetName" = "8:cairo.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_01EA8910F66E47DAB2C147D1DEDC1C09"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_timer-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_timer-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_03DC960A7E8940C69DFFA19743EACB2B"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_chrono-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_chrono-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_04A26A63FCCD46D1A008CA156AA8841B"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitForceFieldHelpers.dll"
+            "TargetName" = "8:RDKitForceFieldHelpers.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1697,10 +1757,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0CEB4D21A9EF46D897A340446194D9A6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C944DA48317472D962BFDA01E3FBC8C"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_math_c99-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_math_c99-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_unit_test_framework-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_unit_test_framework-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1748,6 +1808,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E645C76D1CF49059CBB999685C24DAB"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_stacktrace_windbg-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_stacktrace_windbg-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0FDEA2C9212A6B9B6356295D96D349A9"
             {
             "AssemblyRegister" = "3:1"
@@ -1779,10 +1859,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_12D12EE2142B4A35BBD46AB86FC6FFE3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1054136A46FB4E148CA8D586AFB564F2"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_stacktrace_windbg_cached-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_stacktrace_windbg_cached-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitOptimizer.dll"
+            "TargetName" = "8:RDKitOptimizer.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1799,10 +1879,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_13B1ACB6EBF848C3B57812E2F11BDC2D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_10B8ED08327547EE924C9E576DFECCE5"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitTrajectory.dll"
-            "TargetName" = "8:RDKitTrajectory.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\ikvm-native-win32-x86.dll"
+            "TargetName" = "8:ikvm-native-win32-x86.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1819,10 +1899,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14892534727745B2A4E2A21906AE0868"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_122A24E342AF4191A36BFBA936692135"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_chrono-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_chrono-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_program_options-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_program_options-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1839,10 +1919,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_181206EE9C6B4341953293FFB339DE1D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_130A9D723E134D4992BAB9FEC1D70810"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_math_tr1-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_math_tr1-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolEnumerator.dll"
+            "TargetName" = "8:RDKitMolEnumerator.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1859,10 +1939,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19E9C5E0A9A84495965B3C555407C675"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14C67778FB1744F8A5EA019D01C2C9F6"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_coroutine-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_coroutine-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_math_c99-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_math_c99-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1879,10 +1959,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1A4863A3D8BF4DDA9171BBE231FA1B6E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_163666D4EAEB4C5AB2D019246E76F4BB"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_timer-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_timer-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_locale-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_locale-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1899,10 +1979,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1BA8F25A9857417B9412881B55C75D32"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_16E599DC58914A428358152789929AF5"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_atomic-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_atomic-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitDistGeometry.dll"
+            "TargetName" = "8:RDKitDistGeometry.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1919,10 +1999,50 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1DC49C386C4A4E319AF6DEE3CB579B15"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_175F29CF7BDC4351A705782A8C75668B"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitShapeHelpers.dll"
-            "TargetName" = "8:RDKitShapeHelpers.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_math_c99f-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_math_c99f-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_17C81DE658E14B0D8E25733FE36A2970"
+            {
+            "SourcePath" = "8:..\\NCDK-Excel\\bin\\Release\\NCDK-Excel-AddIn.dna"
+            "TargetName" = "8:NCDK-Excel-AddIn.dna"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1CE8B5968A0C41AE86BA060D2B94B197"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\libinchi.dll"
+            "TargetName" = "8:libinchi.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1970,10 +2090,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_234986A139D04F5A94E37A607BFC0C71"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22C247FAB3C3483085145BE0589EB7B7"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_program_options-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_program_options-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitGraphMol.dll"
+            "TargetName" = "8:RDKitGraphMol.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -1990,10 +2110,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24ACBB3CE8954561A869B127F3E225E4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_29458D3E56AE4311A52D8863F8DF022D"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolStandardize.dll"
-            "TargetName" = "8:RDKitMolStandardize.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitmaeparser.dll"
+            "TargetName" = "8:RDKitmaeparser.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2010,10 +2130,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_293FBF54AE454753B72B0B3B03A38A9D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_29AD47425DD540F0A358B70FA01B5F39"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_iostreams-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_iostreams-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_wserialization-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_wserialization-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2030,10 +2150,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_294CB6B482114FB98F351DA271D6B8BC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A91B04C40BC440EBD928C8A9CCDB834"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitReducedGraphs.dll"
-            "TargetName" = "8:RDKitReducedGraphs.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolInterchange.dll"
+            "TargetName" = "8:RDKitMolInterchange.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2050,10 +2170,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E3BA9DA0FB740138B6C4EB969215687"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2AD901F613594D6B937C051A4EF95C0F"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_regex-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_regex-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitInfoTheory.dll"
+            "TargetName" = "8:RDKitInfoTheory.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2070,10 +2190,130 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_30C4031332A244C8A175504A833A43F5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2BCFA22F17BE4357A7FB3B3FC0F0B505"
             {
-            "SourcePath" = "8:..\\NCDK-Excel\\bin\\Release\\NCDK-Excel-AddIn.dna"
-            "TargetName" = "8:NCDK-Excel-AddIn.dna"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitSimDivPickers.dll"
+            "TargetName" = "8:RDKitSimDivPickers.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2C63818CD4D94E269C2C9B7AEF22E291"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_atomic-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_atomic-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E3DE8F98E2B4DFB845396F3B52C3446"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitSLNParse.dll"
+            "TargetName" = "8:RDKitSLNParse.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_327FDB8D54AC4FB282CCF4DBABBAA01E"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitcoordgen.dll"
+            "TargetName" = "8:RDKitcoordgen.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32ACFEC292C3478D8DEFC2325C7049AA"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_zlib-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_zlib-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_33055F1543E349F39A89AABCB06EF0CE"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_math_tr1-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_math_tr1-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_35B0F6FC2F5E40BF8046D2A0C7A6518F"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_context-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_context-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2121,66 +2361,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3798C586304B48A2BEFAC7F207AAE56D"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitChemicalFeatures.dll"
-            "TargetName" = "8:RDKitChemicalFeatures.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3818DAB404B7446E82B3245021381BCE"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitRDInchiLib.dll"
-            "TargetName" = "8:RDKitRDInchiLib.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_397EE8B4481E4F2680186B5FE86DC9A7"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_bzip2-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_bzip2-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3B8DDD5930B82805607C51ABD2EE18A0"
             {
             "AssemblyRegister" = "3:1"
@@ -2212,10 +2392,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F5D068825CB40F4AB6B11A11376D4B2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BAF227655C1411BA8E25470221784ED"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitDeprotect.dll"
-            "TargetName" = "8:RDKitDeprotect.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_math_tr1l-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_math_tr1l-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2232,10 +2412,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_41BF4831E308479583A318CE07764F6B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3D05CA90BDE44C6AA5C25D1FD6EE8BC0"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitDataStructs.dll"
-            "TargetName" = "8:RDKitDataStructs.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitTautomerQuery.dll"
+            "TargetName" = "8:RDKitTautomerQuery.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2252,10 +2432,70 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_41EDF0AC75D442319A8C145ADC0EB04B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E872FF9620A49E7B13F7D0B9BC06D04"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitGraphMol.dll"
-            "TargetName" = "8:RDKitGraphMol.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitRDGeneral.dll"
+            "TargetName" = "8:RDKitRDGeneral.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F2339A94F814D1E86A09E1C50F0E5E6"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitRingDecomposerLib.dll"
+            "TargetName" = "8:RDKitRingDecomposerLib.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F315B99F7394959B91BE449653BC0A9"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_wave-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_wave-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_433CB295BF2A4A35AC9B99064E44FCD6"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitCIPLabeler.dll"
+            "TargetName" = "8:RDKitCIPLabeler.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2303,26 +2543,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_463F541E6BBE40299D9131BCF702A1B1"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitSLNParse.dll"
-            "TargetName" = "8:RDKitSLNParse.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_46573E9D746D8E627DA3EFDCDB82082D"
             {
             "AssemblyRegister" = "3:1"
@@ -2354,10 +2574,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_470C00BA545942448E3D89DA842F5FB0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4888511A89904BA7B584FBE4C3E63CC7"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitAvalonLib.dll"
-            "TargetName" = "8:RDKitAvalonLib.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitO3AAlign.dll"
+            "TargetName" = "8:RDKitO3AAlign.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2374,10 +2594,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4AB4DAA8CD4A44D5919DAF0B804513AE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48C651CEE872461594181D15EB741FFA"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolCatalog.dll"
-            "TargetName" = "8:RDKitMolCatalog.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitDepictor.dll"
+            "TargetName" = "8:RDKitDepictor.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2394,30 +2614,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C2B7BAC4200444D999900F7879318BF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4BF36B06A7CE43538EFDCA0B81FE8BEF"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitRDStreams.dll"
-            "TargetName" = "8:RDKitRDStreams.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4D056A58ADFC4AC7AD9069C247C9490D"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitFilterCatalog.dll"
-            "TargetName" = "8:RDKitFilterCatalog.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_iostreams-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_iostreams-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2465,10 +2665,30 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4EE22FD34EB04FFAACF96C3199E6D09F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E648BA2C3B049B09A5A54E74C5DFA15"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitScaffoldNetwork.dll"
-            "TargetName" = "8:RDKitScaffoldNetwork.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_graph-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_graph-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E982AA22BA54B71BC428F2855020157"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\freetype.dll"
+            "TargetName" = "8:freetype.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2547,10 +2767,30 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5152ACC2C345447D94ABD7D532BC7CF1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_51396CF447664DDEB58A77F778CBC384"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_container-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_container-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitDataStructs.dll"
+            "TargetName" = "8:RDKitDataStructs.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_518ABF0C0F7346A782DE91895A2F4313"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_regex-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_regex-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2598,26 +2838,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_54B44C08B09E4AE6AF453889D3DA0D75"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitTautomerQuery.dll"
-            "TargetName" = "8:RDKitTautomerQuery.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_555A23D3FCCBE5E2F802AB802FC706E6"
             {
             "AssemblyRegister" = "3:1"
@@ -2649,10 +2869,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A8E3B4417304DE5954C9B5C73B5E1BF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5707DD95B03249A599F4FA054CDB5F6F"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitFileParsers.dll"
-            "TargetName" = "8:RDKitFileParsers.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_prg_exec_monitor-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_prg_exec_monitor-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2669,10 +2889,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5AB4A02E002A415B86443C07BF13D5FA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_581E89F8CD2D4B219556323DA1BD80D4"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitDescriptors.dll"
-            "TargetName" = "8:RDKitDescriptors.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_container-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_container-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2689,10 +2909,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5BE2B59DF3714711903CB854EADF223A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_58CD4379C2EB4B2CA3541F7B1F830BE8"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitSimDivPickers.dll"
-            "TargetName" = "8:RDKitSimDivPickers.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitAlignment.dll"
+            "TargetName" = "8:RDKitAlignment.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2709,10 +2929,70 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5C690EDA00F24B82893C83681FE96609"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59821E55089B497A8E8C4213556179C5"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_thread-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_thread-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitSubstructMatch.dll"
+            "TargetName" = "8:RDKitSubstructMatch.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B75027492624092AD05C74F3DD919D5"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_stacktrace_noop-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_stacktrace_noop-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B949748A7DD4F1E9F1B631466FC4A8A"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolStandardize.dll"
+            "TargetName" = "8:RDKitMolStandardize.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E7B0B4CEA0B44CC9834237EFDF4DA64"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitCatalogs.dll"
+            "TargetName" = "8:RDKitCatalogs.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2760,10 +3040,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_609CF1C5907D44F392BDBAD203586FD0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FB3C904DD544F1BBF38EC25B3C7A4E4"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitRingDecomposerLib.dll"
-            "TargetName" = "8:RDKitRingDecomposerLib.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolCatalog.dll"
+            "TargetName" = "8:RDKitMolCatalog.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2780,10 +3060,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_60C488A222CE4A64A74E3AA44C6B8FE3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_660F531536B040158A49335913492DB2"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_graph-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_graph-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolTransforms.dll"
+            "TargetName" = "8:RDKitMolTransforms.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2800,30 +3080,50 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_678B1769CE9F4F67A06008035E620DD5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_691C071491C74770A0CCE791708DECC8"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_nowide-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitFingerprints.dll"
+            "TargetName" = "8:RDKitFingerprints.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6966B82EE157480EBF9027526B030AD7"
+            {
+            "SourcePath" = "8:..\\NCDK-Excel\\bin\\Release\\NCDK-Excel-AddIn.xll"
+            "TargetName" = "8:NCDK-Excel-AddIn.xll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69672C8785A3454293B91D40B8EC4E46"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_nowide-vc142-mt-x32-1_74.dll"
             "TargetName" = "8:boost_nowide-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6892A25E2A054C02B2A7667B5E676D34"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.dll.manifest"
-            "TargetName" = "8:NCDK-ExcelAddIn.dll.manifest"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2847,11 +3147,6 @@
             "AssemblyAsmDisplayName" = "8:RDKit2DotNet, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_696FC7C511533B287E920883AC4F53BB"
-                    {
-                    "Name" = "8:RDKit2DotNet.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:RDKit2DotNet.dll"
             "TargetName" = "8:"
@@ -2871,70 +3166,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69A62111E09242AEB82E8D43080BF3C1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B777437BFFA40C1878F467C28723A79"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitForceFieldHelpers.dll"
-            "TargetName" = "8:RDKitForceFieldHelpers.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A4365B36CCC449D906A3392A2D89DCE"
-            {
-            "SourcePath" = "8:..\\NCDK-Excel\\bin\\Release\\NCDK-Excel-AddIn.xll.config"
-            "TargetName" = "8:NCDK-Excel-AddIn.xll.config"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AF584BED601477C880D89936845EEE7"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitCatalogs.dll"
-            "TargetName" = "8:RDKitCatalogs.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C4B1434EEB04935BE6CD8362066758D"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\libinchi.dll"
-            "TargetName" = "8:libinchi.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolChemicalFeatures.dll"
+            "TargetName" = "8:RDKitMolChemicalFeatures.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -2982,6 +3217,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7046116A45D94828916785DA84F7A35C"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitTrajectory.dll"
+            "TargetName" = "8:RDKitTrajectory.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_72A2AD83240252628ECFD222E3707710"
             {
             "AssemblyRegister" = "3:1"
@@ -3013,10 +3268,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7496794E2F014999A0A1778EFE5B12BA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_749435D2DFCC450BB82154E6AEB25E6D"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitInfoTheory.dll"
-            "TargetName" = "8:RDKitInfoTheory.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitForceField.dll"
+            "TargetName" = "8:RDKitForceField.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3033,30 +3288,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_759B0FB3F21340E4AC53BF1C0A331204"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76B02B5BBE3942EC86D2A1A5AC78006B"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_filesystem-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_filesystem-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_75F01625916E4F53916AB7B6BB21D968"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_serialization-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_serialization-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_math_tr1f-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_math_tr1f-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3104,10 +3339,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79759071A37B4BDDB3B3EF84C58B83D6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79B43EED1542431BA65D7F53F45EB33D"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitSubgraphs.dll"
-            "TargetName" = "8:RDKitSubgraphs.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\libpng16.dll"
+            "TargetName" = "8:libpng16.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3124,10 +3359,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C09F812394B4C69BEA8FFE4D961B30F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7A93DDCB3E734BBA836A681D53FC798F"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_math_tr1l-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_math_tr1l-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.dll.config"
+            "TargetName" = "8:NCDK-ExcelAddIn.dll.config"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3144,10 +3379,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C5919B8591D422880ECF2322A750ACD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D76895327B647BEAC8E8572F5E10F85"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_system-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_system-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKFuncs.dll"
+            "TargetName" = "8:RDKFuncs.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3164,10 +3399,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D1AAE81A219489E89526A17BA135E11"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7E5C60075829414DA4CADDA5F8DA5D94"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitcoordgen.dll"
-            "TargetName" = "8:RDKitcoordgen.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\zlib.dll"
+            "TargetName" = "8:zlib.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3184,10 +3419,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7E194B48691F4D05BCC197F441A3F7F7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_86C1CC270A5D4D0793A05AA19585B348"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_context-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_context-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_thread-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_thread-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3204,10 +3439,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_829B17BB9B374E5DA824E00A4EEC41CA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C71EA234AA64B1FB54499F93FA0AF90"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\cairo.dll"
-            "TargetName" = "8:cairo.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_log-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_log-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3224,10 +3459,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83B1A74AB5DB47AA86510D7526B707C2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_94EB514DF6AF4AE591853AE7375320F1"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_contract-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_contract-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitFMCS.dll"
+            "TargetName" = "8:RDKitFMCS.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3244,90 +3479,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_859757A20C7C4D23BAFD96BA4C48CDEB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_957ACADE86A24C4D8B38FCF3A1FDD09F"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolTransforms.dll"
-            "TargetName" = "8:RDKitMolTransforms.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_89314BE750EC4028A5832F8717811595"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitRGroupDecomposition.dll"
-            "TargetName" = "8:RDKitRGroupDecomposition.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8CBC36166FC6452BA03234CD08BB1EBE"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitFragCatalog.dll"
-            "TargetName" = "8:RDKitFragCatalog.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8F7B5786651A4F1F8D08288EA2F22602"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_math_c99f-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_math_c99f-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_931D729098C34FA9B3442396BE643D92"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_stacktrace_noop-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_stacktrace_noop-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitChemReactions.dll"
+            "TargetName" = "8:RDKitChemReactions.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3375,6 +3530,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_999133DD358040C19D1074BFF238BC2B"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_system-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_system-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D4A7D0B64C74155B8CA58B885B89BDD"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.vsto"
+            "TargetName" = "8:NCDK-ExcelAddIn.vsto"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A19E9BB58A390D645C36329628B950D8"
             {
             "AssemblyRegister" = "3:1"
@@ -3406,90 +3601,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3B35CE684EC43D09256D7203C56AA48"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A4252D545AC14F8CA4CD174B9BC36344"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_stacktrace_windbg-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_stacktrace_windbg-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A48EBC02DF114E549F031080100C4F2B"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_date_time-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_date_time-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A4EBED1641464A9690A3D3841403E295"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKithc.dll"
-            "TargetName" = "8:RDKithc.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A5E497A0F1CE42CBA06F7933717B1C6B"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_math_c99l-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_math_c99l-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A6405586CA184A369566EF2301729D58"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolDraw2D.dll"
-            "TargetName" = "8:RDKitMolDraw2D.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitDescriptors.dll"
+            "TargetName" = "8:RDKitDescriptors.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3537,10 +3652,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A71BAF599D334824A7ED5B30D5A475B4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A75D6D0857694C739A45AAF14D437429"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitFingerprints.dll"
-            "TargetName" = "8:RDKitFingerprints.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.dll.manifest"
+            "TargetName" = "8:NCDK-ExcelAddIn.dll.manifest"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3557,10 +3672,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7FA35FD74FE4A6997023045F947AAA3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A80187A81864492EABAA7D5C4A32562C"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitAlignment.dll"
-            "TargetName" = "8:RDKitAlignment.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_bzip2-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_bzip2-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3608,10 +3723,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AAD7FFF1D42C480E950E5CDC4CDBBCFF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA6EE8C70F2647B0AF1DFFFE915A38C6"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolEnumerator.dll"
-            "TargetName" = "8:RDKitMolEnumerator.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitFilterCatalog.dll"
+            "TargetName" = "8:RDKitFilterCatalog.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3628,30 +3743,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC2B4FEE6DB642B4B8BA2A5C055095BD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB37E05DD5E7447098B53FB8EC6D4072"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitDistGeometry.dll"
-            "TargetName" = "8:RDKitDistGeometry.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC7E4530F2914F1DA520B7EFDAB58E23"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolAlign.dll"
-            "TargetName" = "8:RDKitMolAlign.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\pixman.dll"
+            "TargetName" = "8:pixman.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3699,10 +3794,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B0B5FFDC99B24862A7CB4FB0822B78D9"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ACA571AA8BE64F9095DC22C0102A2BB6"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolInterchange.dll"
-            "TargetName" = "8:RDKitMolInterchange.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolAlign.dll"
+            "TargetName" = "8:RDKitMolAlign.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3719,10 +3814,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B112F4FDD54440DD8063DE329169E61F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ACE7EFC5E45F42B48B5084D82AD6B59A"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_math_tr1f-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_math_tr1f-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitSubstructLibrary.dll"
+            "TargetName" = "8:RDKitSubstructLibrary.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3739,50 +3834,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B1636CA098AE4B0B80F095C398A8436C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AEE3FA75C31141CA928678DDCA5504D7"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitavalon_clib.dll"
-            "TargetName" = "8:RDKitavalon_clib.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B1DABD2753C44612B81ED7E6B0C2E5D8"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitSmilesParse.dll"
-            "TargetName" = "8:RDKitSmilesParse.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B1F9B85AC2AF4ECF9FBB29ABCE95F859"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitDepictor.dll"
-            "TargetName" = "8:RDKitDepictor.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolDraw2D.dll"
+            "TargetName" = "8:RDKitMolDraw2D.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3830,10 +3885,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B33B61AD279B400488C7B3A0E3A492C1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B25D225C332F40478103FF1F33DD1047"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitInchi.dll"
-            "TargetName" = "8:RDKitInchi.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitDeprotect.dll"
+            "TargetName" = "8:RDKitDeprotect.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3881,10 +3936,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B57FCF2B81C84E3090F6A3C46A7232C7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B457D9EF4ADD4378B9EC85729F8A3554"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitRDGeneral.dll"
-            "TargetName" = "8:RDKitRDGeneral.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitReducedGraphs.dll"
+            "TargetName" = "8:RDKitReducedGraphs.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3901,10 +3956,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6A1E6E3BE474A9CAA4387DD25496428"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B57F34BBA2414A8A9D87F6C28699A6A3"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitSubstructLibrary.dll"
-            "TargetName" = "8:RDKitSubstructLibrary.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitChemTransforms.dll"
+            "TargetName" = "8:RDKitChemTransforms.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3921,10 +3976,90 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B9F746510AA24A5492B64900295516DC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B59BCAE1FCF2459CB4C0BA7EE9A10D8F"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitCIPLabeler.dll"
-            "TargetName" = "8:RDKitCIPLabeler.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_stacktrace_windbg_cached-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_stacktrace_windbg_cached-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6163D2871444C059DD3289AFF0A5917"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_type_erasure-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_type_erasure-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B640DA39BDAB47119DE9EE977BBDEE1D"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitRDGeometryLib.dll"
+            "TargetName" = "8:RDKitRDGeometryLib.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B75F81A275654197B6D27EC3126B4454"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitEigenSolvers.dll"
+            "TargetName" = "8:RDKitEigenSolvers.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B7997F893A444FD1A0096A844A299358"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitRDInchiLib.dll"
+            "TargetName" = "8:RDKitRDInchiLib.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -3972,26 +4107,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC573B4DB8B5411696F8EEDB39DD3055"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitEigenSolvers.dll"
-            "TargetName" = "8:RDKitEigenSolvers.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BC757236EF9863EE37196BA637FC743D"
             {
             "AssemblyRegister" = "3:1"
@@ -4023,10 +4138,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BDFAC8FE71B745179AA4E8CEBED5ED07"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0730BB3790A4118B95462DA7555EDEF"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitFMCS.dll"
-            "TargetName" = "8:RDKitFMCS.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitRGroupDecomposition.dll"
+            "TargetName" = "8:RDKitRGroupDecomposition.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4043,10 +4158,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C08F2F44BCBB49A58C8652DC94FE4738"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0AC0D6313224D37A135ACAA8174D128"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\pixman.dll"
-            "TargetName" = "8:pixman.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitSubgraphs.dll"
+            "TargetName" = "8:RDKitSubgraphs.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4063,10 +4178,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C18BE1EF88134D20AD3D8B0E763B01B6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0CB4A0BF3274CF78369B000E4E7C0FF"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMMPA.dll"
-            "TargetName" = "8:RDKitMMPA.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_coroutine-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_coroutine-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4083,10 +4198,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C1DE7B4D73F84DA594A0A10E6F0095AB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3A0FC7761C442B58E5A3CD4E703672E"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.dll.config"
-            "TargetName" = "8:NCDK-ExcelAddIn.dll.config"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitAvalonLib.dll"
+            "TargetName" = "8:RDKitAvalonLib.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4103,50 +4218,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2F4871E815C479386652D7394F39B14"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C461F4AAFAF941FB99B8793338B59BB0"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitForceField.dll"
-            "TargetName" = "8:RDKitForceField.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3850A8B22A34245BBD0FA2EFBBC7E7C"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\zlib.dll"
-            "TargetName" = "8:zlib.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C47D7FD8054D480597E39C4A13682A72"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitOptimizer.dll"
-            "TargetName" = "8:RDKitOptimizer.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_random-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_random-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4194,10 +4269,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C7EBEA55D35A4C5389493029121B9BE1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C7FD27D475AC41DAA3F3284D1DAB3397"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_fiber-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_fiber-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitInchi.dll"
+            "TargetName" = "8:RDKitInchi.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4214,10 +4289,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C8CFB4CA16E8490D94BD29894C23FA08"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CCC366835AF44A2BB6D61F554C8E106F"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_log-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_log-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitRDStreams.dll"
+            "TargetName" = "8:RDKitRDStreams.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4234,10 +4309,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CC2E83CE7E1E43039283CD95EBC06D5C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D1B8AC6B8E8C40A894324A969761ABA9"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitRDGeometryLib.dll"
-            "TargetName" = "8:RDKitRDGeometryLib.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitScaffoldNetwork.dll"
+            "TargetName" = "8:RDKitScaffoldNetwork.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4254,130 +4329,130 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CEF0188979DE4B2BAFE2A9CA40085489"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D1CECB4DB6644A3E8F929A79A6230F03"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitAbbreviations.dll"
-            "TargetName" = "8:RDKitAbbreviations.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D0560A7D108D4120BE3A73C39F1F07A3"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\libpng16.dll"
-            "TargetName" = "8:libpng16.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D374964526BC4945B095F7B37B3CE732"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_zlib-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_zlib-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D5E98B32FAAA46F7989A9514B17317DD"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_wave-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_wave-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8FB813703AE407DA8CBC4E9B4CC2007"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolHash.dll"
-            "TargetName" = "8:RDKitMolHash.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D9267507C9FD47F5B2C3CD25705F63B4"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitChemTransforms.dll"
-            "TargetName" = "8:RDKitChemTransforms.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D95AF20F3E2E409F8DE87331A97B1C7F"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitPartialCharges.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitPartialCharges.dll"
             "TargetName" = "8:RDKitPartialCharges.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D32A3859109C4052A1A08E6599E3A78E"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMMPA.dll"
+            "TargetName" = "8:RDKitMMPA.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D4203EACBAE5499BA29673391C571240"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_date_time-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_date_time-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D67774209B194A7B9A6C15E8DA312371"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_serialization-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_serialization-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D733F5C0BC044CAD9CA4BBD2084D165C"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitChemicalFeatures.dll"
+            "TargetName" = "8:RDKitChemicalFeatures.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7ABAA856D8E4E4A9559A9E1B59CF5F6"
+            {
+            "SourcePath" = "8:..\\NCDK-Excel\\bin\\Release\\NCDK-Excel-AddIn.xll.config"
+            "TargetName" = "8:NCDK-Excel-AddIn.xll.config"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D96814BA29FD4971B8F4B490FA4A1036"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_filesystem-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_filesystem-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4425,70 +4500,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DC03383C59334FD3AB26C2BD9CAC57DA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DDF1A6EC308F48B589117D1F1BB31083"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitMolChemicalFeatures.dll"
-            "TargetName" = "8:RDKitMolChemicalFeatures.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DC16ED3345E149F087721E4D9361C2FE"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitDistGeomHelpers.dll"
-            "TargetName" = "8:RDKitDistGeomHelpers.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DEA4DD37BE9242EAA445476185F0EA13"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKFuncs.dll"
-            "TargetName" = "8:RDKFuncs.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF56DE37227340D799839EB47364CE07"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitChemReactions.dll"
-            "TargetName" = "8:RDKitChemReactions.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitShapeHelpers.dll"
+            "TargetName" = "8:RDKitShapeHelpers.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4536,10 +4551,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E00A5F35C56F46168744177077EAF35F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2AD83013CF7479FB6070C03CA30819B"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitO3AAlign.dll"
-            "TargetName" = "8:RDKitO3AAlign.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitAbbreviations.dll"
+            "TargetName" = "8:RDKitAbbreviations.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4556,10 +4571,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2283BE8D9894919BD82F0795AF785EF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2DF891732224DD1A3FB03ED028830D0"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitmaeparser.dll"
-            "TargetName" = "8:RDKitmaeparser.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_contract-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_contract-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4607,9 +4622,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6973CAFBE13406B8CD7EFEA5786BA0A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6B5FA0F8CF64B269A1CCCD50369B346"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_log_setup-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_log_setup-vc142-mt-x32-1_74.dll"
             "TargetName" = "8:boost_log_setup-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
@@ -4627,10 +4642,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EB123CFB7FE146088510B38A5C468965"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC4191A56E944F269E5710A4F56D8FE1"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_unit_test_framework-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_unit_test_framework-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitavalon_clib.dll"
+            "TargetName" = "8:RDKitavalon_clib.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4647,10 +4662,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED1A675D48A74FF7A162D39BC1FAEB05"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE24E61C785C451D81627DB8B5EE5FC8"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_type_erasure-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_type_erasure-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_fiber-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_fiber-vc142-mt-x32-1_74.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4667,10 +4682,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F18F7D5072CB4B66A2F5EA46F24F8A48"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE66EE0A20F6423693B7FA659064C986"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\NCDK-ExcelAddIn.vsto"
-            "TargetName" = "8:NCDK-ExcelAddIn.vsto"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitFragCatalog.dll"
+            "TargetName" = "8:RDKitFragCatalog.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4687,10 +4702,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2BC393A07AC42D2BFAC8DF5B84F68A7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF11C0F8C4D34CA8BD178F1056604467"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_locale-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_locale-vc142-mt-x32-1_74.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitMolHash.dll"
+            "TargetName" = "8:RDKitMolHash.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4707,10 +4722,70 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5E71A306C93456F97E58EB9581B0284"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F003D27302B14456A3A215AC33A6A9B2"
             {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\ikvm-native-win32-x86.dll"
-            "TargetName" = "8:ikvm-native-win32-x86.dll"
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitFileParsers.dll"
+            "TargetName" = "8:RDKitFileParsers.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F008EDA9DCEC47F886874E015CF3F990"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKitDistGeomHelpers.dll"
+            "TargetName" = "8:RDKitDistGeomHelpers.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F01737EF0FE04F7294E9D7F347E9869C"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\boost_math_c99l-vc142-mt-x32-1_74.dll"
+            "TargetName" = "8:boost_math_c99l-vc142-mt-x32-1_74.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F1288460135B4B2E8A31506E22F1313F"
+            {
+            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\runtimes\\win-x86\\native\\RDKithc.dll"
+            "TargetName" = "8:RDKithc.dll"
             "Tag" = "8:"
             "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
             "Condition" = "8:"
@@ -4787,86 +4862,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F9E0DDF0595041E68673623966FFCF21"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_prg_exec_monitor-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_prg_exec_monitor-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA327C9B99B94EBDBAB697F9777B4472"
-            {
-            "SourcePath" = "8:..\\NCDK-Excel\\bin\\Release\\NCDK-Excel-AddIn.xll"
-            "TargetName" = "8:NCDK-Excel-AddIn.xll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC6CE64B0B364FE88F9DCECF1FD7AD4B"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\RDKitSubstructMatch.dll"
-            "TargetName" = "8:RDKitSubstructMatch.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FDBCD7BBD63B48728CC76AD9D50E0D8A"
-            {
-            "SourcePath" = "8:..\\NCDK-ExcelAddIn\\bin\\Release\\x86\\boost_random-vc142-mt-x32-1_74.dll"
-            "TargetName" = "8:boost_random-vc142-mt-x32-1_74.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_FCBFD4E412374AB1A2FB0EB275796316"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FFF94F2E4426E64EDC3B5A69B8E05ECB"
@@ -4956,15 +4951,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCDK-Excel"
-        "ProductCode" = "8:{9690F2EA-D38F-47D0-9CBF-DC81D4B4AD49}"
-        "PackageCode" = "8:{97E14852-C44F-47B7-B039-10B60066F3E3}"
+        "ProductCode" = "8:{E57A0BA0-B408-48B1-A9E0-47205E00ACB2}"
+        "PackageCode" = "8:{DDF30AB1-118A-40C8-A01E-A4D4C9C86179}"
         "UpgradeCode" = "8:{C900104A-9916-4EE4-B842-EDF81D08BF50}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.1.0"
+        "ProductVersion" = "8:0.1.1"
         "Manufacturer" = "8:Kazuya Ujihara"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/kazuyaujihara/NCDK-Excel"
@@ -5178,7 +5173,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_0EAD431C2D9B4863812880F3B806700E"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:進行状況"
+                    "DisplayName" = "8:Progress"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminProgressDlg.wid"
@@ -5234,7 +5229,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_00062A8FC81A4054896D338F0AF31B0F"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:インストール フォルダー"
+                    "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFolderDlg.wid"
@@ -5256,7 +5251,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_868B2AEE2E4A43AC89CDC64414DA504A"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:ようこそ"
+                    "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminWelcomeDlg.wid"
@@ -5304,7 +5299,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_9A7F5E9587CD40AAB619F53EA6D77FEA"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:インストールの確認"
+                    "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminConfirmDlg.wid"
@@ -5335,7 +5330,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_5DD7CC2054B944DB8846C371E0D26560"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:完了"
+                    "DisplayName" = "8:Finished"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFinishedDlg.wid"
@@ -5379,7 +5374,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_CE82572620B642B6BAC672FF84C76D8F"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:進行状況"
+                    "DisplayName" = "8:Progress"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdProgressDlg.wid"
@@ -5423,7 +5418,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_3021E44E110647528D8ABE3E5628699F"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:ようこそ"
+                    "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdWelcomeDlg.wid"
@@ -5471,7 +5466,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_5ED0D37F691E4094BEE3DBA2FF9099DC"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:インストール フォルダー"
+                    "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"
@@ -5506,7 +5501,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_C91BFF2D288749A0912F6D99DA1ABDEE"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:インストールの確認"
+                    "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdConfirmDlg.wid"
@@ -5537,7 +5532,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_6E9B7B6C8D1340F1A2B01EA2E4943FEB"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:完了"
+                    "DisplayName" = "8:Finished"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFinishedDlg.wid"

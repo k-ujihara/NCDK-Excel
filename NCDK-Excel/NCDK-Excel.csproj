@@ -143,8 +143,8 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RDKit2DotNet, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
-      <HintPath>..\packages\RDKit.DotNetWrap.0.2020093.3\lib\net40\RDKit2DotNet.dll</HintPath>
+    <Reference Include="RDKit2DotNet, Version=0.2009.3.4, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2020093.4\lib\net40\RDKit2DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -224,11 +224,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets'))" />
     <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
-    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020093.3\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020093.3\build\RDKit.DotNetWrap.targets'))" />
     <Error Condition="!Exists('..\packages\OPSIN.2.5.0.2\build\Opsin.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OPSIN.2.5.0.2\build\Opsin.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets'))" />
   </Target>
   <Import Project="..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets" Condition="Exists('..\packages\ExcelDna.AddIn.1.1.1\build\ExcelDna.AddIn.targets')" />
   <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
-  <Import Project="..\packages\RDKit.DotNetWrap.0.2020093.3\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020093.3\build\RDKit.DotNetWrap.targets')" />
   <Import Project="..\packages\OPSIN.2.5.0.2\build\Opsin.targets" Condition="Exists('..\packages\OPSIN.2.5.0.2\build\Opsin.targets')" />
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets')" />
 </Project>
