@@ -59,6 +59,10 @@ namespace NCDK_ExcelAddIn
             if (mol == null)
                 mol = Chem.MolFromSmarts(text);
             if (mol == null)
+                mol = Chem.MolFromMolBlock(text);
+            if (mol == null)
+                mol = Chem.MolFromInchi(text);
+            if (mol == null)
                 return null;
 
             var tempFile = new TempFile("." + Config.ImageType);

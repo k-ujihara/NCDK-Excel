@@ -8,7 +8,6 @@ NCDK	AutocorrelationCharge	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationD
 NCDK	AutocorrelationMass	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorMass()	DescriptorValue_double[]	Calculate				Returns the autocorrelation mass.
 NCDK	AutocorrelationPolarizability	new NCDK.QSAR.Descriptors.Moleculars.AutocorrelationDescriptorPolarizability()	DescriptorValue_double[]	Calculate				Returns the autocorrelation polarizability.
 NCDK	BasicGroupCount	new NCDK.QSAR.Descriptors.Moleculars.BasicGroupCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of basic groups.
-NCDK	BCUT	new NCDK.QSAR.Descriptors.Moleculars.BCUTDescriptor()	DescriptorValue_double[]	Calculate				Returns the BCUT.
 NCDK	BondCount	new NCDK.QSAR.Descriptors.Moleculars.BondCountDescriptor()	DescriptorValue_int	Calculate				Returns the number of bonds.
 NCDK	BPol	new NCDK.QSAR.Descriptors.Moleculars.BPolDescriptor()	DescriptorValue_double	Calculate				Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule.
 NCDK	CarbonTypes	new NCDK.QSAR.Descriptors.Moleculars.CarbonTypesDescriptor()	DescriptorValue_int[]	Calculate				Returns the topological descriptor characterizing the carbon connectivity. 
@@ -68,58 +67,58 @@ NCDK	MACCSFingerprint	new NCDK.Fingerprints.MACCSFingerprinter()	IBitFingerprint
 NCDK	ShortestPathFingerprint	new NCDK.Fingerprints.ShortestPathFingerprinter()	IBitFingerprint	GetBitFingerprint	AtomContainerManipulator.PercieveAtomTypesAndConfigureAtoms(mol);			Returns the ShortestPath.
 NCDK	SubstructureFingerprint	new NCDK.Fingerprints.SubstructureFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the Substructure.
 NCDK	PubchemFingerprint	new NCDK.Fingerprints.PubchemFingerprinter()	IBitFingerprint	GetBitFingerprint				Returns the Pubchem fingerprint.
-RDKit	MACCSKeysFingerprint	RDKit.Descriptors	ExplicitBitVect	GetMACCSKeysFingerprint			TRUE	Returns the MACCSKeys fingerprint.
+RDKit	MACCSKeysFingerprint	RDKit.Chem	ExplicitBitVect	GetMACCSKeysFingerprint			TRUE	Returns the MACCSKeys fingerprint.
 RDKit	LayeredFingerprint	RDKit.Chem	ExplicitBitVect	LayeredFingerprint			TRUE	Returns the Layered fingerprint.
-RDKit	HashedAtomPairFingerprint	RDKit.Descriptors	ExplicitBitVect	GetHashedAtomPairFingerprintAsBitVect			TRUE	Returns the HashedAtomPair fingerprint.
-RDKit	HashedTopologicalTorsionFingerprint	RDKit.Descriptors	ExplicitBitVect	GetHashedTopologicalTorsionFingerprintAsBitVect			TRUE	Returns the HashedTopologicalTorsion fingerprint.
+RDKit	HashedAtomPairFingerprint	RDKit.Chem	ExplicitBitVect	GetHashedAtomPairFingerprintAsBitVect			TRUE	Returns the HashedAtomPair fingerprint.
+RDKit	HashedTopologicalTorsionFingerprint	RDKit.Chem	ExplicitBitVect	GetHashedTopologicalTorsionFingerprintAsBitVect			TRUE	Returns the HashedTopologicalTorsion fingerprint.
 RDKit	PatternFingerprint	RDKit.Chem	ExplicitBitVect	PatternFingerprint			TRUE	Returns the Pattern fingerprint.
 RDKit	RDKFingerprint	RDKit.Chem	ExplicitBitVect	RDKFingerprint			TRUE	Returns the RDK fingerprint.
-RDKit	AtomPairFingerprint	RDKit.Descriptors	SparseIntVect32	GetAtomPairFingerprint			TRUE	Returns the AtomPair fingerprint.
-RDKit	TopologicalTorsionFingerprint	RDKit.Descriptors	SparseIntVect64	GetTopologicalTorsionFingerprint			TRUE	Returns the TopologicalTorsion fingerprint.
-RDKit	Chi0n	RDKit.Descriptors	double	CalcChi0n			TRUE	Returns Chi0n.
-RDKit	Chi0v	RDKit.Descriptors	double	CalcChi0v			TRUE	Returns Chi0v.
-RDKit	Chi1n	RDKit.Descriptors	double	CalcChi1n			TRUE	Returns Chi1n.
-RDKit	Chi1v	RDKit.Descriptors	double	CalcChi1v			TRUE	Returns Chi1v.
-RDKit	Chi2n	RDKit.Descriptors	double	CalcChi2n			TRUE	Returns Chi2n.
-RDKit	Chi2v	RDKit.Descriptors	double	CalcChi2v			TRUE	Returns Chi2v.
-RDKit	Chi3n	RDKit.Descriptors	double	CalcChi3n			TRUE	Returns Chi3n.
-RDKit	Chi3v	RDKit.Descriptors	double	CalcChi3v			TRUE	Returns Chi3v.
-RDKit	Chi4n	RDKit.Descriptors	double	CalcChi4n			TRUE	Returns Chi4n.
-RDKit	Chi4v	RDKit.Descriptors	double	CalcChi4v			TRUE	Returns Chi4v.
-RDKit	Kappa1	RDKit.Descriptors	double	CalcKappa1			TRUE	Returns Kappa1.
-RDKit	Kappa2	RDKit.Descriptors	double	CalcKappa2			TRUE	Returns Kappa2.
-RDKit	Kappa3	RDKit.Descriptors	double	CalcKappa3			TRUE	Returns Kappa3.
-RDKit	LabuteASA	RDKit.Descriptors	double	CalcLabuteASA			TRUE	Returns LabuteASA.
+RDKit	AtomPairFingerprint	RDKit.Chem	SparseIntVect32	GetAtomPairFingerprint			TRUE	Returns the AtomPair fingerprint.
+RDKit	TopologicalTorsionFingerprint	RDKit.Chem	SparseIntVect64	GetTopologicalTorsionFingerprint			TRUE	Returns the TopologicalTorsion fingerprint.
+RDKit	Chi0n	RDKit.Chem	double	CalcChi0n			TRUE	Returns Chi0n.
+RDKit	Chi0v	RDKit.Chem	double	CalcChi0v			TRUE	Returns Chi0v.
+RDKit	Chi1n	RDKit.Chem	double	CalcChi1n			TRUE	Returns Chi1n.
+RDKit	Chi1v	RDKit.Chem	double	CalcChi1v			TRUE	Returns Chi1v.
+RDKit	Chi2n	RDKit.Chem	double	CalcChi2n			TRUE	Returns Chi2n.
+RDKit	Chi2v	RDKit.Chem	double	CalcChi2v			TRUE	Returns Chi2v.
+RDKit	Chi3n	RDKit.Chem	double	CalcChi3n			TRUE	Returns Chi3n.
+RDKit	Chi3v	RDKit.Chem	double	CalcChi3v			TRUE	Returns Chi3v.
+RDKit	Chi4n	RDKit.Chem	double	CalcChi4n			TRUE	Returns Chi4n.
+RDKit	Chi4v	RDKit.Chem	double	CalcChi4v			TRUE	Returns Chi4v.
+RDKit	Kappa1	RDKit.Chem	double	CalcKappa1			TRUE	Returns Kappa1.
+RDKit	Kappa2	RDKit.Chem	double	CalcKappa2			TRUE	Returns Kappa2.
+RDKit	Kappa3	RDKit.Chem	double	CalcKappa3			TRUE	Returns Kappa3.
+RDKit	LabuteASA	RDKit.Chem	double	CalcLabuteASA			TRUE	Returns LabuteASA.
 RDKit	MolLogP	RDKit.Chem.Crippen	double	MolLogP			TRUE	Returns MolLogP.
 RDKit	MolMR	RDKit.Chem.Crippen	double	MolMR			TRUE	Returns MolMR.
-RDKit	ExactMolWt	RDKit.Descriptors	double	CalcExactMolWt			TRUE	Returns ExactMolWt.
-RDKit	FractionCSP3	RDKit.Descriptors	double	CalcFractionCSP3			TRUE	Returns FractionCSP3.
-RDKit	HallKierAlpha	RDKit.Descriptors	double	CalcHallKierAlpha			TRUE	Returns HallKierAlpha.
-RDKit	NumLipinskiHBA	RDKit.Descriptors	double	CalcNumLipinskiHBA			TRUE	Returns the number of LipinskiHBA.
-RDKit	NumLipinskiHBD	RDKit.Descriptors	double	CalcNumLipinskiHBD			TRUE	Returns the number of LipinskiHBD.
-RDKit	NumAliphaticCarbocycles	RDKit.Descriptors	double	CalcNumAliphaticCarbocycles			TRUE	Returns the number of AliphaticCarbocycles.
-RDKit	NumAliphaticHeterocycles	RDKit.Descriptors	double	CalcNumAliphaticHeterocycles			TRUE	Returns the number of AliphaticHeterocycles.
-RDKit	NumAliphaticRings	RDKit.Descriptors	double	CalcNumAliphaticRings			TRUE	Returns the number of AliphaticRings.
-RDKit	NumAmideBonds	RDKit.Descriptors	double	CalcNumAmideBonds			TRUE	Returns the number of AmideBonds.
-RDKit	NumAromaticCarbocycles	RDKit.Descriptors	double	CalcNumAromaticCarbocycles			TRUE	Returns the number of AromaticCarbocycles.
-RDKit	NumAromaticHeterocycles	RDKit.Descriptors	double	CalcNumAromaticHeterocycles			TRUE	Returns the number of AromaticHeterocycles.
-RDKit	NumAromaticRings	RDKit.Descriptors	double	CalcNumAromaticRings			TRUE	Returns the number of AromaticRings.
-RDKit	NumBridgeheadAtoms	RDKit.Descriptors	double	CalcNumBridgeheadAtoms			TRUE	Returns the number of BridgeheadAtoms.
-RDKit	NumHBA	RDKit.Descriptors	double	CalcNumHBA			TRUE	Returns the number of HBA.
-RDKit	NumHBD	RDKit.Descriptors	double	CalcNumHBD			TRUE	Returns the number of HBD.
-RDKit	TPSA	RDKit.Descriptors	double	CalcTPSA			TRUE	Returns TPSA.
-RDKit	NumRotatableBonds	RDKit.Descriptors	double	CalcNumRotatableBonds			TRUE	Returns the number of RotatableBonds.
-RDKit	NumHeteroatoms	RDKit.Descriptors	double	CalcNumHeteroatoms			TRUE	Returns the number of Heteroatoms.
-RDKit	NumHeterocycles	RDKit.Descriptors	double	CalcNumHeterocycles			TRUE	Returns the number of Heterocycles.
-RDKit	NumRings	RDKit.Descriptors	double	CalcNumRings			TRUE	Returns the number of Rings.
-RDKit	NumSaturatedCarbocycles	RDKit.Descriptors	double	CalcNumSaturatedCarbocycles			TRUE	Returns the number of SaturatedCarbocycles.
-RDKit	NumSaturatedHeterocycles	RDKit.Descriptors	double	CalcNumSaturatedHeterocycles			TRUE	Returns the number of SaturatedHeterocycles.
-RDKit	NumSaturatedRings	RDKit.Descriptors	double	CalcNumSaturatedRings			TRUE	Returns the number of SaturatedRings.
-RDKit	NumSpiroAtoms	RDKit.Descriptors	double	CalcNumSpiroAtoms			TRUE	Returns the number of SpiroAtoms.
+RDKit	ExactMolWt	RDKit.Chem	double	CalcExactMolWt			TRUE	Returns ExactMolWt.
+RDKit	FractionCSP3	RDKit.Chem	double	CalcFractionCSP3			TRUE	Returns FractionCSP3.
+RDKit	HallKierAlpha	RDKit.Chem	double	CalcHallKierAlpha			TRUE	Returns HallKierAlpha.
+RDKit	NumLipinskiHBA	RDKit.Chem	double	CalcNumLipinskiHBA			TRUE	Returns the number of LipinskiHBA.
+RDKit	NumLipinskiHBD	RDKit.Chem	double	CalcNumLipinskiHBD			TRUE	Returns the number of LipinskiHBD.
+RDKit	NumAliphaticCarbocycles	RDKit.Chem	double	CalcNumAliphaticCarbocycles			TRUE	Returns the number of AliphaticCarbocycles.
+RDKit	NumAliphaticHeterocycles	RDKit.Chem	double	CalcNumAliphaticHeterocycles			TRUE	Returns the number of AliphaticHeterocycles.
+RDKit	NumAliphaticRings	RDKit.Chem	double	CalcNumAliphaticRings			TRUE	Returns the number of AliphaticRings.
+RDKit	NumAmideBonds	RDKit.Chem	double	CalcNumAmideBonds			TRUE	Returns the number of AmideBonds.
+RDKit	NumAromaticCarbocycles	RDKit.Chem	double	CalcNumAromaticCarbocycles			TRUE	Returns the number of AromaticCarbocycles.
+RDKit	NumAromaticHeterocycles	RDKit.Chem	double	CalcNumAromaticHeterocycles			TRUE	Returns the number of AromaticHeterocycles.
+RDKit	NumAromaticRings	RDKit.Chem	double	CalcNumAromaticRings			TRUE	Returns the number of AromaticRings.
+RDKit	NumBridgeheadAtoms	RDKit.Chem	double	CalcNumBridgeheadAtoms			TRUE	Returns the number of BridgeheadAtoms.
+RDKit	NumHBA	RDKit.Chem	double	CalcNumHBA			TRUE	Returns the number of HBA.
+RDKit	NumHBD	RDKit.Chem	double	CalcNumHBD			TRUE	Returns the number of HBD.
+RDKit	TPSA	RDKit.Chem	double	CalcTPSA			TRUE	Returns TPSA.
+RDKit	NumRotatableBonds	RDKit.Chem	double	CalcNumRotatableBonds			TRUE	Returns the number of RotatableBonds.
+RDKit	NumHeteroatoms	RDKit.Chem	double	CalcNumHeteroatoms			TRUE	Returns the number of Heteroatoms.
+RDKit	NumHeterocycles	RDKit.Chem	double	CalcNumHeterocycles			TRUE	Returns the number of Heterocycles.
+RDKit	NumRings	RDKit.Chem	double	CalcNumRings			TRUE	Returns the number of Rings.
+RDKit	NumSaturatedCarbocycles	RDKit.Chem	double	CalcNumSaturatedCarbocycles			TRUE	Returns the number of SaturatedCarbocycles.
+RDKit	NumSaturatedHeterocycles	RDKit.Chem	double	CalcNumSaturatedHeterocycles			TRUE	Returns the number of SaturatedHeterocycles.
+RDKit	NumSaturatedRings	RDKit.Chem	double	CalcNumSaturatedRings			TRUE	Returns the number of SaturatedRings.
+RDKit	NumSpiroAtoms	RDKit.Chem	double	CalcNumSpiroAtoms			TRUE	Returns the number of SpiroAtoms.
 RDKit	FormalCharge	RDKit.Chem	double	GetFormalCharge			TRUE	Returns the number of malCharge.
-RDKit	NumAtomStereoCenters	RDKit.Descriptors	double	CalcNumAtomStereoCenters			TRUE	Returns the number of AtomStereoCenters.
-RDKit	NumUnspecifiedAtomStereoCenters	RDKit.Descriptors	double	CalcNumUnspecifiedAtomStereoCenters			TRUE	Returns the number of UnspecifiedAtomStereoCenters.
-RDKit	MolFormula	RDKit.Descriptors	string	CalcMolFormula			TRUE	Returns MolFormula.
+RDKit	NumAtomStereoCenters	RDKit.Chem	double	CalcNumAtomStereoCenters			TRUE	Returns the number of AtomStereoCenters.
+RDKit	NumUnspecifiedAtomStereoCenters	RDKit.Chem	double	CalcNumUnspecifiedAtomStereoCenters			TRUE	Returns the number of UnspecifiedAtomStereoCenters.
+RDKit	MolFormula	RDKit.Chem	string	CalcMolFormula			TRUE	Returns MolFormula.
 RDKit	CXSmiles	RDKit.Chem	string	MolToCXSmiles			TRUE	Returns CXSmiles.
 RDKit	InchiKey	RDKit.Chem	string	MolToInchiKey			TRUE	Returns InchiKey.
 RDKit	MolBlock	RDKit.Chem	string	MolToMolBlock			TRUE	Returns MolBlock.
@@ -127,6 +126,3 @@ RDKit	PDBBlock	RDKit.Chem	string	MolToPDBBlock			TRUE	Returns PDBBlock.
 RDKit	TPLBlock	RDKit.Chem	string	MolToTPLBlock			TRUE	Returns TPLBlock.
 RDKit	XYZBlock	RDKit.Chem	string	MolToXYZBlock			TRUE	Returns XYZBlock.
 RDKit	QED	RDKit.Chem.QED	double	Calculate			TRUE	Returns QED.
-RDKit	NumHeavyAtoms	RDKit.Chem	double	GetNumHeavyAtoms			TRUE	Returns the number of HeavyAtoms.
-RDKit	NumAtoms	RDKit.Chem	double	GetNumAtoms			TRUE	Returns the number of Atoms.
-RDKit	NumBonds	RDKit.Chem	double	GetNumBonds			TRUE	Returns the number of Bonds.

@@ -2,11 +2,13 @@
 
 namespace RDKit
 {
-    public static partial class Descriptors
+    public static partial class Chem
     {
         //
         // rdMolDescriptors
         //
+
+        // MakePropertyRangeQuery
 
         public static double CalcChi0n(ROMol mol, bool force = false)
             => RDKFuncs.calcChi0n(mol, force);

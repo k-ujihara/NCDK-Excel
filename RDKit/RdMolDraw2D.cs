@@ -28,17 +28,41 @@ namespace RDKit
     {
         public static partial class Draw
         {
-            public static class RdMolDraw2D
-            {
-                public static void PrepareAndDrawMolecule(MolDraw2D drawer, ROMol mol, string legend = "", Int_Vect highlight_atoms = null, Int_Vect highlight_bonds = null)
-                {
-                    RDKFuncs.prepareAndDrawMolecule(drawer, mol, legend, highlight_atoms, highlight_bonds);
-                }
+            //
+            // rdkit.Chem.Draw.rdMolDraw2D module
+            //
 
-                public static void PrepareMolForDrawing(RWMol mol, bool kekulize = true, bool addChiralHs = true, bool wedgeBonds = true, bool forceCoords = false)
-                {
-                    RDKFuncs.prepareMolForDrawing(mol, kekulize, addChiralHs, wedgeBonds, forceCoords);
-                }
+            private static readonly ContourParams nullContourParams = new ContourParams();
+
+            public static void ContourAndDrawGaussians(
+                MolDraw2D drawer,
+                Point2D_Vect p_locs,
+                Double_Vect heights,
+                Double_Vect widths,
+                int nContours = 10,
+                Double_Vect levels = null,
+                ContourParams ps = null)
+            {
+                ps = ps ?? nullContourParams;
+                RDKFuncs.ContourAndDrawGaussians(drawer, p_locs, heights, widths, (uint)nContours, levels, ps);
+            }
+
+            public static void ContourAndDrawGrid(
+                MolDraw2D drawer, Double_Vect p_grid, Double_Vect xcoords, Double_Vect ycoords,
+                int nContours = 10, Double_Vect levels = null, ContourParams ps = null)
+            {
+                ps = ps ?? nullContourParams;
+                RDKFuncs.ContourAndDrawGrid(drawer, p_grid, xcoords, ycoords, (uint)nContours, levels, ps);
+            }
+
+            public static void PrepareAndDrawMolecule(MolDraw2D drawer, ROMol mol, string legend = "", Int_Vect highlight_atoms = null, Int_Vect highlight_bonds = null)
+            {
+                RDKFuncs.prepareAndDrawMolecule(drawer, mol, legend, highlight_atoms, highlight_bonds);
+            }
+
+            public static void PrepareMolForDrawing(RWMol mol, bool kekulize = true, bool addChiralHs = true, bool wedgeBonds = true, bool forceCoords = false)
+            {
+                RDKFuncs.prepareMolForDrawing(mol, kekulize, addChiralHs, wedgeBonds, forceCoords);
             }
         }
     }

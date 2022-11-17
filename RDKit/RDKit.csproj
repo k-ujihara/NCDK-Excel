@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,11 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RDKit2DotNet, Version=0.2009.3.4, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
-      <HintPath>..\packages\RDKit.DotNetWrap.0.2020093.4\lib\net40\RDKit2DotNet.dll</HintPath>
+    <Reference Include="RDKit2DotNet, Version=0.2109.4.2, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2021094.2\lib\netstandard2.0\RDKit2DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,27 +56,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atom.cs" />
+    <Compile Include="AtomPDBResidueInfo.cs" />
+    <Compile Include="Bond.cs" />
     <Compile Include="Chem.cs" />
+    <Compile Include="ChemicalReaction.cs" />
+    <Compile Include="Conformer.cs" />
     <Compile Include="Draw.cs" />
-    <Compile Include="GraphMolWrapTools.cs" />
     <Compile Include="Crippen.cs" />
     <Compile Include="DataStructs.cs" />
-    <Compile Include="Descriptors.cs" />
+    <Compile Include="Inchi.cs" />
+    <Compile Include="MolDraw2D.cs" />
+    <Compile Include="FilterCatalog.cs" />
+    <Compile Include="PeriodicTable.cs" />
+    <Compile Include="RdChem.cs" />
+    <Compile Include="RdChemReactions.cs" />
+    <Compile Include="RdDescriptor.cs" />
+    <Compile Include="RdDescriptors.cs" />
+    <Compile Include="LayerFlags.cs" />
+    <Compile Include="RdDistGeom.cs" />
+    <Compile Include="RdMolFiles.cs" />
+    <Compile Include="PDBFlavors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QED.cs" />
     <Compile Include="RdMolDraw2D.cs" />
+    <Compile Include="RdMolOps.cs" />
+    <Compile Include="RdProps.cs" />
+    <Compile Include="ResonanceMolSupplier.cs" />
+    <Compile Include="ROMol.cs" />
+    <Compile Include="RWMol.cs" />
     <Compile Include="SaltRemover.cs" />
+    <Compile Include="SequenceFlavor.cs" />
     <Compile Include="SimilarityFunctions.cs">
       <DependentUpon>SimilarityFunctions.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="SubstanceGroup.cs" />
+    <Compile Include="Vect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SimilarityFunctions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SimilarityFunctions.cs</LastGenOutput>
     </Content>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -75,11 +109,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets'))" />
   </Target>
 </Project>

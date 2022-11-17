@@ -27,7 +27,13 @@ namespace NCDK_ExcelAddIn
 {
     public static class Stuff
     {
-        public static bool EnableProgressBar { get; } = false;
+        public static bool EnableProgressBar { get; } =
+#if DEBUG && !FORCE_ENABLE_PROGRESS_BAR
+            false
+#else
+            true
+#endif
+            ;
 
         private static void AddChemicalStructuresCheckCancel()
         {

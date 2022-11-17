@@ -32,6 +32,7 @@ namespace RDKit
         ///     'Prediction of Physicochemical Parameters by Atomic Contributions',
         ///     Journal of Chemical Information and Computer Sciences, 39, 868-873 [https://doi.org/10.1021/ci990307l]
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1034:Nested types should not be visible", Justification = "<Pending>")]
         public static class QED
         {
             public enum QEDParameterTypes
@@ -372,16 +373,16 @@ namespace RDKit
             {
                 if (mol == null)
                     throw new ArgumentNullException(nameof(mol));
-                mol = mol.RemoveHs(false);
+                mol = mol.removeHs(false);
                 var QEDProperties = new QEDProperies<double>()
                 {
-                    [QEDParameterTypes.MW] = Descriptors.CalcExactMolWt(mol),
+                    [QEDParameterTypes.MW] = Chem.CalcExactMolWt(mol),
                     [QEDParameterTypes.ALOGP] = Crippen.MolLogP(mol),
                     [QEDParameterTypes.HBA] = Acceptors.Sum(pattern => mol.GetSubstructMatches(pattern).Count),
-                    [QEDParameterTypes.HBD] = Descriptors.CalcNumHBD(mol),
-                    [QEDParameterTypes.PSA] = Descriptors.CalcTPSA(mol),
-                    [QEDParameterTypes.ROTB] = Descriptors.CalcNumRotatableBonds(mol, NumRotatableBondsOptions.Strict),
-                    [QEDParameterTypes.AROM] = Chem.GetSSSR(Chem.DeleteSubstructs(Chem.Mol(mol), AliphaticRings)),
+                    [QEDParameterTypes.HBD] = Chem.CalcNumHBD(mol),
+                    [QEDParameterTypes.PSA] = Chem.CalcTPSA(mol),
+                    [QEDParameterTypes.ROTB] = Chem.CalcNumRotatableBonds(mol, NumRotatableBondsOptions.Strict),
+                    [QEDParameterTypes.AROM] = Chem.GetSSSR(Chem.DeleteSubstructs(mol, AliphaticRings)),
                     [QEDParameterTypes.ALERTS] = StructuralAlerts.Count(alert => mol.HasSubstructMatch(alert)),
                 };
                 return QEDProperties;

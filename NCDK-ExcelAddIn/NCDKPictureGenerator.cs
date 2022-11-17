@@ -66,8 +66,6 @@ namespace NCDK_ExcelAddIn
             }
         }
 
-        private readonly static object syncLock = new object();
-
         private DepictionGenerator pictureGenerator = null;
         public DepictionGenerator PictureGenerator
         {
@@ -85,7 +83,7 @@ namespace NCDK_ExcelAddIn
             }
         }
 
-        private static SmilesParser parser = new SmilesParser(CDK.Builder);
+        private static readonly SmilesParser parser = new SmilesParser(CDK.Builder);
 
         public NCDKPictureGenerator()
         {
@@ -95,7 +93,7 @@ namespace NCDK_ExcelAddIn
 
         public void Generate(string text, string filename)
         {
-            Depiction depict = null;
+            Depiction depict;
             if (IsReactionSmilees(text))
             {
                 var rxn = parser.ParseReactionSmiles(text);

@@ -47,6 +47,8 @@ namespace NCDK_ExcelAddIn
             using (var suppl = Chem.SDMolSupplier(sdfName))
             {
                 int numSuppliedMol = 0;
+                double height = 0.0;
+                dynamic rows = null;
 
                 foreach (var mol in suppl)
                 {
@@ -58,6 +60,8 @@ namespace NCDK_ExcelAddIn
                         newSheet = Globals.ThisAddIn.Application.Sheets.Add();
                         ((dynamic)newSheet).Cells[1, ColumnTitle] = "Title";
                         ((dynamic)newSheet).Cells[1, ColumnMolBlock] = "MOL Text";
+                        height = ((dynamic)newSheet).Rows[1].RowHeight;
+                        rows = ((dynamic)newSheet).Rows;
                     }
                     using (var sr = new StringWriter())
                     {
@@ -94,6 +98,7 @@ namespace NCDK_ExcelAddIn
                         }
                         cells[row, ColumnMolBlock] = sr.ToString();
                     }
+                    rows[numSuppliedMol + 2].RowHeight = height;
                     row++;
 
                     numSuppliedMol++;
@@ -123,15 +128,6 @@ namespace NCDK_ExcelAddIn
                 }
                 else
                     _LoadSDFToNewSheet(sdfName, ref newSheet, ref row);
-                if (newSheet != null)
-                {
-                    var height = ((dynamic)newSheet).Rows[1].RowHeight;
-                    var rows = ((dynamic)newSheet).Rows;
-                    for (int i = 2; i < row; i++)
-                    {
-                        rows[i].RowHeight = height;
-                    }
-                }
             }
             finally
             {

@@ -179,9 +179,9 @@ namespace NCDKExcel
                     nullableExcelReturnType = nullableExcelReturnType + "?";
 #>
         [ExcelFunction(<#= string.IsNullOrEmpty(description) ? "": "Description = \"" + description +"\"" #>)]
-        public static <#= excelReturnType #> <#= kit_name #>_<#= func_name #>(string text)
+        public static <#= excelReturnType #> <#= kit_name #>_<#= func_name #>(string molecule_ident)
         {
-            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(text, "<#= kit_name #>_<#= func_name #>",
+            var ret = Caching<<#= nullableExcelReturnType #>>.Calculate(molecule_ident, "<#= kit_name #>_<#= func_name #>",
                 mol =>
                 {
                 <#= nullableExcelReturnType #> nReturnValue = null;

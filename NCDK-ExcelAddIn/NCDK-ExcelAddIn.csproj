@@ -70,7 +70,7 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;VSTO40;FORCE_ENABLE_PROGRESS_BAR</DefineConstants>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <!--
@@ -102,19 +102,22 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="MathNet.Numerics, Version=4.14.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
-      <HintPath>..\packages\MathNet.Numerics.Signed.4.14.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.5.0.0\lib\net461\MathNet.Numerics.dll</HintPath>
     </Reference>
-    <Reference Include="NCDK, Version=1.5.6.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
-      <HintPath>..\packages\NCDK.1.5.6\lib\net461\NCDK.dll</HintPath>
+    <Reference Include="NCDK, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
+      <HintPath>..\packages\NCDK.1.6.1\lib\netstandard2.0\NCDK.dll</HintPath>
     </Reference>
-    <Reference Include="NCDK.Display, Version=1.5.6.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
-      <HintPath>..\packages\NCDK.Display.1.5.6\lib\net461\NCDK.Display.dll</HintPath>
+    <Reference Include="NCDK.Display, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
+      <HintPath>..\packages\NCDK.Display.1.6.1\lib\net461\NCDK.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="NCDK.Math, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7b3355892b3327a8, processorArchitecture=MSIL">
+      <HintPath>..\packages\NCDK.1.6.1\lib\netstandard2.0\NCDK.Math.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RDKit2DotNet, Version=0.2009.3.4, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
-      <HintPath>..\packages\RDKit.DotNetWrap.0.2020093.4\lib\net40\RDKit2DotNet.dll</HintPath>
+    <Reference Include="RDKit2DotNet, Version=0.2109.4.2, Culture=neutral, PublicKeyToken=7905170de3049d9d, processorArchitecture=MSIL">
+      <HintPath>..\packages\RDKit.DotNetWrap.0.2021094.2\lib\netstandard2.0\RDKit2DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -123,6 +126,11 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Presentation" />
@@ -228,9 +236,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="NCDK-ExcelAddIn_TemporaryKey.pfx" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -271,6 +277,9 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -299,13 +308,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.5.6\build\NCDK.targets'))" />
-    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RDKit.DotNetWrap.0.2021094.2\build\RDKit.DotNetWrap.targets'))" />
+    <Error Condition="!Exists('..\packages\NCDK.1.6.1\build\NCDK.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NCDK.1.6.1\build\NCDK.targets'))" />
   </Target>
-  <Import Project="..\packages\NCDK.1.5.6\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.5.6\build\NCDK.targets')" />
-  <Import Project="..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets" Condition="Exists('..\packages\RDKit.DotNetWrap.0.2020093.4\build\RDKit.DotNetWrap.targets')" />
+  <Import Project="..\packages\NCDK.1.6.1\build\NCDK.targets" Condition="Exists('..\packages\NCDK.1.6.1\build\NCDK.targets')" />
 </Project>

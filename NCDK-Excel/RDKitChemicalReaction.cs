@@ -31,8 +31,9 @@ namespace NCDKExcel
                         var mol = RDKitMol.Parse(reactant_smiles);
                         if (mol == null)
                             return null;
-                        mol = mol.AddHs();
-                        mols.Add(mol);
+                        var rmol = new RWMol(mol);
+                        Chem.AddHs(rmol);
+                        mols.Add(rmol);
                     }
 
                     if (rxn.getNumReactantTemplates() != mols.Count)

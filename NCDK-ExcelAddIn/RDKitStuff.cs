@@ -19,6 +19,8 @@ namespace NCDK_ExcelAddIn
             using (var suppl = new SDMolSupplier(sdfName))
             {
                 int numSuppliedMol = 0;
+                double height = 0.0;
+                dynamic rows = null;
 
                 while (!suppl.atEnd())
                 {
@@ -32,6 +34,8 @@ namespace NCDK_ExcelAddIn
                             newSheet = Globals.ThisAddIn.Application.Sheets.Add();
                             ((dynamic)newSheet).Cells[1, ColumnTitle] = "Title";
                             ((dynamic)newSheet).Cells[1, ColumnMolBlock] = "MOL Text";
+                            height = ((dynamic)newSheet).Rows[1].RowHeight;
+                            rows = ((dynamic)newSheet).Rows;
                         }
                         Excel.Range cells = ((dynamic)newSheet).Cells;
                         try
@@ -65,6 +69,8 @@ namespace NCDK_ExcelAddIn
                             cells[row, ColumnTitle] = exception.Message;
                         }
                         cells[row, ColumnMolBlock] = mol.MolToMolBlock();
+
+                        rows[numSuppliedMol+2].RowHeight = height;
                         row++;
                     }
 
@@ -74,6 +80,7 @@ namespace NCDK_ExcelAddIn
                 }
             }
         }
+
 
         /// <summary>
         /// Read molecules and their info from SD file. 
@@ -95,15 +102,6 @@ namespace NCDK_ExcelAddIn
                 }
                 else
                     _LoadSDFToNewSheet(sdfName, ref newSheet, ref row);
-                if (newSheet != null)
-                {
-                    var height = ((dynamic)newSheet).Rows[1].RowHeight;
-                    var rows = ((dynamic)newSheet).Rows;
-                    for (int i = 2; i < row; i++)
-                    {
-                        rows[i].RowHeight = height;
-                    }
-                }
             }
             finally
             {

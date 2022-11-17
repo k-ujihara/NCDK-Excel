@@ -4,6 +4,7 @@ using NCDK.Fingerprints;
 using NCDK.Graphs.InChI;
 using NCDK.IO;
 using NCDK.QSAR;
+using NCDK.Tools.Manipulator;
 using RDKit;
 using System;
 using System.Collections.Concurrent;
@@ -89,6 +90,23 @@ namespace NCDKExcel
                 if (structure.ReturnStatus == InChIReturnCode.Ok)
                 {
                     return structure.AtomContainer;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return null;
+        }
+
+        static IAtomContainer ParseCML(string cml)
+        {
+            try
+            {
+                using (var reader = new CMLReader(new MemoryStream(Encoding.UTF8.GetBytes(cml))))
+                {
+                    var chemFile = reader.Read(CDK.Builder.NewChemFile());
+                    var container = ChemFileManipulator.GetAllAtomContainers(chemFile).First();
+                    return container;
                 }
             }
             catch (Exception)
@@ -185,6 +203,13 @@ namespace NCDKExcel
             if (mol != null)
             {
                 notationType = "InChI";
+                return mol;
+            }
+
+            mol = ParseCML(text);
+            if (mol != null)
+            {
+                notationType = "CML";
                 return mol;
             }
 

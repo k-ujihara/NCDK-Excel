@@ -33,9 +33,9 @@ namespace NCDKExcel
     public static partial class DescriptorFunctions
     {
         [ExcelFunction(Description = "Returns the number of acidic groups.")]
-        public static double NCDK_AcidicGroupCount(string text)
+        public static double NCDK_AcidicGroupCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_AcidicGroupCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_AcidicGroupCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -52,9 +52,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Sum of the atomic polarizabilities.")]
-        public static double NCDK_APol(string text)
+        public static double NCDK_APol(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_APol",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_APol",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -71,9 +71,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of aromatic atoms.")]
-        public static double NCDK_AromaticAtomsCount(string text)
+        public static double NCDK_AromaticAtomsCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_AromaticAtomsCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_AromaticAtomsCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -90,9 +90,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of aromatic bonds.")]
-        public static double NCDK_AromaticBondsCount(string text)
+        public static double NCDK_AromaticBondsCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_AromaticBondsCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_AromaticBondsCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -109,9 +109,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of atoms.")]
-        public static double NCDK_AtomCount(string text)
+        public static double NCDK_AtomCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_AtomCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_AtomCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -128,9 +128,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the autocorrelation charge.")]
-        public static string NCDK_AutocorrelationCharge(string text)
+        public static string NCDK_AutocorrelationCharge(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationCharge",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_AutocorrelationCharge",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -147,9 +147,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the autocorrelation mass.")]
-        public static string NCDK_AutocorrelationMass(string text)
+        public static string NCDK_AutocorrelationMass(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationMass",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_AutocorrelationMass",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -166,9 +166,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the autocorrelation polarizability.")]
-        public static string NCDK_AutocorrelationPolarizability(string text)
+        public static string NCDK_AutocorrelationPolarizability(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_AutocorrelationPolarizability",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_AutocorrelationPolarizability",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -185,9 +185,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the number of basic groups.")]
-        public static double NCDK_BasicGroupCount(string text)
+        public static double NCDK_BasicGroupCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_BasicGroupCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_BasicGroupCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -203,29 +203,10 @@ namespace NCDKExcel
                 });
             return (double)ret;
         }
-        [ExcelFunction(Description = "Returns the BCUT.")]
-        public static string NCDK_BCUT(string text)
-        {
-            var ret = Caching<string>.Calculate(text, "NCDK_BCUT",
-                mol =>
-                {
-                string nReturnValue = null;
-                var descriptor = new NCDK.QSAR.Descriptors.Moleculars.BCUTDescriptor();
-                
-                if (nReturnValue == null)
-                {
-                    var result = descriptor.Calculate(mol);
-                    nReturnValue = ToExcelString(result);
-                }
-
-                return (string)nReturnValue;
-                });
-            return (string)ret;
-        }
         [ExcelFunction(Description = "Returns the number of bonds.")]
-        public static double NCDK_BondCount(string text)
+        public static double NCDK_BondCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_BondCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_BondCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -242,9 +223,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule.")]
-        public static double NCDK_BPol(string text)
+        public static double NCDK_BPol(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_BPol",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_BPol",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -261,9 +242,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the topological descriptor characterizing the carbon connectivity.")]
-        public static string NCDK_CarbonTypes(string text)
+        public static string NCDK_CarbonTypes(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_CarbonTypes",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_CarbonTypes",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -280,9 +261,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Evaluates chi chain descriptors.")]
-        public static string NCDK_ChiChain(string text)
+        public static string NCDK_ChiChain(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ChiChain",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ChiChain",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -299,9 +280,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Evaluates chi cluster descriptors.")]
-        public static string NCDK_ChiCluster(string text)
+        public static string NCDK_ChiCluster(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ChiCluster",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ChiCluster",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -318,9 +299,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Evaluates chi path cluster descriptors.")]
-        public static string NCDK_ChiPathCluster(string text)
+        public static string NCDK_ChiPathCluster(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ChiPathCluster",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ChiPathCluster",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -337,9 +318,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Evaluates chi path descriptors.")]
-        public static string NCDK_ChiPath(string text)
+        public static string NCDK_ChiPath(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ChiPath",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ChiPath",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -356,9 +337,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the CPSA.")]
-        public static string NCDK_CPSA(string text)
+        public static string NCDK_CPSA(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_CPSA",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_CPSA",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -380,9 +361,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the eccentric connectivity index.")]
-        public static double NCDK_EccentricConnectivityIndex(string text)
+        public static double NCDK_EccentricConnectivityIndex(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_EccentricConnectivityIndex",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_EccentricConnectivityIndex",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -399,9 +380,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the FMF.")]
-        public static double NCDK_FMF(string text)
+        public static double NCDK_FMF(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_FMF",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_FMF",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -418,9 +399,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the fractional PSA.")]
-        public static double NCDK_FractionalPSA(string text)
+        public static double NCDK_FractionalPSA(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_FractionalPSA",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_FractionalPSA",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -437,9 +418,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the fractional CSP.")]
-        public static double NCDK_FractionalCSP3(string text)
+        public static double NCDK_FractionalCSP3(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_FractionalCSP3",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_FractionalCSP3",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -456,9 +437,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the fractional CSP3.")]
-        public static double NCDK_FSP3(string text)
+        public static double NCDK_FSP3(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_FSP3",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_FSP3",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -475,9 +456,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the fragment complexity.")]
-        public static double NCDK_FragmentComplexity(string text)
+        public static double NCDK_FragmentComplexity(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_FragmentComplexity",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_FragmentComplexity",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -494,9 +475,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the gravitational index.")]
-        public static string NCDK_GravitationalIndex(string text)
+        public static string NCDK_GravitationalIndex(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_GravitationalIndex",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_GravitationalIndex",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -518,9 +499,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the hbond acceptor count.")]
-        public static double NCDK_HBondAcceptorCount(string text)
+        public static double NCDK_HBondAcceptorCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_HBondAcceptorCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_HBondAcceptorCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -537,9 +518,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the hbond donor count.")]
-        public static double NCDK_HBondDonorCount(string text)
+        public static double NCDK_HBondDonorCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_HBondDonorCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_HBondDonorCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -556,9 +537,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the hybridization ratio.")]
-        public static double NCDK_HybridizationRatio(string text)
+        public static double NCDK_HybridizationRatio(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_HybridizationRatio",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_HybridizationRatio",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -575,9 +556,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the JPLogP.")]
-        public static double NCDK_JPlogP(string text)
+        public static double NCDK_JPlogP(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_JPlogP",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_JPlogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -594,9 +575,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the kappa shape indices.")]
-        public static string NCDK_KappaShapeIndices(string text)
+        public static string NCDK_KappaShapeIndices(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_KappaShapeIndices",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_KappaShapeIndices",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -613,9 +594,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the kier hall SMARTS.")]
-        public static string NCDK_KierHallSmarts(string text)
+        public static string NCDK_KierHallSmarts(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_KierHallSmarts",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_KierHallSmarts",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -632,9 +613,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the largest chain.")]
-        public static double NCDK_LargestChain(string text)
+        public static double NCDK_LargestChain(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_LargestChain",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_LargestChain",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -651,9 +632,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the largest pi system.")]
-        public static double NCDK_LargestPiSystem(string text)
+        public static double NCDK_LargestPiSystem(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_LargestPiSystem",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_LargestPiSystem",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -670,9 +651,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the length over breadth.")]
-        public static string NCDK_LengthOverBreadth(string text)
+        public static string NCDK_LengthOverBreadth(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_LengthOverBreadth",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_LengthOverBreadth",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -694,9 +675,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the longest aliphatic chain.")]
-        public static double NCDK_LongestAliphaticChain(string text)
+        public static double NCDK_LongestAliphaticChain(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_LongestAliphaticChain",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_LongestAliphaticChain",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -713,9 +694,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the mannhold log.")]
-        public static double NCDK_MannholdLogP(string text)
+        public static double NCDK_MannholdLogP(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_MannholdLogP",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_MannholdLogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -732,9 +713,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the MDE.")]
-        public static string NCDK_MDE(string text)
+        public static string NCDK_MDE(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_MDE",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_MDE",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -751,9 +732,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the moment of inertia.")]
-        public static string NCDK_MomentOfInertia(string text)
+        public static string NCDK_MomentOfInertia(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_MomentOfInertia",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_MomentOfInertia",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -775,9 +756,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the petitjean number.")]
-        public static double NCDK_PetitjeanNumber(string text)
+        public static double NCDK_PetitjeanNumber(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_PetitjeanNumber",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_PetitjeanNumber",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -794,9 +775,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the petitjean shape index.")]
-        public static string NCDK_PetitjeanShapeIndex(string text)
+        public static string NCDK_PetitjeanShapeIndex(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_PetitjeanShapeIndex",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_PetitjeanShapeIndex",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -818,9 +799,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the rotatable bonds count.")]
-        public static double NCDK_RotatableBondsCount(string text)
+        public static double NCDK_RotatableBondsCount(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_RotatableBondsCount",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_RotatableBondsCount",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -837,9 +818,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the Rule of Five.")]
-        public static double NCDK_RuleOfFive(string text)
+        public static double NCDK_RuleOfFive(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_RuleOfFive",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_RuleOfFive",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -856,9 +837,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the small ring.")]
-        public static string NCDK_SmallRing(string text)
+        public static string NCDK_SmallRing(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_SmallRing",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_SmallRing",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -875,9 +856,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the TPSA.")]
-        public static double NCDK_TPSA(string text)
+        public static double NCDK_TPSA(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_TPSA",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_TPSA",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -894,9 +875,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the VABC.")]
-        public static double NCDK_VABC(string text)
+        public static double NCDK_VABC(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_VABC",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_VABC",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -913,9 +894,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the vadj ma.")]
-        public static double NCDK_VAdjMa(string text)
+        public static double NCDK_VAdjMa(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_VAdjMa",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_VAdjMa",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -932,9 +913,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the weighted path.")]
-        public static string NCDK_WeightedPath(string text)
+        public static string NCDK_WeightedPath(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_WeightedPath",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_WeightedPath",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -951,9 +932,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the WHIM.")]
-        public static string NCDK_WHIM(string text)
+        public static string NCDK_WHIM(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_WHIM",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_WHIM",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -975,9 +956,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the wiener numbers.")]
-        public static string NCDK_WienerNumbers(string text)
+        public static string NCDK_WienerNumbers(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_WienerNumbers",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_WienerNumbers",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -994,9 +975,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the xlog PDe.")]
-        public static double NCDK_XLogP(string text)
+        public static double NCDK_XLogP(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_XLogP",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_XLogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -1013,9 +994,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the zagreb index.")]
-        public static double NCDK_ZagrebIndex(string text)
+        public static double NCDK_ZagrebIndex(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "NCDK_ZagrebIndex",
+            var ret = Caching<double?>.Calculate(molecule_ident, "NCDK_ZagrebIndex",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -1032,9 +1013,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns ECFP0.")]
-        public static string NCDK_ECFP0(string text)
+        public static string NCDK_ECFP0(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ECFP0",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ECFP0",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1051,9 +1032,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns ECFP2.")]
-        public static string NCDK_ECFP2(string text)
+        public static string NCDK_ECFP2(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ECFP2",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ECFP2",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1070,9 +1051,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns ECFP4.")]
-        public static string NCDK_ECFP4(string text)
+        public static string NCDK_ECFP4(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ECFP4",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ECFP4",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1089,9 +1070,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns ECFP6.")]
-        public static string NCDK_ECFP6(string text)
+        public static string NCDK_ECFP6(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ECFP6",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ECFP6",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1108,9 +1089,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns FCFP0.")]
-        public static string NCDK_FCFP0(string text)
+        public static string NCDK_FCFP0(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_FCFP0",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_FCFP0",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1127,9 +1108,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns FCFP2.")]
-        public static string NCDK_FCFP2(string text)
+        public static string NCDK_FCFP2(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_FCFP2",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_FCFP2",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1146,9 +1127,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns FCFP4.")]
-        public static string NCDK_FCFP4(string text)
+        public static string NCDK_FCFP4(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_FCFP4",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_FCFP4",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1165,9 +1146,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns FCFP6.")]
-        public static string NCDK_FCFP6(string text)
+        public static string NCDK_FCFP6(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_FCFP6",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_FCFP6",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1184,9 +1165,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the AtomPairs2D fingerprint.")]
-        public static string NCDK_AtomPairs2DFingerprint(string text)
+        public static string NCDK_AtomPairs2DFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_AtomPairs2DFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_AtomPairs2DFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1203,9 +1184,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the EState fingerprint.")]
-        public static string NCDK_EStateFingerprint(string text)
+        public static string NCDK_EStateFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_EStateFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_EStateFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1222,9 +1203,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the Extended fingerprint.")]
-        public static string NCDK_ExtendedFingerprint(string text)
+        public static string NCDK_ExtendedFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ExtendedFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ExtendedFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1241,9 +1222,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the CDK fingerprint.")]
-        public static string NCDK_CDKFingerprint(string text)
+        public static string NCDK_CDKFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_CDKFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_CDKFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1260,9 +1241,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the KlekotaRoth fingerprint.")]
-        public static string NCDK_KlekotaRothFingerprint(string text)
+        public static string NCDK_KlekotaRothFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_KlekotaRothFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_KlekotaRothFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1279,9 +1260,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the Lingo fingerprint.")]
-        public static string NCDK_LingoFingerprint(string text)
+        public static string NCDK_LingoFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_LingoFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_LingoFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1298,9 +1279,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the MACCS fingerprint.")]
-        public static string NCDK_MACCSFingerprint(string text)
+        public static string NCDK_MACCSFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_MACCSFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_MACCSFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1317,9 +1298,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the ShortestPath.")]
-        public static string NCDK_ShortestPathFingerprint(string text)
+        public static string NCDK_ShortestPathFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_ShortestPathFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_ShortestPathFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1336,9 +1317,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the Substructure.")]
-        public static string NCDK_SubstructureFingerprint(string text)
+        public static string NCDK_SubstructureFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_SubstructureFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_SubstructureFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1355,9 +1336,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the Pubchem fingerprint.")]
-        public static string NCDK_PubchemFingerprint(string text)
+        public static string NCDK_PubchemFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "NCDK_PubchemFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "NCDK_PubchemFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1374,16 +1355,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the MACCSKeys fingerprint.")]
-        public static string RDKit_MACCSKeysFingerprint(string text)
+        public static string RDKit_MACCSKeysFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_MACCSKeysFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_MACCSKeysFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.GetMACCSKeysFingerprint(mol);
+                    var result = RDKit.Chem.GetMACCSKeysFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1392,9 +1373,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the Layered fingerprint.")]
-        public static string RDKit_LayeredFingerprint(string text)
+        public static string RDKit_LayeredFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_LayeredFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_LayeredFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1410,16 +1391,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the HashedAtomPair fingerprint.")]
-        public static string RDKit_HashedAtomPairFingerprint(string text)
+        public static string RDKit_HashedAtomPairFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_HashedAtomPairFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_HashedAtomPairFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.GetHashedAtomPairFingerprintAsBitVect(mol);
+                    var result = RDKit.Chem.GetHashedAtomPairFingerprintAsBitVect(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1428,16 +1409,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the HashedTopologicalTorsion fingerprint.")]
-        public static string RDKit_HashedTopologicalTorsionFingerprint(string text)
+        public static string RDKit_HashedTopologicalTorsionFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_HashedTopologicalTorsionFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_HashedTopologicalTorsionFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.GetHashedTopologicalTorsionFingerprintAsBitVect(mol);
+                    var result = RDKit.Chem.GetHashedTopologicalTorsionFingerprintAsBitVect(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1446,9 +1427,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the Pattern fingerprint.")]
-        public static string RDKit_PatternFingerprint(string text)
+        public static string RDKit_PatternFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_PatternFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_PatternFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1464,9 +1445,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the RDK fingerprint.")]
-        public static string RDKit_RDKFingerprint(string text)
+        public static string RDKit_RDKFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_RDKFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_RDKFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -1482,16 +1463,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the AtomPair fingerprint.")]
-        public static string RDKit_AtomPairFingerprint(string text)
+        public static string RDKit_AtomPairFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_AtomPairFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_AtomPairFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.GetAtomPairFingerprint(mol);
+                    var result = RDKit.Chem.GetAtomPairFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1500,16 +1481,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns the TopologicalTorsion fingerprint.")]
-        public static string RDKit_TopologicalTorsionFingerprint(string text)
+        public static string RDKit_TopologicalTorsionFingerprint(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_TopologicalTorsionFingerprint",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_TopologicalTorsionFingerprint",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.GetTopologicalTorsionFingerprint(mol);
+                    var result = RDKit.Chem.GetTopologicalTorsionFingerprint(mol);
                     nReturnValue = ToExcelString(result);
                 }
 
@@ -1518,16 +1499,16 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns Chi0n.")]
-        public static double RDKit_Chi0n(string text)
+        public static double RDKit_Chi0n(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi0n",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi0n",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi0n(mol);
+                    var result = RDKit.Chem.CalcChi0n(mol);
                     nReturnValue = result;
                 }
 
@@ -1536,16 +1517,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi0v.")]
-        public static double RDKit_Chi0v(string text)
+        public static double RDKit_Chi0v(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi0v",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi0v",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi0v(mol);
+                    var result = RDKit.Chem.CalcChi0v(mol);
                     nReturnValue = result;
                 }
 
@@ -1554,16 +1535,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi1n.")]
-        public static double RDKit_Chi1n(string text)
+        public static double RDKit_Chi1n(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi1n",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi1n",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi1n(mol);
+                    var result = RDKit.Chem.CalcChi1n(mol);
                     nReturnValue = result;
                 }
 
@@ -1572,16 +1553,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi1v.")]
-        public static double RDKit_Chi1v(string text)
+        public static double RDKit_Chi1v(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi1v",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi1v",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi1v(mol);
+                    var result = RDKit.Chem.CalcChi1v(mol);
                     nReturnValue = result;
                 }
 
@@ -1590,16 +1571,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi2n.")]
-        public static double RDKit_Chi2n(string text)
+        public static double RDKit_Chi2n(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi2n",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi2n",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi2n(mol);
+                    var result = RDKit.Chem.CalcChi2n(mol);
                     nReturnValue = result;
                 }
 
@@ -1608,16 +1589,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi2v.")]
-        public static double RDKit_Chi2v(string text)
+        public static double RDKit_Chi2v(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi2v",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi2v",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi2v(mol);
+                    var result = RDKit.Chem.CalcChi2v(mol);
                     nReturnValue = result;
                 }
 
@@ -1626,16 +1607,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi3n.")]
-        public static double RDKit_Chi3n(string text)
+        public static double RDKit_Chi3n(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi3n",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi3n",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi3n(mol);
+                    var result = RDKit.Chem.CalcChi3n(mol);
                     nReturnValue = result;
                 }
 
@@ -1644,16 +1625,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi3v.")]
-        public static double RDKit_Chi3v(string text)
+        public static double RDKit_Chi3v(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi3v",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi3v",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi3v(mol);
+                    var result = RDKit.Chem.CalcChi3v(mol);
                     nReturnValue = result;
                 }
 
@@ -1662,16 +1643,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi4n.")]
-        public static double RDKit_Chi4n(string text)
+        public static double RDKit_Chi4n(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi4n",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi4n",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi4n(mol);
+                    var result = RDKit.Chem.CalcChi4n(mol);
                     nReturnValue = result;
                 }
 
@@ -1680,16 +1661,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Chi4v.")]
-        public static double RDKit_Chi4v(string text)
+        public static double RDKit_Chi4v(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Chi4v",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Chi4v",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcChi4v(mol);
+                    var result = RDKit.Chem.CalcChi4v(mol);
                     nReturnValue = result;
                 }
 
@@ -1698,16 +1679,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Kappa1.")]
-        public static double RDKit_Kappa1(string text)
+        public static double RDKit_Kappa1(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Kappa1",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Kappa1",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcKappa1(mol);
+                    var result = RDKit.Chem.CalcKappa1(mol);
                     nReturnValue = result;
                 }
 
@@ -1716,16 +1697,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Kappa2.")]
-        public static double RDKit_Kappa2(string text)
+        public static double RDKit_Kappa2(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Kappa2",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Kappa2",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcKappa2(mol);
+                    var result = RDKit.Chem.CalcKappa2(mol);
                     nReturnValue = result;
                 }
 
@@ -1734,16 +1715,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns Kappa3.")]
-        public static double RDKit_Kappa3(string text)
+        public static double RDKit_Kappa3(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_Kappa3",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_Kappa3",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcKappa3(mol);
+                    var result = RDKit.Chem.CalcKappa3(mol);
                     nReturnValue = result;
                 }
 
@@ -1752,16 +1733,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns LabuteASA.")]
-        public static double RDKit_LabuteASA(string text)
+        public static double RDKit_LabuteASA(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_LabuteASA",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_LabuteASA",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcLabuteASA(mol);
+                    var result = RDKit.Chem.CalcLabuteASA(mol);
                     nReturnValue = result;
                 }
 
@@ -1770,9 +1751,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns MolLogP.")]
-        public static double RDKit_MolLogP(string text)
+        public static double RDKit_MolLogP(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_MolLogP",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_MolLogP",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -1788,9 +1769,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns MolMR.")]
-        public static double RDKit_MolMR(string text)
+        public static double RDKit_MolMR(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_MolMR",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_MolMR",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -1806,16 +1787,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns ExactMolWt.")]
-        public static double RDKit_ExactMolWt(string text)
+        public static double RDKit_ExactMolWt(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_ExactMolWt",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_ExactMolWt",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcExactMolWt(mol);
+                    var result = RDKit.Chem.CalcExactMolWt(mol);
                     nReturnValue = result;
                 }
 
@@ -1824,16 +1805,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns FractionCSP3.")]
-        public static double RDKit_FractionCSP3(string text)
+        public static double RDKit_FractionCSP3(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_FractionCSP3",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_FractionCSP3",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcFractionCSP3(mol);
+                    var result = RDKit.Chem.CalcFractionCSP3(mol);
                     nReturnValue = result;
                 }
 
@@ -1842,16 +1823,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns HallKierAlpha.")]
-        public static double RDKit_HallKierAlpha(string text)
+        public static double RDKit_HallKierAlpha(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_HallKierAlpha",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_HallKierAlpha",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcHallKierAlpha(mol);
+                    var result = RDKit.Chem.CalcHallKierAlpha(mol);
                     nReturnValue = result;
                 }
 
@@ -1860,16 +1841,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of LipinskiHBA.")]
-        public static double RDKit_NumLipinskiHBA(string text)
+        public static double RDKit_NumLipinskiHBA(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumLipinskiHBA",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumLipinskiHBA",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumLipinskiHBA(mol);
+                    var result = RDKit.Chem.CalcNumLipinskiHBA(mol);
                     nReturnValue = result;
                 }
 
@@ -1878,16 +1859,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of LipinskiHBD.")]
-        public static double RDKit_NumLipinskiHBD(string text)
+        public static double RDKit_NumLipinskiHBD(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumLipinskiHBD",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumLipinskiHBD",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumLipinskiHBD(mol);
+                    var result = RDKit.Chem.CalcNumLipinskiHBD(mol);
                     nReturnValue = result;
                 }
 
@@ -1896,16 +1877,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AliphaticCarbocycles.")]
-        public static double RDKit_NumAliphaticCarbocycles(string text)
+        public static double RDKit_NumAliphaticCarbocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAliphaticCarbocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAliphaticCarbocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAliphaticCarbocycles(mol);
+                    var result = RDKit.Chem.CalcNumAliphaticCarbocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -1914,16 +1895,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AliphaticHeterocycles.")]
-        public static double RDKit_NumAliphaticHeterocycles(string text)
+        public static double RDKit_NumAliphaticHeterocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAliphaticHeterocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAliphaticHeterocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAliphaticHeterocycles(mol);
+                    var result = RDKit.Chem.CalcNumAliphaticHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -1932,16 +1913,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AliphaticRings.")]
-        public static double RDKit_NumAliphaticRings(string text)
+        public static double RDKit_NumAliphaticRings(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAliphaticRings",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAliphaticRings",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAliphaticRings(mol);
+                    var result = RDKit.Chem.CalcNumAliphaticRings(mol);
                     nReturnValue = result;
                 }
 
@@ -1950,16 +1931,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AmideBonds.")]
-        public static double RDKit_NumAmideBonds(string text)
+        public static double RDKit_NumAmideBonds(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAmideBonds",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAmideBonds",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAmideBonds(mol);
+                    var result = RDKit.Chem.CalcNumAmideBonds(mol);
                     nReturnValue = result;
                 }
 
@@ -1968,16 +1949,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AromaticCarbocycles.")]
-        public static double RDKit_NumAromaticCarbocycles(string text)
+        public static double RDKit_NumAromaticCarbocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAromaticCarbocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAromaticCarbocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAromaticCarbocycles(mol);
+                    var result = RDKit.Chem.CalcNumAromaticCarbocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -1986,16 +1967,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AromaticHeterocycles.")]
-        public static double RDKit_NumAromaticHeterocycles(string text)
+        public static double RDKit_NumAromaticHeterocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAromaticHeterocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAromaticHeterocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAromaticHeterocycles(mol);
+                    var result = RDKit.Chem.CalcNumAromaticHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2004,16 +1985,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AromaticRings.")]
-        public static double RDKit_NumAromaticRings(string text)
+        public static double RDKit_NumAromaticRings(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAromaticRings",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAromaticRings",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAromaticRings(mol);
+                    var result = RDKit.Chem.CalcNumAromaticRings(mol);
                     nReturnValue = result;
                 }
 
@@ -2022,16 +2003,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of BridgeheadAtoms.")]
-        public static double RDKit_NumBridgeheadAtoms(string text)
+        public static double RDKit_NumBridgeheadAtoms(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumBridgeheadAtoms",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumBridgeheadAtoms",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumBridgeheadAtoms(mol);
+                    var result = RDKit.Chem.CalcNumBridgeheadAtoms(mol);
                     nReturnValue = result;
                 }
 
@@ -2040,16 +2021,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of HBA.")]
-        public static double RDKit_NumHBA(string text)
+        public static double RDKit_NumHBA(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumHBA",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumHBA",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumHBA(mol);
+                    var result = RDKit.Chem.CalcNumHBA(mol);
                     nReturnValue = result;
                 }
 
@@ -2058,16 +2039,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of HBD.")]
-        public static double RDKit_NumHBD(string text)
+        public static double RDKit_NumHBD(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumHBD",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumHBD",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumHBD(mol);
+                    var result = RDKit.Chem.CalcNumHBD(mol);
                     nReturnValue = result;
                 }
 
@@ -2076,16 +2057,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns TPSA.")]
-        public static double RDKit_TPSA(string text)
+        public static double RDKit_TPSA(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_TPSA",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_TPSA",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcTPSA(mol);
+                    var result = RDKit.Chem.CalcTPSA(mol);
                     nReturnValue = result;
                 }
 
@@ -2094,16 +2075,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of RotatableBonds.")]
-        public static double RDKit_NumRotatableBonds(string text)
+        public static double RDKit_NumRotatableBonds(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumRotatableBonds",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumRotatableBonds",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumRotatableBonds(mol);
+                    var result = RDKit.Chem.CalcNumRotatableBonds(mol);
                     nReturnValue = result;
                 }
 
@@ -2112,16 +2093,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of Heteroatoms.")]
-        public static double RDKit_NumHeteroatoms(string text)
+        public static double RDKit_NumHeteroatoms(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumHeteroatoms",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumHeteroatoms",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumHeteroatoms(mol);
+                    var result = RDKit.Chem.CalcNumHeteroatoms(mol);
                     nReturnValue = result;
                 }
 
@@ -2130,16 +2111,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of Heterocycles.")]
-        public static double RDKit_NumHeterocycles(string text)
+        public static double RDKit_NumHeterocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumHeterocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumHeterocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumHeterocycles(mol);
+                    var result = RDKit.Chem.CalcNumHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2148,16 +2129,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of Rings.")]
-        public static double RDKit_NumRings(string text)
+        public static double RDKit_NumRings(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumRings",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumRings",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumRings(mol);
+                    var result = RDKit.Chem.CalcNumRings(mol);
                     nReturnValue = result;
                 }
 
@@ -2166,16 +2147,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of SaturatedCarbocycles.")]
-        public static double RDKit_NumSaturatedCarbocycles(string text)
+        public static double RDKit_NumSaturatedCarbocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumSaturatedCarbocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumSaturatedCarbocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumSaturatedCarbocycles(mol);
+                    var result = RDKit.Chem.CalcNumSaturatedCarbocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2184,16 +2165,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of SaturatedHeterocycles.")]
-        public static double RDKit_NumSaturatedHeterocycles(string text)
+        public static double RDKit_NumSaturatedHeterocycles(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumSaturatedHeterocycles",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumSaturatedHeterocycles",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumSaturatedHeterocycles(mol);
+                    var result = RDKit.Chem.CalcNumSaturatedHeterocycles(mol);
                     nReturnValue = result;
                 }
 
@@ -2202,16 +2183,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of SaturatedRings.")]
-        public static double RDKit_NumSaturatedRings(string text)
+        public static double RDKit_NumSaturatedRings(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumSaturatedRings",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumSaturatedRings",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumSaturatedRings(mol);
+                    var result = RDKit.Chem.CalcNumSaturatedRings(mol);
                     nReturnValue = result;
                 }
 
@@ -2220,16 +2201,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of SpiroAtoms.")]
-        public static double RDKit_NumSpiroAtoms(string text)
+        public static double RDKit_NumSpiroAtoms(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumSpiroAtoms",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumSpiroAtoms",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumSpiroAtoms(mol);
+                    var result = RDKit.Chem.CalcNumSpiroAtoms(mol);
                     nReturnValue = result;
                 }
 
@@ -2238,9 +2219,9 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of malCharge.")]
-        public static double RDKit_FormalCharge(string text)
+        public static double RDKit_FormalCharge(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_FormalCharge",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_FormalCharge",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -2256,16 +2237,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of AtomStereoCenters.")]
-        public static double RDKit_NumAtomStereoCenters(string text)
+        public static double RDKit_NumAtomStereoCenters(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAtomStereoCenters",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumAtomStereoCenters",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumAtomStereoCenters(mol);
+                    var result = RDKit.Chem.CalcNumAtomStereoCenters(mol);
                     nReturnValue = result;
                 }
 
@@ -2274,16 +2255,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns the number of UnspecifiedAtomStereoCenters.")]
-        public static double RDKit_NumUnspecifiedAtomStereoCenters(string text)
+        public static double RDKit_NumUnspecifiedAtomStereoCenters(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumUnspecifiedAtomStereoCenters",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_NumUnspecifiedAtomStereoCenters",
                 mol =>
                 {
                 double? nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcNumUnspecifiedAtomStereoCenters(mol);
+                    var result = RDKit.Chem.CalcNumUnspecifiedAtomStereoCenters(mol);
                     nReturnValue = result;
                 }
 
@@ -2292,16 +2273,16 @@ namespace NCDKExcel
             return (double)ret;
         }
         [ExcelFunction(Description = "Returns MolFormula.")]
-        public static string RDKit_MolFormula(string text)
+        public static string RDKit_MolFormula(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_MolFormula",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_MolFormula",
                 mol =>
                 {
                 string nReturnValue = null;
                 
                 if (nReturnValue == null)
                 {
-                    var result = RDKit.Descriptors.CalcMolFormula(mol);
+                    var result = RDKit.Chem.CalcMolFormula(mol);
                     nReturnValue = result;
                 }
 
@@ -2310,9 +2291,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns CXSmiles.")]
-        public static string RDKit_CXSmiles(string text)
+        public static string RDKit_CXSmiles(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_CXSmiles",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_CXSmiles",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -2328,9 +2309,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns InchiKey.")]
-        public static string RDKit_InchiKey(string text)
+        public static string RDKit_InchiKey(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_InchiKey",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_InchiKey",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -2346,9 +2327,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns MolBlock.")]
-        public static string RDKit_MolBlock(string text)
+        public static string RDKit_MolBlock(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_MolBlock",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_MolBlock",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -2364,9 +2345,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns PDBBlock.")]
-        public static string RDKit_PDBBlock(string text)
+        public static string RDKit_PDBBlock(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_PDBBlock",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_PDBBlock",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -2382,9 +2363,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns TPLBlock.")]
-        public static string RDKit_TPLBlock(string text)
+        public static string RDKit_TPLBlock(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_TPLBlock",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_TPLBlock",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -2400,9 +2381,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns XYZBlock.")]
-        public static string RDKit_XYZBlock(string text)
+        public static string RDKit_XYZBlock(string molecule_ident)
         {
-            var ret = Caching<string>.Calculate(text, "RDKit_XYZBlock",
+            var ret = Caching<string>.Calculate(molecule_ident, "RDKit_XYZBlock",
                 mol =>
                 {
                 string nReturnValue = null;
@@ -2418,9 +2399,9 @@ namespace NCDKExcel
             return (string)ret;
         }
         [ExcelFunction(Description = "Returns QED.")]
-        public static double RDKit_QED(string text)
+        public static double RDKit_QED(string molecule_ident)
         {
-            var ret = Caching<double?>.Calculate(text, "RDKit_QED",
+            var ret = Caching<double?>.Calculate(molecule_ident, "RDKit_QED",
                 mol =>
                 {
                 double? nReturnValue = null;
@@ -2428,60 +2409,6 @@ namespace NCDKExcel
                 if (nReturnValue == null)
                 {
                     var result = RDKit.Chem.QED.Calculate(mol);
-                    nReturnValue = result;
-                }
-
-                return (double)nReturnValue;
-                });
-            return (double)ret;
-        }
-        [ExcelFunction(Description = "Returns the number of HeavyAtoms.")]
-        public static double RDKit_NumHeavyAtoms(string text)
-        {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumHeavyAtoms",
-                mol =>
-                {
-                double? nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = RDKit.Chem.GetNumHeavyAtoms(mol);
-                    nReturnValue = result;
-                }
-
-                return (double)nReturnValue;
-                });
-            return (double)ret;
-        }
-        [ExcelFunction(Description = "Returns the number of Atoms.")]
-        public static double RDKit_NumAtoms(string text)
-        {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumAtoms",
-                mol =>
-                {
-                double? nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = RDKit.Chem.GetNumAtoms(mol);
-                    nReturnValue = result;
-                }
-
-                return (double)nReturnValue;
-                });
-            return (double)ret;
-        }
-        [ExcelFunction(Description = "Returns the number of Bonds.")]
-        public static double RDKit_NumBonds(string text)
-        {
-            var ret = Caching<double?>.Calculate(text, "RDKit_NumBonds",
-                mol =>
-                {
-                double? nReturnValue = null;
-                
-                if (nReturnValue == null)
-                {
-                    var result = RDKit.Chem.GetNumBonds(mol);
                     nReturnValue = result;
                 }
 

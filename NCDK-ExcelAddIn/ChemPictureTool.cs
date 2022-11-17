@@ -115,7 +115,7 @@ namespace NCDK_ExcelAddIn
                         Globals.ThisAddIn.Application.ScreenUpdating = false;
                         Globals.ThisAddIn.Application.Calculation = Excel.XlCalculation.xlCalculationManual;
 
-                        var shapeNames = shapes.Cast<Excel.Shape>().Select(n => n.Name).ToList();
+                        List<string> shapeNames = shapes.Cast<Excel.Shape>().Select(n => n.Name).ToList();
                         ExcelTool.EnumerateCells(cells, cell => GenerateChemicalStructurePictureOnCell(cell, pictureGenerator, shapeNames), callback);
                     }
                     finally
@@ -131,7 +131,7 @@ namespace NCDK_ExcelAddIn
 
         const string PicturePrefix = "NCDK-Picture ";
 
-        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell, IPictureGegerator pictureGenerator, ICollection<string> shapeNames)
+        private static void GenerateChemicalStructurePictureOnCell(Excel.Range cell, IPictureGegerator pictureGenerator, List<string> shapeNames)
         {
             try
             {
@@ -147,10 +147,11 @@ namespace NCDK_ExcelAddIn
                             dynamic sheet = Globals.ThisAddIn.Application.ActiveSheet;
                             string pictureName = CreateUniqueString(shapeNames, prefix: PicturePrefix);
 
-                            var shapeToDelete = FindChemShape(cell);
-                            if (shapeToDelete != null)
-                                shapeToDelete.Delete();
+                            //var shapeToDelete = FindChemShape(cell);
+                            //if (shapeToDelete != null)
+                            //    shapeToDelete.Delete();
                             AddPicture(cell, tempPng, pictureName);
+                            shapeNames.Add(pictureName);
                         }
                         finally
                         {
@@ -189,7 +190,7 @@ namespace NCDK_ExcelAddIn
 
             var xyRatioCell = (float)cell.Width / (float)cell.Height;
             var xyRatioShape = shape.Width / shape.Height;
-            float scale = 1;
+            float scale;
             if (xyRatioCell > xyRatioShape)
             {
                 // fit to cell.Height
